@@ -20,8 +20,8 @@ $theme_footer_txt: $brand_yellow;
 $copyright_link: $brand_lt_blue;
 $copyright_link_hover: $brand_red;
 //Header Colors
-$theme_header_bg: $brand_dk_blue;
-$theme_header_txt: $brand_yellow; 
+$theme_header_bg: rgba($brand_black,0.7);
+$theme_header_txt: $brand_white; 
 //Button Colors
 $theme_button_bg: $brand_yellow;
 $theme_button_txt: $brand_dk_blue;
@@ -45,3 +45,10 @@ $footer-padding: 1em;
 @include bodyPadding($body-padding);
 @include footerPadding($footer-padding);
 //Start Theme Customizations below: 
+#header {
+	top: 0;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	height: calc(100% - 5em);
+}

@@ -17,9 +17,8 @@ body {
 #header {
 	@include header_colors;
 	text-align: center;
-	
 	h1, h2, h3, h4, h5 {
-		@include header_colors;
+		color: $theme_header_txt;
 	}
 }
 //PureCSS Grids
