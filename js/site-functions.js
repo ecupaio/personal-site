@@ -41,15 +41,15 @@ $(document).ready(function() {
             //Project Toggle
             $('.project-col').click(function() {
                 headerHeight = $('#header').height() + 20;
-                $(this).find('.project-info').slideToggle();
-                $(this).siblings().find('.project-info').slideUp();
-                /*$(this).toggleClass('active');
-                $(this).siblings().removeClass('active');*/
+                /*$(this).find('.project-info').slideToggle();
+                $(this).siblings().find('.project-info').slideUp();*/
+                
                 $("body, html").animate({
                     scrollTop: $(this).offset().top - headerHeight
                 },'1000', 'swing');
-                
-                
+                $(this).addClass('active');
+                $(this).siblings().removeClass('active');
+
             });
         }
     });

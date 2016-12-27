@@ -120,70 +120,88 @@ Either pass the px number through individually, or set it as a variable */
     -webkit-filter: blur(0);
     margin-top: 4.5em; }
 
-#portfolio .project-col.active {
-  width: 66%; }
-
-#portfolio .project-col .project {
-  position: relative;
-  min-height: 15em;
+#portfolio .project-col {
   transition: all 0.7s ease;
   -webkit-transition: all 0.7s ease;
   -moz-transition: all 0.7s ease;
-  -o-transition: all 0.7s ease;
-  overflow: hidden; }
-  #portfolio .project-col .project .project-name {
-    transition: all 0.7s ease;
-    -webkit-transition: all 0.7s ease;
-    -moz-transition: all 0.7s ease;
-    -o-transition: all 0.7s ease;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    z-index: 9;
-    opacity: 0;
-    font-size: 1.5em;
-    text-align: center;
-    color: #ffd700;
-    font-family: "Montserrat", sans-serif; }
-  #portfolio .project-col .project .project-img {
-    /* width: 100%;
-                height: 15em;
-                object-fit: cover;
-                position: relative; */
-    z-index: -1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 100%;
-    width: auto;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -o-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%); }
-  #portfolio .project-col .project:hover {
-    background: rgba(0, 0, 0, 0.7);
-    cursor: pointer;
+  -o-transition: all 0.7s ease; }
+  #portfolio .project-col.active {
+    width: 100%; }
+    #portfolio .project-col.active .project-info {
+      width: 50%;
+      height: 100%;
+      padding: 1em; }
+      #portfolio .project-col.active .project-info .info {
+        padding-bottom: 1em; }
+    #portfolio .project-col.active .project {
+      width: 50%;
+      display: inline-block; }
+  #portfolio .project-col:hover {
     -webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
     -moz-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
     box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5); }
-    #portfolio .project-col .project:hover .project-name {
-      opacity: 1; }
-
-#portfolio .project-col .project-info {
-  display: none;
-  background: #3e73cb;
-  padding: 1em;
-  color: #fff; }
-  #portfolio .project-col .project-info .info {
-    padding-bottom: 1em; }
-  #portfolio .project-col .project-info a {
-    color: #ffd700; }
-    #portfolio .project-col .project-info a:hover {
-      color: #fff; }
+  #portfolio .project-col .project {
+    position: relative;
+    min-height: 15em;
+    overflow: hidden; }
+    #portfolio .project-col .project .project-name {
+      transition: all 0.7s ease;
+      -webkit-transition: all 0.7s ease;
+      -moz-transition: all 0.7s ease;
+      -o-transition: all 0.7s ease;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      z-index: 9;
+      opacity: 0;
+      font-size: 1.5em;
+      text-align: center;
+      color: #ffd700;
+      font-family: "Montserrat", sans-serif; }
+    #portfolio .project-col .project .project-img {
+      /* width: 100%;
+                height: 15em;
+                object-fit: cover;
+                position: relative; */
+      z-index: -1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 15em;
+      width: auto;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -o-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      transition: all 0.7s ease;
+      -webkit-transition: all 0.7s ease;
+      -moz-transition: all 0.7s ease;
+      -o-transition: all 0.7s ease; }
+    #portfolio .project-col .project:hover {
+      background: rgba(0, 0, 0, 0.7);
+      cursor: pointer; }
+      #portfolio .project-col .project:hover .project-name {
+        opacity: 1; }
+      #portfolio .project-col .project:hover .project-img {
+        -webkit-transform: translateX(-50%) translateY(-50%) scale(1.2);
+        -moz-transform: translateX(-50%) translateY(-50%) scale(1.2);
+        -o-transform: translateX(-50%) translateY(-50%) scale(1.2);
+        transform: translateX(-50%) translateY(-50%) scale(1.2); }
+  #portfolio .project-col .project-info {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    background: #3e73cb;
+    color: #fff;
+    overflow: hidden; }
+    #portfolio .project-col .project-info a {
+      color: #ffd700; }
+      #portfolio .project-col .project-info a:hover {
+        color: #fff; }
 
 .pure-button {
   border-radius: 0;
