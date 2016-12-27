@@ -5,21 +5,31 @@ body {
 	padding:0;
 	height:100%;
 	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
 }
 * {
 	@include border-box; 
 }
 #wrapper {
-	min-height:100%;
+	flex: 1;
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
 	position:relative;
 }
 //Header
 #header {
 	@include header_colors;
 	text-align: center;
-	
 	h1, h2, h3, h4, h5 {
-		@include header_colors;
+		color: $theme_header_txt;
 	}
 }
 //PureCSS Grids

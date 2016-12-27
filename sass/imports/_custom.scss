@@ -6,7 +6,6 @@
 //$brand_red
 //$brand_yellow
 //$brand_gray
-
 //Theme Colors
 //Use the brand colors for your theme colors
 //Body and Heading text Colors
@@ -15,13 +14,13 @@ $theme_body_link: $brand_lt_blue;
 $theme_body_link_hover: $brand_dk_blue;
 $theme_heading: $brand_dk_blue;
 //Footer Colors
-$theme_footer_bg: $brand_dk_blue;
-$theme_footer_txt: $brand_yellow; 
+$theme_footer_bg: $brand_black;
+$theme_footer_txt: $brand_yellow;
 $copyright_link: $brand_lt_blue;
 $copyright_link_hover: $brand_red;
 //Header Colors
-$theme_header_bg: $brand_dk_blue;
-$theme_header_txt: $brand_yellow; 
+$theme_header_bg: rgba($brand_black, 0.9);
+$theme_header_txt: $brand_white;
 //Button Colors
 $theme_button_bg: $brand_yellow;
 $theme_button_txt: $brand_dk_blue;
@@ -40,8 +39,143 @@ $header-padding: 1em;
 $body-padding: 1em 3em;
 $footer-padding: 1em;
 @import "mixins";
-@include gridGutters($gutter-padding);	
+@include gridGutters($gutter-padding);
 @include headerPadding($header-padding);
 @include bodyPadding($body-padding);
 @include footerPadding($footer-padding);
 //Start Theme Customizations below: 
+
+#header {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    z-index: 10;
+    padding: 0;
+    @include transition;
+    .header-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100vh;
+        padding: 3em 1em 1em;
+        h1 {
+            margin: 0;
+        }
+        .site-title {
+            text-transform: uppercase;
+        }
+        .header-collapse {
+            position: absolute;
+            bottom: 0%;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            font-size: 3em;
+        }
+    }
+    &.collapsed {
+        top: 0;
+        left: 0;
+        position: fixed;
+        background-color: $brand_dk_blue;
+        height: auto;
+        min-height: 10%;
+        -webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
+        -moz-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
+        box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
+        .header-inner {
+            height: 100%;
+            padding: 1em;
+        }
+        .site-tagline,
+        .header-collapse {
+            display: none;
+        }
+    }
+}
+
+//Animate Collapse Toggle
+.header-collapse:hover {
+    animation: wiggle .3s 2;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(3deg);
+    }
+    50% {
+        transform: rotate(-3deg);
+    }
+    100% {
+        transform: rotate(3deg);
+    }
+}
+
+#main {
+    filter: blur(0.25em);
+    -webkit-filter: blur(0.25em);
+    padding: 1em 0.5em;
+    &.collapsed {
+        filter: blur(0);
+        -webkit-filter: blur(0);
+        margin-top: 4.5em;
+    }
+}
+
+#portfolio {
+    .project-col {
+        @include transition;
+        &.active {
+            width: 66%;
+        }
+        &:hover {
+            .project {
+                background: rgba(0, 0, 0, 0.7);
+                .project-name {
+                    opacity: 1;
+                }
+            }
+        }
+        .project {
+            position: relative;
+            min-height: 15em;
+            @include transition;
+            .project-name {
+                @include absoluteCenter(50%, 50%);
+                z-index: 9;
+                opacity: 0;
+                font-size: 1.5em;
+                text-align: center;
+                color: $brand_yellow;
+                font-family: $header_font;
+                //@include transition;
+            }
+            .project-img {
+                width: 100%;
+                height: 15em;
+                object-fit: cover;
+                position: relative;
+                z-index: -1;
+            }
+        }
+        .project-info {
+            display: none;
+            background: $brand_dk_blue;
+            padding: 1em;
+            color: #fff;
+            .info {
+                padding-bottom: 1em;
+            }
+            a {
+                color: $brand_yellow;
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
