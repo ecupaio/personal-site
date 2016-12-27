@@ -54,6 +54,12 @@ $transition_type: all .7s ease;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
+//Border Box 
+@mixin box-shadow {
+	-webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
+        -moz-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
+        box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
+}
 //Rounded Social Share Buttons
 @mixin social_share_rounded {
   i {

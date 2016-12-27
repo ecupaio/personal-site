@@ -44,7 +44,6 @@ $footer-padding: 1em;
 @include bodyPadding($body-padding);
 @include footerPadding($footer-padding);
 //Start Theme Customizations below: 
-
 #header {
     top: 0;
     left: 0;
@@ -128,23 +127,16 @@ $footer-padding: 1em;
 
 #portfolio {
     .project-col {
-        @include transition;
         &.active {
             width: 66%;
-        }
-        &:hover {
-            .project {
-                background: rgba(0, 0, 0, 0.7);
-                .project-name {
-                    opacity: 1;
-                }
-            }
         }
         .project {
             position: relative;
             min-height: 15em;
             @include transition;
+            overflow: hidden;
             .project-name {
+                @include transition;
                 @include absoluteCenter(50%, 50%);
                 z-index: 9;
                 opacity: 0;
@@ -155,11 +147,29 @@ $footer-padding: 1em;
                 //@include transition;
             }
             .project-img {
-                width: 100%;
+                /* width: 100%;
                 height: 15em;
                 object-fit: cover;
-                position: relative;
+                position: relative; */
                 z-index: -1;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                height:100%;
+                width: auto;
+                -webkit-transform: translateX(-50%) translateY(-50%);
+                -moz-transform: translateX(-50%) translateY(-50%);
+                -o-transform: translateX(-50%) translateY(-50%);
+                transform: translateX(-50%) translateY(-50%);
+            }
+            &:hover {
+                background: rgba(0, 0, 0, 0.7);
+                cursor: pointer;
+                @include box-shadow;
+                .project-name {
+                    opacity: 1;
+                }
+                .project-img {}
             }
         }
         .project-info {
