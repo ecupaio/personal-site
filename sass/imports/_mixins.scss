@@ -130,7 +130,7 @@ Either pass the px number through individually, or set it as a variable */
 	.pure-g > div[class*="pure-u-"] {
 		@include border-box;
 		@include input;
-		padding: $gutter-padding;
+		border: $gutter-padding solid transparent;
 	}
 	//Form Grid
 	.pure-g > form > div[class*="pure-u-"] > div{
@@ -154,4 +154,13 @@ Either pass the px number through individually, or set it as a variable */
 	#footer {
 		padding: $footer-padding;
 	}
+}
+@mixin absoluteCenter($top,$left) {
+	position: absolute;
+	top: $top;
+	left: $left;
+	transform:translate(-$left,-$top);
+	-webkit-transform:translate(-$left,-$top);
+	-moz-transform:translate(-$left,-$top);
+	-ms-transform:translate(-$left,-$top);
 }

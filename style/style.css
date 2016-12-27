@@ -31,7 +31,7 @@ Either pass the px number through individually, or set it as a variable */
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  padding: 0.5em 1em; }
+  border: 0.5em 1em solid transparent; }
   .pure-g > div[class*="pure-u-"] input {
     width: 100%;
     line-height: 1;
@@ -55,9 +55,120 @@ Either pass the px number through individually, or set it as a variable */
 #header {
   top: 0;
   left: 0;
-  position: fixed;
+  position: absolute;
   width: 100%;
-  height: calc(100% - 5em); }
+  min-height: 100%;
+  height: 100%;
+  z-index: 10;
+  padding: 0;
+  transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease; }
+  #header .header-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    padding: 3em 1em 1em; }
+    #header .header-inner h1 {
+      margin: 0; }
+    #header .header-inner .site-title {
+      text-transform: uppercase; }
+    #header .header-inner .header-collapse {
+      position: absolute;
+      bottom: 0%;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      font-size: 3em; }
+  #header.collapsed {
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: #3e73cb;
+    height: auto;
+    min-height: 10%;
+    -webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
+    -moz-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
+    box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5); }
+    #header.collapsed .header-inner {
+      height: 100%;
+      padding: 1em; }
+    #header.collapsed .site-tagline,
+    #header.collapsed .header-collapse {
+      display: none; }
+
+.header-collapse:hover {
+  animation: wiggle .3s 2; }
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(3deg); }
+  50% {
+    transform: rotate(-3deg); }
+  100% {
+    transform: rotate(3deg); } }
+
+#main {
+  filter: blur(0.25em);
+  -webkit-filter: blur(0.25em);
+  padding: 1em 0.5em; }
+  #main.collapsed {
+    filter: blur(0);
+    -webkit-filter: blur(0);
+    margin-top: 4.5em; }
+
+#portfolio .project-col {
+  transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease; }
+  #portfolio .project-col.active {
+    width: 66%; }
+  #portfolio .project-col:hover .project {
+    background: rgba(0, 0, 0, 0.7); }
+    #portfolio .project-col:hover .project .project-name {
+      opacity: 1; }
+  #portfolio .project-col .project {
+    position: relative;
+    min-height: 15em;
+    transition: all 0.7s ease;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease; }
+    #portfolio .project-col .project .project-name {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      z-index: 9;
+      opacity: 0;
+      font-size: 1.5em;
+      text-align: center;
+      color: #ffd700;
+      font-family: "Montserrat", sans-serif; }
+    #portfolio .project-col .project .project-img {
+      width: 100%;
+      height: 15em;
+      object-fit: cover;
+      position: relative;
+      z-index: -1; }
+  #portfolio .project-col .project-info {
+    display: none;
+    background: #3e73cb;
+    padding: 1em;
+    color: #fff; }
+    #portfolio .project-col .project-info .info {
+      padding-bottom: 1em; }
+    #portfolio .project-col .project-info a {
+      color: #ffd700; }
+      #portfolio .project-col .project-info a:hover {
+        color: #fff; }
 
 .pure-button {
   border-radius: 0;
@@ -94,7 +205,15 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column; }
 
 * {
   box-sizing: border-box;
@@ -102,11 +221,14 @@ body {
   -webkit-box-sizing: border-box; }
 
 #wrapper {
-  min-height: 100%;
+  flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
   position: relative; }
 
 #header {
-  background: rgba(51, 51, 51, 0.7);
+  background: rgba(51, 51, 51, 0.9);
   color: #fff;
   text-align: center; }
   #header h1, #header h2, #header h3, #header h4, #header h5 {
@@ -165,7 +287,7 @@ body {
     margin-left: 1em; }
 
 #footer {
-  background: #3e73cb;
+  background: #333;
   color: #ffd700;
   text-align: center;
   clear: both;
