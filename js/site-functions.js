@@ -7,10 +7,7 @@ $(document).ready(function() {
     });
 
     $(window).scroll( function(){
-        
-            $('#header, #main').addClass('collapsed');
-        
-        
+        $('#header, #main').addClass('collapsed');
     });
     
     //Load Projects
@@ -27,28 +24,34 @@ $(document).ready(function() {
                 info,
                 image;
                 
-            this.each(function(column) {
-                
+            this.each(function(column,idx) {
+                console.log(idx);
                 name = column.Name ? column.Name : "";
                 link = column.Link ? column.Link : "";
                 info = column.Info ? column.Info : "";
                 image = column.Image ? column.Image : "";
+                if (idx < 6) {
+                    $('.portfolio-grid').append('<div class="pure-u-1 pure-u-md-1-3 project-col"><div class="project-inner"><div class="project"><img src="min_images/' + image + '" class="project-img"><div class="project-name">' + name + '</div></div><div class="project-info"><div class="info">' + info + '</div><a class="see-site" href="' + link + '" target="_blank">See Site <i class="fa fa-external-link"></i></a></div></div></div>');     
+                }
 
-                $('.portfolio-grid').append('<div class="pure-u-1 pure-u-md-1-3 project-col"><div class="project"><img src="min_images/' + image + '" class="project-img"><div class="project-name">' + name + '</div></div><div class="project-info"><div class="info">' + info + '</div><a class="see-site" href="' + link + '" target="_blank">See Site <i class="fa fa-external-link"></i></a></div></div>');
-                
+                $('.see-more').click(function(){
+                console.log(image);
+                    $('.portfolio-grid').append('<div class="pure-u-1 pure-u-md-1-3 project-col"><div class="project"><img src="min_images/' + image + '" class="project-img"><div class="project-name">' + name + '</div></div><div class="project-info"><div class="info">' + info + '</div><a class="see-site" href="' + link + '" target="_blank">See Site <i class="fa fa-external-link"></i></a></div></div>');
+                });    
 
             });
+            
             //Project Toggle
             $('.project-col').click(function() {
                 headerHeight = $('#header').height() + 20;
                 /*$(this).find('.project-info').slideToggle();
                 $(this).siblings().find('.project-info').slideUp();*/
-                
-                $("body, html").animate({
-                    scrollTop: $(this).offset().top - headerHeight
-                },'1000', 'swing');
-                $(this).addClass('active');
                 $(this).siblings().removeClass('active');
+                $(this).toggleClass('active');
+                
+                /*$("body, html").animate({
+                    scrollTop: $(this).offset().top - headerHeight
+                },'1000', 'swing');*/
 
             });
         }
