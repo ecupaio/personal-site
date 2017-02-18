@@ -12,9 +12,11 @@ $(document).ready(function() {
     //Project Toggle
     $('.project-col').click(function() {
         headerHeight = $('#header').height() + 20;
-        $(this).siblings().removeClass('active');
-        $(this).addClass('active');
-        $('.close-project').addClass('active');
+        //$(this).siblings().removeClass('active');
+        //$(this).addClass('active');
+        //$('.close-project').addClass('active');
+        $(this).siblings().find('.project-info').slideUp();
+        $(this).find('.project-info').slideToggle();
 
     });
     $('.close-project').click(function(){

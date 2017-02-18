@@ -134,44 +134,11 @@ $footer-padding: 1em;
     }
     .project-col {
         @include transition;
-        &.active {
-            position: fixed;
-            height: 100%;
-            width: 100%;
-            z-index: 10;
-            top:1em;
-            left:0;
-            background-color: rgba(0,0,0,0.7);
-            .project-inner {
-              position: relative;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              width: 75%;
-            }
-            .project-info {
 
-                width: 50%;
-                padding: 1em;
-                display: block;
-                .info {
-                    padding-bottom: 1em;
-                }
-            }
-            .project {
-                background: #000;
-                height: 15em;
-                width: 50%;
-                pointer-events: none;
-                .project-img {
-                    z-index: 1;
-                    height: 15em;
-                    object-fit: cover;
-                }
-            }
-        }
         &:hover {
+          .project {
             @include box-shadow;
+          }
         }
         .project-inner {
 
@@ -182,6 +149,8 @@ $footer-padding: 1em;
             min-height: 15em;
             width: 100%;
             overflow: hidden;
+            background: rgba($brand_white, 0);
+            @include transition;
 
             .project-name {
                 @include transition;
@@ -211,6 +180,7 @@ $footer-padding: 1em;
                 @include transition;
             }
             &:hover {
+
                 background: rgba($brand_white, 0.8);
                 cursor: pointer;
                 .project-name {
@@ -223,11 +193,12 @@ $footer-padding: 1em;
                     transform: translateX(-50%) translateY(-50%) scale(1.2);
                 }
             }
+
         }
         .project-info {
             display: none;
-            width: 0;
-            height: 0;
+            width: 100%;
+            height: 100%;
             background: $brand_dk_blue;
 
             color: #fff;
@@ -240,6 +211,9 @@ $footer-padding: 1em;
                     color: #fff;
                 }
             }
+        }
+        &.active {
+
         }
     }
 }
