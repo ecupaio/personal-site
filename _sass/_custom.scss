@@ -45,14 +45,9 @@ $footer-padding: 1em;
 @include footerPadding($footer-padding);
 //Start Theme Customizations below:
 #header {
-    top: 0;
-    left: 0;
-    position: absolute;
     width: 100%;
     min-height: 100%;
     height: 100%;
-    z-index: 10;
-    padding: 0;
     @include transition;
     .header-inner {
         position: relative;
@@ -100,12 +95,10 @@ $footer-padding: 1em;
     }
 }
 #main {
-    filter: blur(0.25em);
-    -webkit-filter: blur(0.25em);
+
     padding: 1em 0.5em;
     &.collapsed {
-        filter: blur(0);
-        -webkit-filter: blur(0);
+
         margin-top: 4.5em;
     }
 }
@@ -157,11 +150,12 @@ $footer-padding: 1em;
                 @include absoluteCenter(50%, 50%);
                 z-index: 9;
                 opacity: 0;
+                text-transform: uppercase;
                 font-size: 1.5em;
                 font-family: $header_font;
                 text-align: center;
                 color: $brand_dk_blue;
-                font-family: $header_font;
+
 
             }
             .project-img {
