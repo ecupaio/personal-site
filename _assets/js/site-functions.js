@@ -12,16 +12,14 @@ $(document).ready(function() {
     //Project Toggle
     $('.project-col').click(function() {
         headerHeight = $('#header').height() + 20;
-        /*$(this).find('.project-info').slideToggle();
-        $(this).siblings().find('.project-info').slideUp();*/
         $(this).siblings().removeClass('active');
-        $(this).toggleClass('active');
-
-        /*$("body, html").animate({
-            scrollTop: $(this).offset().top - headerHeight
-        },'1000', 'swing');*/
+        $(this).addClass('active');
+        $('.close-project').addClass('active');
 
     });
+    $('.close-project').click(function(){
+      $(this).removeClass('active');
+      $('.project-col.active').removeClass('active');
+    });
 
-    
 });
