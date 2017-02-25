@@ -1,7 +1,10 @@
 ---
 title: Democrats.org
 link: https://democrats.org
-img: "/min_images/Democrats.png"
+img:
+- Democrats.png
+cms: Expression Engine
 ---
 
-The official site of the democratic party. I created the new homepage along with some pages like My Vote and The Latest
+## Description
+Democrats.org is the official site of the democratic party that I helped manage. I redesigned the homepage and created custom pages such as [My Vote](project/my-vote) and [The Latest](project/the-latest)

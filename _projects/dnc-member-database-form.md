@@ -1,7 +1,10 @@
 ---
 title: DNC Member Database Form
 link: https://dncmembers.democrats.org/
-img: "/min_images/Member_DB.png"
+img:
+- Member_DB.png
+cms: static
 ---
 
-Frontend for a salesforce form
+## Description
+The DNC Member Database Form is a static site frontend for a Salesforce form. DNC members would add their information here for the Secretary's Office. 

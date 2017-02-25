@@ -1,7 +1,10 @@
 ---
-title: DNC Chair Feedback
+title: Rebuild
 link: https://rebuild.democrats.org/
-img: "/min_images/Rebuild.png"
+img:
+- Rebuild.png
+cms: Static
 ---
 
-Frontend for BlueState Digital signup form
+## Description
+Rebuild is a microsite that features a BSD form so that users can provide constructive feedback for the new DNC chair. 

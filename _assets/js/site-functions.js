@@ -12,12 +12,10 @@ $(document).ready(function() {
     //Project Toggle
     $('.project-col').click(function() {
         headerHeight = $('#header').height() + 20;
-        //$(this).siblings().removeClass('active');
-        //$(this).addClass('active');
-        //$('.close-project').addClass('active');
         $(this).siblings().find('.project-info').slideUp();
         $(this).find('.project-info').slideToggle();
-
+        $(this).siblings().find('.project').removeClass('active');
+        $(this).find('.project').toggleClass('active');
     });
     $('.close-project').click(function(){
       $(this).removeClass('active');
