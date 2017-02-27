@@ -3,4 +3,4 @@ title: Home Page
 layout: index
 ---
 
-home page content
+{% include home.html %}
