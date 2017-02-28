@@ -5,9 +5,19 @@ $(document).ready(function() {
         $('#header, #main').addClass('collapsed');
 
     });
-
+    var scrollLimit = 15;
     $(window).scroll( function(){
         $('#header, #main').addClass('collapsed');
+        var userScroll = $(this).scrollTop();
+        console.log(userScroll);
+        if (userScroll > scrollLimit) {
+            //Down
+            $('#header, .header-inner').addClass('hide');
+        } else {
+            //Up
+            $('#header, .header-inner').removeClass('hide');
+        }
+
     });
     //Project Toggle
     $('.project-col').click(function() {

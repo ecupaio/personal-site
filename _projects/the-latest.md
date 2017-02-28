@@ -2,7 +2,7 @@
 title: The Latest
 link: https://www.democrats.org/the-latest
 img:
-- Victory_2016.png
+- Latest.png
 cms: Expression Engine
 ---
 

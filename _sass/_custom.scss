@@ -52,7 +52,7 @@ $footer-padding: 1em;
     z-index: 10;
     top: 0;
     left: 0;
-    @include transition;
+    @include custom_transition(all, 0.7s, ease);
     .header-inner {
         position: relative;
         width: 100%;
@@ -66,6 +66,7 @@ $footer-padding: 1em;
         display: -webkit-flex;
         align-items: center;
         justify-content: center;
+
         h1 {
             margin: 0;
         }
@@ -105,12 +106,25 @@ $footer-padding: 1em;
         .header-inner {
             height: 100%;
             padding: 1em;
+            @include custom_transition(all, 0.7s, ease);
+            &.hide {
+                height: 0;
+                padding: 0;
+                overflow: hidden;
+            }
         }
         .site-tagline,
         .header-collapse {
             display: none;
         }
+        @include custom_transition(all, 0.7s, ease);
+        &.hide {
+            height: 0;
+            min-height: 0;
+        }
+
     }
+
 }
 #main {
     filter:blur(5px);

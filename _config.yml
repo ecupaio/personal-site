@@ -45,4 +45,11 @@ sass:
 collections:
   projects:
     output: true
-    permalink: /project/:path  
+    permalink: /project/:path
+defaults:
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
