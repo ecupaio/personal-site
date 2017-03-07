@@ -5,25 +5,19 @@ $(document).ready(function() {
         $('#header, #main').addClass('collapsed');
 
     });
-    var scrollLimit = 15;
-    $(window).scroll( function(){
-        $('#header, #main').addClass('collapsed');
-        var userScroll = $(this).scrollTop();
-        console.log(userScroll);
-        if (userScroll > scrollLimit) {
-            //Down
+
+    $(window).on('wheel', function(e) {
+    	var delta = e.originalEvent.deltaY;
+        console.log(delta);
+    	if (delta > 0) {
             $('#header, .header-inner').addClass('hide');
         } else {
-            //Up
             $('#header, .header-inner').removeClass('hide');
         }
-
     });
     //Project Toggle
     $('.project-col').click(function() {
         headerHeight = $('#header').height() + 20;
-        $(this).siblings().find('.project-info').slideUp();
-        $(this).find('.project-info').slideToggle();
         $(this).siblings().find('.project').removeClass('active');
         $(this).find('.project').toggleClass('active');
     });
@@ -32,15 +26,28 @@ $(document).ready(function() {
       $('.project-col.active').removeClass('active');
     });
     //Load Iframe
-    $('.load-iframe').click(function() {
-        var iframeURL = $(this).data('url');
+    $('.iframe-overlay').click(function() {
+        var iframeURL = $('.load-iframe').data('url');
         $('.iframe-window').attr('src',iframeURL);
+        $('.load-iframe i').attr('class','fa fa-circle-o-notch fa-spin');
         $('.iframe-window').load(function(){
-            $('.iframe-overlay').addClass('hidden');
+            $('.iframe-overlay').addClass('hide');
+            $('#project-iframe').attr('style','');
             $('.iframe-window').addClass('active');
+            $('.iframe-buttons').slideDown();
         });
-
-
     });
-
+    $('.resize').click(function(){
+        if ($('.enlarge').hasClass('active')) {
+            $('.enlarge').removeClass('active');
+            $('.minimize').addClass('active');
+        } else {
+            $('.enlarge').addClass('active');
+            $('.minimize').removeClass('active');
+        }
+        $('#project-iframe, #project-body').toggleClass('active');
+        $('html,body').delay('500').animate({
+            scrollTop: $('#project-iframe').offset().top
+        });
+    });
 });

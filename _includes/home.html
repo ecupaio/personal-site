@@ -7,10 +7,12 @@
             <div class="project ">
                     <img src="/min_images/{{ project.img[0] }}" class="project-img">
               <div class="project-name">{{ project.title }}</div>
-            </div>
-            <div class="project-info ">
-              <a class="pure-button info" href="{{ project.url }}">more info</a>
-              <a class="pure-button see-site" href="{{ project.link }}" target="_blank">See Site</a>
+              <div class="project-info">
+                <div class="info-inner">  
+                    <a class="pure-button info" href="{{ project.url }}">more info</a>
+                    <a class="pure-button see-site" href="{{ project.link }}" target="_blank">See Site</a>
+                </div>
+              </div>
             </div>
         </div>
       </div>

@@ -14,10 +14,10 @@ $theme_body_link: $brand_dk_blue;
 $theme_body_link_hover: darken($brand_dk_blue,20%);
 $theme_heading: $brand_dk_blue;
 //Footer Colors
-$theme_footer_bg: $brand_black;
-$theme_footer_txt: $brand_yellow;
-$copyright_link: $brand_lt_blue;
-$copyright_link_hover: $brand_red;
+$theme_footer_bg: $brand_white;
+$theme_footer_txt: $brand_dk_blue;
+$copyright_link: $brand_dk_blue;
+$copyright_link_hover: darken($brand_dk_blue,20%);
 //Header Colors
 $theme_header_bg: rgba($brand_white, 0.8);
 $theme_header_txt: $brand_dk_blue;
@@ -69,7 +69,9 @@ $footer-padding: 1em;
 
         h1 {
             margin: 0;
+
         }
+
         .site-title {
             h1 {
                 text-transform: uppercase;
@@ -86,6 +88,7 @@ $footer-padding: 1em;
             -webkit-transform: translateX(-50%);
             -moz-transform: translateX(-50%);
             font-size: 3em;
+
         }
     }
     &.collapsed {
@@ -100,7 +103,7 @@ $footer-padding: 1em;
         -webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
         -moz-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
         box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
-        h1 {
+        h1, a {
             color: $brand_white;
         }
         .header-inner {
@@ -207,8 +210,7 @@ $footer-padding: 1em;
                 transform: translateX(-50%) translateY(-50%);
                 @include transition;
             }
-            &:hover, &.active {
-
+            &:hover {
                 background: rgba($brand_white, 0.8);
                 cursor: pointer;
                 .project-name {
@@ -221,22 +223,49 @@ $footer-padding: 1em;
                     transform: translateX(-50%) translateY(-50%) scale(1.2);
                 }
             }
+            &.active {
+                background: rgba($brand_white, 0.8);
+                cursor: pointer;
+                .project-name {
+                    opacity: 0;
+                }
+                .project-img {
+                    -webkit-transform: translateX(-50%) translateY(-50%) scale(1.2);
+                    -moz-transform: translateX(-50%) translateY(-50%) scale(1.2);
+                    -ms-transform: translateX(-50%) translateY(-50%) scale(1.2);
+                    transform: translateX(-50%) translateY(-50%) scale(1.2);
+                }
+                .project-info {
+                    width: 100%;
+                    z-index: 10;
+                    padding: 1em;
+                }
+            }
 
 
         }
         .project-info {
-            display: none;
-            width: 100%;
+            position: absolute;
+            width: 0;
+            display: flex;
+            display: -webkit-flex;
+            display: -moz-flex;
+            justify-content: center;
+            align-items: center;
             height: 100%;
-            background: $brand_dk_blue;
+            background: rgba($brand_dk_blue,0.8);
             color: #fff;
             overflow: hidden;
-            padding: 1em;
+            @include custom_transition(width, 0.7s, ease);
             a {
               &.pure-button {
                 border: 3px solid $brand_white;
                 text-transform: uppercase;
                 width: 100%;
+                background: transparent;
+                &:hover {
+                    background: $brand_white;
+                }
                 &:first-child {
                     margin-bottom: 0.5em;
                 }
@@ -250,34 +279,77 @@ $footer-padding: 1em;
     }
 }
 //Project Page
+#project-body {
+    @include custom_transition(width 0.7s ease);
+    &.active {
+        width: 100%;
+    }
+}
 #project-iframe {
-    min-height: 25vh;
+    min-height: 50vh;
     background-size: cover;
     position: relative;
     z-index: 1;
+    @include custom_transition(width, min-height 0.7s ease);
+    &.active {
+        width: 100%;
+        min-height: 100vh;
+    }
     .iframe-overlay {
+
         height: 100%;
         width: 100%;
         position: absolute;
         top: 0;
         left: 0;
         z-index: 2;
-        background: rgba($brand_dk_blue, 0.7);
-        @include custom_transition(height, ease, 0.7);
+        background: rgba($brand_white, 0.7);
+        color: $brand_dk_blue;
+        display: flex;
+        display: -webkit-flex;
+        display: -moz-flex;
+        justify-content: center;
+        align-items: center;
+        @include transition;
+
         .load-iframe {
-            color: #fff;
+            i {
+                font-size: 2em;
+            }
+        }
+        &:hover {
+            cursor: pointer;
+            background: rgba($brand_dk_blue,0.7);
+            color: $brand_white;
         }
         &.hide {
             height: 0;
-            background: none;
+            .load-iframe {
+                display: none;
+            }
+
+        }
+    }
+    .iframe-buttons {
+        display: none;
+        margin-top: 0.5em;
+        .resize {
+            span {
+                display: none;
+                &.active {
+                    display: inline-block;
+                }
+            }
         }
     }
     iframe {
         display: none;
         &.active {
             display: block;
-            height: 100%;
             width: 100%;
+            height: calc(100% - 3em);
+            height: -webkit-calc(100% - 3em);
+            height: -moz-calc(100% - 3em);
             border: 0;
         }
 
@@ -286,4 +358,7 @@ $footer-padding: 1em;
         width: 100%;
         height: auto;
     }
+}
+@include bp-medium($size-medium) {
+
 }
