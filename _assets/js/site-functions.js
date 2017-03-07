@@ -31,5 +31,16 @@ $(document).ready(function() {
       $(this).removeClass('active');
       $('.project-col.active').removeClass('active');
     });
+    //Load Iframe
+    $('.load-iframe').click(function() {
+        var iframeURL = $(this).data('url');
+        $('.iframe-window').attr('src',iframeURL);
+        $('.iframe-window').load(function(){
+            $('.iframe-overlay').addClass('hidden');
+            $('.iframe-window').addClass('active');
+        });
+
+
+    });
 
 });
