@@ -142,23 +142,7 @@ $footer-padding: 1em;
 
 #portfolio {
     position: relative;
-    .close-project {
-      display: none;
-      &.active {
-        display: block;
-        position: fixed;
-        font-size: 1.5em;
-        top: 4em;
-        right: 1em;
-        z-index: 11;
-        color: $brand_white;
-        @include transition;
-        &:hover {
-          cursor: pointer;
-          color: $brand_yellow;
-        }
-      }
-    }
+
     .portfolio-grid {
         position: relative;
     }
@@ -178,6 +162,7 @@ $footer-padding: 1em;
             position: relative;
             min-height: 15em;
             width: 100%;
+
             overflow: hidden;
             background: rgba($brand_white, 0);
             @include transition;
@@ -194,6 +179,9 @@ $footer-padding: 1em;
                 color: $brand_dk_blue;
 
 
+            }
+            .close-project {
+              display: none;
             }
             .project-img {
                 z-index: -1;
@@ -226,6 +214,7 @@ $footer-padding: 1em;
             &.active {
                 background: rgba($brand_white, 0.8);
                 cursor: pointer;
+
                 .project-name {
                     opacity: 0;
                 }
@@ -240,6 +229,20 @@ $footer-padding: 1em;
                     z-index: 10;
                     padding: 1em;
                 }
+                .close-project {
+                    //display: block;
+                    position: absolute;
+                    font-size: 1.5em;
+                    top: 0.5em;
+                    right: 0.5em;
+                    z-index: 11;
+                    color: $brand_white;
+                    @include transition;
+                    &:hover {
+                      cursor: pointer;
+                      color: $brand_yellow;
+                    }
+                  }
             }
 
 
@@ -286,14 +289,14 @@ $footer-padding: 1em;
     }
 }
 #project-iframe {
-    min-height: 50vh;
+    height: 50vh;
     background-size: cover;
     position: relative;
     z-index: 1;
-    @include custom_transition(width, min-height 0.7s ease);
+    @include custom_transition(width, height 0.7s ease);
     &.active {
         width: 100%;
-        min-height: 100vh;
+        height: 100vh;
     }
     .iframe-overlay {
 
@@ -357,6 +360,12 @@ $footer-padding: 1em;
     img {
         width: 100%;
         height: auto;
+    }
+}
+#project-slider {
+    text-align: center;
+    .slider {
+        max-width: 700px;
     }
 }
 @include bp-medium($size-medium) {

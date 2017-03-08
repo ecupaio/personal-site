@@ -2,8 +2,8 @@
 <html>
 <head>
     {% include head.html %}
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" /> -->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
 </head>
 
 <body>
@@ -24,9 +24,11 @@
         </div>
         <div id="main" class="collapsed">
             <div class="pure-g">
+                {% if page.link %}
                 <div id="project-body" class="pure-u-1 pure-u-md-1-2">
                 {{ content }}
                 </div>
+
                 <div id="project-iframe" class="pure-u-1 pure-u-md-1-2" style="background-image: url(/min_images/{{ page.img }}); ">
                     <div class="iframe-overlay">
                         <div data-url="{{ page.link }}" class="load-iframe"><i class="fa fa-search"></i></div>
@@ -40,6 +42,20 @@
                         </a>
                     </div>
                 </div>
+                {% else %}
+                <div id="project-body" class="pure-u-1">
+                    {{ content }}
+                </div>
+                <div id="project-slider" class="pure-u-1">
+                    <div class="slider">
+                        {% for img in page.img %}
+                            <div>
+                                <img src="/min_images/{{ img }}"/>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
 
             </div>
         </div>
@@ -48,7 +64,7 @@
         {% include footer.html %}
     </div>
     <!-- Scripts-->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
     {% js theme_functions.js %}
 </body>
 </html>
