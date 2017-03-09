@@ -1,59 +1,75 @@
 $(document).ready(function() {
-    //Header Collapse 
+    //Header Collapse
     var headerHeight;
     $('.header-collapse').click(function() {
         $('#header, #main').addClass('collapsed');
 
     });
 
-    $(window).scroll( function(){
-        $('#header, #main').addClass('collapsed');
-    });
-    
-    //Load Projects
-    var ds = new Miso.Dataset({
-        importer: Miso.Dataset.Importers.GoogleSpreadsheet,
-        parser: Miso.Dataset.Parsers.GoogleSpreadsheet,
-        key: "1-nhosAH4e5I3HmXLLt-kSV9kGgN5M4cIwLuxmpHnEyU", //Add your google spreadsheet key here
-        worksheet: "1" //Worksheets start counting at 1
-    });
-    ds.fetch({
-        success: function() {
-            var name,
-                link,
-                info,
-                image;
-                
-            this.each(function(column,idx) {
-                console.log(idx);
-                name = column.Name ? column.Name : "";
-                link = column.Link ? column.Link : "";
-                info = column.Info ? column.Info : "";
-                image = column.Image ? column.Image : "";
-                if (idx < 6) {
-                    $('.portfolio-grid').append('<div class="pure-u-1 pure-u-md-1-3 project-col"><div class="project-inner"><div class="project"><img src="min_images/' + image + '" class="project-img"><div class="project-name">' + name + '</div></div><div class="project-info"><div class="info">' + info + '</div><a class="see-site" href="' + link + '" target="_blank">See Site <i class="fa fa-external-link"></i></a></div></div></div>');     
-                }
+    $(window).on('wheel', function(e) {
+    	var delta = e.originalEvent.deltaY;
 
-                $('.see-more').click(function(){
-                console.log(image);
-                    $('.portfolio-grid').append('<div class="pure-u-1 pure-u-md-1-3 project-col"><div class="project"><img src="min_images/' + image + '" class="project-img"><div class="project-name">' + name + '</div></div><div class="project-info"><div class="info">' + info + '</div><a class="see-site" href="' + link + '" target="_blank">See Site <i class="fa fa-external-link"></i></a></div></div>');
-                });    
-
-            });
-            
-            //Project Toggle
-            $('.project-col').click(function() {
-                headerHeight = $('#header').height() + 20;
-                /*$(this).find('.project-info').slideToggle();
-                $(this).siblings().find('.project-info').slideUp();*/
-                $(this).siblings().removeClass('active');
-                $(this).toggleClass('active');
-                
-                /*$("body, html").animate({
-                    scrollTop: $(this).offset().top - headerHeight
-                },'1000', 'swing');*/
-
-            });
+    	if (delta > 0) {
+            $('#header, .header-inner').addClass('hide');
+        } else {
+            $('#header, .header-inner').removeClass('hide');
         }
+    });
+    var scrollLimit = 15;
+    $(window).scroll( function(){
+
+        var userScroll = $(this).scrollTop();
+        console.log(userScroll);
+        if (userScroll > scrollLimit) {
+            //Down
+            //$('#header, .header-inner').addClass('hide');
+        } else if (userScroll < scrollLimit) {
+            //Up
+            //$('#header, .header-inner').removeClass('hide');
+        }
+
+    });
+    //Project Toggle
+    $('.project-col').click(function() {
+        $(this).siblings().find('.project').removeClass('active');
+        $(this).find('.project').addClass('active');
+    });
+    //TODO fix close project function
+    $('.close-project').click(function(){
+
+      $('.project').removeClass('active');
+    });
+
+    //Load Iframe
+    $('.iframe-overlay').click(function() {
+        var iframeURL = $('.load-iframe').data('url');
+        $('.iframe-window').attr('src',iframeURL);
+        $('.load-iframe i').attr('class','fa fa-circle-o-notch fa-spin');
+        $('.iframe-window').load(function(){
+            $('.iframe-overlay').addClass('hide');
+            $('#project-iframe').attr('style','');
+            $('.iframe-window').addClass('active');
+            $('.iframe-buttons').slideDown();
+        });
+    });
+    $('.resize').click(function(){
+        if ($('.enlarge').hasClass('active')) {
+            $('.enlarge').removeClass('active');
+            $('.minimize').addClass('active');
+        } else {
+            $('.enlarge').addClass('active');
+            $('.minimize').removeClass('active');
+        }
+        $('#project-iframe, #project-body').toggleClass('active');
+        $('html,body').delay('500').animate({
+            scrollTop: $('#project-iframe').offset().top
+        });
+    });
+    $('.slider').slick({
+        dots: true,
+        autoplay: true,
+        adaptiveHeight: false
+        //prevArrow: '<i class="fa fa-chevron-left"></i>',
+        //nextArrow: '<i class="fa fa-chevron-right"></i>'
     });
 });

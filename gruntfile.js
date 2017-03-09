@@ -1,18 +1,15 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		sass: {
+
+		imagemin: {
 			target: {
-				files: {
-					'style/style.css' : 'sass/style.scss'
-				}
-			}
-		},
-		cssmin: {
-			target: {
-				files: {
-				'style/style.min.css' : 'style/style.css'
-				}
+				files: [{
+					expand: true,
+					cwd: 'images/',
+					src: ['**/*.{png,jpg,gif,jpeg,svg}'],
+					dest: 'min_images/'
+				}]
 			}
 		},
 		uglify: {
@@ -31,33 +28,10 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		imagemin: {
-			target: {
-				files: [{
-					expand: true,
-					cwd: 'images/',
-					src: ['**/*.{png,jpg,gif,jpeg,svg}'],
-					dest: 'min_images/'
-				}]
-			}
-		},
-		htmlmin: {
-			target: {
-				options: {
-					collapseWhitespace: true
-				},
-				files: {
-					'index.html' : 'html/index.html'
-				}
-			}
-		},
 		watch: {
-			sass: {
-				files: 'sass/**/*.scss',
-				tasks: ['sass','cssmin'],
-				options: {
-					livereload: true
-				}
+			imagemin: {
+				files: 'images/*.{png,jpg,gif}',
+				tasks: ['imagemin']
 			},
 			uglify: {
 				files: ['js/*.js','!js/*.min.js'],
@@ -66,26 +40,12 @@ module.exports = function(grunt) {
 					livereload: true
 				}
 			},
-			imagemin: {
-				files: 'images/*.{png,jpg,gif}',
-				tasks: ['imagemin']
-			},
-			htmlmin: {
-				files: 'html/*.html',
-				tasks: ['htmlmin'],
-				options: {
-					livereload: true
-				}
-			}
+
 		}
 	});
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-sass');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-newer');
-	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-htmlmin');
-	grunt.registerTask('default',['sass','cssmin','uglify','newer:imagemin:target','htmlmin', 'watch']);
+	grunt.registerTask('default',['newer:imagemin:target','uglify','watch']);
 };
