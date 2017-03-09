@@ -1,0 +1,409 @@
+//Custom Styles
+//Use this sheet to add your custom touches to the core scss. Brand colors are listed below:
+//$brand_lt_blue
+//$brand_dk_blue
+//$brand_white
+//$brand_red
+//$brand_yellow
+//$brand_gray
+//Theme Colors
+//Use the brand colors for your theme colors
+//Body and Heading text Colors
+$theme_body: #333;
+$theme_body_link: $brand_dk_blue;
+$theme_body_link_hover: darken($brand_dk_blue,20%);
+$theme_heading: $brand_dk_blue; //Footer Colors
+$theme_footer_bg: $brand_white;
+$theme_footer_txt: $brand_dk_blue;
+$copyright_link: $brand_dk_blue;
+$copyright_link_hover: darken($brand_dk_blue,20%); //Header Colors
+$theme_header_bg: rgba($brand_white, 0.8);
+$theme_header_txt: $brand_dk_blue; //Button Colors
+$theme_button_bg: $brand_dk_blue;
+$theme_button_txt: $brand_white; //BSD Form Colors
+$theme_form_bg: $brand_red;
+$theme_form_txt: $brand_black;
+$theme_form_btn_bg: $brand_black;
+$theme_form_btn_txt: $brand_white; //Mobile Breakpoints
+$size-largee: 1024px;
+$size-medium: 768px;
+$size-small: 568px; //Padding for Sections and Grids
+$gutter-padding: 0.5em 1em;
+$header-padding: 1em;
+$body-padding: 1em 3em;
+$footer-padding: 1em;
+@import "mixins";
+@include gridGutters($gutter-padding);
+@include headerPadding($header-padding);
+@include bodyPadding($body-padding);
+@include footerPadding($footer-padding); //Start Theme Customizations below:
+
+#header {
+    width: 100%;
+    min-height: 15em;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    @include custom_transition(all, 0.7s, ease);
+
+    .header-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 100vh;
+        padding: 3em 1em 1em;
+        display: flex;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            margin: 0;
+        }
+
+        .site-title {
+            h1 {
+                text-transform: uppercase;
+            }
+
+            .site-tagline {
+                text-transform: lowercase;
+            }
+        }
+
+        .header-collapse {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            font-size: 3em;
+        }
+    }
+
+    &.collapsed {
+        top: 0;
+        left: 0;
+        z-index: 10;
+        padding: 0;
+        position: fixed;
+        background-color: $brand_dk_blue;
+        height: auto;
+        min-height: 4em;
+        -webkit-box-shadow: 0 3px 5px rgba(100, 100, 100, 0.5);
+        -moz-box-shadow: 0 3px 5px rgba(100, 100, 100, 0.5);
+        box-shadow: 0 3px 5px rgba(100, 100, 100, 0.5);
+
+        a,
+        h1 {
+            color: $brand_white;
+        }
+
+        .header-inner {
+            height: 100%;
+            padding: 1em;
+            @include custom_transition(all, 0.7s, ease);
+
+            &.hide {
+                height: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+        }
+
+        .header-collapse,
+        .site-tagline {
+            display: none;
+        }
+        @include custom_transition(all, 0.7s, ease);
+
+        &.hide {
+            height: 0;
+            min-height: 0;
+        }
+    }
+}
+
+#main {
+    filter:blur(5px);
+    -webkit-filter:blur(5px);
+    padding: 1em 0.5em;
+
+    &.collapsed {
+        filter: blur(0px);
+        -webkit-filter: blur(0px);
+        margin-top: 4.5em;
+    }
+}
+
+#portfolio {
+    position: relative;
+
+    .portfolio-grid {
+        position: relative;
+    }
+
+    .project-col {
+        @include transition;
+
+        &:hover {
+            .project {
+                @include box-shadow;
+            }
+        }
+
+        .project-inner {
+            padding: 0.5em;
+        }
+
+        .project {
+            position: relative;
+            min-height: 15em;
+            width: 100%;
+            overflow: hidden;
+            background: rgba($brand_white, 0);
+            @include transition;
+
+            .project-name {
+                @include transition;
+                @include absoluteCenter(50%, 50%);
+                z-index: 9;
+                opacity: 0;
+                text-transform: uppercase;
+                font-size: 1.5em;
+                font-family: $header_font;
+                text-align: center;
+                color: $brand_dk_blue;
+            }
+
+            .close-project {
+                display: none;
+            }
+
+            .project-img {
+                z-index: -1;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                height: 15em;
+                width: 100%;
+                object-fit: cover;
+                object-position: top center;
+                -webkit-transform: translateX(-50%) translateY(-50%);
+                -moz-transform: translateX(-50%) translateY(-50%);
+                -ms-transform: translateX(-50%) translateY(-50%);
+                transform: translateX(-50%) translateY(-50%);
+                @include transition;
+            }
+
+            &:hover {
+                background: rgba($brand_white, 0.8);
+                cursor: pointer;
+
+                .project-name {
+                    opacity: 1;
+                }
+
+                .project-img {
+                    -webkit-transform: translateX(-50%) translateY(-50%) scale(1.2);
+                    -moz-transform: translateX(-50%) translateY(-50%) scale(1.2);
+                    -ms-transform: translateX(-50%) translateY(-50%) scale(1.2);
+                    transform: translateX(-50%) translateY(-50%) scale(1.2);
+                }
+            }
+
+            &.active {
+                background: rgba($brand_white, 0.8);
+                cursor: pointer;
+
+                .project-name {
+                    opacity: 0;
+                }
+
+                .project-img {
+                    -webkit-transform: translateX(-50%) translateY(-50%) scale(1.2);
+                    -moz-transform: translateX(-50%) translateY(-50%) scale(1.2);
+                    -ms-transform: translateX(-50%) translateY(-50%) scale(1.2);
+                    transform: translateX(-50%) translateY(-50%) scale(1.2);
+                }
+
+                .project-info {
+                    width: 100%;
+                    z-index: 10;
+                    padding: 1em;
+                }
+
+                .close-project {
+                    //display: block;
+                    position: absolute;
+                    font-size: 1.5em;
+                    top: 0.5em;
+                    right: 0.5em;
+                    z-index: 11;
+                    color: $brand_white;
+                    @include transition;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: $brand_yellow;
+                    }
+                }
+            }
+        }
+
+        .project-info {
+            position: absolute;
+            width: 0;
+            display: flex;
+            display: -webkit-flex;
+            display: -moz-flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background: rgba($brand_dk_blue,0.8);
+            color: #fff;
+            overflow: hidden;
+            @include custom_transition(width, 0.7s, ease);
+
+            a {
+                &.pure-button {
+                    border: 3px solid $brand_white;
+                    text-transform: uppercase;
+                    width: 100%;
+                    background: transparent;
+
+                    &:hover {
+                        background: $brand_white;
+                    }
+
+                    &:first-child {
+                        margin-bottom: 0.5em;
+                    }
+                }
+            }
+        }
+
+        &.active {}
+    }
+}
+//Project Page
+
+#project-body {
+    @include custom_transition(width 0.7s ease);
+
+    &.active {
+        width: 100%;
+    }
+}
+
+#project-iframe {
+    height: 50vh;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    @include custom_transition(width, height 0.7s ease);
+
+    &.active {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .iframe-overlay {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background: rgba($brand_white, 0.7);
+        color: $brand_dk_blue;
+        display: flex;
+        display: -webkit-flex;
+        display: -moz-flex;
+        justify-content: center;
+        align-items: center;
+        @include transition;
+
+        .load-iframe {
+            i {
+                font-size: 2em;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+            background: rgba($brand_dk_blue,0.7);
+            color: $brand_white;
+        }
+
+        &.hide {
+            height: 0;
+
+            .load-iframe {
+                display: none;
+            }
+        }
+    }
+
+    .iframe-buttons {
+        display: none;
+        margin-top: 0.5em;
+
+        .resize {
+            span {
+                display: none;
+
+                &.active {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    iframe {
+        display: none;
+
+        &.active {
+            display: block;
+            width: 100%;
+            height: calc(100% - 3em);
+            height: -webkit-calc(100% - 3em);
+            height: -moz-calc(100% - 3em);
+            border: 0;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+#project-slider {
+    text-align: center;
+
+    .slider {
+        max-width: 700px;
+        margin: auto;
+        .slick-prev::before {
+            font-family: FontAwesome;
+            content: "\f053";
+            font-size: 22px;
+            color: $brand_dk_blue;
+        }
+        .slick-next::before {
+            font-family: FontAwesome;
+            content: "\f054";
+            font-size: 22px;
+            color: $brand_dk_blue;
+
+        }
+    }
+}
+@include bp-medium($size-medium) {}
