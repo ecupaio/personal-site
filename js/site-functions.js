@@ -67,7 +67,9 @@ $(document).ready(function() {
     });
     $('.slider').slick({
         dots: true,
-        prevArrow: false,
-        nextArrow: false
+        autoplay: true,
+        adaptiveHeight: false
+        //prevArrow: '<i class="fa fa-chevron-left"></i>',
+        //nextArrow: '<i class="fa fa-chevron-right"></i>'
     });
 });
