@@ -40,7 +40,7 @@ sass:
 collections:
   projects:
     output: true
-    permalink: /project/:path
+    permalink: /project/:path/
 defaults:
   -
     scope:
