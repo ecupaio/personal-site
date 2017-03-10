@@ -19,8 +19,7 @@ description: Frontend Developer | Web Designer
 baseurl: "" # the subpath of your site, e.g. /blog
 url: http://edcupaioli.com # the base hostname & protocol for your site, e.g. http://example.com
 meta_img: ""
-twitter_username: jekyllrb
-github_username:  jekyll
+github_username:  ecupaio
 
 # Build settings
 markdown: kramdown
