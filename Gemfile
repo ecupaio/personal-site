@@ -24,4 +24,5 @@ group :jekyll_plugins do
    gem 'jekyll-admin', group: :jekyll_plugins
    gem "jekyll-assets"
    gem 'uglifier'
+   gem 'github-pages', group: :jekyll_plugins
 end
