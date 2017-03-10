@@ -29,7 +29,7 @@
                 {{ content }}
                 </div>
 
-                <div id="project-iframe" class="pure-u-1 pure-u-md-1-2" style="background-image: url(/min_images/{{ page.img }}); ">
+                <div id="project-iframe" class="pure-u-1 pure-u-md-1-2" style="background-image: url({{ site.github.url }}/min_images/{{ page.img }}); ">
                     <div class="iframe-overlay">
                         <div data-url="{{ page.link }}" class="load-iframe"><i class="fa fa-search"></i></div>
                     </div>
@@ -50,7 +50,7 @@
                     <div class="slider">
                         {% for img in page.img %}
                             <div>
-                                <img src="/min_images/{{ img }}"/>
+                                <img src="{{ site.github.url }}/min_images/{{ img }}"/>
                             </div>
                         {% endfor %}
                     </div>
