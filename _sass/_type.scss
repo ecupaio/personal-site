@@ -15,8 +15,7 @@ a {
 	text-decoration: none;
 	color: $theme_body_link;
 	@include transition;
-	&:hover, &:active, &:focus {
+	&:hover, &:focus {
 		color: $theme_body_link_hover;
 	}
 }
-
