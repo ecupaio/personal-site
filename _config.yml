@@ -16,7 +16,8 @@
 title: Ed Cupaioli
 email: your-email@domain.com
 description: Frontend Developer | Web Designer
-url: https://ecupaio.github.io/personal-site/ # the base hostname & protocol for your site, e.g. http://example.com
+url: https://ecupaio.github.io/personal-site # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: /personal-site
 meta_img: ""
 github_username:  ecupaio
 
@@ -38,7 +39,7 @@ sass:
 collections:
   projects:
     output: true
-    permalink: /project/:path/
+    permalink: /project/:title/
 defaults:
   -
     scope:
