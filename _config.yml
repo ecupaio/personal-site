@@ -17,7 +17,6 @@ title: Ed Cupaioli
 email: your-email@domain.com
 description: Frontend Developer | Web Designer
 url: https://ecupaio.github.io/personal-site # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: /personal-site
 meta_img: ""
 github_username:  ecupaio
 
@@ -27,7 +26,6 @@ theme: minima
 gems:
   - jekyll-feed
   - jekyll-admin
-  - jekyll-assets
 exclude:
   - Gemfile
   - Gemfile.lock
