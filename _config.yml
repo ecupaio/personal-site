@@ -19,6 +19,7 @@ description: Frontend Developer | Web Designer
 url: https://ecupaio.github.io/personal-site # the base hostname & protocol for your site, e.g. http://example.com
 meta_img: ""
 github_username:  ecupaio
+repo: "personal-site"
 
 # Build settings
 markdown: kramdown

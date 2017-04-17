@@ -19,7 +19,7 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
-    jekyll-admin (0.4.1)
+    jekyll-admin (0.4.0)
       addressable (~> 2.4)
       jekyll (~> 3.3)
       sinatra (~> 1.4)
@@ -74,7 +74,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
-  jekyll-admin
+  jekyll-admin (= 0.4.0)
   jekyll-feed (~> 0.6)
   json
   minima (~> 2.0)
