@@ -26,6 +26,7 @@ theme: minima
 gems:
   - jekyll-feed
   - jekyll-admin
+  - uglifier
 exclude:
   - Gemfile
   - Gemfile.lock

@@ -30,6 +30,7 @@ GEM
       sass (~> 3.4)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
+    json (2.0.4)
     kramdown (1.13.2)
     liquid (3.0.6)
     listen (3.0.8)
@@ -75,6 +76,7 @@ DEPENDENCIES
   jekyll
   jekyll-admin
   jekyll-feed (~> 0.6)
+  json
   minima (~> 2.0)
   uglifier
 

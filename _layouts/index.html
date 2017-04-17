@@ -29,6 +29,9 @@
         {% include footer.html %}
     </div>
     <!-- Scripts-->
-    <script src="{{ base }}/js/theme_functions.min.js"></script>
+    {% capture scripts %}
+        {% include js/theme_functions.min.js %}
+    {% endcapture %}
+    <script>{{ scripts | uglify | strip }}</script>
 </body>
 </html>
