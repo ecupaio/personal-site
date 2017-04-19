@@ -3,7 +3,8 @@ title: Democrats.org
 link: https://democrats.org
 img:
 - Democrats.png
-cms: Expression Engine
+tech:
+- Expression Engine
 ---
 
 ## Description

@@ -3,7 +3,8 @@ title: The Latest
 link: https://www.democrats.org/the-latest
 img:
 - Latest.png
-cms: Expression Engine
+tech:
+- Expression Engine
 ---
 
 ## Description

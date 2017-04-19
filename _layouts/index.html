@@ -3,11 +3,16 @@
 <head>
     {% include head.html %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    {% if page.url contains "/project" %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+    {% assign header-state = "collapsed" %}
+    {% endif %}
 </head>
 
 <body>
     <div id="wrapper">
-        <div id="header">
+        <div id="header" class="{{ header-state }}">
             <div class="header-inner">
                 <div class="site-title">
                     <h1><a href="{{ base }}/">Ed Cupaioli</a></h1>
@@ -21,14 +26,21 @@
                 </div>
             </div>
         </div>
-        <div id="main">
-            {{ content }}
+        <div id="main" class="{{ header-state }}">
+            {% if page.url contains "/project" %}
+                {% include project.html %}
+            {% else %}
+                {{ content }}
+            {% endif %}
         </div>
     </div>
     <div id="footer">
         {% include footer.html %}
     </div>
     <!-- Scripts-->
+    {% if page.url contains "/project" %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+    {% endif %}
     <script src="{{ base }}/theme_functions.min.js"></script>
 </body>
 </html>

@@ -3,7 +3,8 @@ title: Victory 2016
 link: https://victory2016.democrats.org/page/event/search_simple
 img:
 - Victory_2016.png
-cms: Blue State Digital
+tech:
+- Blue State Digital
 ---
 
 ## Description

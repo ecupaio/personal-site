@@ -30,7 +30,7 @@ $size-medium: 768px;
 $size-small: 568px; //Padding for Sections and Grids
 $gutter-padding: 0.5em 1em;
 $header-padding: 1em;
-$body-padding: 1em 3em;
+$body-padding: 0.5em 3em;
 $footer-padding: 1em;
 @import "mixins";
 @include gridGutters($gutter-padding);
@@ -293,19 +293,20 @@ $footer-padding: 1em;
     }
 }
 //Project Page
+.project-grid {
 
-#project-body {
-    @include custom_transition(width 0.7s ease);
-
-    &.active {
-        width: 100%;
-    }
+}
+$project-padding: 2em;
+#project-content {
+    padding-right: $project-padding;
 }
 
-
+@include headings() {
+    margin-top: 0;
+}
 #project-slider {
     text-align: center;
-
+    padding-left: $project-padding;
     .slider {
         max-width: 700px;
         margin: auto;
@@ -322,6 +323,9 @@ $footer-padding: 1em;
             color: $brand_dk_blue;
 
         }
+    }
+    .view-site {
+        margin-top: 0.5em;
     }
 }
 @include bp-medium($size-medium) {}

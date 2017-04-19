@@ -1,0 +1,20 @@
+<div class="main-body project-body">
+    <h1>{{ page.title }}</h1>
+    <div class="pure-g project-grid">
+        <div id="project-content" class="pure-u-1 pure-u-md-1-2">
+            {{ content }}
+        </div>
+        <div id="project-slider" class="pure-u-1 pure-u-md-1-2">
+            <div class="slider">
+                {% for img in page.img %}
+                    <div class="project-slide">
+                        <div class="slide-img">
+                            <img src="{{ base }}/min_images/{{ img }}"/>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <a class="view-site pure-button" target="_blank" href="{{ page.link }}">View Site <i class="fa fa-external-link"></i></a>
+        </div>
+    </div>
+</div>

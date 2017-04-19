@@ -3,11 +3,12 @@ title: Polling Place Locator
 link: http://pollingplaces.democrats.org
 img:
 - Polling_Places.png
-cms: Static
+tech:
+- Google Maps API
 ---
 
 ## Description
-I can easily define my time at the DNC with the Polling Place Locator. It was a legacy project handed down to me on day one and it continues to be my favorite project I constanty tinker with and learn from. This project included a [standalone website](http://pollingplaces.democrats.org/) and an [embeddable widget](http://pollingplaces.democrats.org/localwidget.html) for state parties to use. Simply put, users entered an address and got directions to their polling place and a list of Democrats running for office. 
+I can easily define my time at the DNC with the Polling Place Locator. It was a legacy project handed down to me on day one and it continues to be my favorite project I constanty tinker with and learn from. This project included a [standalone website](http://pollingplaces.democrats.org/) and an [embeddable widget](http://pollingplaces.democrats.org/localwidget.html) for state parties to use. Simply put, users entered an address and got directions to their polling place and a list of Democrats running for office.
 
 ##  Features
 Although there are no elections happening right now, you can use one of the main street addresses listed below for a full look into the Polling Place Locator:
