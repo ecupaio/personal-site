@@ -28,7 +28,6 @@ gems:
   - jekyll-feed
   - jekyll-admin
   - uglifier
-  - jekyll/minibundle
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -36,9 +35,6 @@ exclude:
 sass:
   sass_dir: _sass
   style: compressed
-minibundle:
-  minifier_commands:
-    js: node_modules/.bin/uglifyjs -  
 # Collections
 collections:
   projects:

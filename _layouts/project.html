@@ -26,7 +26,7 @@
             <div class="pure-g">
                 {% if page.link %}
                 <div id="project-body" class="pure-u-1 pure-u-md-1-2">
-                <h2>{{ page.title }}</h2>    
+                <h2>{{ page.title }}</h2>
                 {{ content }}
                 </div>
 
@@ -68,9 +68,6 @@
     </div>
     <!-- Scripts-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
-    {% capture scripts %}
-        {% include js/theme_functions.min.js %}
-    {% endcapture %}
-    <script>{{ scripts | uglify | strip }}</script>
+    <script src="{{ base }}/theme_functions.min.js"></script>
 </body>
 </html>
