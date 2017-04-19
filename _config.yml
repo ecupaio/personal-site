@@ -28,6 +28,7 @@ gems:
   - jekyll-feed
   - jekyll-admin
   - uglifier
+  - jekyll/minibundle
 exclude:
   - Gemfile
   - Gemfile.lock
