@@ -29,9 +29,16 @@
         {% include footer.html %}
     </div>
     <!-- Scripts-->
-    {% capture scripts %}
-        {% include js/theme_functions.min.js %}
-    {% endcapture %}
-    <script>{{ scripts | uglify | strip }}</script>
+    {% minibundle js %}
+        source_dir: _assets/js
+        destination_path: assets/site
+        baseurl: '{{ base }}/'
+        assets:
+          - site_functions
+          - social_links
+        attributes:
+          id: my-scripts
+          async:
+    {% endminibundle %}
 </body>
 </html>

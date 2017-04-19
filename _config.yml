@@ -36,6 +36,9 @@ exclude:
 sass:
   sass_dir: _sass
   style: compressed
+minibundle:
+  minifier_commands:
+    js: node_modules/.bin/uglifyjs -  
 # Collections
 collections:
   projects:
