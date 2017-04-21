@@ -5,7 +5,7 @@ img:
 - College_Democrats.png
 tech:
 - Jekyll
-- Google Maps Javascript API
+- Google Maps API
 - Miso Dataset
 ---
 

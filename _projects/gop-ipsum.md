@@ -5,6 +5,7 @@ img:
 - GOP_Ipsum.png
 tech:
 - Miso Dataset
+- JQuery UI
 ---
 
 Random text generator for GOP talking points
