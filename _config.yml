@@ -20,6 +20,7 @@ url: https://ecupaio.github.io/personal-site # the base hostname & protocol for 
 meta_img: ""
 github_username:  ecupaio
 repo: "personal-site"
+future: true
 
 # Build settings
 markdown: kramdown

@@ -5,6 +5,7 @@ img:
 - Victory_2016.png
 tech:
 - Blue State Digital
+date: '2016-06-08'
 ---
 
 ## Description

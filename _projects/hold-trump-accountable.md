@@ -5,6 +5,7 @@ img:
 - Hold_Trump_Accountable.png
 tech:
 - Blue State Digital
+date: '2016-12-08'
 ---
 
 ## Description

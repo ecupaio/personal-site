@@ -5,6 +5,7 @@ img:
 - Stress_Ball.png
 tech:
 - Blue State Digital
+date: '2016-09-26'
 ---
 
 ## Description

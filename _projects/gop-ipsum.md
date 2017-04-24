@@ -6,6 +6,7 @@ img:
 tech:
 - Miso Dataset
 - JQuery UI
+date: '2016-02-04'
 ---
 
 Random text generator for GOP talking points
