@@ -1,0 +1,21 @@
+<div id="resume-timeline">
+    {% assign sorted-experience = site.experience | sort:"date" | reverse %}
+    {% for experience in sorted-experience %}
+        <div class="experience-block">
+            <div class="experience-header">
+                <div class="org-logo">
+                    {{ experience.org_logo }}
+                </div>
+                <div class="experience-title">
+                    {% if experience.org %}
+                    <div class="title-org">{{ experience.org }}</div>
+                    {% endif %}
+                    <div class="title-position">{{ experience.title }}</div>
+                </div>
+            </div>
+            <div class="experience-details">
+                {{ experience.content }}
+            </div>
+        </div>
+    {% endfor %}
+</div>

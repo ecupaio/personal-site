@@ -390,4 +390,26 @@ $project-padding: 2em;
         margin-top: 0.5em;
     }
 }
+#resume-timeline {
+    padding: 1em 3em;
+    .experience-block {
+        .experience-header {
+            .org-logo {
+                height: 5em;
+                width: 5em;
+                border: 5px solid $brand_dk_blue;
+                border-radius: 50%;
+                display: inline-block;
+                margin-right: 1em;
+            }
+            .experience-title {
+                display: inline-block;
+            }
+        }
+        .experience-details {
+            display: none;
+        }
+    }
+
+}
 @include bp-medium($size-medium) {}

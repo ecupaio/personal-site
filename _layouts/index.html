@@ -3,7 +3,7 @@
 <head>
     {% include head.html %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    {% if page.url contains "/project" %}
+    {% if page.url contains "/project" or "/resume" %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
     {% assign header-state = "collapsed" %}

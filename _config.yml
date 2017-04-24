@@ -41,6 +41,8 @@ collections:
   projects:
     output: true
     permalink: /project/:title/
+  experience:
+    output: true
 defaults:
   -
     scope:
