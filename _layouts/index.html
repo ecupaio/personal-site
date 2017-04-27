@@ -2,18 +2,46 @@
 <html>
 <head>
     {% include head.html %}
+    {% if page.url == "/" %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    {% if page.url contains "/project" or "/resume" %}
+    <!-- homepage -->
+    {% else  %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
     {% assign header-state = "collapsed" %}
+
     {% endif %}
 </head>
 
 <body>
+    <div id="sidebar-menu">
+        <div class="sidebar-inner">
+            <a class="menu-item" href="{{ base }}/resume">
+                <div class="item">Resumé</div>
+                <div class="item-u"></div>
+            </a>
+            <a class="menu-item" href="{{ base }}/">
+                <div class="item">Portfolio</div>
+                <div class="item-u"></div>
+            </a>
+            <a class="menu-item" >
+                <div class="item">Contact</div>
+                <div class="item-u"></div>
+            </a>
+            <a class="menu-item" >
+                <div class="item">Blog</div>
+                <div class="item-u"></div>
+            </a>
+        </div>
+    </div>
     <div id="wrapper">
         <div id="header" class="{{ header-state }}">
             <div class="header-inner">
+                <div class="menu-toggle">
+                      <div class="toggle-line"></div>
+                      <div class="toggle-line"></div>
+                      <div class="toggle-line"></div>
+                </div>
                 <div class="site-title">
                     <h1><a href="{{ base }}/">Ed Cupaioli</a></h1>
                     <div class="site-tagline">

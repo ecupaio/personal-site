@@ -5,6 +5,11 @@ $(document).ready(function() {
             scrollTop: $(selector).offset().top - offset
         });
     }
+    //Menu toggle
+    $('.menu-toggle').click(function() {
+        $('.menu-toggle, .toggle-line').toggleClass('open');
+        $('#sidebar-menu, #wrapper').toggleClass('active');
+    });
     //Header Collapse
     var headerHeight;
     $('.header-collapse').click(function() {
@@ -55,9 +60,25 @@ $(document).ready(function() {
     }
 
     //Resume
+    function showExperience() {
+        $(this).parent().siblings().find('.experience-details').slideUp();
+        $(this).parent().siblings().removeClass('active');
+        $(this).siblings('.experience-details').slideToggle(300,function() {
+            $(this).parent().toggleClass('active');
+             $('html, body').animate({
+                 scrollTop: $(this).prev('.experience-header').offset().top - 85
+             }, 300);
+        });
+    }
+    
     $('.experience-header').click(function() {
         $(this).parent().siblings().find('.experience-details').slideUp();
-        $(this).siblings('.experience-details').slideToggle();
-
+        $(this).parent().siblings().removeClass('active');
+        $(this).siblings('.experience-details').slideToggle(300,function() {
+            $(this).parent().toggleClass('active');
+             $('html, body').animate({
+                 scrollTop: $(this).prev('.experience-header').offset().top - 85
+             }, 300);
+        });
     });
 });

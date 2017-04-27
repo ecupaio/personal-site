@@ -3,6 +3,7 @@ title: Field Organizer
 org: Organizing for America Virginia
 date: '2012-07-01 06:01:00'
 end_date: '2012-11-16'
+org_logo: 'ofa_logo.png'
 ---
 
 * Increased Obama supporter turnout by 248 votes in my polling precincts through the creation and management of neighborhood volunteer teams.

@@ -31,13 +31,93 @@ $size-small: 568px; //Padding for Sections and Grids
 $gutter-padding: 0.5em 1em;
 $header-padding: 1em;
 $body-padding: 0.5em 3em;
+$body-padding-mobile: 0.5em 0;
 $footer-padding: 1em;
 @import "mixins";
 @include gridGutters($gutter-padding);
 @include headerPadding($header-padding);
 @include bodyPadding($body-padding);
 @include footerPadding($footer-padding); //Start Theme Customizations below:
+@mixin center_flex {
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+}
 
+$menu_width: 10em;
+#sidebar-menu {
+
+    width: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: $brand_black;
+    color: $brand_white;
+
+    @include custom_transition(width 0.7s ease);
+    .sidebar-inner {
+         margin-top: 4.5em;
+         padding: 1em;
+         text-align: center;
+
+        a.menu-item {
+             font-family: $header_font;
+             text-transform: uppercase;
+             font-weight: normal;
+             color: $brand_white;
+             font-size: 1.25em;
+             margin-bottom: 0.5em;
+             display: block;
+             .item-u {
+                 height: 3px;
+                 background-color: $brand_white;
+                 transform: scale(0,1);
+                 -webkit-transform: scale(0,1);
+                 -moz-transform: scale(0,1);
+                 -ms-transform: scale(0,1);
+                 transform-origin: center center;
+                 -webkit-transform-origin: center center;
+                 -moz-transform-origin: center center;
+                 -ms-transform-origin: center center;
+                 @include transition;
+             }
+             &:hover {
+                 color: $brand_white;
+                 .item-u {
+                     height: 3px;
+                     transform: scale(1);
+                     -webkit-transform: scale(1);
+                     -moz-transform: scale(1);
+                     -ms-transform: scale(1);
+                     transform-origin: center center;
+                     -webkit-transform-origin: center center;
+                     -moz-transform-origin: center center;
+                     -ms-transform-origin: center center;
+                     @include transition;
+                 }
+             }
+         }
+    }
+
+    &.active {
+        width: $menu_width;
+
+    }
+
+}
+#wrapper {
+    margin-left: 0;
+    @include custom_transition(margin 0.7s ease);
+    &.active {
+        margin-left: $menu_width;
+    }
+}
 #header {
     width: 100%;
     min-height: 15em;
@@ -54,25 +134,23 @@ $footer-padding: 1em;
         height: 100%;
         max-height: 100vh;
         padding: 3em 1em 1em;
-        display: flex;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        align-items: center;
-        justify-content: center;
+        display: block;
 
         h1 {
             margin: 0;
         }
 
-        .site-title {
-            h1 {
-                text-transform: uppercase;
-            }
+        .menu-toggle {
+            display: none;
+        }
 
+        .site-title {
+            text-transform: uppercase;
             .site-tagline {
-                text-transform: lowercase;
+                h2 {
+                    font-weight: normal;
+                }
+
             }
         }
 
@@ -84,6 +162,13 @@ $footer-padding: 1em;
             -webkit-transform: translateX(-50%);
             -moz-transform: translateX(-50%);
             font-size: 3em;
+            display: flex;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            align-items: center;
+            justify-content: center;
         }
     }
 
@@ -108,12 +193,46 @@ $footer-padding: 1em;
         .header-inner {
             height: 100%;
             padding: 1em;
-            @include custom_transition(all, 0.7s, ease);
+            @include custom_transition(height, 0.7s, ease);
 
             &.hide {
                 height: 0;
                 padding: 0;
                 overflow: hidden;
+            }
+            .menu-toggle {
+                display: block;
+                width: 2.5em;
+                padding: 0.5em 0.25em;
+                display: inline-block;
+                float: left;
+                &:hover {
+                    cursor: pointer;
+                }
+
+                .toggle-line {
+                    width: 100%;
+                    background-color: $brand_white;
+                    height: 0.25rem;
+                    margin: 0.25em 0;
+                    @include transition;
+                    &.open {
+                        &:nth-child(2) {
+                            transform: scale(0);
+                            -webkit-transform-origin: center center;
+                            -moz-transform-origin: center center;
+                            transform-origin: center center;
+                        }
+
+                        &:nth-child(1) {
+                            transform: translate(0, 0.5rem) rotate(45deg);
+                        }
+
+                        &:nth-child(3) {
+                            transform: translate(0, -0.5rem) rotate(-45deg);
+                        }
+                    }
+                }
             }
         }
 
@@ -293,14 +412,14 @@ $footer-padding: 1em;
     }
 }
 //Project Page
-.project-grid {
-
-}
+.project-grid {}
 $project-padding: 2em;
+
 #project-content {
     padding-right: $project-padding;
+
     .tech-grid {
-        &>div {
+        & > div {
             padding: 1em 2em 1em 0;
             display: flex;
             display: -webkit-flex;
@@ -309,12 +428,14 @@ $project-padding: 2em;
             justify-content: center;
             align-items: center;
         }
+
         .tech-logo {
             position: relative;
             overflow: hidden;
-            min-height: 5em;
+            height: 5em;
             padding: 1em;
             text-align: center;
+
             .logo-overlay {
                 position: absolute;
                 top: 0;
@@ -322,18 +443,21 @@ $project-padding: 2em;
                 padding: 0.5em;
                 width: 100%;
                 height: 100%;
-                transform: translateY(-100%);
-                -webkit-transform: translateY(-100%);
-                -moz-transform: translateY(-100%);
+                font-weight: bold;
+                white-space: normal;
+                display: flex;
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                justify-content: center;
+                align-items: center;
+                transform: translateY(-101%);
+                -webkit-transform: translateY(-101%);
+                -moz-transform: translateY(-101%);
                 background: rgba($brand_dk_blue,0.7);
                 @include transition;
+
                 .tech-label {
-                    position: absolute;
-                    top: 50%;
-                    left: 0;
-                    text-align: center;
-                    width: 100%;
-                    transform: translate(-0.5em,-50%);
                     color: $brand_white;
                 }
             }
@@ -341,8 +465,12 @@ $project-padding: 2em;
             .logo-img {
                 width: 100%;
                 height: auto;
-
+                @include bp-medium($size-medium) {
+                    width: auto;
+                    height: 100%;
+                }
             }
+
             &:hover {
                 .logo-overlay {
                     transform: translateY(0%);
@@ -353,15 +481,15 @@ $project-padding: 2em;
         }
     }
 }
-
 @include headings() {
     margin-top: 0;
 }
+
 #project-slider {
     text-align: center;
     padding-left: $project-padding;
+
     .project-slide {
-        height: 400px;
         .slide-img {
             img {
                 width: 100%;
@@ -369,47 +497,114 @@ $project-padding: 2em;
             }
         }
     }
+
     .slider {
-        max-width: 700px;
         margin: auto;
+
         .slick-prev::before {
             font-family: FontAwesome;
             content: "\f053";
             font-size: 22px;
             color: $brand_dk_blue;
         }
+
         .slick-next::before {
             font-family: FontAwesome;
             content: "\f054";
             font-size: 22px;
             color: $brand_dk_blue;
-
         }
     }
+
     .view-site {
-        margin-top: 0.5em;
+        margin-top: 2em;
     }
 }
+
 #resume-timeline {
-    padding: 1em 3em;
+
+    @include bp-medium($size-medium) {
+        padding: 1em;
+    }
+
     .experience-block {
+        background: $brand_white;
+        padding: 1em 0;
+
+        &.active,
+        &:hover {
+            cursor: pointer;
+
+            .experience-header {
+                .block-border {
+                    width: 100%;
+                }
+            }
+        }
+
         .experience-header {
+            position: relative;
+            padding: 1em 0;
+            @include bp-medium($size-medium) {
+                text-align: center;
+            }
+            & > div {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
             .org-logo {
                 height: 5em;
                 width: 5em;
-                border: 5px solid $brand_dk_blue;
-                border-radius: 50%;
-                display: inline-block;
                 margin-right: 1em;
+                overflow: hidden;
+
+                img {
+                    width: auto;
+                    height: 100%;
+                }
+                @include bp-medium($size-medium) {
+                    margin-bottom: 1em;
+                    width: 100%;
+                }
             }
+
             .experience-title {
-                display: inline-block;
+                .title-position {
+                    font-family: $header_font;
+                    font-size: 1.5em;
+                    font-weight: bold;
+                    color: $brand_dk_blue;
+                    text-transform: uppercase;
+                }
+            }
+
+            .block-border {
+                width: 0;
+                height: 0.5em;
+                left: 0;
+                bottom: 0;
+                position: absolute;
+                background: $brand_dk_blue;
+                @include transition;
             }
         }
+
         .experience-details {
             display: none;
+            padding: 1em;
+            overflow: hidden;
+
+            ul {
+                margin: 0;
+
+                li {
+                    padding: 0.5em;
+                }
+            }
         }
     }
-
 }
-@include bp-medium($size-medium) {}
+#paper-resume {
+    margin-top: 1em;
+}

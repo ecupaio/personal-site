@@ -2,6 +2,7 @@
 title: Frontend Developer
 org: Democratic National Committee
 date: '2015-12-02 02:21:42'
+org_logo: 'dnc_logo.png'
 ---
 
 * Built and maintained a wide range of websites, microsites, and frontend applications for the purpose of electing Democrats and engaging constituents.

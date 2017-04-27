@@ -5,10 +5,10 @@ body {
 	padding:0;
 	height:100%;
 	width: 100%;
-	
+
 }
 * {
-	@include border-box; 
+	@include border-box;
 }
 #wrapper {
 	min-height: 100%;
@@ -62,15 +62,16 @@ body {
 //Footer
 #footer {
 	@include footer_colors;
-	text-align: center;
+	
 	clear: both;
 	width: 100%;
+
 	a {
 	    color: $copyright_link;
 	    text-decoration: none;
 	    &:hover {
 	      color: $copyright_link_hover;
-	    } 
+	    }
   	}
 	.copyright-footer {
 		border: 1px solid $theme_footer_txt;
