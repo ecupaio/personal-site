@@ -1,0 +1,37 @@
+<div class="contact-form-body">
+    <div class="contact-title">
+        <h1>Contact</h1>
+        <p>Use the form below to shoot me a line via email.</p>
+    </div>
+    <form class="signup-form" action="https://my.democrats.org/page/s/come-together-and-fight-back-tour" method="POST">
+        <div class="form-input">
+                <!-- Name -->
+                <input class="firstName" type="text" name="firstname" placeholder="First Name">
+        </div>
+        <div class="form-input">
+
+                <!-- Email -->
+                <input class="email" type="email" name="email" placeholder="Email address" required id="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,11}">
+
+        </div>
+        <div class="form-input">
+
+                <!-- Text -->
+                <textarea class="text-area"></textarea>
+
+        </div>
+        <div class="form-input">
+                <!-- Submit -->
+                <input class="submit pure-button" type="submit" class="pure-button" name="submit" value="Submit" onclick="ga('send', 'event', 'Footer', 'Click', 'Sign Up');">
+        </div>
+    </form>
+    <div class="pure-u-1">
+        <p>If you don't feel like using the form, feel free to contact me via phone or email</p>
+        <div class="contact-icon" data-contact="469.867.3438">
+            <i class="fa fa-phone"></i>
+        </div>
+        <div class="contact-icon" data-contact="ecupaio@gmail.com">
+            <i class="fa fa-envelope"></i>
+        </div>
+    </div>
+</div>

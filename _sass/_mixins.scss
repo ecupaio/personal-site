@@ -101,13 +101,20 @@ $transition_type: all .7s ease;
 }
 //Form Input
 @mixin input {
-	input {
-	    width: 100%;
-	    line-height: 1;
-	    box-sizing: border-box;
-	    -moz-box-sizing: border-box;
-	    -webkit-box-sizing: border-box;
-	    height: 2.5em;
+	input,textarea {
+		&:not([type=submit]):not([type=file]) {
+			width: 100%;
+			padding: 0.5em;
+			border: none;
+			-webkit-appearance: none;
+		}
+
+        &.submit {
+            white-space: normal;
+        }
+    }
+	textarea {
+		min-height: 10em;
 	}
 }
 //Breakpoints for mobile
@@ -164,6 +171,7 @@ Either pass the px number through individually, or set it as a variable */
 	#footer {
 		padding: $footer-padding;
 	}
+
 }
 @mixin absoluteCenter($top,$left) {
 	position: absolute;

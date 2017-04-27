@@ -8,7 +8,7 @@ $(document).ready(function() {
     //Menu toggle
     $('.menu-toggle').click(function() {
         $('.menu-toggle, .toggle-line').toggleClass('open');
-        $('#sidebar-menu, #wrapper').toggleClass('active');
+        $('#sidebar-menu, #wrapper, #footer').toggleClass('active');
     });
     //Header Collapse
     var headerHeight;
@@ -70,7 +70,7 @@ $(document).ready(function() {
              }, 300);
         });
     }
-    
+
     $('.experience-header').click(function() {
         $(this).parent().siblings().find('.experience-details').slideUp();
         $(this).parent().siblings().removeClass('active');
@@ -80,5 +80,14 @@ $(document).ready(function() {
                  scrollTop: $(this).prev('.experience-header').offset().top - 85
              }, 300);
         });
+    });
+    //Contact Form
+    $('.contact-link').click(function() {
+        $('.menu-toggle, .toggle-line').removeClass('open');
+        $('#sidebar-menu, #wrapper, #footer').removeClass('active');
+        $('#contact').addClass('active');
+    });
+    $('.contact-close').click(function () {
+        $('#contact').removeClass('active');
     });
 });

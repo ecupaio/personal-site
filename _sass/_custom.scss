@@ -13,26 +13,26 @@ $theme_body: #333;
 $theme_body_link: $brand_dk_blue;
 $theme_body_link_hover: darken($brand_dk_blue,20%);
 $theme_heading: $brand_dk_blue; //Footer Colors
-$theme_footer_bg: $brand_white;
-$theme_footer_txt: $brand_dk_blue;
+$theme_footer_bg: $brand_black;
+$theme_footer_txt: $brand_white;
 $copyright_link: $brand_dk_blue;
 $copyright_link_hover: darken($brand_dk_blue,20%); //Header Colors
 $theme_header_bg: rgba($brand_white, 0.8);
 $theme_header_txt: $brand_dk_blue; //Button Colors
 $theme_button_bg: $brand_dk_blue;
 $theme_button_txt: $brand_white; //BSD Form Colors
-$theme_form_bg: $brand_red;
+$theme_form_bg: $brand_black;
 $theme_form_txt: $brand_black;
-$theme_form_btn_bg: $brand_black;
+$theme_form_btn_bg: $brand_dk_blue;
 $theme_form_btn_txt: $brand_white; //Mobile Breakpoints
-$size-largee: 1024px;
+$size-large: 1024px;
 $size-medium: 768px;
 $size-small: 568px; //Padding for Sections and Grids
 $gutter-padding: 0.5em 1em;
 $header-padding: 1em;
 $body-padding: 0.5em 3em;
 $body-padding-mobile: 0.5em 0;
-$footer-padding: 1em;
+$footer-padding: 1em 3em;
 @import "mixins";
 @include gridGutters($gutter-padding);
 @include headerPadding($header-padding);
@@ -111,7 +111,7 @@ $menu_width: 10em;
     }
 
 }
-#wrapper {
+#wrapper,#footer {
     margin-left: 0;
     @include custom_transition(margin 0.7s ease);
     &.active {
@@ -219,17 +219,27 @@ $menu_width: 10em;
                     &.open {
                         &:nth-child(2) {
                             transform: scale(0);
+                            -webkit-transform: scale(0);
+                            -moz-transform: scale(0);
+                            -ms-transform: scale(0);
+                            transform-origin: center center;
                             -webkit-transform-origin: center center;
                             -moz-transform-origin: center center;
-                            transform-origin: center center;
+                            -ms-transform-origin: center center;
                         }
 
                         &:nth-child(1) {
                             transform: translate(0, 0.5rem) rotate(45deg);
+                            -webkit-transform: translate(0, 0.5rem) rotate(45deg);
+                            -moz-transform: translate(0, 0.5rem) rotate(45deg);
+                            -ms-transform: translate(0, 0.5rem) rotate(45deg);
                         }
 
                         &:nth-child(3) {
                             transform: translate(0, -0.5rem) rotate(-45deg);
+                            -webkit-transform: translate(0, -0.5rem) rotate(-45deg);
+                            -moz-transform: translate(0, -0.5rem) rotate(-45deg);
+                            -ms-transform: translate(0, -0.5rem) rotate(-45deg);
                         }
                     }
                 }
@@ -607,4 +617,54 @@ $project-padding: 2em;
 }
 #paper-resume {
     margin-top: 1em;
+}
+#contact {
+    background: rgba($brand_white,0.7);
+    position: absolute;
+    top: -4.5em;
+
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    overflow: hidden;
+    color: $brand_white;
+    padding: 1em 2em;
+    z-index: 11;
+    text-align: right;
+    @include custom_transition(transform 0.7s ease);
+    &.active {
+        transform: translateX(0);
+
+    }
+    .contact-close {
+        color: $brand_black;
+        display: inline-block;
+        margin-bottom: 1em;
+        font-size: 1.25em;
+    }
+    .contact-form-body {
+        text-align: left;
+        background: $theme_form_bg;
+        padding: 1em;
+        margin-top: 1.5em;
+        width: 33%;
+        display: block;
+        margin: auto;
+        h1 {
+            color: $brand_white;
+        }
+        @include bp-medium($size-medium) {
+            width: 100%;
+        }
+        .signup-form {
+            padding: 0;
+            .form-input {
+                padding: 1em 0;
+            }
+        }
+    }
+
+}
+#footer {
+
 }

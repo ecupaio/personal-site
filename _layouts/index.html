@@ -24,7 +24,7 @@
                 <div class="item">Portfolio</div>
                 <div class="item-u"></div>
             </a>
-            <a class="menu-item" >
+            <a class="menu-item contact-link">
                 <div class="item">Contact</div>
                 <div class="item-u"></div>
             </a>
@@ -35,6 +35,10 @@
         </div>
     </div>
     <div id="wrapper">
+        <div id="contact">
+            <div class="contact-close"><i class="fa fa-times"></i></div>
+            {% include form.html %}
+        </div>
         <div id="header" class="{{ header-state }}">
             <div class="header-inner">
                 <div class="menu-toggle">
