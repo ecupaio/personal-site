@@ -83,6 +83,7 @@ $(document).ready(function() {
     });
     //Contact Form
     $('.contact-link').click(function() {
+        console.log('clicked contact');
         $('.menu-toggle, .toggle-line').removeClass('open');
         $('#sidebar-menu, #wrapper, #footer').removeClass('active');
         $('#contact').addClass('active');
@@ -90,4 +91,7 @@ $(document).ready(function() {
     $('.contact-close').click(function () {
         $('#contact').removeClass('active');
     });
+    if (window.location.href.indexOf('/contact') > -1) {
+        $('#contact').addClass('active');
+    }
 });
