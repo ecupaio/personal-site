@@ -47,10 +47,9 @@ $footer-padding: 1em 3em;
     align-items: center;
     justify-content: center;
 }
-
 $menu_width: 10em;
-#sidebar-menu {
 
+#sidebar-menu {
     width: 0;
     overflow: hidden;
     position: fixed;
@@ -59,65 +58,69 @@ $menu_width: 10em;
     height: 100%;
     background: $brand_black;
     color: $brand_white;
-
     @include custom_transition(width 0.7s ease);
+
     .sidebar-inner {
-         margin-top: 4.5em;
-         padding: 1em;
-         text-align: center;
+        margin-top: 4.5em;
+        padding: 1em;
+        text-align: center;
 
         a.menu-item {
-             font-family: $header_font;
-             text-transform: uppercase;
-             font-weight: normal;
-             color: $brand_white;
-             font-size: 1.25em;
-             margin-bottom: 0.5em;
-             display: block;
-             .item-u {
-                 height: 3px;
-                 background-color: $brand_white;
-                 transform: scale(0,1);
-                 -webkit-transform: scale(0,1);
-                 -moz-transform: scale(0,1);
-                 -ms-transform: scale(0,1);
-                 transform-origin: center center;
-                 -webkit-transform-origin: center center;
-                 -moz-transform-origin: center center;
-                 -ms-transform-origin: center center;
-                 @include transition;
-             }
-             &:hover {
-                 color: $brand_white;
-                 .item-u {
-                     height: 3px;
-                     transform: scale(1);
-                     -webkit-transform: scale(1);
-                     -moz-transform: scale(1);
-                     -ms-transform: scale(1);
-                     transform-origin: center center;
-                     -webkit-transform-origin: center center;
-                     -moz-transform-origin: center center;
-                     -ms-transform-origin: center center;
-                     @include transition;
-                 }
-             }
-         }
+            font-family: $header_font;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: $brand_white;
+            font-size: 1.25em;
+            margin-bottom: 0.5em;
+            display: block;
+
+            .item-u {
+                height: 3px;
+                background-color: $brand_white;
+                transform: scale(0,1);
+                -webkit-transform: scale(0,1);
+                -moz-transform: scale(0,1);
+                -ms-transform: scale(0,1);
+                transform-origin: center center;
+                -webkit-transform-origin: center center;
+                -moz-transform-origin: center center;
+                -ms-transform-origin: center center;
+                @include transition;
+            }
+
+            &:hover {
+                color: $brand_white;
+                cursor: pointer;
+                .item-u {
+                    height: 3px;
+                    transform: scale(1);
+                    -webkit-transform: scale(1);
+                    -moz-transform: scale(1);
+                    -ms-transform: scale(1);
+                    transform-origin: center center;
+                    -webkit-transform-origin: center center;
+                    -moz-transform-origin: center center;
+                    -ms-transform-origin: center center;
+                    @include transition;
+                }
+            }
+        }
     }
 
     &.active {
         width: $menu_width;
-
     }
-
 }
-#wrapper,#footer {
+
+#wrapper {
     margin-left: 0;
     @include custom_transition(margin 0.7s ease);
+
     &.active {
         margin-left: $menu_width;
     }
 }
+
 #header {
     width: 100%;
     min-height: 15em;
@@ -126,7 +129,7 @@ $menu_width: 10em;
     z-index: 10;
     top: 0;
     left: 0;
-    @include custom_transition(all, 0.7s, ease);
+    @include custom_transition(all 0.7s ease);
 
     .header-inner {
         position: relative;
@@ -146,11 +149,11 @@ $menu_width: 10em;
 
         .site-title {
             text-transform: uppercase;
+
             .site-tagline {
                 h2 {
                     font-weight: normal;
                 }
-
             }
         }
 
@@ -193,19 +196,21 @@ $menu_width: 10em;
         .header-inner {
             height: 100%;
             padding: 1em;
-            @include custom_transition(height, 0.7s, ease);
+            @include custom_transition(height 0.7s ease);
 
             &.hide {
                 height: 0;
                 padding: 0;
                 overflow: hidden;
             }
+
             .menu-toggle {
                 display: block;
                 width: 2.5em;
                 padding: 0.5em 0.25em;
                 display: inline-block;
                 float: left;
+
                 &:hover {
                     cursor: pointer;
                 }
@@ -216,6 +221,7 @@ $menu_width: 10em;
                     height: 0.25rem;
                     margin: 0.25em 0;
                     @include transition;
+
                     &.open {
                         &:nth-child(2) {
                             transform: scale(0);
@@ -250,7 +256,7 @@ $menu_width: 10em;
         .site-tagline {
             display: none;
         }
-        @include custom_transition(all, 0.7s, ease);
+        @include custom_transition(all 0.7s ease);
 
         &.hide {
             height: 0;
@@ -346,6 +352,36 @@ $menu_width: 10em;
                     transform: translateX(-50%) translateY(-50%) scale(1.2);
                 }
             }
+            .project-info {
+                position: absolute;
+                width: 0;
+                display: flex;
+                display: -webkit-flex;
+                display: -moz-flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                background: rgba($brand_dk_blue,0.8);
+                color: #fff;
+                overflow: hidden;
+                @include custom_transition(width 0.7s ease);
+                a {
+                    &.pure-button {
+                        border: 3px solid $brand_white;
+                        text-transform: uppercase;
+                        width: 100%;
+                        background: transparent;
+
+                        &:hover {
+                            background: $brand_white;
+                        }
+
+                        &:first-child {
+                            margin-bottom: 0.5em;
+                        }
+                    }
+                }
+            }
 
             &.active {
                 background: rgba($brand_white, 0.8);
@@ -386,42 +422,13 @@ $menu_width: 10em;
             }
         }
 
-        .project-info {
-            position: absolute;
-            width: 0;
-            display: flex;
-            display: -webkit-flex;
-            display: -moz-flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            background: rgba($brand_dk_blue,0.8);
-            color: #fff;
-            overflow: hidden;
-            @include custom_transition(width, 0.7s, ease);
 
-            a {
-                &.pure-button {
-                    border: 3px solid $brand_white;
-                    text-transform: uppercase;
-                    width: 100%;
-                    background: transparent;
-
-                    &:hover {
-                        background: $brand_white;
-                    }
-
-                    &:first-child {
-                        margin-bottom: 0.5em;
-                    }
-                }
-            }
-        }
 
         &.active {}
     }
 }
 //Project Page
+
 .project-grid {}
 $project-padding: 2em;
 
@@ -445,7 +452,8 @@ $project-padding: 2em;
             height: 5em;
             padding: 1em;
             text-align: center;
-
+            display: inline-block;
+            margin-right: 1em;
             .logo-overlay {
                 position: absolute;
                 top: 0;
@@ -473,12 +481,8 @@ $project-padding: 2em;
             }
 
             .logo-img {
-                width: 100%;
-                height: auto;
-                @include bp-medium($size-medium) {
-                    width: auto;
-                    height: 100%;
-                }
+                width: auto;
+                height: 100%;
             }
 
             &:hover {
@@ -532,7 +536,6 @@ $project-padding: 2em;
 }
 
 #resume-timeline {
-
     @include bp-medium($size-medium) {
         padding: 1em;
     }
@@ -558,6 +561,7 @@ $project-padding: 2em;
             @include bp-medium($size-medium) {
                 text-align: center;
             }
+
             & > div {
                 display: inline-block;
                 vertical-align: middle;
@@ -615,36 +619,35 @@ $project-padding: 2em;
         }
     }
 }
+
 #paper-resume {
     margin-top: 1em;
 }
+
 #contact {
     background: rgba($brand_white,0.7);
     position: absolute;
     top: -4.5em;
     width: 100%;
-    height: 100%;
+    height: calc(100% + 4.5em);
+    height: -webkit-calc(100% + 4.5em);
+    height: -moz-calc(100% + 4.5em);
+    height: -ms-calc(100% + 4.5em);
     transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
     overflow: hidden;
     color: $brand_white;
     padding: 1em 2em;
     z-index: 11;
     text-align: right;
     @include custom_transition(transform 0.7s ease);
+
     &.active {
         transform: translateX(0);
+    }
 
-    }
-    .contact-close {
-        color: $brand_white;
-        display: inline-block;
-        vertical-align: middle;
-        font-size: 1.25em;
-    }
-    .contact-title {
-        display: inline-block;
-        vertical-align: middle;
-    }
     .contact-form-body {
         text-align: left;
         background: $theme_form_bg;
@@ -653,22 +656,104 @@ $project-padding: 2em;
         width: 33%;
         display: block;
         margin: auto;
-        h1 {
+        overflow: hidden;
+
+        @include headings() {
             color: $brand_white;
-            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+
+        .contact-title {
+            .contact-close {
+                color: $brand_white;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 1.25em;
+                float: right;
+            }
+
+            h1 {
+
+                text-transform: uppercase;
+                display: inline-block;
+            }
         }
         @include bp-large($size-large) {
             width: 100%;
+        }
+        .form-inner {
+            position: relative;
+            overflow: hidden;
         }
         .signup-form {
             padding: 0;
             .form-input {
                 padding: 1em 0;
+                color: $brand_black;
+            }
+            .submit {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .contact-alt {
+            text-align: center;
+
+            p {
+                text-align: left;
+            }
+
+        }
+        .form-success {
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $brand_black;
+            padding-top: 1em;
+            transform: translateY(-100%);
+            &.active {
+                @include transition;
+                transform: translateY(0);
+
+            }
+        }
+        .contact-info {
+            margin-top: 1em;
+            .contact-icon {
+                display: inline-block;
+                font-size: 2em;
+                vertical-align: middle;
+                margin-right: 0.5em;
+            }
+            &>.pure-button {
+                margin: 1em 0;
+                display: block;
+            }
+            .contact {
+                display: inline-block;
+                vertical-align: middle;
             }
         }
     }
-
 }
-#footer {
 
+#footer {
+    z-index: 10;
+    position: relative;
+    .contact-link {
+        background-image: linear-gradient(to right, rgba($brand_white,0) 50%, $brand_white 50%);
+        background-position: 0 0;
+        background-size: 202%;
+        display: inline;
+        @include transition;
+        &:hover {
+            cursor: pointer;
+            color: $brand_black;
+            background-position: -100% 0;
+
+        }
+
+    }
 }

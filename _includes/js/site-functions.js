@@ -85,13 +85,41 @@ $(document).ready(function() {
     $('.contact-link').click(function() {
         console.log('clicked contact');
         $('.menu-toggle, .toggle-line').removeClass('open');
-        $('#sidebar-menu, #wrapper, #footer').removeClass('active');
+        $('#sidebar-menu, #wrapper').removeClass('active');
         $('#contact').addClass('active');
+        scrollTop('body,html',0);
     });
     $('.contact-close').click(function () {
-        $('#contact').removeClass('active');
+        $('#contact, .form-success').removeClass('active');
     });
+    $('.contact-icon').click(function() {
+        var contactLink = $(this).data('link');
+        $('.contact-info').slideDown();
+        $('.'+contactLink).addClass('active');
+    });
+
     if (window.location.href.indexOf('/contact') > -1) {
         $('#contact').addClass('active');
+        scrollTop('body,html',0);
     }
+    $('#contact-form').submit(function(e) {
+        e.preventDefault();
+        var contactName = $('.contact-name').val();
+        var contactEmail = $('.contact-email').val();
+        var contactText = $('.text-area').val();
+        $.ajax({
+               url: "https://docs.google.com/forms/d/e/1FAIpQLSert_INVrXXAUFzqnp9DFX89b6b78HZGrtN35KwFCE4u3SBdw/formResponse",
+               data: {'entry.629291182' : contactName, 'entry.1897827418' : contactEmail, 'entry.501068258' : contactText},
+               type: "POST",
+               dataType: "json",
+               statusCode: {
+                0: function() {
+                    $('.form-success').addClass('active');
+
+                }
+            }
+           });
+    });
+
+
 });

@@ -11,9 +11,9 @@
                     <div class="project-info">
                         <div class="close-project"><i class="fa fa-times"></i></div>
                         <div class="info-inner">
-                            <a class="pure-button info" href="{{ base }}{{ project.url }}">more info</a>
+                            <a class="pure-button info" href="{{ base }}{{ project.url }}" onclick="ga('send', 'event', 'Portfolio', 'Click', 'More Info');">more info</a>
                             {% if project.link %}
-                            <a class="pure-button see-site" href="{{ project.link }}" target="_blank">See Site</a>
+                            <a class="pure-button see-site" href="{{ project.link }}" target="_blank" onclick="ga('send', 'event', 'Portfolio', 'Click', 'View Site');">See Site</a>
                             {% endif %}
                         </div>
                     </div>
