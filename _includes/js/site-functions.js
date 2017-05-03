@@ -17,28 +17,16 @@ $(document).ready(function() {
 
     });
 
-    $(window).on('wheel', function(e) {
-    	var delta = e.originalEvent.deltaY;
 
-    	if (delta > 0) {
+    var t = 0;
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 80 && t < $(this).scrollTop() ) {
             $('#header, .header-inner').addClass('hide');
         } else {
             $('#header, .header-inner').removeClass('hide');
         }
-    });
-    var scrollLimit = 15;
-    $(window).scroll( function(){
 
-        var userScroll = $(this).scrollTop();
-        console.log(userScroll);
-        if (userScroll > scrollLimit) {
-            //Down
-            //$('#header, .header-inner').addClass('hide');
-        } else if (userScroll < scrollLimit) {
-            //Up
-            //$('#header, .header-inner').removeClass('hide');
-        }
-
+        t = $(this).scrollTop();
     });
     //Project Toggle
     $('.project-col').click(function() {
