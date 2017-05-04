@@ -115,7 +115,7 @@ $menu_width: 10em;
 #wrapper {
     margin-left: 0;
     @include custom_transition(margin 0.7s ease);
-
+    overflow: hidden;
     &.active {
         margin-left: $menu_width;
     }
@@ -627,12 +627,10 @@ $project-padding: 2em;
 #contact {
     background: rgba($brand_white,0.7);
     position: absolute;
-    top: -4.5em;
+    top: 0;
     width: 100%;
-    height: calc(100% + 4.5em);
-    height: -webkit-calc(100% + 4.5em);
-    height: -moz-calc(100% + 4.5em);
-    height: -ms-calc(100% + 4.5em);
+    height: 100%;
+
     transform: translateX(100%);
     -webkit-transform: translateX(100%);
     -moz-transform: translateX(100%);
