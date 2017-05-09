@@ -22,13 +22,13 @@
         </div>
         {% endfor %}
         <div class="pure-u-1">
-            Show More
+            <div class="pure-button show-more">Show More</div>
         </div>
         {% for project in sorted-projects offset: 9 %}
-        <div class="pure-u-1 pure-u-md-1-3 project-col">
+        <div class="pure-u-1 pure-u-md-1-3 project-col not-loaded">
             <div class="project-inner">
                 <div class="project ">
-                    <img src="{{ base }}/min_images/{{ project.img[0] }}" class="project-img">
+                    <img data-project-img="{{ base }}/min_images/{{ project.img[0] }}" src="" class="project-img">
                     <div class="project-name">{{ project.title }}</div>
                     <div class="project-info">
                         <div class="close-project"><i class="fa fa-times"></i></div>

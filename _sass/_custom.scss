@@ -292,8 +292,15 @@ $menu_width: 10em;
     }
 
     .project-col {
+        height: 100%;
+        opacity: 1;
         @include transition;
 
+        &.not-loaded {
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
         &:hover {
             .project {
                 @include box-shadow;

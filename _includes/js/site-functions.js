@@ -30,7 +30,18 @@ $(document).ready(function() {
         $('#header, #main').addClass('collapsed');
     });
 
+    $('.show-more').click(function() {
 
+        $('.not-loaded .project img').each(function() {
+            var projectImg = $(this).data('project-img');
+            $(this).attr('src',projectImg);
+
+        });
+        scrollTop('.show-more',0);
+        $(this).parent().hide();
+        $('.project-col.not-loaded').removeClass('not-loaded');
+
+    });
     var t = 0;
     $(window).scroll(function () {
         if ($(this).scrollTop() > 80 && t < $(this).scrollTop() ) {
