@@ -12,11 +12,22 @@ $(document).ready(function() {
         $('#sidebar-menu, #wrapper, #footer').toggleClass('active');
     });
     //Header Collapse
-    var headerHeight;
-    $( "#header" ).draggable({ axis: "y" });
+    var headerTop = $('#header').offset().top;
+
+    // $( "#header" ).draggable({
+    //     axis: "y",
+    //     stop: function(event, ui) {
+    //         var dragTop = $(this).offset().top;
+    //         if  (headerTop - dragTop >= 100 ) {
+    //             $('#header').attr("style","");
+    //             $('#header, #main').addClass('collapsed');
+    //         }
+    //         console.log(dragTop);
+    //
+    //     }
+    // });
     $('.enter').click(function() {
         $('#header, #main').addClass('collapsed');
-
     });
 
 
