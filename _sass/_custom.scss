@@ -31,7 +31,7 @@ $size-small: 568px; //Padding for Sections and Grids
 $gutter-padding: 0.5em 1em;
 $header-padding: 1em;
 $body-padding: 0.5em 3em;
-$body-padding-mobile: 0.5em 0;
+$body-padding-mobile: 0.5em 1em;
 $footer-padding: 1em 3em;
 @import "mixins";
 @include gridGutters($gutter-padding);
@@ -158,20 +158,21 @@ $menu_width: 10em;
         }
 
         .header-collapse {
-            position: absolute;
+            position: fixed;
             bottom: 0;
             left: 50%;
-            transform: translateX(-50%);
-            -webkit-transform: translateX(-50%);
-            -moz-transform: translateX(-50%);
+            display: inline-block;
             font-size: 3em;
-            display: flex;
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            align-items: center;
-            justify-content: center;
+
+        }
+        .enter.pure-button {
+            background-color: transparent;
+            color: $brand_dk_blue;
+            border: 3px $brand_dk_blue solid;
+            &:hover {
+                color: $brand_white;
+                background-color: $brand_dk_blue;
+            }
         }
     }
 
@@ -280,6 +281,7 @@ $menu_width: 10em;
         -webkit-filter: blur(0px);
         margin-top: 4.5em;
     }
+
 }
 
 #portfolio {
@@ -433,12 +435,27 @@ $menu_width: 10em;
     }
 }
 //Project Page
-
-.project-grid {}
 $project-padding: 2em;
 
+.project-grid {
+    &> div:first-child {
+        padding: 1em $project-padding 1em 0;
+    }
+    & > div:nth-child(2) {
+        padding: 1em 0 1em $project-padding;
+    }
+    @include bp-medium($size-medium) {
+        &> div:first-child, & > div:nth-child(2) {
+            padding: 1em 0;
+        }
+    }
+
+
+}
+
+
 #project-content {
-    padding-right: $project-padding;
+
 
     .tech-grid {
         & > div {
@@ -507,7 +524,7 @@ $project-padding: 2em;
 
 #project-slider {
     text-align: center;
-    padding-left: $project-padding;
+
 
     .project-slide {
         .slide-img {
@@ -520,7 +537,9 @@ $project-padding: 2em;
 
     .slider {
         margin: auto;
-
+            width: calc(100% - 50px);
+            width: -webkit-calc(100% - 50px);
+            width: -moz-calc(100% - 50px);
         .slick-prev::before {
             font-family: FontAwesome;
             content: "\f053";

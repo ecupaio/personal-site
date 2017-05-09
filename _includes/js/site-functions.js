@@ -6,13 +6,15 @@ $(document).ready(function() {
         });
     }
     //Menu toggle
+
     $('.menu-toggle').click(function() {
         $('.menu-toggle, .toggle-line').toggleClass('open');
         $('#sidebar-menu, #wrapper, #footer').toggleClass('active');
     });
     //Header Collapse
     var headerHeight;
-    $('.header-collapse').click(function() {
+    $( "#header" ).draggable({ axis: "y" });
+    $('.enter').click(function() {
         $('#header, #main').addClass('collapsed');
 
     });
@@ -108,6 +110,7 @@ $(document).ready(function() {
             }
            });
     });
+
 
 
 });
