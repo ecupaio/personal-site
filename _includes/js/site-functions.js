@@ -31,15 +31,18 @@ $(document).ready(function() {
     });
 
     $('.show-more').click(function() {
-
+        var delay = 0;
         $('.not-loaded .project img').each(function() {
             var projectImg = $(this).data('project-img');
             $(this).attr('src',projectImg);
+            setTimeout(function() {
+                $('.project-col.not-loaded').removeClass('not-loaded');
+            }, delay+=100);
 
         });
         scrollTop('.show-more',0);
         $(this).parent().hide();
-        $('.project-col.not-loaded').removeClass('not-loaded');
+
 
     });
     var t = 0;
