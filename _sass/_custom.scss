@@ -661,6 +661,9 @@ $project-padding: 2em;
     margin-top: 1em;
 }
 #skills {
+    .pure-g.skill-grid {
+        margin: 0 -1em;
+    }
     .skill-section {
         border: 1rem solid #fff;
         overflow: hidden;

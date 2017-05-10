@@ -136,6 +136,7 @@ $(document).ready(function() {
            });
     });
     $('.section-title').click(function() {
+        $(this).parent().siblings().removeClass('active');
         $(this).parent().toggleClass('active');
     });
 
