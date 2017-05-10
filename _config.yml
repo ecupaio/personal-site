@@ -16,9 +16,11 @@
 title: Ed Cupaioli
 email: your-email@domain.com
 description: Frontend Developer | Web Designer
-url: http://edcupaioli.com # the base hostname & protocol for your site, e.g. http://example.com
+url: https://ecupaio.github.io/personal-site # the base hostname & protocol for your site, e.g. http://example.com
 meta_img: ""
 github_username:  ecupaio
+repo: "personal-site"
+future: true
 
 # Build settings
 markdown: kramdown
@@ -26,7 +28,7 @@ theme: minima
 gems:
   - jekyll-feed
   - jekyll-admin
-  - jekyll-assets
+  - uglifier
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -38,11 +40,12 @@ sass:
 collections:
   projects:
     output: true
-    permalink: /project/:path/
+    permalink: /project/:title/
+  experience:
+    output: true
 defaults:
   -
     scope:
       path: ""
-      type: "projects"
     values:
-      layout: "project"
+      layout: "index"

@@ -11,7 +11,7 @@ $transition_type: all .7s ease;
 	-webkit-transition: $transition;
 	-moz-transition: $transition;
 	-o-transition: $transition;
-}	
+}
 //Theme Color Mixins
 @mixin header_colors {
 	background: $theme_header_bg;
@@ -54,7 +54,7 @@ $transition_type: all .7s ease;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
-//Border Box 
+//Border Box
 @mixin box-shadow {
 	-webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
         -moz-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
@@ -101,13 +101,20 @@ $transition_type: all .7s ease;
 }
 //Form Input
 @mixin input {
-	input {
-	    width: 100%;
-	    line-height: 1;
-	    box-sizing: border-box;
-	    -moz-box-sizing: border-box;
-	    -webkit-box-sizing: border-box;
-	    height: 2.5em;
+	input,textarea {
+		&:not([type=submit]):not([type=file]) {
+			width: 100%;
+			padding: 0.5em;
+			border: none;
+			-webkit-appearance: none;
+		}
+
+        &.submit {
+            white-space: normal;
+        }
+    }
+	textarea {
+		min-height: 10em;
 	}
 }
 //Breakpoints for mobile
@@ -153,13 +160,18 @@ Either pass the px number through individually, or set it as a variable */
 	#main {
 		.main-body {
 			padding: $body-padding; //Add padding to main-body
+			@include bp-medium($size-medium) {
+		        padding: $body-padding-mobile;
+		    }
 		}
+
 	}
 }
 @mixin footerPadding($footer-padding) {
 	#footer {
 		padding: $footer-padding;
 	}
+
 }
 @mixin absoluteCenter($top,$left) {
 	position: absolute;

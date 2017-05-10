@@ -4,8 +4,9 @@ img:
 - Burr_Job.png
 - Obstruct_Chuck.png
 - Toomey_Job.png
-cms: Static Site
-link:
+tech:
+- Blue State Digital
+date: '2016-04-04'
 ---
 
 ## Description

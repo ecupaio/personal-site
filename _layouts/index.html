@@ -2,32 +2,79 @@
 <html>
 <head>
     {% include head.html %}
+    {% if page.url == "/" %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- homepage -->
+    {% else  %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+    {% assign header-state = "collapsed" %}
+
+    {% endif %}
 </head>
 
 <body>
+    <div id="sidebar-menu">
+        <div class="sidebar-inner">
+            <a class="menu-item" href="{{ base }}/portfolio" onclick="ga('send', 'event', 'Menu', 'Click', 'Portfolio');">
+                <div class="item">Portfolio</div>
+                <div class="item-u"></div>
+            </a>
+            <a class="menu-item" href="{{ base }}/resume" onclick="ga('send', 'event', 'Menu', 'Click', 'Resume');">
+                <div class="item">Resumé</div>
+                <div class="item-u"></div>
+            </a>
+            <a class="menu-item contact-link" onclick="ga('send', 'event', 'Menu', 'Click', 'Contact');">
+                <div class="item">Contact</div>
+                <div class="item-u"></div>
+            </a>
+        </div>
+    </div>
     <div id="wrapper">
-        <div id="header">
+        <div id="contact">
+
+            {% include form.html %}
+        </div>
+        <div id="header" class="{{ header-state }}">
             <div class="header-inner">
+                <div class="menu-toggle">
+                      <div class="toggle-line"></div>
+                      <div class="toggle-line"></div>
+                      <div class="toggle-line"></div>
+                </div>
                 <div class="site-title">
-                    <h1><a href="/">Ed Cupaioli</a></h1>
+                    <h1><a href="{{ base }}/">Ed Cupaioli</a></h1>
                     <div class="site-tagline">
                         <h2>Frontend Developer | Web Designer</h2>
+                        <div class="enter pure-button" onclick="ga('send', 'event', 'Enter Site', 'Click', 'Button');">Enter Site</div>
                     </div>
-                </div>
-
-                <div class="header-collapse">
-                    <i class="fa fa-angle-up "></i>
                 </div>
             </div>
         </div>
-        <div id="main">
-            {{ content }}
+        <div id="main" class="{{ header-state }}">
+            {% if page.url contains "/project" %}
+                {% include project.html %}
+            {% else %}
+                {{ content }}
+            {% endif %}
         </div>
     </div>
     <div id="footer">
         {% include footer.html %}
     </div>
     <!-- Scripts-->
-    <script src="{{ base }}/js/theme_functions.min.js"></script>
+    {% if page.url contains "/project" %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+    {% endif %}
+    <script src="{{ base }}/theme_functions.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-57852434-1', 'auto');
+      ga('send', 'pageview');
+    </script>
 </body>
 </html>
