@@ -32,59 +32,19 @@
     <div id="skills">
         <h1>Skills</h1>
         <div class="pure-g skill-grid">
-        <div class="skill-section pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-            <div class="section-title">
-                <h2>Languages</h2>
+            {% for skill in site.skills %}
+            <div class="skill-section pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <div class="section-title">
+                    <h2>{{ skill.title }}</h2>
+                </div>
+                <div class="skill-items">
+                    <h4>{{ skill.title }}</h4>
+                    {% for item in skill.items %}
+                    <div class="skill">{{ item }}</div>
+                    {% endfor %}
+                </div>
             </div>
-            <div class="skill-items">
-                <h4>Languages</h4>
-                <div class="skill">HTML</div>
-                <div class="skill">CSS</div>
-                <div class="skill">Javascript</div>
-                <div class="skill">jQuery</div>
-                <div class="skill">LESS</div>
-                <div class="skill">SASS/SCSS</div>
-
-            </div>
+            {% endfor %}
         </div>
-        <div class="skill-section pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-            <div class="section-title">
-                <h2>CMSs</h2>
-            </div>
-            <div class="skill-items">
-                <h4>CMSs</h4>
-                <div class="skill">Drupal</div>
-                <div class="skill">Wordpress</div>
-                <div class="skill">Expression Engine</div>
-                <div class="skill">Jekyll</div>
-            </div>
-        </div>
-        <div class="skill-section pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-            <div class="section-title">
-                <h2>CRMs</h2>
-            </div>
-            <div class="skill-items">
-                <h4>CRMs</h4>
-                <div class="skill">Blue State Digital</div>
-                <div class="skill">NGP-VAN</div>
-                <div class="skill">MailChimp</div>
-                <div class="skill">GovDelivery</div>
-            </div>
-        </div>
-        <div class="skill-section pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-            <div class="section-title">
-                <h2>APIs, Libraries, and Frameworks</h2>
-            </div>
-            <div class="skill-items">
-                <h4>APIs, Libraries, and Frameworks</h4>
-                <div class="skill">Bootstrap</div>
-                <div class="skill">Pure</div>
-                <div class="skill">Google Maps API</div>
-                <div class="skill">Google Civic Information API</div>
-                <div class="skill">Vis.js</div>
-                <div class="skill">Highcharts</div>
-            </div>
-        </div>
-    </div>
     </div>
 </div>

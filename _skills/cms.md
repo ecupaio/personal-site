@@ -1,5 +1,5 @@
 ---
-title: CMS
+title: CMSs
 items:
 - Drupal
 - Wordpress

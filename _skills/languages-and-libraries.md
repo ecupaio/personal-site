@@ -1,5 +1,5 @@
 ---
-title: Languages and Libraries
+title: Languages
 items:
 - HTML
 - CSS
