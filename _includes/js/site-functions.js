@@ -135,7 +135,9 @@ $(document).ready(function() {
             }
            });
     });
-
+    $('.section-title').click(function() {
+        $(this).parent().toggleClass('active');
+    });
 
 
 });
