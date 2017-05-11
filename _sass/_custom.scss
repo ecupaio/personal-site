@@ -774,8 +774,26 @@ $project-padding: 2em;
         .signup-form {
             padding: 0;
             .form-input {
-                padding: 1em 0;
+                margin: 2em 0;
                 color: $brand_black;
+                position: relative;
+                .input-border {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 0;
+                    border-left: 5px solid $brand_dk_blue;
+                    @include transition;
+                }
+                input,textarea {
+                    display: block;
+                    &:focus {
+                         ~ .input-border {
+                            height: 100%;
+                        }
+                    }
+                }
+
             }
             .submit {
                 width: 100%;

@@ -115,6 +115,9 @@ $transition_type: all .7s ease;
 			border: none;
 			-webkit-appearance: none;
 		}
+		&:focus {
+			outline: none;
+		}
 
         &.submit {
             white-space: normal;
