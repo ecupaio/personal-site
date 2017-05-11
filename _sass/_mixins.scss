@@ -36,6 +36,7 @@ $transition_type: all .7s ease;
 			background: $theme_form_bg;
 			color: $theme_form_txt;
 			.pure-button {
+
 				background: $theme_form_btn_bg;
 				color:  $theme_form_btn_txt;
 				&:hover {
@@ -96,6 +97,7 @@ $transition_type: all .7s ease;
 	border-radius: 0;
 	background-color: $theme_button_bg;
 	color: $theme_button_txt;
+	font-family: $header_font;
 	&:hover, &:focus {
 		background-image: none;
 		background-color: $theme_button_txt;
