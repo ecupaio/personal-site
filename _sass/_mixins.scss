@@ -98,6 +98,7 @@ $transition_type: all .7s ease;
 	background-color: $theme_button_bg;
 	color: $theme_button_txt;
 	font-family: $header_font;
+	white-space: normal;
 	&:hover, &:focus {
 		background-image: none;
 		background-color: $theme_button_txt;
