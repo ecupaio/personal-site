@@ -391,10 +391,9 @@ $menu_width: 10em;
                         width: 100%;
                         background: transparent;
                         white-space: nowrap;
-                        &:hover {
+                        &:hover, &:focus {
                             background: $brand_white;
                         }
-
                         &:first-child {
                             margin-bottom: 0.5em;
                         }
