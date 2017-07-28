@@ -2,7 +2,7 @@
 title: iTree Lessons
 link: http://www.itreelessons.com/
 img:
-- itree.png
+- itree.jpg
 tech:
 - Drupal
 date: '2015-09-30'

@@ -4,9 +4,9 @@ tech:
 - Jekyll
 link: https://live.democrats.org/
 img:
-- dems_live-1.png
-- dems_live-2.png
-- dems_live-3.png
+- dems_live-1.jpg
+- dems_live-2.jpg
+- dems_live-3.jpg
 date: '2017-03-28'
 ---
 

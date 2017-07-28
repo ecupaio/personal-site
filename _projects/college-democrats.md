@@ -2,7 +2,7 @@
 title: College Democrats
 link: https://collegedems.com/
 img:
-- College_Democrats.png
+- College_Democrats.jpg
 tech:
 - Jekyll
 - Google Maps API

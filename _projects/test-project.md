@@ -2,9 +2,9 @@
 title: Polling Place Locator
 link: http://pollingplaces-stage.democrats.org
 img:
-- Polling_Places.png
-- polling_places_2.png
-- polling_places_3.png
+- Polling_Places.jpg
+- polling_places_2.jpg
+- polling_places_3.jpg
 tech:
 - Google Maps API
 - Google Civic Information API

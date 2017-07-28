@@ -5,9 +5,9 @@ tech:
 - Jekyll
 - Blue State Digital
 img:
-- fight_back_tour-1.png
-- fight_back_tour-2.png
-- fight_back_tour-3.png
+- fight_back_tour-1.jpg
+- fight_back_tour-2.jpg
+- fight_back_tour-3.jpg
 date: '2017-04-14'
 ---
 

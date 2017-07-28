@@ -1,9 +1,9 @@
 ---
 title: 'SCOTUS Confirmation '
 img:
-- Burr_Job.png
-- Obstruct_Chuck.png
-- Toomey_Job.png
+- Burr_Job.jpg
+- Obstruct_Chuck.jpg
+- Toomey_Job.jpg
 tech:
 - Blue State Digital
 date: '2016-04-04'

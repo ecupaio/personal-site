@@ -2,7 +2,7 @@
 title: My Vote
 link: https://www.democrats.org/my-vote
 img:
-- My_Vote.png
+- My_Vote.jpg
 tech:
 - Expression Engine
 date: '2016-06-03'

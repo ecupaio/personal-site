@@ -2,7 +2,7 @@
 title: The Latest
 link: https://www.democrats.org/the-latest
 img:
-- Latest.png
+- Latest.jpg
 tech:
 - Expression Engine
 date: '2016-04-19'

@@ -2,7 +2,7 @@
 title: DNC Member Database Form
 link: https://dncmembers.democrats.org/
 img:
-- Member_DB.png
+- Member_DB.jpg
 tech:
 - Blue State Digital
 date: '2016-08-09'

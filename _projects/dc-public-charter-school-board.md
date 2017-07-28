@@ -2,7 +2,7 @@
 title: DC Public Charter School Board
 link: http://www.dcpcsb.org/
 img:
-- dcpcsb.png
+- dcpcsb.jpg
 tech:
 - Drupal
 - Highcharts

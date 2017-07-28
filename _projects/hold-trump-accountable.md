@@ -2,7 +2,7 @@
 title: Hold Trump Accountable
 link: https://trumpaccountability.democrats.org/
 img:
-- Hold_Trump_Accountable.png
+- Hold_Trump_Accountable.jpg
 tech:
 - Blue State Digital
 date: '2016-12-08'

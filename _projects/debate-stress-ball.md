@@ -2,7 +2,7 @@
 title: Debate Stress Ball
 link: https://debatestressball.com/
 img:
-- Stress_Ball.png
+- Stress_Ball.jpg
 tech:
 - Blue State Digital
 date: '2016-09-26'

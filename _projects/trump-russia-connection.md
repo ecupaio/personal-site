@@ -4,9 +4,9 @@ tech:
 - Jekyll
 - Vis.js
 img:
-- trump_russia-1.png
-- trump_russia-2.png
-- trump_russia-3.png
+- trump_russia-1.jpg
+- trump_russia-2.jpg
+- trump_russia-3.jpg
 link: https://trumprussianetwork.com/
 date: '2017-03-30'
 ---

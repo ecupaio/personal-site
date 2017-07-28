@@ -18,43 +18,14 @@
             <div class="project-desc">{{ content }}</div>
             <div class="project-tech">
                 <h3>Built with:</h3>
-                <div class="tech-grid">
-                {% for tech in page.tech %}
-                    {% if tech == "Blue State Digital" %}
-                        {% assign tech-img = "bsd-logo.png" %}
-                    {% elsif tech == "Drupal" %}
-                        {% assign tech-img = "drupal_logo.png" %}
-                    {% elsif tech == "Expression Engine" %}
-                        {% assign tech-img = "expressionengine-logo.png" %}
-                    {% elsif tech == "Google Maps API" %}
-                        {% assign tech-img =  "Google_Maps.jpg" %}
-                    {% elsif tech == "Google Civic Information API" %}
-                        {% assign tech-img = "google-developers.svg" %}
-                    {% elsif tech == "Highcharts" %}
-                        {% assign tech-img = "highcharts_logo.png" %}
-                    {% elsif tech == "Jekyll" %}
-                        {% assign tech-img = "jekyll-logo.svg" %}
-                    {% elsif tech == "JQuery UI" %}
-                        {% assign tech-img = "JQuery_UI_Logo.png" %}
-                    {% elsif tech == "Miso Dataset" %}
-                        {% assign tech-img = "miso-logo.png" %}
-                    {% elsif tech == "Vis.js" %}
-                        {% assign tech-img = "visjs_logo.png" %}
-                    {% elsif tech == "Wordpress" %}
-                        {% assign tech-img = "wordpress-logo.png" %}
-                    {% endif %}
-                    <!-- <div class="pure-u-1 pure-u-lg-1-2"> -->
-                        <div class="tech-logo">
-                            <div class="logo-overlay">
-                                <div class="tech-label">
-                                    {{ tech }}
-                                </div>
-                            </div>
-                            <img class="logo-img" src="{{ base }}/min_images/{{ tech-img }}"></img>
-                        </div>
-                    <!-- </div> -->
-                {% endfor %}
+                <div class="tech-list">
+                    <ul>
+                        {% for tech in page.tech %}
+                            <li>{{ tech }}</li>
+                        {% endfor %}
+                    </ul>
                 </div>
+                
             </div>
         </div>
     </div>

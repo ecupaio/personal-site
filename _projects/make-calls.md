@@ -1,9 +1,9 @@
 ---
 title: Make Calls
 img:
-- make_calls-1.png
-- make_calls-2.png
-- make_calls-3.png
+- make_calls-1.jpg
+- make_calls-2.jpg
+- make_calls-3.jpg
 tech:
 - Google Civic Information API
 - Blue State Digital
