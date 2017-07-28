@@ -696,6 +696,8 @@ $project-padding: 2em;
             display: block;
             height: 100%;
             transform: translateY(0%);
+            padding: 1em;
+            border: 2px solid $brand_dk_blue;
             @include transition;
             .skill {
                 margin-bottom: 0.5em;
