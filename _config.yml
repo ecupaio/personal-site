@@ -52,6 +52,7 @@ defaults:
     values:
       layout: "index"
 prose:
+  ignore: ['_layouts','_plugins']
   metadata:
     _projects:
       - name: "link"
