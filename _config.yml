@@ -53,7 +53,7 @@ defaults:
       layout: "index"
 prose:
   metadata:
-    _posts:
+    _projects:
       - name: "test"
         field:
           element: "text"
