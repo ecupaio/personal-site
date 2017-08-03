@@ -62,7 +62,7 @@ prose:
           value: ""
           placeholder: "Helper text in the input if no value is provided."
           type: "text"
-      - name: "image"
+      - name: "img"
         field:
           element: "multiselect"
           label: "Image"
