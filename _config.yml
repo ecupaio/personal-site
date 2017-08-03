@@ -69,7 +69,4 @@ prose:
           help: "Image for project"
           value: ""
           placeholder: "Helper text in the input if no value is provided."
-          options:
-            - name: "image"
-              value: ""
           alterable: true
