@@ -54,11 +54,11 @@ defaults:
 prose:
   metadata:
     _projects:
-      - name: "test"
+      - name: "link"
         field:
           element: "text"
-          label: "Label to the user"
-          help: "Help/description to accompany a label"
-          value: "A default value"
+          label: "Link"
+          help: "URL for project"
+          value: ""
           placeholder: "Helper text in the input if no value is provided."
           type: "text"
