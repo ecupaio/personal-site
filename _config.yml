@@ -62,3 +62,14 @@ prose:
           value: ""
           placeholder: "Helper text in the input if no value is provided."
           type: "text"
+      - name: "image"
+        field:
+          element: "multiselect"
+          label: "Image"
+          help: "Image for project"
+          value: ""
+          placeholder: "Helper text in the input if no value is provided."
+          options:
+            - name: "image"
+              value: ""
+          alterable: true
