@@ -51,3 +51,13 @@ defaults:
       path: ""
     values:
       layout: "index"
+prose:
+  metadata:
+    _projects:
+      - name: "test"
+        field:
+          label: "Label to the user"
+          help: "Help/description to accompany a label"
+          value: "A default value"
+          placeholder: "Helper text in the input if no value is provided."
+          type: "text"
