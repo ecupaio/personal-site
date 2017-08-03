@@ -1,13 +1,17 @@
 ---
 title: College Democrats
-link: https://collegedems.com/
+link: 'https://collegedems.com/'
 img:
-- College_Democrats.jpg
+  - College_Democrats.jpg
 tech:
-- Jekyll
-- Google Maps API
-- Miso Dataset
+  - Jekyll
+  - Google Maps API
+  - Miso Dataset
 date: '2016-05-11'
+published: true
+image:
+  - College_Democrats.jpg
+  - Other_image.jpg
 ---
 
 ## Description
