@@ -53,7 +53,7 @@ defaults:
       layout: "index"
 prose:
   metadata:
-    _projects:
+    _posts:
       - name: "test"
         field:
           label: "Label to the user"
