@@ -16,7 +16,7 @@
 title: Ed Cupaioli
 email: your-email@domain.com
 description: Frontend Developer | Web Designer
-url: https://ecupaio.github.io/personal-site # the base hostname & protocol for your site, e.g. http://example.com
+url: https://edcupaioli.com # the base hostname & protocol for your site, e.g. http://example.com
 meta_img: ""
 github_username:  ecupaio
 repo: "personal-site"
@@ -69,5 +69,23 @@ prose:
           label: "Image"
           help: "Image for project"
           value: ""
-          placeholder: "Helper text in the input if no value is provided."
           alterable: true
+      - name: "date"
+        field:
+          element: "text"
+          label: "Date"
+          help: "Date of project release"
+          value: ""
+          type: "text"
+      - name: "tech"
+        field:
+          element: "multiselect"
+          label: "Tech"
+          help: "List tech used for project"
+          alterable: true
+          value: ""
+          options:
+            - name: "Jekyll"
+              value: "Jekyll"
+            - name: "Blue State Digital"
+              value: "Blue State Digital"  
