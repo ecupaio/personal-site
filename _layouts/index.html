@@ -8,8 +8,6 @@
     {% else  %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
-    {% assign header-state = "collapsed" %}
-
     {% endif %}
 </head>
 
@@ -35,7 +33,7 @@
 
             {% include form.html %}
         </div>
-        <div id="header" class="{{ header-state }}">
+        <div id="header" class="collapsed">
             <div class="header-inner">
                 <div class="menu-toggle">
                       <div class="toggle-line"></div>

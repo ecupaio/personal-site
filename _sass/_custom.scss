@@ -1,13 +1,4 @@
 //Custom Styles
-//Use this sheet to add your custom touches to the core scss. Brand colors are listed below:
-//$brand_lt_blue
-//$brand_dk_blue
-//$brand_white
-//$brand_red
-//$brand_yellow
-//$brand_gray
-//Theme Colors
-//Use the brand colors for your theme colors
 //Body and Heading text Colors
 $theme_body: #333;
 $theme_body_link: $brand_dk_blue;
@@ -58,7 +49,7 @@ $menu_width: 10em;
     height: 100%;
     background: $brand_black;
     color: $brand_white;
-    @include custom_transition(width 0.7s ease);
+    @include custom_transition(width 0.5s ease);
 
     .sidebar-inner {
         margin-top: 4.5em;
@@ -114,7 +105,7 @@ $menu_width: 10em;
 
 #wrapper {
     margin-left: 0;
-    @include custom_transition(margin 0.7s ease);
+    @include custom_transition(margin 0.5s ease);
     overflow: hidden;
     &.active {
         margin-left: $menu_width;
@@ -129,7 +120,7 @@ $menu_width: 10em;
     z-index: 10;
     top: 0;
     left: 0;
-    @include custom_transition(all 0.7s ease);
+    @include custom_transition(all 0.5s ease);
 
     .header-inner {
         position: relative;
@@ -200,7 +191,7 @@ $menu_width: 10em;
         .header-inner {
             height: 100%;
             padding: 1em;
-            @include custom_transition(height 0.7s ease);
+            @include custom_transition(height 0.5s ease);
 
             &.hide {
                 height: 0;
@@ -262,7 +253,7 @@ $menu_width: 10em;
         .site-tagline {
             display: none;
         }
-        @include custom_transition(all 0.7s ease);
+        @include custom_transition(all 0.5s ease);
 
         &.hide {
             height: 0;
@@ -272,16 +263,7 @@ $menu_width: 10em;
 }
 
 #main {
-    filter:blur(5px);
-    -webkit-filter:blur(5px);
-    padding: 1em 0.5em;
-
-    &.collapsed {
-        filter: blur(0px);
-        -webkit-filter: blur(0px);
-        margin-top: 4.5em;
-    }
-
+    margin-top: 4.5em;
 }
 
 #portfolio {
@@ -383,7 +365,7 @@ $menu_width: 10em;
                 background: rgba($brand_dk_blue,0.8);
                 color: #fff;
                 overflow: hidden;
-                @include custom_transition(width 0.7s ease);
+                @include custom_transition(width 0.5s ease);
                 a {
                     &.pure-button {
                         border: 3px solid $brand_white;
@@ -729,7 +711,7 @@ $project-padding: 2em;
     padding: 1em 2em;
     z-index: 11;
     text-align: right;
-    @include custom_transition(transform 0.7s ease);
+    @include custom_transition(transform 0.5s ease);
 
     &.active {
         transform: translateX(0);

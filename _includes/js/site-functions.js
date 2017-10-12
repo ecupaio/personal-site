@@ -14,22 +14,6 @@ $(document).ready(function() {
     //Header Collapse
     var headerTop = $('#header').offset().top;
 
-    // $( "#header" ).draggable({
-    //     axis: "y",
-    //     stop: function(event, ui) {
-    //         var dragTop = $(this).offset().top;
-    //         if  (headerTop - dragTop >= 100 ) {
-    //             $('#header').attr("style","");
-    //             $('#header, #main').addClass('collapsed');
-    //         }
-    //         console.log(dragTop);
-    //
-    //     }
-    // });
-    $('.enter').click(function() {
-        $('#header, #main').addClass('collapsed');
-    });
-
     $('.show-more').click(function() {
         var delay = 0;
         $('.not-loaded .project img').each(function() {
@@ -57,7 +41,7 @@ $(document).ready(function() {
                 var projectImg = $(this).data('project-img');
                 $(this).attr('src',projectImg);
                 $('.project-col.not-loaded').removeClass('not-loaded');
-                
+
 
             });
         }
