@@ -1,5 +1,24 @@
 {% include base.html %}
-<div id="portfolio">
+<div class="home-section" id="about">
+    <h1>About me</h1>
+    {% for page in site.pages %}
+        {% if page.title == "About me" %}
+        {{ page.content }}
+        {% endif %}
+    {% endfor %}
+</div>
+<div class="home-section" id="portfolio">
+    <h1>Portfolio</h1>
+    <div class="portfolio-search">
+        <input class="search-input" type="text">
+        <div class="search-tags">
+            {% for project in site.projects %}
+                {% for item in projects.tech %}
+                <div class="tag">{{ item }}</div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
     <div class="pure-g portfolio-grid">
         {% assign sorted-projects = site.projects | sort:"date" | reverse %}
         {% for project in sorted-projects limit: 9 %}
@@ -38,6 +57,39 @@
                     </div>
                 </div>
             </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="home-section" id="skills">
+    <h1>Skills</h1>
+    <div class="skills-text">
+        {% for page in site.pages %}
+            {% if page.title == "Skills"%}
+                {{ page.content }}
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="pure-g">
+        {% for skill in site.skills %}
+        <div class="skill-section pure-u-1 pure-u-sm-1-2">
+            <div class="section-title">
+                <div class="section-icon">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa {{ skill.icon }} fa-stack-1x"></i>
+                    </span>
+                </div>
+                <h2>{{ skill.title }}</h2>
+
+            </div>
+            <ul class="skill-items">
+
+                {% for item in skill.items %}
+                <li class="skill">{{ item }}</li>
+                {% endfor %}
+
+            </ul>
         </div>
         {% endfor %}
     </div>

@@ -6,7 +6,6 @@ $(document).ready(function() {
         });
     }
     //Menu toggle
-
     $('.menu-toggle').click(function() {
         $('.menu-toggle, .toggle-line').toggleClass('open');
         $('#sidebar-menu, #wrapper, #footer').toggleClass('active');
@@ -41,8 +40,6 @@ $(document).ready(function() {
                 var projectImg = $(this).data('project-img');
                 $(this).attr('src',projectImg);
                 $('.project-col.not-loaded').removeClass('not-loaded');
-
-
             });
         }
 

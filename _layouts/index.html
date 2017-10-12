@@ -41,14 +41,18 @@
                       <div class="toggle-line"></div>
                 </div>
                 <div class="site-title">
-                    <h1><a href="{{ base }}/">Ed Cupaioli</a></h1>
-                    <div class="site-tagline">
-                        <h2>Frontend Developer | Web Designer</h2>
-                        <div class="enter pure-button" onclick="ga('send', 'event', 'Enter Site', 'Click', 'Button');">Enter Site</div>
-                    </div>
+                    <a href="{{ base }}/">Ed Cupaioli</a>
                 </div>
             </div>
         </div>
+        {% if page.title == "Home Page" %}
+        <div id="banner">
+            <div class="banner-text">
+                <h1>Ed Cupaioli</h1>
+                <h2>Frontend Developer | Web Designer</h2>
+            </div>
+        </div>
+        {% endif %}
         <div id="main" class="{{ header-state }}">
             {% if page.url contains "/project" %}
                 {% include project.html %}

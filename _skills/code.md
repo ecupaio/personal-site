@@ -1,11 +1,15 @@
 ---
-title: APIs, Libraries, and Frameworks
+title: Code
 items:
+- HTML/CSS
+- Javascript/jQuery
 - Bootstrap
-- Pure
+- PureCSS
+- LESS
+- SASS/SCSS
 - Google Maps API
 - Google Civic Information API
 - Vis.js
 - Highcharts
+icon: fa-code
 ---
-
