@@ -1,4 +1,11 @@
 ---
 published: false
+link: 'https://gillespiefacts.com/'
+img:
+  - min_images/Gillespie_Facts.jpg
+  - min_images/Gillespie_Facts_Interior.jpg
+date: 09-27-2017
+tech:
+  - Jekyll
 ---
 Gillespie Facts is a opposition content site that I made for the Virginia Coordinated Campaign. I designed the site so that their staff could upload content to the site. The frontpage feautures a filterable list of all content and the interior pages are setup for sharing on social media. 
