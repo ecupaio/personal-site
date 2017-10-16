@@ -1,0 +1,17 @@
+<div class="portfolio-search">
+    <input class="search-input" type="text">
+    <div class="search-tags">
+         {% assign techArray = "" | split: ',' %}
+        {% for project in site.projects %}
+            {% for item in project.tech %}
+                {% assign techArray = techArray | push: item %}
+            {% endfor %}
+        {% endfor %}
+        {% capture tech %}
+        {{ techArray | split: ',' | uniq | join: ',' }}
+        {% endcapture %}
+        {% for item in tech %}
+            <div>{{ item }}</div>
+        {% endfor %}
+    </div>
+</div>

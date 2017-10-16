@@ -219,6 +219,11 @@ $menu_width: 10em;
         }
     }
 }
+#main {
+    &.interior {
+        margin-top: 4em;
+    }
+}
 
 #portfolio {
     position: relative;
@@ -607,7 +612,14 @@ $project-padding: 2em;
             padding: $gutter-padding;
         }
     }
+    .skills-text {
+        margin-bottom: 1em;
+    }
     .skill-section {
+        text-align: center;
+        .section-icon {
+            margin-bottom: 1em;
+        }
         .section-title {
 
         }
@@ -615,11 +627,7 @@ $project-padding: 2em;
             list-style: none;
             padding: 0;
             li.skill {
-                margin-left: 0.5em;
-                &::before {
-                    content: '-';
-                    margin-left: -0.5em
-                }
+                padding: 0.5em 0;
             }
         }
     }
@@ -756,7 +764,8 @@ $project-padding: 2em;
     }
 }
 .home-section {
-    padding: 2em 3em;
+    $triangle: 2em;
+    position: relative;
     @include headings{
         text-transform: uppercase;
     }
@@ -766,7 +775,27 @@ $project-padding: 2em;
         @include headings {
             color: $brand_white;
         }
+        &:before {
+            border-bottom: $triangle solid $brand_dk_blue;
+        }
     }
+    &:nth-child(even) {
+        &:before {
+            border-bottom: $triangle solid $brand_white;
+        }
+    }
+
+    &:before {
+      content: "";
+      border-left: $triangle solid transparent;
+      border-right: $triangle solid transparent;
+      position: absolute;
+      top: -$triangle;
+      left: 50%;
+
+    }
+    
+    padding: 2em 3em calc(2em + #{$triangle});
 
 }
 #footer {

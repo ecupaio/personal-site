@@ -3,17 +3,21 @@
 <head>
     {% include head.html %}
     {% if page.url == "/" %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <!-- homepage -->
+
     {% else  %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+    {% assign header-state = 'interior' %}
     {% endif %}
 </head>
 
 <body>
     <div id="sidebar-menu">
         <div class="sidebar-inner">
+            <a class="menu-item" href="{{ base }}/" onclick="ga('send', 'event', 'Menu', 'Click', 'Home');">
+                <div class="item">Home</div>
+                <div class="item-u"></div>
+            </a>
             <a class="menu-item" href="{{ base }}/portfolio" onclick="ga('send', 'event', 'Menu', 'Click', 'Portfolio');">
                 <div class="item">Portfolio</div>
                 <div class="item-u"></div>
@@ -33,7 +37,7 @@
 
             {% include form.html %}
         </div>
-        <div id="header" class="collapsed">
+        <div id="header">
             <div class="header-inner">
                 <div class="menu-toggle">
                       <div class="toggle-line"></div>

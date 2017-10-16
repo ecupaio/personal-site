@@ -1,5 +1,5 @@
 //Default Transition
-$transition_type: all .7s ease;
+$transition_type: all .5s ease;
 @mixin transition {
 	transition: $transition_type;
 	-webkit-transition: $transition_type;

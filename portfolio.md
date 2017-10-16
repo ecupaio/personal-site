@@ -2,4 +2,4 @@
 title: Portfolio
 ---
 
-{% include home.html %}
+{% include portfolio.html %}

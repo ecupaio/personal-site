@@ -1,8 +1,10 @@
 ---
 title: Code
 items:
-- HTML/CSS
-- Javascript/jQuery
+- HTML
+- CSS
+- Javascript
+- jQuery
 - Bootstrap
 - PureCSS
 - LESS
