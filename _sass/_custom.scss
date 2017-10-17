@@ -49,6 +49,7 @@ $menu_width: 10em;
     height: 100%;
     background: $brand_black;
     color: $brand_white;
+    z-index: 9;
     @include custom_transition(width 0.5s ease);
 
     .sidebar-inner {
@@ -109,6 +110,9 @@ $menu_width: 10em;
     overflow: hidden;
     &.active {
         margin-left: $menu_width;
+        @include bp-small($size-small) {
+            margin-left: 0;
+        }
     }
 }
 
@@ -792,11 +796,14 @@ $project-padding: 2em;
       position: absolute;
       top: -$triangle;
       left: 50%;
+      transform: translateX(-50%);
 
     }
-    
-    padding: 2em 3em calc(2em + #{$triangle});
 
+    padding: 2em 3em calc(2em + #{$triangle});
+    @include bp-small($size-small){
+        padding: 2em 1em calc(2em + #{$triangle});
+    }
 }
 #footer {
     z-index: 10;
