@@ -58,10 +58,16 @@
         </div>
         {% endif %}
         <div id="main" class="{{ header-state }}">
-            {% if page.url contains "/project" %}
-                {% include project.html %}
-            {% else %}
+            {% if page.url == "/" %}
                 {{ content }}
+            {% elsif page.url contains "/project" %}
+                <div class="main-body">
+                    {% include project.html %}
+                </div>
+            {% else %}
+                <div class="main-body">
+                    {{ content }}
+                </div>
             {% endif %}
         </div>
     </div>
