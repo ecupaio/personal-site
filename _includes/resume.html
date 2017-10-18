@@ -1,7 +1,6 @@
 {% include base.html %}
 
-
-    <div id="resume-timeline">
+    <div markdown="1" id="resume-timeline">
         <h1>Resumé</h1>
         {% assign sorted-experience = site.experience | sort:"date" | reverse %}
         {% for experience in sorted-experience %}

@@ -64,6 +64,10 @@
                 <div class="main-body">
                     {% include project.html %}
                 </div>
+            {% elsif page.url contains "/resume" %}
+            <div class="main-body">
+                {% include resume.html %}
+            </div>
             {% else %}
                 <div class="main-body">
                     {{ content }}
