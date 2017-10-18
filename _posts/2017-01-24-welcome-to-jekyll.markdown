@@ -18,6 +18,9 @@ Jekyll also offers powerful support for code snippets:
 <li></li>
 {% endfor %}
 
+look at how includes don't work and there's no documentation for why
+{% include resume.html %}
+
 {% highlight ruby %}
 def print_hi(name)
   puts "Hi, #{name}"
