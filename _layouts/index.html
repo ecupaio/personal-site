@@ -2,11 +2,11 @@
 <html>
 <head>
     {% include head.html %}
-    {% if page.url == "/" %}
-
-    {% else  %}
+    {% if page.url contains "/project" %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+    {% endif %}
+    {% if page.url != '/' %}
     {% assign header-state = 'interior' %}
     {% endif %}
 </head>
