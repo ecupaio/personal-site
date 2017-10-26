@@ -65,22 +65,12 @@ $(document).ready(function() {
     }
 
     //Resume
-    function showExperience() {
-        $(this).parent().siblings().find('.experience-details').slideUp();
-        $(this).parent().siblings().removeClass('active');
-        $(this).siblings('.experience-details').slideToggle(300,function() {
-            $(this).parent().toggleClass('active');
-             $('html, body').animate({
-                 scrollTop: $(this).prev('.experience-header').offset().top - 85
-             }, 300);
-        });
-    }
-
     $('.experience-header').click(function() {
         $(this).parent().siblings().find('.experience-details').slideUp();
         $(this).parent().siblings().removeClass('active');
+        $(this).parent().toggleClass('active');
         $(this).siblings('.experience-details').slideToggle(300,function() {
-            $(this).parent().toggleClass('active');
+
              $('html, body').animate({
                  scrollTop: $(this).prev('.experience-header').offset().top - 85
              }, 300);

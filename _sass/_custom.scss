@@ -528,10 +528,11 @@ $project-padding: 2em;
     .experience-block {
         background: $brand_white;
         padding: 1em 0;
-
-        &.active,
         &:hover {
             cursor: pointer;
+        }
+        &.active {
+
 
             .experience-header {
                 .block-border {
