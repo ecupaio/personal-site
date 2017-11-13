@@ -528,16 +528,23 @@ $project-padding: 2em;
     .experience-block {
         background: $brand_white;
         padding: 1em 0;
-
-        &.active,
         &:hover {
             cursor: pointer;
-
+        }
+        &.active {
             .experience-header {
                 .block-border {
                     width: 100%;
                 }
+                .experience-toggle {
+                    .toggle-line {
+                        &:nth-child(1) {
+                            transform: translateX(-50%) rotate(0deg);
+                        }
+                    }
+                }
             }
+
         }
 
         .experience-header {
@@ -550,6 +557,7 @@ $project-padding: 2em;
             & > div {
                 display: inline-block;
                 vertical-align: middle;
+
             }
 
             .org-logo {
@@ -569,15 +577,45 @@ $project-padding: 2em;
             }
 
             .experience-title {
+
                 .title-position {
                     font-family: $header_font;
                     font-size: 1.5em;
                     font-weight: bold;
                     color: $brand_dk_blue;
                     text-transform: uppercase;
+                    @include transition;
+                }
+
+            }
+            .experience-toggle {
+                font-size: 1.5em;
+                color: $brand_dk_blue;
+                padding: 1em;
+                position: relative;
+                margin: auto;
+                .toggle-line {
+                    background-color: $brand_dk_blue;
+                    height: 5px;
+                    position: absolute;
+                    width: 30px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    &:nth-child(1) {
+                        transform: translateX(-50%) rotate(90deg);
+                        transform-origin: center;
+                        @include transition;
+
+                    }
+
+
+
+                }
+                @include bp-medium($size-medium) {
+                    display: block;
+
                 }
             }
-
             .block-border {
                 width: 0;
                 height: 0.5em;
@@ -586,6 +624,12 @@ $project-padding: 2em;
                 position: absolute;
                 background: $brand_dk_blue;
                 @include transition;
+            }
+            &:hover {
+
+                .title-position,.experience-toggle {
+                    color: darken($brand_dk_blue,15%);
+                }
             }
         }
 

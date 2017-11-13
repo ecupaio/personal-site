@@ -23,5 +23,6 @@ group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
    gem 'jekyll-admin', "0.3.0"
    gem 'uglifier'
+   gem 'jekyll-livereload'
    gem 'json'
 end
