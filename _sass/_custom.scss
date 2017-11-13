@@ -598,9 +598,10 @@ $project-padding: 2em;
                     background-color: $brand_dk_blue;
                     height: 5px;
                     position: absolute;
-                    width: 30px;
+                    width: 20px;
                     left: 50%;
                     transform: translateX(-50%);
+                    @include custom_transition(background-color 0.5s ease);
                     &:nth-child(1) {
                         transform: translateX(-50%) rotate(90deg);
                         transform-origin: center;
@@ -627,8 +628,11 @@ $project-padding: 2em;
             }
             &:hover {
 
-                .title-position,.experience-toggle {
+                .title-position {
                     color: darken($brand_dk_blue,15%);
+                }
+                .toggle-line {
+                    background-color: darken($brand_dk_blue,15%);
                 }
             }
         }
