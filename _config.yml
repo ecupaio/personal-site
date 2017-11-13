@@ -36,6 +36,7 @@ exclude:
 sass:
   sass_dir: _sass
   style: compressed
+livereload: true  
 # Collections
 collections:
   projects:

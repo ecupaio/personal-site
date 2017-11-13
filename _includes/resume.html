@@ -1,7 +1,6 @@
 {% include base.html %}
-<div class="main-body">
 
-    <div id="resume-timeline">
+    <div markdown="1" id="resume-timeline">
         <h1>Resumé</h1>
         {% assign sorted-experience = site.experience | sort:"date" | reverse %}
         {% for experience in sorted-experience %}
@@ -17,6 +16,12 @@
                         {% endif %}
 
                     </div>
+                    <div class="experience-toggle">
+
+                            <div class="toggle-line"></div>
+                            <div class="toggle-line"></div>
+                        
+                    </div>
                     <span class="block-border"></span>
                 </div>
                 <div class="experience-details">
@@ -29,22 +34,3 @@
     <div id="paper-resume">
         <a class="pure-button" target="_blank" href="https://docs.google.com/document/d/1l-1GJuj4FbjXMw56JleAPw2gCv1_f0hvC1jKrNs2NA4/export?format=pdf">Printable Version</a>
     </div>
-    <div id="skills">
-        <h1>Skills</h1>
-        <div class="pure-g skill-grid">
-            {% for skill in site.skills %}
-            <div class="skill-section pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-                <div class="section-title">
-                    <h2>{{ skill.title }}</h2>
-                </div>
-                <div class="skill-items">
-                    <h4>{{ skill.title }}</h4>
-                    {% for item in skill.items %}
-                    <div class="skill">{{ item }}</div>
-                    {% endfor %}
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</div>

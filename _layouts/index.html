@@ -2,11 +2,11 @@
 <html>
 <head>
     {% include head.html %}
-    {% if page.url == "/" %}
-
-    {% else  %}
+    {% if page.url contains "/project" %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+    {% endif %}
+    {% if page.url != '/' %}
     {% assign header-state = 'interior' %}
     {% endif %}
 </head>
@@ -58,10 +58,20 @@
         </div>
         {% endif %}
         <div id="main" class="{{ header-state }}">
-            {% if page.url contains "/project" %}
-                {% include project.html %}
-            {% else %}
+            {% if page.url == "/" %}
                 {{ content }}
+            {% elsif page.url contains "/project" %}
+                <div class="main-body">
+                    {% include project.html %}
+                </div>
+            {% elsif page.url contains "/resume" %}
+            <div class="main-body">
+                {% include resume.html %}
+            </div>
+            {% else %}
+                <div class="main-body">
+                    {{ content }}
+                </div>
             {% endif %}
         </div>
     </div>
