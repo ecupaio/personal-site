@@ -26,6 +26,10 @@
                 <div class="item">Resumé</div>
                 <div class="item-u"></div>
             </a>
+            <a class="menu-item" href="{{ base }}/blog" onclick="ga('send', 'event', 'Menu', 'Click', 'Resume');">
+                <div class="item">Blog</div>
+                <div class="item-u"></div>
+            </a>
             <a class="menu-item contact-link" onclick="ga('send', 'event', 'Menu', 'Click', 'Contact');">
                 <div class="item">Contact</div>
                 <div class="item-u"></div>
@@ -67,6 +71,10 @@
             {% elsif page.url contains "/resume" %}
             <div class="main-body">
                 {% include resume.html %}
+            </div>
+            {% elsif page.url == "/blog/" %}
+            <div class="main-body">
+                {% include blog.html %}
             </div>
             {% else %}
                 <div class="main-body">

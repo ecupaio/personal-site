@@ -95,6 +95,7 @@ $transition_type: all .5s ease;
 //PureCSS Buttons
 @mixin button {
 	border-radius: 0;
+	border: 3px solid $theme_button_bg;
 	background-color: $theme_button_bg;
 	color: $theme_button_txt;
 	font-family: $header_font;

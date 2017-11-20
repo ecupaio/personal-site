@@ -688,6 +688,18 @@ $project-padding: 2em;
         }
     }
 }
+#blog {
+    .post {
+        .post-tags {
+            .tag {
+                display: inline-block;
+            }
+        }
+        .post-link {
+            margin: 1em 0;
+        }
+    }
+}
 
 #contact {
     background: rgba($brand_white,0.7);

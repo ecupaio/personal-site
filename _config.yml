@@ -21,7 +21,7 @@ meta_img: ""
 github_username:  ecupaio
 repo: "personal-site"
 future: true
-
+timezone: "America/New_York"
 # Build settings
 markdown: kramdown
 theme: minima
@@ -36,7 +36,7 @@ exclude:
 sass:
   sass_dir: _sass
   style: compressed
-livereload: true  
+livereload: true
 # Collections
 collections:
   projects:
@@ -44,6 +44,7 @@ collections:
     permalink: /project/:title/
   experience:
     output: true
+    test: ""
   skills:
     output: true
 defaults:
@@ -52,6 +53,16 @@ defaults:
       path: ""
     values:
       layout: "index"
+  -
+    scope:
+      type: "projects"
+    values:
+      link: ""
+      img:
+        - ""
+      tech:
+        - ""
+      date: "2017-01-01"
 prose:
   ignore: ['_layouts','_plugins']
   metadata:

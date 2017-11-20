@@ -21,7 +21,7 @@ gem "minima", "~> 2.0"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
-   gem 'jekyll-admin', "0.3.0"
+   gem 'jekyll-admin', "0.7.0"
    gem 'uglifier'
    gem 'jekyll-livereload'
    gem 'json'
