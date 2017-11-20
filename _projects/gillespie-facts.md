@@ -1,7 +1,7 @@
 ---
 title: Gillespie Facts
 link: https://gillespiefacts.com/
-img:
+image:
 - Gillespie_Facts.jpg
 - Gillespie_Facts_Interior.jpg
 tech:

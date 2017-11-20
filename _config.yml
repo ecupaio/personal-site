@@ -58,7 +58,7 @@ defaults:
       type: "projects"
     values:
       link: ""
-      img:
+      image:
         - ""
       tech:
         - ""

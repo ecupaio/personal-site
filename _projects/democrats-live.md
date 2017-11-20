@@ -3,7 +3,7 @@ title: Democrats Live
 tech:
 - Jekyll
 link: https://live.democrats.org/
-img:
+image:
 - dems_live-1.jpg
 - dems_live-2.jpg
 - dems_live-3.jpg

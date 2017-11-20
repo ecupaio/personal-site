@@ -1,7 +1,7 @@
 ---
 title: Democrats.org
 link: https://democrats.org
-img:
+image:
 - Democrats_org.jpg
 tech:
 - Expression Engine

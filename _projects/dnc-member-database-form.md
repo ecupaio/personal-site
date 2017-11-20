@@ -1,7 +1,7 @@
 ---
 title: DNC Member Database Form
 link: https://dncmembers.democrats.org/
-img:
+image:
 - Member_DB.jpg
 tech:
 - Blue State Digital

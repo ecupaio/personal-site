@@ -1,7 +1,7 @@
 ---
 title: Resistance Summer
 link: https://resistsummer.com/
-img:
+image:
 - Resistance_Summer_home.jpg
 - Resistance_Summer_map.jpg
 - Resistance_Summer_signup.jpg

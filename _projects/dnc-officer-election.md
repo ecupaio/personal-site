@@ -2,7 +2,7 @@
 title: DNC Officer Election
 tech:
 - Jekyll
-img:
+image:
 - dnc_officer_elections-2.jpg
 - dnc_officer_elections-1.jpg
 - dnc_officer_elections-3.jpg

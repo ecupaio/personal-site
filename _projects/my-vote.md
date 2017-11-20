@@ -1,7 +1,7 @@
 ---
 title: My Vote
 link: https://www.democrats.org/my-vote
-img:
+image:
 - My_Vote.jpg
 tech:
 - Expression Engine

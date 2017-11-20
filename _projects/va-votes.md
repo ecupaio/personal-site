@@ -3,7 +3,7 @@ title: VA Votes
 link: https://vavotes2017.com/
 tech:
 - Jekyll
-img:
+image:
 - VA-Votes.jpg
 date: '2017-09-29 04:22:22'
 ---

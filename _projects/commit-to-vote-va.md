@@ -4,7 +4,7 @@ link: https://iwillvote.com/commit/
 tech:
 - Jekyll
 - Google Maps API
-img:
+image:
 - Commit_to_Vote.jpg
 date: '2017-10-11 04:22:22'
 ---

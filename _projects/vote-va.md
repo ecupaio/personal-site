@@ -5,7 +5,7 @@ tech:
 - Jekyll
 - Google Maps API
 - Blue State Digital
-img:
+image:
 - Vote_VA_1.jpg
 - Vote_VA_2.jpeg
 date: '2017-09-29 04:05:01'

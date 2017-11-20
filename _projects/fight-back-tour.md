@@ -4,7 +4,7 @@ link: https://fightbacktour.com/
 tech:
 - Jekyll
 - Blue State Digital
-img:
+image:
 - fight_back_tour-1.jpg
 - fight_back_tour-2.jpg
 - fight_back_tour-3.jpg

@@ -3,7 +3,7 @@ title: Trump-Russia Connection
 tech:
 - Jekyll
 - Vis.js
-img:
+image:
 - trump_russia-1.jpg
 - trump_russia-2.jpg
 - trump_russia-3.jpg

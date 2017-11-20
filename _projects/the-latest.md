@@ -1,7 +1,7 @@
 ---
 title: The Latest
 link: https://www.democrats.org/the-latest
-img:
+image:
 - Latest.jpg
 tech:
 - Expression Engine

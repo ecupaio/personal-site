@@ -1,7 +1,7 @@
 ---
 title: 'GOP Ipsum '
 link: https://gop-ipsum.com/
-img:
+image:
 - GOP_Ipsum.jpg
 tech:
 - Miso Dataset

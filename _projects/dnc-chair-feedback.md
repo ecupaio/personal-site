@@ -1,7 +1,7 @@
 ---
 title: Rebuild
 link: https://rebuild.democrats.org/
-img:
+image:
 - Rebuild.jpg
 tech:
 - Blue State Digital

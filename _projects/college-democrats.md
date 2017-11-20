@@ -1,7 +1,7 @@
 ---
 title: College Democrats
 link: 'https://collegedems.com/'
-img:
+image:
   - College_Democrats.jpg
 tech:
   - Jekyll

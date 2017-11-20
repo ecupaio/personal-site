@@ -1,7 +1,7 @@
 ---
 title: Hold Trump Accountable
 link: https://trumpaccountability.democrats.org/
-img:
+image:
 - Hold_Trump_Accountable.jpg
 tech:
 - Blue State Digital

@@ -1,6 +1,6 @@
 ---
 title: 'SCOTUS Confirmation '
-img:
+image:
 - Burr_Job.jpg
 - Obstruct_Chuck.jpg
 - Toomey_Job.jpg

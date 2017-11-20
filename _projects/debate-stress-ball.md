@@ -1,7 +1,7 @@
 ---
 title: Debate Stress Ball
 link: https://debatestressball.com/
-img:
+image:
 - Stress_Ball.jpg
 tech:
 - Blue State Digital
