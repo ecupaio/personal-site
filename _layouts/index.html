@@ -76,6 +76,11 @@
             <div class="main-body">
                 {% include blog.html %}
             </div>
+            {% elsif page.url contains "/blog/" %}
+            <div class="main-body">
+                {{ page.tile }}
+                {{ content }}
+            </div>
             {% else %}
                 <div class="main-body">
                     {{ content }}

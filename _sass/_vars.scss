@@ -1,25 +1,3 @@
-//Bucket Fonts
-@font-face {
-  font-family: "Gotham-Bold";
-  src: url("https://frontend-assets.dnc.org/fonts/Gotham-Bold.eot");
-  src: url("https://frontend-assets.dnc.org/fonts/Gotham-Bold.otf") format("otf"),
-  url("https://frontend-assets.dnc.org/fonts/Gotham-Bold.svg") format('svg'),
-  url("https://frontend-assets.dnc.org/fonts/Gotham-Bold.ttf") format('ttf'),
-  url("https://frontend-assets.dnc.org/fonts/Gotham-Bold.woff") format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "GothamBook";
-  src: url("https://frontend-assets.dnc.org/fonts/GothamBook.eot");
-  src: url("https://frontend-assets.dnc.org/fonts/GothamRounded-Book.otf") format("otf"),
-  url("https://frontend-assets.dnc.org/fonts/GothamBook.ttf") format('ttf'),
-  url("https://frontend-assets.dnc.org/fonts/GothamBook.svg") format('svg'),
-  url("https://frontend-assets.dnc.org/fonts/GothamBook.woff") format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
 //Fonts
 $header-font: 'Montserrat', sans-serif;
 $body-font: 'Raleway', sans-serif;

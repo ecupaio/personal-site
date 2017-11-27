@@ -690,13 +690,49 @@ $project-padding: 2em;
 }
 #blog {
     .post {
+
+        padding-bottom: 1em;
+        padding-right: 2em;
+        .post-title {
+            display: inline-block;
+        }
         .post-tags {
             .tag {
                 display: inline-block;
             }
         }
-        .post-link {
-            margin: 1em 0;
+
+    }
+    .tag-search {
+        input {
+            background: $brand_gray;
+        }
+        .tag-filter {
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+
+    }
+    .selected-tags {
+
+        .selected-tag {
+            background: $brand_dk_blue;
+            color: $brand_white;
+            display: inline-block;
+            padding: 0.5em;
+            border-radius: 1em;
+            margin: 0 1em 0.5em 0;
+            .remove-tag {
+                display: inline-block;
+            }
+            .filter-label {
+                &:after {
+                    content: ' |';
+                }
+
+            }
         }
     }
 }

@@ -120,5 +120,69 @@ $(document).ready(function() {
         $(this).parent().toggleClass('active');
     });
 
+    //Blog Tag Search
+    var filterArray = [];
+    $('.tag-input').click(function() {
+        $('.tag-list').addClass('active');
+    });
 
+    $('.tag-input').keyup(function() {
+        var searchTerm = $('.tag-input').val();
+        $('.tag-filter').each(function(){
+            var filter = $(this).data('tag');
+            if (filter.indexOf(searchTerm) > -1 ) {
+                if (!$(this).hasClass('in-use')) {
+                    $(this).addClass('active');
+                }
+            } else {
+                $(this).removeClass('active');
+            }
+        });
+    });
+    var filterLength;
+    $('.tag-filter').click(function() {
+        var filter = $(this).data('tag');
+        $(this).removeClass('active');
+        $(this).addClass('in-use');
+        filterArray.push(filter);
+        $('.tag-input').val('');
+
+        $('.selected-tags').append('<div class="selected-tag" data-tag="'+filter+'"><span class="filter-label">'+filter+'</span> <span class="remove-tag"><i class="fa fa-times"></i></span></div>');
+
+        filterLength = filterArray.length;
+        filterBlog();
+    });
+    $('.selected-tags').on('click', '.remove-tag', function(e){
+        var rmTag = $(this).parent().text().trim();
+
+        $('.tag-filter[data-tag="'+rmTag+'"]').addClass('active');
+        $('.tag-filter[data-tag="'+rmTag+'"]').removeClass('in-use');
+        var rmIndex = filterArray.indexOf(rmTag);
+        filterArray.splice(rmIndex,1);
+
+        $(this).parent().remove();
+        filterLength = filterArray.length;
+
+
+        filterBlog();
+    });
+    function filterBlog() {
+
+        $('.post-tags').each(function() {
+            var postTags = $(this).text().replace(/[\r\n\s,]+/g," ").trim().split(' ');
+            function containsAny(source,target) {
+                var result = source.filter(function(item){ return target.indexOf(item) > -1;});
+                return (result.length > 0);
+            }
+            if (containsAny(postTags,filterArray) === true ) {
+                $(this).parent().show();
+            } else if (filterArray.length === 0) {
+                $(this).parent().show();
+            } else {
+                $(this).parent().hide();
+            }
+
+        });
+
+    }
 });
