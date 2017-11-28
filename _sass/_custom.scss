@@ -690,7 +690,6 @@ $project-padding: 2em;
 }
 #blog {
     .post {
-
         padding-bottom: 1em;
         padding-right: 2em;
         .post-title {
@@ -711,6 +710,13 @@ $project-padding: 2em;
             display: none;
             &.active {
                 display: block;
+                color: $brand_dk_blue;
+                margin: 0.25em 0;
+                @include transition;
+                &:hover {
+                    cursor: pointer;
+                    color: $brand_black;
+                }
             }
         }
 
