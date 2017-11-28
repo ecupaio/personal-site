@@ -688,6 +688,9 @@ $project-padding: 2em;
         }
     }
 }
+code, kbd, pre, samp {
+    background: $brand_gray;
+}
 #blog {
     @include bp-medium($size-medium) {
         .filter-col {
