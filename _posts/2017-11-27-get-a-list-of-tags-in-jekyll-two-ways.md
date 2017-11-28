@@ -75,9 +75,8 @@ Woot! Our tags are unique and ready to be looped through:
 ### The other method
 
 I discovered another method from tooling around. In this method I create an array, filter the array for unique values, then loop through that array to get my tags. Basically the same as the method above, but more complicated! I just comment above each line here for a more brief explanation:
-
-Create an empty array to add objects to:  
 {% raw %}
+Create an empty array to add objects to:  
 `{% assign tagArray = '' | split: ',' %}`  
 Loop through the posts:  
 `{% for post in site.posts %}`  
