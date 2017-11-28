@@ -69,6 +69,8 @@ defaults:
     values:
       published: "false"
       permalink: "/blog/:title/"
+      tags:
+        - ""
 prose:
   ignore: ['_layouts','_plugins']
   metadata:

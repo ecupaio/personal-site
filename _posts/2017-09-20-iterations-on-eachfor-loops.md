@@ -4,7 +4,6 @@ layout: index
 published: true
 permalink: "/blog/:title/"
 tags:
-- guide
 - jekyll
 ---
 

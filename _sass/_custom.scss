@@ -689,6 +689,16 @@ $project-padding: 2em;
     }
 }
 #blog {
+    @include bp-medium($size-medium) {
+        .filter-col {
+            order: 1;
+            margin-bottom: 1em;
+        }
+        .post-col {
+            order: 2;
+        }
+    }
+
     .post {
         padding-bottom: 1em;
         padding-right: 2em;
