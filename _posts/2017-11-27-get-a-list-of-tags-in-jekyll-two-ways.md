@@ -39,7 +39,7 @@ I added the `where` filter to get only the posts that are published:
 {% raw %}
 `{% assign posts =  site.posts | where: 'published', 'true' %}`
 {% endraw %}
-The `where` operates based on an object/value pair. In the above example, I'm telling jekyll to get all posts where the published object has a value of true, e.g. `published: true`. `where` is just a filter for your frontmatter. 
+The `where` operates based on an object/value pair. In the above example, I'm telling jekyll to get all posts where the published object has a value of true, e.g. `published: true`. `where` is just a filter for your frontmatter.
 
 I added the `map` filter in order to create an array with only the tag filters:  
 {% raw %}
@@ -81,7 +81,7 @@ Create an empty array to add objects to:
 `{% assign tagArray = '' | split: ',' %}`  
 Loop through the posts:  
 `{% for post in site.posts %}`  
-Get only published posts:
+Get only published posts:  
 `{% if post.published != "false" %}`  
     Loop through the tag lists within each post:  
     `{% for tag in post.tags %}`  
