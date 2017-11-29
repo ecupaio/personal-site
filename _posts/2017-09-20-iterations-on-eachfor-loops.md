@@ -5,6 +5,7 @@ published: true
 permalink: "/blog/:title/"
 tags:
 - jekyll
+- example
 ---
 
 Let's say you want to apply specific behaviors to every 3rd item of an array. Technically, you can use nth-child, but you can't apply nth-child to specific children.
