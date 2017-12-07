@@ -1,13 +1,13 @@
 ---
+title: GOP Tax Scam
 layout: index
 link: https://goptaxscam.democrats.org/
 image:
-- http://localhost:4000/min_images/Stop%20the%20GOP%20Tax%20Scam%20--%20Make%20Calls.jpeg
+- Stop%20the%20GOP%20Tax%20Scam%20--%20Make%20Calls.jpeg
 tech:
 - Jekyll
 - Revolution Messaging
 date: '2017-11-21 19:00:00'
-title: GOP Tax Scam
 ---
 
 GOP Tax Scam is an action based microsite where users can enter their information in order to contact their representative in Congress. The site uses the [Revere Calling tool](https://revolutionmessaging.com/revere/calling) from Revolution Messaging to call the user's phone then connect them with their representative based on the zip code they entered. Over 4,000 calls were made in the first week of launching the site.
