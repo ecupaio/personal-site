@@ -1,9 +1,17 @@
 ---
-published: true
+title: College Democrats
+date: '2016-05-11'
+img:
+  - College_Democrats.jpg
+tech:
+  - Jekyll
+  - Google Maps API
+  - Miso Dataset
+link: 'https://collegedems.com/'
 ---
 
 ## Description
-Collegedems.com  is the official site for College Democrats. This started as a static microsite and later converted into a Jekyll site so that content editors could updated the bios page.
+Collegedems.com  is the official site for College Democrats. This started as a static microsite and later converted into a Jekyll site so that content editors could updated the bios page .
 ## Features
 [Twitter Timeline](http://)  
 I used [Twitter Post Fetcher](https://github.com/jasonmayes/Twitter-Post-Fetcher)  and [Slick Carousel](http://kenwheeler.github.io/slick/) to make a custom branded twitter timeline. It's fully interactive and mobile ready.
