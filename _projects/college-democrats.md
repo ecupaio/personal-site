@@ -1,7 +1,7 @@
 ---
 title: College Democrats
 date: '2016-05-11'
-image:
+img:
   - College_Democrats.jpg
 tech:
   - Jekyll
