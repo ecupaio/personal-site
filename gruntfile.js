@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 					expand: true,
 					cwd: 'images/',
 					src: ['**/*.{png,jpg,gif,jpeg,svg}'],
-					dest: 'min_images/'
+					dest: 'images/'
 				}]
 			}
 		},

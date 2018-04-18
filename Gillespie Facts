@@ -2,8 +2,8 @@
 published: false
 link: 'https://gillespiefacts.com/'
 img:
-  - min_images/Gillespie_Facts.jpg
-  - min_images/Gillespie_Facts_Interior.jpg
+  - images/Gillespie_Facts.jpg
+  - images/Gillespie_Facts_Interior.jpg
 date: 09-27-2017
 tech:
   - Jekyll
