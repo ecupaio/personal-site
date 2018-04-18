@@ -26,8 +26,6 @@ timezone: "America/New_York"
 markdown: kramdown
 theme: minima
 gems:
-  - jekyll-feed
-  - jekyll-admin
   - uglifier
 exclude:
   - Gemfile
@@ -58,7 +56,7 @@ defaults:
       type: "projects"
     values:
       link: ""
-      image:
+      img:
         - ""
       tech:
         - ""
@@ -71,45 +69,3 @@ defaults:
       permalink: "/blog/:title/"
       tags:
         - ""
-prose:
-  ignore: ['_layouts','_plugins']
-  metadata:
-    _projects:
-      - name: "link"
-        field:
-          element: "text"
-          label: "Link"
-          help: "URL for project"
-          value: ""
-          placeholder: "Helper text in the input if no value is provided."
-          type: "text"
-      - name: "img"
-        field:
-          element: "multiselect"
-          label: "Image"
-          help: "Image for project"
-          value: ""
-          alterable: true
-      - name: "date"
-        field:
-          element: "text"
-          label: "Date"
-          help: "Date of project release"
-          value: ""
-          type: "text"
-      - name: "tech"
-        field:
-          element: "multiselect"
-          label: "Tech"
-          help: "List tech used for project"
-          alterable: true
-          value: ""
-          options:
-            - name: "Jekyll"
-              value: "Jekyll"
-            - name: "Blue State Digital"
-              value: "Blue State Digital"
-            - name: "Wordpress"
-              value: "Wordpress"
-            - name: "Drupal"
-              value: "Drupal"
