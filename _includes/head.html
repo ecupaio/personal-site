@@ -9,7 +9,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
 <!-- CSS -->
 {% include base.html %}
-<link href="{{ base }}/css/style.css" rel="stylesheet" type="text/css">
+<!-- <link href="{{ base }}/css/style.css" rel="stylesheet" type="text/css"> -->
+<style>
+{% capture include_to_scssify %}
+      {% include styles.scss %}
+    {% endcapture %}
+    {{ include_to_scssify | scssify }}
+</style>
 <!-- Font -->
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:400,400i,700" rel="stylesheet">
 <!-- Font Awesome -->
