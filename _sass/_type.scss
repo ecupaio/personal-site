@@ -14,7 +14,7 @@ a {
 	font-weight: bold;
 	text-decoration: none;
 	color: $theme_body_link;
-	@include transition;
+	@include transition(all);
 	&:hover {
 		color: $theme_body_link_hover;
 	}

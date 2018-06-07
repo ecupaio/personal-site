@@ -24,15 +24,14 @@ $(document).ready(function() {
 
         });
         scrollTop('.show-more',0);
-
     });
     var t = 0;
     $(window).scroll(function () {
         if ($(this).scrollTop() > 80 && t < $(this).scrollTop() ) {
-            $('#header, .header-inner').addClass('hide');
+            $('#header').addClass('hide');
 
         } else {
-            $('#header, .header-inner').removeClass('hide');
+            $('#header').removeClass('hide');
         }
         if ($(this).scrollTop() > 50) {
             var delay = 0;

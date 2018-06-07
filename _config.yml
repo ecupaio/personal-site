@@ -24,17 +24,16 @@ future: true
 timezone: "America/New_York"
 # Build settings
 markdown: kramdown
-theme: minima
-gems:
-  - uglifier
+plugins:
+  - jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
+  - gruntfile.js
 sass:
   sass_dir: _sass
   style: compressed
-livereload: true
 # Collections
 collections:
   projects:

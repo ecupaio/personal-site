@@ -3,27 +3,36 @@
 $theme_body: #333;
 $theme_body_link: $brand_dk_blue;
 $theme_body_link_hover: darken($brand_dk_blue,20%);
-$theme_heading:$brand_dk_blue; //Footer Colors
+$theme_heading:$brand_dk_blue;
+//Footer Colors
 $theme_footer_bg: $brand_black;
 $theme_footer_txt: $brand_white;
 $copyright_link: $brand_dk_blue;
-$copyright_link_hover: darken($brand_dk_blue,20%); //Header Colors
+$copyright_link_hover: darken($brand_dk_blue,20%);
+//Header Colors
 $theme_header_bg: rgba($brand_dk_blue, 0.8);
-$theme_header_txt: $brand_dk_blue; //Button Colors
+$theme_header_txt: $brand_dk_blue;
+//Button Colors
 $theme_button_bg: $brand_dk_blue;
-$theme_button_txt: $brand_white; //BSD Form Colors
+$theme_button_txt: $brand_white;
+//BSD Form Colors
 $theme_form_bg: $brand_black;
 $theme_form_txt: $brand_black;
 $theme_form_btn_bg: $brand_dk_blue;
-$theme_form_btn_txt: $brand_white; //Mobile Breakpoints
+$theme_form_btn_txt: $brand_white;
+//Mobile Breakpoints
+$size-x-large: 1280px;
 $size-large: 1024px;
 $size-medium: 768px;
-$size-small: 568px; //Padding for Sections and Grids
+$size-small: 568px;
+//Padding for Sections and Grids
 $gutter-padding: 0.5em 1em;
 $header-padding: 1em;
 $body-padding: 0.5em 3em;
 $body-padding-mobile: 0.5em 1em;
 $footer-padding: 1em 3em;
+//
+$transition_duration: 0.5s;
 @import "mixins";
 @include gridGutters($gutter-padding);
 @include headerPadding($header-padding);
@@ -50,7 +59,7 @@ $menu_width: 10em;
     background: $brand_black;
     color: $brand_white;
     z-index: 9;
-    @include custom_transition(width 0.5s ease);
+    @include transition(width);
 
     .sidebar-inner {
         margin-top: 4.5em;
@@ -77,7 +86,7 @@ $menu_width: 10em;
                 -webkit-transform-origin: center center;
                 -moz-transform-origin: center center;
                 -ms-transform-origin: center center;
-                @include transition;
+                @include transition(all);
             }
 
             &:hover {
@@ -93,7 +102,7 @@ $menu_width: 10em;
                     -webkit-transform-origin: center center;
                     -moz-transform-origin: center center;
                     -ms-transform-origin: center center;
-                    @include transition;
+                    @include transition(all);
                 }
             }
         }
@@ -106,7 +115,7 @@ $menu_width: 10em;
 
 #wrapper {
     margin-left: 0;
-    @include custom_transition(margin 0.5s ease);
+    @include transition(margin);
     overflow: hidden;
     &.active {
         margin-left: $menu_width;
@@ -125,7 +134,6 @@ $menu_width: 10em;
     padding: 0;
     position: fixed;
     background-color: $brand_dk_blue;
-    height: auto;
     min-height: 3em;
     text-transform: uppercase;
     a {
@@ -133,23 +141,18 @@ $menu_width: 10em;
         font-size: 1em;
         font-family: $header_font;
     }
+    &.hide {
+        @include transform(translateY(-100%));
+        overflow: hidden;
+    }
 
     .header-inner {
         text-align: right;
-        height: 100%;
         padding: 1em;
-        @include custom_transition(height 0.5s ease);
-        overflow: auto;
-        &.hide {
-            height: 0;
-            padding: 0;
-            overflow: hidden;
-        }
         .site-title {
             display: inline-block;
             margin-top: 3px;
         }
-
         .menu-toggle {
             width: 2.5em;
             padding: 0 0.25em;
@@ -168,7 +171,7 @@ $menu_width: 10em;
                 background-color: $brand_white;
                 height: 0.25rem;
                 margin: 0.25rem 0;
-                @include transition;
+                @include transition(all);
 
                 &.open {
                     &:nth-child(2) {
@@ -199,7 +202,7 @@ $menu_width: 10em;
             }
         }
     }
-    @include custom_transition(all 0.5s ease);
+    @include transition(all);
     &.hide {
         height: 0;
         min-height: 0;
@@ -251,7 +254,7 @@ $menu_width: 10em;
     .project-col {
         height: 100%;
         opacity: 1;
-        @include transition;
+        @include transition(all);
 
         &.not-loaded {
             height: 0;
@@ -274,10 +277,10 @@ $menu_width: 10em;
             width: 100%;
             overflow: hidden;
             background: rgba($brand_white, 0);
-            @include transition;
+            @include transition(all);
 
             .project-name {
-                @include transition;
+                @include transition(all);
                 @include absoluteCenter(50%, 50%);
                 z-index: 9;
                 opacity: 0;
@@ -305,7 +308,7 @@ $menu_width: 10em;
                 -moz-transform: translateX(-50%) translateY(-50%);
                 -ms-transform: translateX(-50%) translateY(-50%);
                 transform: translateX(-50%) translateY(-50%);
-                @include transition;
+                @include transition(all);
             }
 
             &:hover {
@@ -335,7 +338,7 @@ $menu_width: 10em;
                 background: rgba($brand_dk_blue,0.8);
                 color: #fff;
                 overflow: hidden;
-                @include custom_transition(width 0.5s ease);
+                @include transition(width);
                 a {
                     &.pure-button {
                         border: 3px solid $brand_white;
@@ -382,7 +385,7 @@ $menu_width: 10em;
                     right: 0.5em;
                     z-index: 11;
                     color: $brand_white;
-                    @include transition;
+                    @include transition(all);
 
                     &:hover {
                         cursor: pointer;
@@ -458,7 +461,7 @@ $project-padding: 2em;
                 -webkit-transform: translateY(-101%);
                 -moz-transform: translateY(-101%);
                 background: rgba($brand_dk_blue,0.7);
-                @include transition;
+                @include transition(all);
 
                 .tech-label {
                     color: $brand_white;
@@ -492,7 +495,7 @@ $project-padding: 2em;
     .project-slide {
         .slide-img {
             img {
-                
+
                 width: 100%;
                 height: auto;
             }
@@ -588,7 +591,7 @@ $project-padding: 2em;
                     font-weight: bold;
                     color: $brand_dk_blue;
                     text-transform: uppercase;
-                    @include transition;
+                    @include transition(all);
                 }
 
             }
@@ -605,11 +608,11 @@ $project-padding: 2em;
                     width: 20px;
                     left: 50%;
                     transform: translateX(-50%);
-                    @include custom_transition(background-color 0.5s ease);
+                    @include transition(background-color);
                     &:nth-child(1) {
                         transform: translateX(-50%) rotate(90deg);
                         transform-origin: center;
-                        @include transition;
+                        @include transition(all);
 
                     }
 
@@ -628,7 +631,7 @@ $project-padding: 2em;
                 bottom: 0;
                 position: absolute;
                 background: $brand_dk_blue;
-                @include transition;
+                @include transition(all);
             }
             &:hover {
 
@@ -729,7 +732,7 @@ code, kbd, pre, samp {
                 display: block;
                 color: $brand_dk_blue;
                 margin: 0.25em 0;
-                @include transition;
+                @include transition(all);
                 &:hover {
                     cursor: pointer;
                     color: $brand_black;
@@ -776,7 +779,7 @@ code, kbd, pre, samp {
     padding: 1em 2em;
     z-index: 11;
     text-align: right;
-    @include custom_transition(transform 0.5s ease);
+    @include transition(transform);
 
     &.active {
         transform: translateX(0);
@@ -831,7 +834,7 @@ code, kbd, pre, samp {
                     top: 0;
                     height: 0;
                     border-left: 5px solid $brand_dk_blue;
-                    @include transition;
+                    @include transition(all);
                 }
                 input,textarea {
                     display: block;
@@ -866,7 +869,7 @@ code, kbd, pre, samp {
             padding-top: 1em;
             transform: translateY(-100%);
             &.active {
-                @include transition;
+                @include transition(all);
                 transform: translateY(0);
 
             }
@@ -936,7 +939,7 @@ code, kbd, pre, samp {
         background-position: 0 0;
         background-size: 202%;
         display: inline;
-        @include transition;
+        @include transition(all);
         &:hover {
             cursor: pointer;
             color: $brand_black;
