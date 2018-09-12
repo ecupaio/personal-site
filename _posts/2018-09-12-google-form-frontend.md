@@ -1,7 +1,7 @@
 ---
 title: How to create a custom front-end for a Google Form
 date: 2018-09-12 18:25:38 +0000
-undefined: ''
+permalink: "/blog/google-form-front-end/"
 tags:
 - Google Apps
 - jQuery
@@ -73,14 +73,14 @@ I created the formula for you, but I still want you to understand what's going o
       //AJAX request
       $.ajax({
         url: 'https://docs.google.com/forms/d/e/1FAIpQLScfJY0v7xNhp6fyFdmiX6vPiAVgoldqPDNvf1PU1OCVxIu1jg/formResponse',     //The public Google Form url, but replace /view with /formResponse
-        data: $('#my-form').serialize(), //Nifty jquery function that gets all the input data 
+        data: $('#my-form').serialize(), //Nifty jquery function that gets all the input data
         type: 'POST', //tells ajax to post the data to the url
         dataType: "json", //the standard data type for most ajax requests
         statusCode: { //the status code from the POST request
           0: function(data) { //0 is when Google gives a CORS error, don't worry it went through
             //success
             $('#form-success').text('hooray!');
-          }, 
+          },
           200: function(data) {//200 is a success code. it went through!
             //success
             $('#form-success').text('hooray!');
@@ -93,21 +93,21 @@ I created the formula for you, but I still want you to understand what's going o
       });
     });
 
-This is non-standard AJAX request function since Google will through an error because you're sending the request from a domain that isn't Google (e.g. a CORS error). I'm using the statusCode response since the standard `success` and `error` responses will turn up an `error` each time because of the CORS error I mentioned earlier. `200` is good, `0` is when we get that CORS error but Google still gets the data somehow, and `403` is when no data went through. 
+This is non-standard AJAX request function since Google will through an error because you're sending the request from a domain that isn't Google (e.g. a CORS error). I'm using the statusCode response since the standard `success` and `error` responses will turn up an `error` each time because of the CORS error I mentioned earlier. `200` is good, `0` is when we get that CORS error but Google still gets the data somehow, and `403` is when no data went through.
 
 ### Send a test submission
 
-Go ahead and plug some data into your HTML form and check on the Google Form submissions backend to see if it went through! 
+Go ahead and plug some data into your HTML form and check on the Google Form submissions backend to see if it went through!
 
 The other way you can test is to take the /formResponse url you made earlier and add the input name attributes as URL parameters:
 
-Add a question mark to the form response URL like so: 
+Add a question mark to the form response URL like so:
 
 `https://docs.google.com/forms/d/e/1FAIpQLScfJY0v7xNhp6fyFdmiX6vPiAVgoldqPDNvf1PU1OCVxIu1jg/formResponse?`
 
 This tells the URL that we are going to add some information (parameters) to the request.
 
-`entry.1746887209` is my (only) input name attribute that I created with Google, so I add that after the question mark: 
+`entry.1746887209` is my (only) input name attribute that I created with Google, so I add that after the question mark:
 
 `https://docs.google.com/forms/d/e/1FAIpQLScfJY0v7xNhp6fyFdmiX6vPiAVgoldqPDNvf1PU1OCVxIu1jg/formResponse?entry.1746887209`
 
@@ -115,6 +115,6 @@ Now all I need to do is add the data for the input with an equal sign:
 
 `https://docs.google.com/forms/d/e/1FAIpQLScfJY0v7xNhp6fyFdmiX6vPiAVgoldqPDNvf1PU1OCVxIu1jg/formResponse?entry.1746887209=test`
 
-Open that [url](https://docs.google.com/forms/d/e/1FAIpQLScfJY0v7xNhp6fyFdmiX6vPiAVgoldqPDNvf1PU1OCVxIu1jg/formResponse?entry.1746887209) in a broswer and you will see the Google form success screen! 
+Open that [url](https://docs.google.com/forms/d/e/1FAIpQLScfJY0v7xNhp6fyFdmiX6vPiAVgoldqPDNvf1PU1OCVxIu1jg/formResponse?entry.1746887209) in a broswer and you will see the Google form success screen!
 
-If you have more than one input, add each parameter with an ampersand (`&`) 
+If you have more than one input, add each parameter with an ampersand (`&`)
