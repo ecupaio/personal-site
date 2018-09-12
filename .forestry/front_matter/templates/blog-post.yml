@@ -6,6 +6,9 @@ fields:
 - type: textarea
   label: title
   name: title
+- type: tag_list
+  name: tags
+  label: tags
 pages:
 - _posts/google-form-frontend.md
 - _posts/prevent-blur-on-scale-transform-transition.md
