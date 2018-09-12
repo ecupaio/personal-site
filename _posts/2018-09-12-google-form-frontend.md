@@ -11,7 +11,7 @@ tags:
 
 **Solution:** Create your own HTML form and use an AJAX request to transfer data to Google.
 
-This tutorial was intended for novices so if you're a javascript master, you can just check out my codepen where I have everything laid out.
+This tutorial was intended for novices so if you're a javascript master, you can just check out [my codepen](https://codepen.io/ecupaio/pen/QVrQov) where I have everything laid out.
 
 ## Steps:
 
