@@ -5,4 +5,5 @@ is_partial: false
 fields:
 - type: textarea
 pages:
+- _posts/google-form-frontend.md
 - _posts/prevent-blur-on-scale-transform-transition.md
