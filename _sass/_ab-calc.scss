@@ -1,0 +1,75 @@
+#ab-calc {
+  .data-row {
+    margin: 1em 0;
+    .form-field {
+      display: inline-block;
+    }
+  }
+  .significance {
+
+  }
+  .results {
+    .sig-chart {
+      position: relative;
+      width: 200px;
+
+      .donut {
+
+        .donut-ring {
+          stroke: #f2f2f2;
+        }
+        .donut-segment {
+          transition: stroke-dasharray 0.5s ease;
+        }
+
+      }
+
+      .confidence {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 3em;
+        font-weight: bold;
+        font-family: $header_font;
+      }
+    }
+    .conversion-chart {
+      width: 300px;
+      position: relative;
+
+      .col-container {
+        position: relative;
+        & > div {
+          display: inline-block;
+        }
+
+      }
+      .col-label {
+        font-weight: bold;
+        font-family: $header_font;
+        top: 24px;
+        position: relative;
+        padding-right: 0.5em;
+      }
+      .rate-col {
+
+        margin-bottom: 1em;
+        width: 0;
+
+        text-align: left;
+        background-color: #ffd700;
+        color: #333;
+        height: 4em;
+        text-align: center;
+        transition: width 0.5s ease;
+        span {
+          position: relative;
+          top: 24px;
+          font-weight: bold;
+          font-family: $header_font;
+        }
+      }
+    }
+  }
+}
