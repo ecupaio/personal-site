@@ -57,10 +57,20 @@ $(function() {
     //conversion rate chart
     $('.rate-a').text(Math.round(conversionRateA * 100)+'%');
     $('.rate-b').text(Math.round(conversionRateB * 100)+'%');
-    $('.col-a').attr('style','width: calc('+Math.round(conversionRateA * 100)+'% + 18px);');
-    $('.col-b').attr('style','width: calc('+Math.round(conversionRateB * 100)+'% + 18px);');
+    $('.col-a .rate-col').attr('style','width: calc('+Math.round(conversionRateA * 100)+'% + 18px);');
+    $('.col-b .rate-col').attr('style','width: calc('+Math.round(conversionRateB * 100)+'% + 18px);');
+    if (conversionRateA > conversionRateB && chiSq > sig20) {
+      $('.col-container').removeClass('winner');
+      $('.col-a').addClass('winner');
+
+    } else if (conversionRateB > conversionRateA && chiSq > sig20) {
+      $('.col-container').removeClass('winner');
+      $('.col-b').addClass('winner');
+    } else {
+      $('.col-container').removeClass('winner');
+    }
     //URL maker
-    $('.url-maker').text('?sessionA='+sessionA+'&sessionB='+sessionB+'&conversionA='+conversionA+'&conversionB='+conversionB);
+    $('.url-params').text('?sessionA='+sessionA+'&sessionB='+sessionB+'&conversionA='+conversionA+'&conversionB='+conversionB);
   }
   function getParameterByName(name, url) {
     if (!url) url = window.location.href;

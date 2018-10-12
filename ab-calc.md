@@ -32,22 +32,24 @@ permalink: /ab-test-calculator/
   <div class="results">
     <div class="conversion-chart">
       <h3>Conversion rates</h3>
-      <div class="chart-cols">
-        <div class="col-container">
+      <div class="chart-cols ">
+        <div class="col-container col-a">
           <div class="col-label">
             A
           </div>
-          <div class="rate-col col-a">
+          <div class="rate-col ">
               <span class="rate-a"></span>
           </div>
+          <span class="winner-text"><i class="fa fa-check"></i> Winner!</span>
         </div>
-        <div class="col-container">
+        <div class="col-container col-b">
           <div class="col-label">
             B
           </div>
-          <div class="rate-col col-b">
+          <div class="rate-col ">
             <span class="rate-b"></span>
           </div>
+          <span class="winner-text"><i class="fa fa-check"></i> Winner!</span>
         </div>
 
       </div>
@@ -69,6 +71,10 @@ permalink: /ab-test-calculator/
       <span class="confidence"></span>
     </div>
   </div>
-  <div class="url-maker"></div>
-
+  <div class="copy-url">
+    Copy the url below to share the results:
+  <div>
+    http://edcupaioli.com/<span class="url-params"></span>
+  </div>
+  </div>
 </div>

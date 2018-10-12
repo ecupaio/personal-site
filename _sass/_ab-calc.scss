@@ -1,3 +1,7 @@
+$green: #26a65b;
+$yellow: #ffd700;
+$red: #dc2a2a;
+$orange: #e65722;
 #ab-calc {
   .data-row {
     margin: 1em 0;
@@ -35,15 +39,32 @@
       }
     }
     .conversion-chart {
-      width: 300px;
+      
       position: relative;
 
       .col-container {
         position: relative;
+        .winner-text {
+          display: none;
+
+        }
         & > div {
           display: inline-block;
         }
+        &.winner {
+          .rate-col {
+            background-color: $green;
+            color: #fff;
+          }
+          .winner-text {
+            display: inline-block;
+            position: relative;
+            font-weight: 700;
+            top: 1.25em;
 
+            color: $green;
+          }
+        }
       }
       .col-label {
         font-weight: bold;
@@ -51,18 +72,18 @@
         top: 24px;
         position: relative;
         padding-right: 0.5em;
+
       }
       .rate-col {
-
         margin-bottom: 1em;
         width: 0;
-
         text-align: left;
         background-color: #ffd700;
         color: #333;
         height: 4em;
         text-align: center;
         transition: width 0.5s ease;
+
         span {
           position: relative;
           top: 24px;
