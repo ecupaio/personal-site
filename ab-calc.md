@@ -5,7 +5,6 @@ permalink: /ab-test-calculator/
 <div id="ab-calc">
   <h1>A/B Test Calculator</h1>
   <form id="calc-form">
-
     <div class="data-row">
       <div class="form-field">
         <label>Sessions A</label>
@@ -29,7 +28,7 @@ permalink: /ab-test-calculator/
     <input type="submit" class="pure-btn"/>
   </form>
 
-  <div class="results">
+  <div class="results hidden">
     <div class="conversion-chart">
       <h3>Conversion rates</h3>
       <div class="chart-cols ">
@@ -70,11 +69,13 @@ permalink: /ab-test-calculator/
       </svg>
       <span class="confidence"></span>
     </div>
+    <div class="copy-url">
+      Copy the url below to share the results:
+      <div>
+        <input class="url-params" >
+      </div>
+
+    </div>
   </div>
-  <div class="copy-url">
-    Copy the url below to share the results:
-  <div>
-    http://edcupaioli.com/<span class="url-params"></span>
-  </div>
-  </div>
+
 </div>

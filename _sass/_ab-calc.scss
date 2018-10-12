@@ -16,6 +16,7 @@ $orange: #e65722;
     .sig-chart {
       position: relative;
       width: 200px;
+      margin-top: 1em;
 
       .donut {
 
@@ -39,7 +40,7 @@ $orange: #e65722;
       }
     }
     .conversion-chart {
-      
+
       position: relative;
 
       .col-container {
@@ -92,5 +93,8 @@ $orange: #e65722;
         }
       }
     }
+  }
+  .url-params {
+    width: 100%;
   }
 }

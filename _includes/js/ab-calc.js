@@ -1,6 +1,8 @@
 $(function() {
   // use https://www.socscistatistics.com/tests/chisquare/Default2.aspx to check
   function findSig() {
+    //display results
+    $('.results').removeClass('hidden');
     //clear results
     $('.not-sig, .is-sig').addClass('hidden');
     $('.donut-segment').attr('stroke-dasharray','0,100').attr('stroke','');
@@ -70,7 +72,7 @@ $(function() {
       $('.col-container').removeClass('winner');
     }
     //URL maker
-    $('.url-params').text('?sessionA='+sessionA+'&sessionB='+sessionB+'&conversionA='+conversionA+'&conversionB='+conversionB);
+    $('.url-params').val('http://edcupaioli.com/?sessionA='+sessionA+'&sessionB='+sessionB+'&conversionA='+conversionA+'&conversionB='+conversionB);
   }
   function getParameterByName(name, url) {
     if (!url) url = window.location.href;
@@ -84,6 +86,9 @@ $(function() {
   $('#calc-form').submit(function(e) {
     e.preventDefault();
     findSig();
+  });
+  $('.url-params').click(function () {
+    $(this).select();
   });
   if (window.location.href.indexOf('?sessionA') > -1) {
     $('.sessions-a').val(getParameterByName('sessionA'));
