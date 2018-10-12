@@ -55,6 +55,7 @@ permalink: /ab-test-calculator/
 
     </div>
     <div class="significance">
+      <h3>Significance of results</h3>
       <div class="is-sig hidden">
         The results were significant at <span class="confidence"></span> confidence.
       </div>
