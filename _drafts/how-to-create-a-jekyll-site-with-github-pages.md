@@ -198,6 +198,21 @@ Open the layout located at `_layouts/default.html` and add the following line ju
 
 ### Publish your Jekyll Site with Github Pages
 
+Now that you got everything set up and you're happy with your home page, it's time to publish! 
+
+Push your file changes to the remote repo: 
+
+`git add .`
+`git commit -m "Set up site"`
+`git push origin master`
+
+Open your repo in github: https://github.com/user-name/repo-name
+
+Select settings at the top menu
+
+Scroll to Github Pages and select master branch under Source, then select save. 
+
+Scroll back down to the Github Pages section, and your site link will be there: https://username.github.io/repo-name/. 
 
 
 ### Purchase and Redirect your Domain
