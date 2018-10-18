@@ -186,10 +186,18 @@ Now that your homepage is shining, you're probably going to want to add some cli
 
 Create a directory in the root of your site named `js`. 
 
-This is where you will store your files. 
+Add your first script file to the `js` directory and name it `functions.js`
 
 #### Add JS to the layout
 
+With your JS directory and script file added, now all you need to do is add it to the layout.
+
+Open the layout located at `_layouts/default.html` and add the following line just above the `</body>` closing tag:
+
+`<script src="{{ site.url }}/js/functions.js">`
+
 ### Publish your Jekyll Site with Github Pages
+
+
 
 ### Purchase and Redirect your Domain
