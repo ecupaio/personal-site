@@ -10,7 +10,7 @@ In this tutorial, we're going to create a Jekyll site and host it with Github. Y
 
 ### Install and/or update Ruby
 
-Docs are usually terrible and written for CS graduates, but Jekyll lays out precisely how to it for all operating systems: 
+Docs are usually terrible and written for CS graduates, but Jekyll lays out precisely how to it for all operating systems:
 
 * [macOS](https://jekyllrb.com/docs/installation/macos/)
 * [Ubuntu Linux](https://jekyllrb.com/docs/installation/ubuntu/)
@@ -23,18 +23,18 @@ Docs are usually terrible and written for CS graduates, but Jekyll lays out prec
 
 `gem install jekyll bundler`
 
-This will install all the necessary ruby gems (files) that Jekyll needs in order to run. 
+This will install all the necessary ruby gems (files) that Jekyll needs in order to run.
 
 ### Create Jekyll Site
 
-**Create a folder (directory) in your username (root) directory in Finder for your projects.**   
+**Create a folder (directory) in your username (root) directory in Finder for your projects.**  
 ![](/uploads/root-directory.png)
 
-This is where you're going to put your first Jekyll website along with all your other projects. I call mine "Projects", but you can name it whatever you want, as long as it's easy to remember and type. 
+This is where you're going to put your first Jekyll website along with all your other projects. I call mine "Projects", but you can name it whatever you want, as long as it's easy to remember and type.
 
 **Next, create a folder for your Jekyll site within your projects folder.**
 
-Make sure there are no spaces in your site folder name, as this will cause some issues later. 
+Make sure there are no spaces in your site folder name, as this will cause some issues later.
 
 **Open a terminal window and change the directory to your new site folder by entering the following:**
 
@@ -42,11 +42,11 @@ Make sure there are no spaces in your site folder name, as this will cause some 
 
 Now you're in your site directory and you are ready to install your jekyll site.
 
-**In that same terminal window, enter the following:** 
+**In that same terminal window, enter the following:**
 
 `jekyll new . --force`
 
-This will create a Jekyll site within your site directory. You should see a bunch of files in your site folder. 
+This will create a Jekyll site within your site directory. You should see a bunch of files in your site folder.
 
 **Run the Jekyll server to check if you're site is working, by entering the following in the same terminal window:**
 
@@ -56,11 +56,11 @@ Go to [http://localhost:4000](http://localhost:4000) to see your site!
 
 ### Create a repository on Github for your site
 
-I am adapting the [instructions from Github](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/) for this section. 
+I am adapting the [instructions from Github](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/) for this section.
 
 **Go to** [**https://github.com/new**](https://github.com/new "https://github.com/new") **to create a new repo**
 
-Name it the exact name as your site folder. 
+Name it the exact name as your site folder.
 
 **Open terminal and cd into your site:**
 
@@ -70,7 +70,7 @@ Name it the exact name as your site folder.
 
 `git init`
 
-**Stage all of your site files to be committed to your local repo:** 
+**Stage all of your site files to be committed to your local repo:**
 
 `git add .`
 
@@ -82,7 +82,7 @@ Name it the exact name as your site folder.
 
 Github will give you the exact commands for how to do this when you create your repo under "...or push an existing repository from the command line"
 
-Here they are below: 
+Here they are below:
 
 `git remote add origin https://github.com/your-username/site-repo.git`
 
@@ -98,47 +98,30 @@ Open your repo with a text editor (Atom, Sublime, etc.) for the simplest way to 
 
 #### Add a custom layout
 
-Jekyll comes with themes and layouts, but we want to make our very own custom site so we're going to add a custom layout. 
+Jekyll comes with themes and layouts, but we want to make our very own custom site so we're going to add a custom layout.
 
 First, create a directory named _layout in the root of your site
 
 Next, add a html file to the _layout directory and name it `default.html`
 
-This will be your layout for your home page. Eventually, you can add layouts for blog posts or product pages. But for now we'll stick with this one since the purpose is to get your content to display properly across the pages you create. [See Jekyll's docs](https://jekyllrb.com/docs/layouts/) for a more in-depth explanation on layouts.  
+This will be your layout for your home page. Eventually, you can add layouts for blog posts or product pages. But for now we'll stick with this one since the purpose is to get your content to display properly across the pages you create. [See Jekyll's docs](https://jekyllrb.com/docs/layouts/) for a more in-depth explanation on layouts.
 
 Below is a boiler plate layout that will set you up for success:
 
-```
-<!doctype html>
-
-<html lang="en">
-
-  <head>
-
-    <meta charset="utf-8">
-
-    <!-- configured in the page frontmatter -->
-
-    <title>{{ page.title }}</title>
-
-    <!-- configured in the _config.yml -->
-
-    <meta content="{{ site.description }}" name="description">
-
-    <link rel="stylesheet" href="/css/style.css">
-
-  </head>
-
-  <body>
-
-    <!-- the content of the page -->
-
-    {{ content }}
-
-  </body>
-
-</html>  
-```
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <!-- configured in the page frontmatter -->
+        <title>{{ page.title }}</title>
+        <!-- configured in the _config.yml -->
+        <meta content="{{ site.description }}" name="description">
+      </head>
+      <body>
+        <!-- the content of the page -->
+        {{ content }}
+      </body>
+    </html>  
 
 #### Add SCSS file structure
 
