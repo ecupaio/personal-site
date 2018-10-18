@@ -202,8 +202,10 @@ Now that you got everything set up and you're happy with your home page, it's ti
 
 Push your file changes to the remote repo:
 
-`git add .`  
-`git commit -m "Set up site"`  
+`git add .`
+
+`git commit -m "Set up site"`
+
 `git push origin master`  
 
 Open your repo in github: https://github.com/user-name/repo-name
