@@ -6,9 +6,9 @@ tags:
 - github pages
 
 ---
-In this tutorial, we're going to create a Jekyll site and host it with Github. You will need to use the command line 
+In this tutorial, we're going to create a Jekyll site and host it with Github. You will need to use the command line (Applications > Utilities > Terminal) and I'm using Mac OS X for the steps below. I'm also assuming you have git installed and you have a github account so follow these instructions, if you have not: [https://help.github.com/articles/set-up-git/](https://help.github.com/articles/set-up-git/ "https://help.github.com/articles/set-up-git/")
 
-## Install Ruby
+### Install and/or update Ruby
 
 Docs are usually terrible and written for CS graduates, but Jekyll lays out precisely how to it for all operating systems: 
 
@@ -17,10 +17,83 @@ Docs are usually terrible and written for CS graduates, but Jekyll lays out prec
 * [Other Linux distros](https://jekyllrb.com/docs/installation/other-linux)
 * [Windows](https://jekyllrb.com/docs/installation/windows/)
 
-Create Jekyll Site
+### Install Jekyll
 
-Configure your Jekyll Site
+**Open a terminal window and enter the following:**
 
-Publish your Jekyll Site with Github Pages
+`gem install jekyll bundler`
 
-Purchase and Redirect your Domain
+This will install all the necessary ruby gems (files) that Jekyll needs in order to run. 
+
+### Create Jekyll Site
+
+**Create a folder (directory) in your username (root) directory in Finder for your projects.**   
+![](/uploads/root-directory.png)
+
+This is where you're going to put your first Jekyll website along with all your other projects. I call mine "Projects", but you can name it whatever you want, as long as it's easy to remember and type. 
+
+**Next, create a folder for your Jekyll site within your projects folder.**
+
+Make sure there are no spaces in your site folder name, as this will cause some issues later. 
+
+**Open a terminal window and change the directory to your new site folder by entering the following:**
+
+`cd ~/Projects-folder-name/website-name`
+
+Now you're in your site directory and you are ready to install your jekyll site.
+
+**In that same terminal window, enter the following:** 
+
+`jekyll new . --force`
+
+This will create a Jekyll site within your site directory. You should see a bunch of files in your site folder. 
+
+**Run the Jekyll server to check if you're site is working, by entering the following in the same terminal window:**
+
+`bundle exec jekyll serve --livereload`
+
+Go to [http://localhost:4000](http://localhost:4000) to see your site!
+
+### Create a repository on Github for your site
+
+I am adapting the [instructions from Github](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/) for this section. 
+
+**Go to** [**https://github.com/new**](https://github.com/new "https://github.com/new") **to create a new repo**
+
+Name it the exact name as your site folder. 
+
+**Open terminal and cd into your site:**
+
+`cd ~/Projects-folder-name/website-name`
+
+**Initialize your repository by entering the following into your terminal window:**
+
+`git init`
+
+**Stage all of your site files to be committed to your local repo:** 
+
+`git add .`
+
+**Commit your files to the local repo:**
+
+`git commit -m "Add site files"`
+
+**Push the local repo to the remote repo on Github:**
+
+Github will give you the exact commands for how to do this when you create your repo under "...or push an existing repository from the command line"
+
+Here they are below: 
+
+`git remote add origin https://github.com/your-username/site-repo.git`
+
+`git push -u origin master`
+
+**Refresh the repo page to see if it went through**
+
+You should also receive confirmation in the terminal: `Branch 'master' set up to track remote branch 'master' from 'origin'.`
+
+### Configure your Jekyll Site
+
+### Publish your Jekyll Site with Github Pages
+
+### Purchase and Redirect your Domain
