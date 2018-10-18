@@ -94,6 +94,60 @@ You should also receive confirmation in the terminal: `Branch 'master' set up to
 
 ### Configure your Jekyll Site
 
+Open your repo with a text editor (Atom, Sublime, etc.) for the simplest way to edit and add all of your configurations
+
+#### Add a custom layout
+
+Jekyll comes with themes and layouts, but we want to make our very own custom site so we're going to add a custom layout. 
+
+First, create a directory named _layout in the root of your site
+
+Next, add a html file to the _layout directory and name it `default.html`
+
+This will be your layout for your home page. Eventually, you can add layouts for blog posts or product pages. But for now we'll stick with this one since the purpose is to get your content to display properly across the pages you create. [See Jekyll's docs](https://jekyllrb.com/docs/layouts/) for a more in-depth explanation on layouts.  
+
+Below is a boiler plate layout that will set you up for success:
+
+```
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <!-- configured in the page frontmatter -->
+
+    <title>{{ page.title }}</title>
+
+    <!-- configured in the _config.yml -->
+
+    <meta content="{{ site.description }}" name="description">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+  </head>
+
+  <body>
+
+    <!-- the content of the page -->
+
+    {{ content }}
+
+  </body>
+
+</html>  
+```
+
+#### Add SCSS file structure
+
+#### Load CSS in the Header
+
+#### Create a JS directory
+
+#### Add JS to the layout
+
 ### Publish your Jekyll Site with Github Pages
 
 ### Purchase and Redirect your Domain
