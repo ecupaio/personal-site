@@ -3,7 +3,7 @@
     <div class="pure-g">
         <div class="pure-u-1 post-col pure-u-md-4-5">
         {% for post in site.posts %}
-            {% if post.published != "false" %}
+
             <div class="post">
                 <a href="{{ base }}{{ post.url }}" class="post-title">
                     <h2>{{ post.title }}</h2>
@@ -18,7 +18,7 @@
                 </div>
                 <hr class="post-hr">
             </div>
-            {% endif %}
+            
         {% endfor %}
         </div>
         <div class="pure-u-1 filter-col pure-u-md-1-5">

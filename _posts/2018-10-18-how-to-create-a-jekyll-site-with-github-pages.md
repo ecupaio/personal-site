@@ -232,6 +232,6 @@ Scroll back down to the Github Pages section, and your site link will be there: 
 
 Once you're happy with your site, it's time to park it on a domain and share it with the world.
 
-Go to [namecheap.com](https://www.namecheap.com/) and purchase an available domain. 
+Go to [namecheap.com](https://www.namecheap.com/) and purchase an available domain.
 
-Follow [Namecheap's directions](https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages) on how to add a CNAME to the domain for your github page. 
+Follow [Namecheap's directions](https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages) on how to add a CNAME to the domain for your github page.
