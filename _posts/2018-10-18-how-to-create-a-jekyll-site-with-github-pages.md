@@ -4,6 +4,7 @@ date: 2018-10-18 15:01:56 +0000
 tags:
 - jekyll
 - github pages
+
 ---
 In this tutorial, we're going to create a Jekyll site and host it with Github. You will need to use the command line (Applications > Utilities > Terminal) and I'm using Mac OS X for the steps below. I'm also assuming you have git installed and you have a github account so follow these instructions, if you have not: [https://help.github.com/articles/set-up-git/](https://help.github.com/articles/set-up-git/ "https://help.github.com/articles/set-up-git/")
 
@@ -128,11 +129,11 @@ Below is a boiler plate layout that will set you up for success:
 Pages are added to the root of your site repo. Jekyll will add two pages for you: a home page (index.md) and an about page (about.md). They end with the `.md` attachment because they are in markdown, a language specifically for written content that's simpler to write than HTML. However, Jekyll allows for HTML to be written within the markdown, so we will leave the home page as a markdown file. For more information about markdown, [read Jekyll's docs](https://jekyllrb.com/docs/posts/).
 
 First, change the layout in the [front matter](https://jekyllrb.com/docs/front-matter/) (the configurations at the top of the page) to default. Your front matter on index.md should look like the following:
-```
----
-layout: default
----
-```
+
+    ---
+    layout: default
+    ---
+
 Next, add your custom HTML for the homepage.
 
 Cd into your repo, then run `bundle exec jekyll serve --livereload` and check http://localhost:4000 to see your homepage in realtime.
@@ -148,25 +149,25 @@ Next, add a scss sheet for your home page within the `_sass` directory named `ho
 Add a directory named `css` and then add a file named `style.scss` to the directory so Jekyll can process your SCSS into CSS.
 
 In the `style.scss` sheet, add the following lines:
-```
----
----
-@import "home";
-```
+
+    ---
+    ---
+    @import "home";
+
 The dashes at the top are used for front matter, which tells jekyll it needs to process the SCSS into CSS on this page.
 
 You will add an `@import "sheet-name"` for every SCSS sheet you add to the `_sass` directory.
 
 In the end, your repo should look like this (plus the default files already added):
-```
-mysite/
-  _layouts/
-  	default.html
-  _sass/
-  	home.scss
-  css/
-  	style.scss
-```
+
+    mysite/
+      _layouts/
+      	default.html
+      _sass/
+      	home.scss
+      css/
+      	style.scss
+
 #### Load CSS in the Head
 
 With your scss strutured and ready. You can load your css in the head of the default layout.
@@ -201,9 +202,9 @@ Now that you got everything set up and you're happy with your home page, it's ti
 
 Push your file changes to the remote repo:
 
-`git add .`
-`git commit -m "Set up site"`
-`git push origin master`
+`git add .`  
+`git commit -m "Set up site"`  
+`git push origin master`  
 
 Open your repo in github: https://github.com/user-name/repo-name
 
