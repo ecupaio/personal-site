@@ -123,6 +123,18 @@ Below is a boiler plate layout that will set you up for success:
       </body>
     </html>  
 
+#### Create a home page
+
+Pages are added to the root of your site repo. Jekyll will add two pages for you: a home page (index.md) and an about page (about.md). They end with the `.md` attachment because they are in markdown, a language specifically for written content that's simpler to write than HTML. However, Jekyll allows for HTML to be written within the markdown, so we will leave the home page as a markdown file. For more information about markdown, [read Jekyll's docs](https://jekyllrb.com/docs/posts/).
+
+First, change the layout in the [front matter](https://jekyllrb.com/docs/front-matter/) (the configurations at the top of the page) to default. Your front matter on index.md should look like the following: 
+
+```
+---
+layout: default
+---
+```
+
 #### Add SCSS file structure
 
 #### Load CSS in the Header
