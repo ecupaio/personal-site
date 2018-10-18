@@ -96,6 +96,14 @@ You should also receive confirmation in the terminal: `Branch 'master' set up to
 
 Open your repo with a text editor (Atom, Sublime, etc.) for the simplest way to edit and add all of your configurations
 
+#### Add a baseurl 
+
+Since your site is going to be served from a subdirectory of your github profile, you need to add a baseurl in order to properly serve the CSS and JS among the other assets you will add. 
+
+Open the `_config.yml` file in the root of your site repo. 
+
+Add the 
+
 #### Add a custom layout
 
 Jekyll comes with themes and layouts, but we want to make our very own custom site so we're going to add a custom layout.
@@ -176,7 +184,7 @@ Open your default layout located in `_layouts/default.html`
 
 Right above the `</head>` closing tag, add the following line: 
 
-`<link rel="stylesheet" href="{{site.url}}/css/styles.css">`
+`<link rel="stylesheet" href="{{site.baseurl}}/css/styles.css">`
 
 Now you're ready to add style to your homepage. Go to the `_scss/home.scss` sheet and  make some magic!
 
@@ -194,7 +202,7 @@ With your JS directory and script file added, now all you need to do is add it t
 
 Open the layout located at `_layouts/default.html` and add the following line just above the `</body>` closing tag:
 
-`<script src="{{ site.url }}/js/functions.js">`
+`<script src="{{ site.baseurl }}/js/functions.js">`
 
 ### Publish your Jekyll Site with Github Pages
 
