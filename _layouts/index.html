@@ -80,7 +80,8 @@
             {% elsif page.url contains "/blog/" %}
             <div class="main-body blog-post">
                 <h1>{{ page.title }}</h1>
-                {{ content }}
+
+                {{ page.content | mardownify }}
                 <hr>
                 <div class='related-posts'>
                     <h2>Related Posts</h2>
