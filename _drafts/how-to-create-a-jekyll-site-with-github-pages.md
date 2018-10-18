@@ -96,20 +96,20 @@ You should also receive confirmation in the terminal: `Branch 'master' set up to
 
 Open your repo with a text editor (Atom, Sublime, etc.) for the simplest way to edit and add all of your configurations
 
-#### Add a baseurl 
+#### Add a baseurl
 
-Since your site is going to be served from a subdirectory of your github profile, you need to add a baseurl in order to properly serve the CSS and JS among the other assets you will add. 
+Since your site is going to be served from a subdirectory of your github profile, you need to add a baseurl in order to properly serve the CSS and JS among the other assets you will add.
 
-Open the `_config.yml` file in the root of your site repo. 
+Open the `_config.yml` file in the root of your site repo.
 
 Find the line that says `baseurl: ""` (line 22 at the time of publishing).
 
-Fill in your repo's name with a beginning slash: 
-`baseurl: /mysite` 
+Fill in your repo's name with a beginning slash:
+`baseurl: /mysite`
 
-If you have the jekyll server still running, you will need to restart the server in order to build the changes. With the terminal window open, press control + C to stop the server, then enter `bundle exec jekyll serve --livereload` to build the site and run the server. 
+If you have the jekyll server still running, you will need to restart the server in order to build the changes. With the terminal window open, press control + C to stop the server, then enter `bundle exec jekyll serve --livereload` to build the site and run the server.
 
-The site will now serve from `http://localhost/mysite`, with `mysite` being the text you just added to baseurl. 
+The site will now serve from `http://localhost/mysite`, with `mysite` being the text you just added to baseurl.
 
 #### Add a custom layout
 
@@ -163,13 +163,12 @@ Next, add a scss sheet for your home page within the _sass directory named `home
 Add a directory named `css` and then add a file named `style.scss` to the directory so Jekyll can process your SCSS into CSS.
 
 In the `style.scss` sheet, add the following lines:
-```
----
----
-@import "home";
-```
 
-The dashes at the top are used for front matter, which tells jekyll it needs to process the SCSS into CSS on this page. 
+    ---
+    ---
+    @import "home";
+
+The dashes at the top are used for front matter, which tells jekyll it needs to process the SCSS into CSS on this page.
 
 You will add an `@import "sheet-name"` for every SCSS sheet you add to the `_sass` directory.
 
@@ -185,11 +184,11 @@ In the end, your repo should look like this (plus the default files already adde
 
 #### Load CSS in the Head
 
-With your scss strutured and ready. You can load your css in the head of the default layout. 
+With your scss strutured and ready. You can load your css in the head of the default layout.
 
 Open your default layout located in `_layouts/default.html`
 
-Right above the `</head>` closing tag, add the following line: 
+Right above the `</head>` closing tag, add the following line:
 
 `<link rel="stylesheet" href="{{site.baseurl}}/css/styles.css">`
 
@@ -197,9 +196,9 @@ Now you're ready to add style to your homepage. Go to the `_scss/home.scss` shee
 
 #### Create a JS directory
 
-Now that your homepage is shining, you're probably going to want to add some click events and little wooshy woos (that's my way of describing CSS animations and transitions). 
+Now that your homepage is shining, you're probably going to want to add some click events and little wooshy woos (that's my way of describing CSS animations and transitions).
 
-Create a directory in the root of your site named `js`. 
+Create a directory in the root of your site named `js`.
 
 Add your first script file to the `js` directory and name it `functions.js`
 
@@ -213,9 +212,9 @@ Open the layout located at `_layouts/default.html` and add the following line ju
 
 ### Publish your Jekyll Site with Github Pages
 
-Now that you got everything set up and you're happy with your home page, it's time to publish! 
+Now that you got everything set up and you're happy with your home page, it's time to publish!
 
-Push your file changes to the remote repo: 
+Push your file changes to the remote repo:
 
 `git add .`
 `git commit -m "Set up site"`
@@ -225,9 +224,14 @@ Open your repo in github: https://github.com/user-name/repo-name
 
 Select settings at the top menu
 
-Scroll to Github Pages and select master branch under Source, then select save. 
+Scroll to Github Pages and select master branch under Source, then select save.
 
-Scroll back down to the Github Pages section, and your site link will be there: https://username.github.io/repo-name/. 
+Scroll back down to the Github Pages section, and your site link will be there: https://username.github.io/repo-name/.
 
+### Purchase and Link your Domain
 
-### Purchase and Redirect your Domain
+Once you're happy with your site, it's time to park it on a domain and share it with the world.
+
+Go to [namecheap.com](https://www.namecheap.com/) and purchase an available domain. 
+
+Follow [Namecheap's directions](https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages) on how to add a CNAME to the domain for your github page. 

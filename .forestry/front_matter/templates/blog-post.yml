@@ -10,6 +10,6 @@ fields:
   name: tags
   label: tags
 pages:
-- _posts/how-to-create-a-jekyll-site-with-github-pages.md
+- _posts/2018-10-18-how-to-create-a-jekyll-site-with-github-pages.md
 - _posts/2018-09-12-google-form-frontend.md
 - _posts/prevent-blur-on-scale-transform-transition.md
