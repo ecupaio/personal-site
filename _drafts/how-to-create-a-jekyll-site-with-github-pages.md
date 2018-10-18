@@ -102,7 +102,14 @@ Since your site is going to be served from a subdirectory of your github profile
 
 Open the `_config.yml` file in the root of your site repo. 
 
-Add the 
+Find the line that says `baseurl: ""` (line 22 at the time of publishing).
+
+Fill in your repo's name with a beginning slash: 
+`baseurl: /mysite` 
+
+If you have the jekyll server still running, you will need to restart the server in order to build the changes. With the terminal window open, press control + C to stop the server, then enter `bundle exec jekyll serve --livereload` to build the site and run the server. 
+
+The site will now serve from `http://localhost/mysite`, with `mysite` being the text you just added to baseurl. 
 
 #### Add a custom layout
 
