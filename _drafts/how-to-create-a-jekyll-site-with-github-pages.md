@@ -133,15 +133,60 @@ First, change the layout in the [front matter](https://jekyllrb.com/docs/front-m
     layout: default
     ---
 
-Next, add your custom HTML for the homepage. 
+Next, add your custom HTML for the homepage.
 
-Cd into your repo, then run `bundle exec jekyll serve --livereload` and check http://localhost:4000 to see your homepage in realtime. 
+Cd into your repo, then run `bundle exec jekyll serve --livereload` and check http://localhost:4000 to see your homepage in realtime.
 
 #### Add SCSS file structure
 
-#### Load CSS in the Header
+Now that you have your html structure for your homepage, you're going to need to add you SCSS. SCSS is like CSS but better and easier to write and template. You can write plain CSS in your SCSS files to get started, but we're gonna get set up with a proper file structure once you get more comfortable writing SCSS. [Reference the SCSS docs](https://sass-lang.com/guide) for more info.
+
+First, add a directory named `_sass` in your website's root.
+
+Next, add a scss sheet for your home page within the _sass directory named `home.scss`.
+
+Add a directory named `css` and then add a file named `style.scss` to the directory so Jekyll can process your SCSS into CSS.
+
+In the `style.scss` sheet, add the following lines:
+```
+---
+---
+@import "home";
+```
+
+The dashes at the top are used for front matter, which tells jekyll it needs to process the SCSS into CSS on this page. 
+
+You will add an `@import "sheet-name"` for every SCSS sheet you add to the `_sass` directory.
+
+In the end, your repo should look like this (plus the default files already added):
+
+    mysite/
+      _layouts/
+      	default.html
+      _sass/
+      	home.scss
+      css/
+      	style.scss
+
+#### Load CSS in the Head
+
+With your scss strutured and ready. You can load your css in the head of the default layout. 
+
+Open your default layout located in `_layouts/default.html`
+
+Right above the `</head>` closing tag, add the following line: 
+
+`<link rel="stylesheet" href="{{site.url}}/css/styles.css">`
+
+Now you're ready to add style to your homepage. Go to the `_scss/home.scss` sheet and  make some magic!
 
 #### Create a JS directory
+
+Now that your homepage is shining, you're probably going to want to add some click events and little wooshy woos (that's my way of describing CSS animations and transitions). 
+
+Create a directory in the root of your site named `js`. 
+
+This is where you will store your files. 
 
 #### Add JS to the layout
 
