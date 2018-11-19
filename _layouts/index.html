@@ -9,7 +9,6 @@
     {% if page.url != '/' %}
     {% assign header-state = 'interior' %}
     {% endif %}
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body>
@@ -129,17 +128,6 @@
 
       ga('create', 'UA-57852434-1', 'auto');
       ga('send', 'pageview');
-    </script>
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
     </script>
 </body>
 </html>
