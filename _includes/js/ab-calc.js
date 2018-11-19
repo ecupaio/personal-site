@@ -60,8 +60,8 @@ $(function() {
 
     $('.rate-a').text((conversionRateA * 100).toFixed(2) +'%');
     $('.rate-b').text((conversionRateB * 100).toFixed(2) +'%');
-    var lift = (conversionRateB * 100).toFixed(2) - (conversionRateA * 100).toFixed(2);
-    $('.lift').text(lift);
+    var lift = (conversionRateB * 100) - (conversionRateA * 100);
+    $('.lift').text(lift.toFixed(2));
     if (lift > 0) {
       $('.lift').addClass('pos');
       $('.lift').removeClass('neg');
