@@ -40,9 +40,13 @@ $orange: #e65722;
       }
     }
     .conversion-chart {
-
+      h3 {
+        margin: 0;
+      }
       position: relative;
-
+      .chart-cols {
+        margin-top: 1em;
+      }
       .col-container {
         position: relative;
         .winner-text {
@@ -91,6 +95,18 @@ $orange: #e65722;
           font-weight: bold;
           font-family: $header_font;
         }
+      }
+    }
+    .lift {
+      font-weight: bold;
+      font-family: $header_font;
+      margin-bottom: 1rem;
+      font-size: 1.5em;
+      &.pos {
+        color: $green;
+      }
+      &.neg {
+        color: $red;
       }
     }
   }

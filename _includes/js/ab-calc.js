@@ -57,8 +57,18 @@ $(function() {
       $('.sig-chart').addClass('hidden');
     }
     //conversion rate chart
-    $('.rate-a').text(Math.round(conversionRateA * 100)+'%');
-    $('.rate-b').text(Math.round(conversionRateB * 100)+'%');
+
+    $('.rate-a').text((conversionRateA * 100).toFixed(2) +'%');
+    $('.rate-b').text((conversionRateB * 100).toFixed(2) +'%');
+    var lift = (conversionRateB * 100).toFixed(2) - (conversionRateA * 100).toFixed(2);
+    $('.lift').text(lift);
+    if (lift > 0) {
+      $('.lift').addClass('pos');
+      $('.lift').removeClass('neg');
+    } else {
+      $('.lift').removeClass('pos');
+      $('.lift').addClass('neg');
+    }
     $('.col-a .rate-col').attr('style','width: calc('+Math.round(conversionRateA * 100)+'% + 18px);');
     $('.col-b .rate-col').attr('style','width: calc('+Math.round(conversionRateB * 100)+'% + 18px);');
     if (conversionRateA > conversionRateB && chiSq > sig20) {

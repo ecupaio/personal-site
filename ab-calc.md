@@ -51,6 +51,10 @@ permalink: /ab-test-calculator/
           <span class="winner-text"><i class="fa fa-check"></i> Winner!</span>
         </div>
       </div>
+      <h3>Lift</h3>
+      <div class="lift">
+
+      </div>
     </div>
     <div class="significance">
       <h3>Significance of results</h3>
