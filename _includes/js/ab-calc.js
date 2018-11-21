@@ -82,7 +82,7 @@ $(function() {
       $('.col-container').removeClass('winner');
     }
     //URL maker
-    $('.url-params').val('http://edcupaioli.com/?sessionA='+sessionA+'&sessionB='+sessionB+'&conversionA='+conversionA+'&conversionB='+conversionB);
+    $('.url-params').val('https://edcupaioli.com/ab-test-calculator/?sessionA='+sessionA+'&sessionB='+sessionB+'&conversionA='+conversionA+'&conversionB='+conversionB);
   }
   function getParameterByName(name, url) {
     if (!url) url = window.location.href;
