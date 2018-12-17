@@ -1,0 +1,119 @@
+$green: #26a65b;
+$yellow: #ffd700;
+$red: #dc2a2a;
+$orange: #e65722;
+#ab-calc {
+  .data-row {
+    margin: 1em 0;
+    .form-field {
+      display: inline-block;
+    }
+  }
+  .significance {
+
+  }
+  .results {
+    .sig-chart {
+      position: relative;
+      width: 200px;
+      margin-top: 1em;
+
+      .donut {
+
+        .donut-ring {
+          stroke: #f2f2f2;
+        }
+        .donut-segment {
+          transition: stroke-dasharray 0.5s ease;
+        }
+
+      }
+
+      .confidence {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 3em;
+        font-weight: bold;
+        font-family: $header_font;
+      }
+    }
+    .conversion-chart {
+      h3 {
+        margin: 0;
+      }
+      position: relative;
+      .chart-cols {
+        margin-top: 1em;
+      }
+      .col-container {
+        position: relative;
+        .winner-text {
+          display: none;
+
+        }
+        & > div {
+          display: inline-block;
+        }
+        &.winner {
+          .rate-col {
+            background-color: $green;
+            color: #fff;
+          }
+          .winner-text {
+            display: inline-block;
+            position: relative;
+            font-weight: 700;
+            top: 1.25em;
+
+            color: $green;
+          }
+        }
+      }
+      .col-label {
+        font-weight: bold;
+        font-family: $header_font;
+        top: 24px;
+        position: relative;
+        padding-right: 0.5em;
+
+      }
+      .rate-col {
+        margin-bottom: 1em;
+        width: 0;
+        text-align: left;
+        background-color: #ffd700;
+        color: #333;
+        height: 4em;
+        text-align: center;
+        transition: width 0.5s ease;
+
+        span {
+          position: relative;
+          top: 24px;
+          font-weight: bold;
+          font-family: $header_font;
+        }
+      }
+    }
+    .lift {
+      font-weight: bold;
+      font-family: $header_font;
+      margin-bottom: 1rem;
+      font-size: 1.5em;
+      &.pos {
+        color: $green;
+      }
+      &.neg {
+        color: $red;
+      }
+    }
+  }
+  .copy-url {
+    margin-top: 1em;
+  }
+  .url-params {
+    width: 100%;
+  }
+}

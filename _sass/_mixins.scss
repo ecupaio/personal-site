@@ -1,22 +1,16 @@
 //Default Transition
-@mixin transition($prop...) {
-	-webkit-transition-property: $prop;
-	-moz-transition-property: $prop;
-	-o-transition-property: $prop;
-	transition-property: $prop;
-	-webkit-transition-duration: $transition_duration;
-	-moz-transition-duration: $transition_duration;
-	-o-transition-duration: $transition_duration;
-	transition-duration: $transition_duration;
-	-webkit-transition-timing-function: ease;
-	-moz-transition-timing-function: ease;
-	-o-transition-timing-function: ease;
-	transition-timing-function: ease;
+$transition_type: all .33s ease;
+@mixin transition {
+	transition: $transition_type;
+	-webkit-transition: $transition_type;
+	-moz-transition: $transition_type;
+	-o-transition: $transition_type;
 }
-@mixin transform($prop...) {
-	-webkit-transform: $prop;
-	-moz-transform: $prop;
-	transform: $prop;
+@mixin custom_transition($transition...) {
+	transition: $transition;
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-o-transition: $transition;
 }
 @mixin flexbox {
   display: -webkit-box;
@@ -46,7 +40,7 @@
 				background: $theme_form_btn_bg;
 				color:  $theme_form_btn_txt;
 				&:hover {
-					@include transition(all);
+					@include transition;
 					background: $theme_form_btn_txt;
 					color: $theme_form_btn_bg;
 				}
@@ -93,7 +87,7 @@
 	  text-decoration: none;
 	}
   i:hover {
-  	@include transition(all);
+  	@include transition;
     background-color: $theme_button_txt;
     color: $theme_button_bg;
   }
@@ -110,7 +104,7 @@
 		background-image: none;
 		background-color: $theme_button_txt;
 		color: $theme_button_bg;
-		@include transition(all);
+		@include transition;
 	}
 }
 .pure-button {
