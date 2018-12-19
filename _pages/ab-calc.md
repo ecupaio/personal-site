@@ -82,3 +82,4 @@ permalink: /ab-test-calculator/
   </div>
 
 </div>
+<script src="/js/min/ab-calc.min.js"></script>

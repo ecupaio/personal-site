@@ -5,6 +5,7 @@ $(document).ready(function() {
             scrollTop: $(selector).offset().top - offset
         });
     }
+    
     //Menu toggle
     $('.menu-toggle').click(function() {
         $('.menu-toggle, .toggle-line').toggleClass('open');

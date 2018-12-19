@@ -1,51 +1,47 @@
 //Default Transition
-$transition_type: all .33s ease;
-@mixin transition {
-	transition: $transition_type;
-	-webkit-transition: $transition_type;
-	-moz-transition: $transition_type;
-	-o-transition: $transition_type;
+@mixin transition($prop...) {
+	-webkit-transition-property: $prop;
+	-moz-transition-property: $prop;
+	-o-transition-property: $prop;
+	transition-property: $prop;
+	-webkit-transition-duration: $transition_duration;
+	-moz-transition-duration: $transition_duration;
+	-o-transition-duration: $transition_duration;
+	transition-duration: $transition_duration;
+	-webkit-transition-timing-function: ease;
+	-moz-transition-timing-function: ease;
+	-o-transition-timing-function: ease;
+	transition-timing-function: ease;
 }
-@mixin custom_transition($transition...) {
-	transition: $transition;
-	-webkit-transition: $transition;
-	-moz-transition: $transition;
-	-o-transition: $transition;
+//Transform
+@mixin transform($prop...) {
+	-webkit-transform: $prop;
+	-moz-transform: $prop;
+	transform: $prop;
 }
-@mixin flexbox {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
-//Theme Color Mixins
-@mixin header_colors {
-	background: $theme_header_bg;
-	color: $theme_header_txt;
-}
-@mixin footer_colors {
-	background: $theme_footer_bg;
-	color: $theme_footer_txt;
-}
-//Form Colors
-@mixin form_colors {
-	.signup-form {
-		background: $theme_form_bg;
-		.grid-content {
-			background: $theme_form_bg;
-			color: $theme_form_txt;
-			.pure-button {
+//Link Underline
+@mixin hover_underline {
+	&:after {
+	    content: '';
+	    height: 3px;
+	    position: absolute;
+	    bottom: 0.5em;
+	    left: 0;
+	    width: 100%;
+	    transform: scaleX(0);
+	    background-color: $body_link;
+	    @include transition(all);
+	    -webkit-transform-origin: center;
+	    -ms-transform-origin: center;
+	    transform-origin: center;
+	}
 
-				background: $theme_form_btn_bg;
-				color:  $theme_form_btn_txt;
-				&:hover {
-					@include transition;
-					background: $theme_form_btn_txt;
-					color: $theme_form_btn_bg;
-				}
-			}
-		}
+	&:hover, &.active {
+	    cursor: pointer;
+	    color: $body_link;
+	    &:after {
+	        transform: scaleX(1);
+	    }
 	}
 }
 //Headings
@@ -56,24 +52,18 @@ $transition_type: all .33s ease;
       }
     }
 }
-//Border Box
-@mixin border-box {
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-//Border Box
+//Box Shadow
 @mixin box-shadow {
 	-webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
-        -moz-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
-        box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
+    -moz-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
+    box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
 }
 //Rounded Social Share Buttons
 @mixin social_share_rounded {
   i {
-    background-color: $theme_button_bg;
+    background-color: $button_bg;
     border-radius: 2em;
-    color: $theme_button_txt;
+    color: $button_txt;
     display: inline-block;
     height: 2em;
     line-height: 2em;
@@ -87,82 +77,53 @@ $transition_type: all .33s ease;
 	  text-decoration: none;
 	}
   i:hover {
-  	@include transition;
-    background-color: $theme_button_txt;
-    color: $theme_button_bg;
+  	@include transition(all);
+    background-color: $button_txt;
+    color: $button_bg;
   }
 }
-//PureCSS Buttons
-@mixin button {
-	border-radius: 0;
-	border: 3px solid $theme_button_bg;
-	background-color: $theme_button_bg;
-	color: $theme_button_txt;
-	font-family: $header_font;
-	white-space: normal;
-	&:hover, &:focus {
-		background-image: none;
-		background-color: $theme_button_txt;
-		color: $theme_button_bg;
-		@include transition;
-	}
-}
-.pure-button {
-	@include button
-}
-//Form Input
-@mixin input {
-	input,textarea {
-		&:not([type=submit]):not([type=file]) {
-			width: 100%;
-			padding: 0.5em;
-			border: none;
-			-webkit-appearance: none;
-		}
-		&:focus {
-			outline: none;
-		}
 
-        &.submit {
-            white-space: normal;
-        }
-    }
-	textarea {
-		min-height: 10em;
-	}
-}
 //Breakpoints for mobile
 /* Usage: easily set breakpoints for small, medium, and large screens
 Either pass the px number through individually, or set it as a variable */
-@mixin bp-large($size-large) {
+@mixin bp-large {
   @media only screen and (max-width: $size-large) {
     @content;
   }
 }
 
-@mixin bp-medium($size-medium) {
+@mixin bp-medium {
   @media only screen and (max-width: $size-medium) {
     @content;
   }
 }
 
-@mixin bp-small($size-small) {
+@mixin bp-small {
   @media only screen and (max-width: $size-small) {
     @content;
   }
 }
 // Add Gutters - include in any section you want to have gutters, such as the form
-@mixin gridGutters($gutter-padding) {
+@mixin gridGutters($grid-gutters) {
 	//Gutter Padding Method
-	.pure-g > div[class*="pure-u-"] {
-		@include border-box;
-		@include input;
-		border: $gutter-padding solid transparent;
+	.pure-g  div[class*="pure-u-"] {
+		padding: $grid-gutters;
 	}
-	//Form Grid
-	.pure-g > form > div[class*="pure-u-"] > div{
-		padding: $gutter-padding;
-	}
+}
+//Mixin if you want equal-height columns
+@mixin flexGrid($gutter-border,$grid-bg) {
+	padding: 0;
+	border-width: $gutter-border;
+	border-color: $grid-bg;
+	border-style: solid;
+}
+//Flexbox
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
 }
 //Section Padding
 @mixin headerPadding($header-padding) {
@@ -172,27 +133,16 @@ Either pass the px number through individually, or set it as a variable */
 }
 @mixin bodyPadding($body-padding) {
 	#main {
-		.main-body {
-			padding: $body-padding; //Add padding to main-body
-			@include bp-medium($size-medium) {
-		        padding: $body-padding-mobile;
-		    }
-		}
-
+		padding: $body-padding;
 	}
+	@media screen and (max-width: $size-medium) {
+        #main {
+            padding: $body-padding-mobile;
+        }
+    }
 }
 @mixin footerPadding($footer-padding) {
 	#footer {
 		padding: $footer-padding;
 	}
-
-}
-@mixin absoluteCenter($top,$left) {
-	position: absolute;
-	top: $top;
-	left: $left;
-	transform:translate(-$left,-$top);
-	-webkit-transform:translate(-$left,-$top);
-	-moz-transform:translate(-$left,-$top);
-	-ms-transform:translate(-$left,-$top);
 }

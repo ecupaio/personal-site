@@ -1,23 +1,32 @@
 //Fonts
 $header-font: 'Montserrat', sans-serif;
 $body-font: 'Raleway', sans-serif;
-
-
-//Brand Colors
-$brand_lt_blue: #00AEF3;
-$brand_dk_blue: #3e73cb;
-$brand_white: #fff;
-$brand_red: #E31818;
-$brand_yellow: #ffd700;
-$brand_gray: #e7e7e7;
-$brand_black: #333;
-
-//Brand Color Overlays
-$opacity: 0.7;
-$lt_blue_overlay: rgba($brand_lt_blue, $opacity);
-$dk_blue_overlay: rgba($brand_dk_blue, $opacity);
-$white_overlay: rgba($brand_white, $opacity);
-$red_overlay: rgba($brand_red, $opacity);
-$yellow_overlay: rgba($brand_yellow, $opacity);
-$gray_overlay: rgba($brand_gray, $opacity);
-$black_overlay: rgba($brand_black, $opacity);
+//Color Variables
+$green: #26a65b;
+$yellow: #ffd700;
+$red: #dc2a2a;
+$orange: #e65722;
+$blue: #3e73cb;
+$white: #fff;
+$charcoal: #333;
+//Theme colors
+$text_color: $charcoal;
+$primary_color: $blue;
+$secondary_color: $white;
+//Mobile Breakpoints
+$size-x-large: 1280px;
+$size-large: 1024px;
+$size-medium: 768px;
+$size-small: 568px;
+//Padding for Sections and Grids
+$grid-gutters: 0.5em 1em;
+$header-padding: 1em 2em;
+$body-padding: 1em 2em;
+$body-padding-mobile: 1em;
+$footer-padding: 3em 1em;
+$transition_duration: .5s;
+//Mixins
+@include gridGutters($grid-gutters);
+@include headerPadding($header-padding);
+@include bodyPadding($body-padding);
+@include footerPadding($footer-padding);

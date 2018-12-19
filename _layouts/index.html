@@ -1,133 +1,29 @@
+---
+layout: compress
+---
 <!DOCTYPE html>
 <html>
 <head>
-    {% include head.html %}
-    {% if page.url contains "/project" %}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
-    {% endif %}
-    {% if page.url != '/' %}
-    {% assign header-state = 'interior' %}
-    {% endif %}
+  {% include head.html %}
 </head>
-
 <body>
-    <div id="sidebar-menu">
-        <div class="sidebar-inner">
-            <a class="menu-item" href="{{ base }}/" onclick="ga('send', 'event', 'Menu', 'Click', 'Home');">
-                <div class="item">Home</div>
-                <div class="item-u"></div>
-            </a>
-            <a class="menu-item" href="{{ base }}/portfolio" onclick="ga('send', 'event', 'Menu', 'Click', 'Portfolio');">
-                <div class="item">Portfolio</div>
-                <div class="item-u"></div>
-            </a>
-            <a class="menu-item" href="{{ base }}/resume" onclick="ga('send', 'event', 'Menu', 'Click', 'Resume');">
-                <div class="item">Resumé</div>
-                <div class="item-u"></div>
-            </a>
-            <a class="menu-item" href="{{ base }}/blog" onclick="ga('send', 'event', 'Menu', 'Click', 'Resume');">
-                <div class="item">Blog</div>
-                <div class="item-u"></div>
-            </a>
-            <a class="menu-item contact-link" onclick="ga('send', 'event', 'Menu', 'Click', 'Contact');">
-                <div class="item">Contact</div>
-                <div class="item-u"></div>
-            </a>
-        </div>
+  {% if site.gtm %}
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.gtm }}"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  {% endif %}
+  <div id="wrapper">
+    <div id="header">
+      <h1>{{ site.title }}</h1>
     </div>
-    <div id="wrapper">
-        <div id="contact">
-
-            {% include form.html %}
-        </div>
-        <div id="header">
-            <div class="header-inner">
-                <div class="menu-toggle">
-                      <div class="toggle-line"></div>
-                      <div class="toggle-line"></div>
-                      <div class="toggle-line"></div>
-                </div>
-                <div class="site-title">
-                    <a href="{{ base }}/">Ed Cupaioli</a>
-                </div>
-            </div>
-        </div>
-        {% if page.title == "Home Page" %}
-        <div id="banner">
-            <div class="banner-text">
-                <h1>Ed Cupaioli</h1>
-                <h2>Frontend Developer | Web Designer</h2>
-            </div>
-        </div>
-        {% endif %}
-        <div id="main" class="{{ header-state }}">
-            {% if page.url == "/" %}
-                {{ content }}
-            {% elsif page.url contains "/project" %}
-                <div class="main-body">
-                    {% include project.html %}
-                </div>
-            {% elsif page.url contains "/resume" %}
-            <div class="main-body">
-                {% include resume.html %}
-            </div>
-            {% elsif page.url == "/blog/" %}
-            <div class="main-body">
-                {% include blog.html %}
-            </div>
-            {% elsif page.url contains "/blog/" %}
-            <div class="main-body blog-post">
-                <h1>{{ page.title }}</h1>
-
-                {{ page.content | mardownify }}
-                <hr>
-                <div class='related-posts'>
-                    <h2>Related Posts</h2>
-                    <div class="related-grid pure-g">
-                    {% assign pageTag = page.tags[0] %}
-                    {% assign pageTags = page.tags | join: ',' %}
-                    {% for post in site.posts %}
-                        {% assign postTags = post.tags | join: ',' %}
-                        {% if postTags contains pageTag %}
-                        {% if post.title != page.title %}
-                        {% capture times_if %}{% increment times_if %}{% endcapture %}
-                            {% if times_if < '4' %}
-                                <div class="related-col pure-u-1 pure-u-md-1-3">
-                                    <a href="{{ post.url }}" class="post-link">
-                                        {{ post.title }}
-                                    </a>
-                                </div>
-                            {% endif %}
-                        {% endif %}
-                        {% endif %}
-                    {% endfor %}
-                    </div>
-                </div>
-            </div>
-            {% else %}
-                <div class="main-body">
-                    {{ content }}
-                </div>
-            {% endif %}
-        </div>
+    <div id="main">
+      {{ content }}
     </div>
-    <div id="footer">
-        {% include footer.html %}
-    </div>
-    <!-- Scripts-->
-    {% if page.url contains "/project" %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
-    {% endif %}
-    <script src="{{ base }}/theme_functions.min.js"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-57852434-1', 'auto');
-      ga('send', 'pageview');
-    </script>
+  </div>
+  <div id="footer">
+  </div>
+  <!-- Scripts -->
+  <script src="/js/min/site-functions.min.js"></script>
 </body>
 </html>
