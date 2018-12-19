@@ -20,13 +20,6 @@ $size-medium: 768px;
 $size-small: 568px;
 //Padding for Sections and Grids
 $grid-gutters: 0.5em 1em;
-$header-padding: 1em 2em;
-$body-padding: 1em 2em;
-$body-padding-mobile: 1em;
-$footer-padding: 3em 1em;
-$transition_duration: .5s;
+$transition_duration: .33s;
 //Mixins
 @include gridGutters($grid-gutters);
-@include headerPadding($header-padding);
-@include bodyPadding($body-padding);
-@include footerPadding($footer-padding);

@@ -1,6 +1,5 @@
 ---
 title: Iterations on Each/For Loops
-layout: index
 permalink: "/blog/:title/"
 tags:
 - jekyll

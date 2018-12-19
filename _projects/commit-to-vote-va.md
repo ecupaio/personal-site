@@ -1,6 +1,6 @@
 ---
 title: Commit to Vote VA
-layout: index
+
 link: https://democrats.github.io/commit2vote-va/
 image:
 - Commit_to_Vote.jpg

@@ -1,5 +1,4 @@
 ---
-layout: index
 permalink: /ab-test-calculator/
 ---
 <div id="ab-calc">

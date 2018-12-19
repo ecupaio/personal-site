@@ -1,6 +1,6 @@
 ---
 title: Arcadia Power
-layout: index
+
 link: https://arcadiapower.com
 image:
 - arcadia-home.jpg

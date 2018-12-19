@@ -1,0 +1,55 @@
+#home {
+
+  #hero {
+    padding: 0;
+    text-transform: uppercase;
+    color: $white;
+    background-image: url('https://images.unsplash.com/photo-1526374870839-e155464bb9b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjIxMTIzfQ&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: right;
+
+    .hero-text {
+      padding: 1em 2em;
+      background-color: $blue;
+      max-width: $size-small;
+      min-height: 100vh;
+      position: relative;
+      .text-item {
+        opacity: 0;
+        @include transform(translateX(-100%));
+        @include transition(transform,opacity);
+      }
+      &:after {
+        content: '';
+        display: block;
+        border-bottom: 100vh solid $blue;
+        border-right: 5em solid transparent;
+        position: absolute;
+        top: 0;
+        right: -5em;
+      }
+      &:before {
+        content: '';
+        display: block;
+        left: 1em;
+        width: 5px;
+        background-color: $white;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        @include transform(translateY(-100%));
+        @include transition(transform);
+      }
+      &.active {
+        &:before {
+          @include transform(translateY(0%));
+        }
+        .text-item {
+          opacity: 1;
+          @include transform(translateX(0%));
+
+        }
+      }
+    }
+  }
+}

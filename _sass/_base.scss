@@ -13,6 +13,8 @@ body {
 //Default Fonts
 h1, h2, h3, h4, h5 {
 	font-family: $header-font;
+	margin-top: 0;
+	margin-bottom: 1rem;
 }
 body {
 	font-family: $body-font;
@@ -32,6 +34,13 @@ a {
 #wrapper {
 	min-height: 100%;
 	position:relative;
+}
+//semantic elements
+main, section, article, footer, nav {
+	display: block;
+}
+section {
+	padding: 1em 2em;
 }
 
 //Form Inputs
