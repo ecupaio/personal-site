@@ -1,32 +1,31 @@
 #home {
-
+  $portfolio-overlap: 4em;
+  section {
+    .inner-section {
+      max-width: $size-large;
+      margin: auto;
+      h2 {
+        text-align: center;
+      }
+    }
+  }
   #hero {
-    padding: 0;
+    padding: 4em 2em;
+    padding-bottom: #{2em + $portfolio-overlap};
     text-transform: uppercase;
     color: $white;
-    background-image: url('https://images.unsplash.com/photo-1526374870839-e155464bb9b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjIxMTIzfQ&auto=format&fit=crop&w=1350&q=80');
-    background-size: cover;
-    background-position: right;
-
+    @include flexbox;
+    justify-content: center;
+    align-items: center;
+    background-color: $blue;
     .hero-text {
       padding: 1em 2em;
-      background-color: $blue;
-      max-width: $size-small;
-      min-height: 100vh;
+      overflow: hidden;
       position: relative;
       .text-item {
         opacity: 0;
         @include transform(translateX(-100%));
         @include transition(transform,opacity);
-      }
-      &:after {
-        content: '';
-        display: block;
-        border-bottom: 100vh solid $blue;
-        border-right: 5em solid transparent;
-        position: absolute;
-        top: 0;
-        right: -5em;
       }
       &:before {
         content: '';
@@ -47,7 +46,143 @@
         .text-item {
           opacity: 1;
           @include transform(translateX(0%));
+        }
+      }
+    }
+  }
+  #portfolio {
+    margin-top: -$portfolio-overlap;
+    position: relative;
+    .project-overlay {
+      position: fixed;
+      padding: 2em;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba($black,0.8);
+      z-index: -1;
+      opacity: 0;
+      overflow-y: scroll;
+      @include transform(translateY(100%));
+      @include transition(transform,opacity);
 
+      &.active {
+        z-index: 10;
+        opacity: 1;
+        @include transform(translateY(0%));
+      }
+      .overlay-content {
+        max-width: $size-large;
+        margin: auto;
+        .project-slider {
+          
+        }
+      }
+    }
+    .portfolio-grid {
+      max-width: $size-large;
+      margin: auto;
+      background-color: $white;
+      .project-col {
+        background-size: cover;
+        background-position: top center;
+        height: 250px;
+        overflow: hidden;
+        padding: 0;
+        .col-content {
+          text-align: center;
+          position: relative;
+          z-index: 2;
+          padding-top: 1em;
+          height: 100%;
+          @include transform(translateY(-100%));
+          @include transition(transform);
+          .project-title {
+            color: $white;
+          }
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            opacity: 0;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-image: linear-gradient(to bottom, $blue, transparent 100%);
+            @include transition(opacity);
+          }
+        }
+        &:hover {
+          cursor: pointer;
+          .col-content {
+            @include transform(translateY(0%));
+            &:before {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  #about {
+
+  }
+  #contact {
+    background-color: $blue;
+    color: $white;
+    #contact-form {
+      max-width: 400px;
+      margin: auto;
+      text-align: center;
+      .form-input {
+        margin: 1em 0;
+        color: $charcoal;
+        position: relative;
+        text-align: left;
+        input {
+          padding: 1em 0.5em;
+        }
+        .placeholder {
+          color: rgba($charcoal,0.5);
+          position: absolute;
+          top: 1em;
+          left: 0.5em;
+          font-weight: 400;
+          @include transition(color,top,font-size,font-weight);
+          &.active {
+            top: 0;
+            color: $blue;
+            font-size: 0.75em;
+            font-weight: 700;
+          }
+
+        }
+
+        textarea {
+          resize: none;
+          height: 150px;
+          &::placeholder {
+            color: rgba($charcoal,0.5);
+          }
+        }
+      }
+      button {
+        background-color: $white;
+        color: $blue;
+        border: none;
+        padding: 0.5em 1em;
+        width: 100%;
+        font-weight: bold;
+        font-family: $header-font;
+        @include transform(translateY(0));
+        @include box-shadow($prop: 0 0 0 rgba(0, 0, 0, 0.35));
+        @include transition(transform,box-shadow);
+        &:hover {
+          @include transform(translateY(-2px));
+           @include box-shadow($prop:0px 15px 10px -10px rgba(0,0,0,0.35));
         }
       }
     }

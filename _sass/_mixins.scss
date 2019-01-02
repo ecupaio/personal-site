@@ -52,11 +52,12 @@
       }
     }
 }
-//Box Shadow
-@mixin box-shadow {
-	-webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
-    -moz-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
-    box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
+//Box shadow
+$default-shadow: -2px 2px 10px rgba(0, 0, 0, 0.35);
+@mixin box-shadow($prop: $default-shadow) {
+  -webkit-box-shadow: $prop;
+  -moz-box-shadow: $prop;
+  box-shadow: $prop;
 }
 //Breakpoints for mobile
 /* Usage: easily set breakpoints for small, medium, and large screens
