@@ -8,16 +8,40 @@ $(document).ready(function() {
   setTimeout(function() {
     $('#home .hero-text').addClass('active');
   }, 1000);
-  //project
+  //project overlay
   $('.project-col').click(function(e) {
+    $('.project-slider .slider-images').html('');
     var projectTitle = $(this).find('.project-title').text();
     var projectLink = $(this).find('.project-link').text();
     var projectTech = $(this).find('.project-tech').text();
     var projectImages = JSON.parse($(this).find('.project-images').text());
+    console.log(projectTitle);
+    $('.info-title').text(projectTitle);
     $.each(projectImages,function(i,img) {
-      $('.project-slider').append("<div class='slide'><img src='/images/"+img+"' /></div>");
+      $('.project-slider .slider-images').append("<div class='slide'><img src='/images/"+img+"' /></div>");
     });
-    $('.project-overlay').addClass('active');
+    if (projectImages.length < 2) {
+      $('.slide-toggle').addClass('hidden');
+    } else {
+      $('.slide-toggle').removeClass('hidden');
+    }
+    $('.slide').first().addClass('active');
+    $('.project-overlay, body').addClass('active');
+  });
+  $('.project-overlay').click(function(e) {
+    if ($(e.target).hasClass('project-overlay')) {
+      $('.project-overlay, body').removeClass('active');
+    }
+  });
+  $('.slide-toggle').click(function() {
+    if ($(this).hasClass('next')) {
+      if ($('.slide.active').next('.slide').length > 0) {
+        $('.slide.active').removeClass('active').next('.slide').addClass('active');
+      } else {
+        $('.slide.active').removeClass('active');
+        $('.slide').first().addClass('active');
+      }
+    }
   });
   //contact form
   $('.form-input input').focus(function() {
@@ -30,4 +54,11 @@ $(document).ready(function() {
       $(this).parent().find('.placeholder').removeClass('active');
     }
   });
+  //menu
+  $('#nav-toggle').click(function() {
+    $('#nav-toggle, #sidebar-nav, #wrapper').toggleClass('active');
+  });
+  $('.nav-link').click(function() {
+    $('#nav-toggle, #sidebar-nav, #wrapper').removeClass('active');
+  })
 });

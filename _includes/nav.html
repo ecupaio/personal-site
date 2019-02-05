@@ -1,0 +1,16 @@
+<div id="nav-toggle">
+  <div class="toggle-burger">
+    <span class="toggle-line one"></span>
+    <span class="toggle-line two"></span>
+    <span class="toggle-line three"></span>
+  </div>
+</div>
+<nav id="sidebar-nav">
+  <ul class="nav-link-list">
+    {% for nav in site.data.nav.main %}
+    <li>
+      <a class="nav-link" href="{{ nav.url }}">{{ nav.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

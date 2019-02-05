@@ -1,3 +1,104 @@
+body {
+  position: relative;
+  &.active {
+    overflow-y: hidden;
+  }
+}
+.project-overlay {
+  position: fixed;
+  padding: 2em;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($black,0.8);
+  z-index: -1;
+  opacity: 0;
+  overflow-y: scroll;
+  @include transform(translateY(-100%));
+  @include transition(transform,opacity);
+  @include flexbox;
+  justify-content: center;
+  align-items: center;
+  &.active {
+    z-index: 10;
+    opacity: 1;
+    
+    @include transform(translateY(0%));
+  }
+  .overlay-content {
+
+    max-width: $size-large;
+    margin: auto;
+    .project-info {
+      background-color: $white;
+    }
+    .project-slider {
+      position: relative;
+      .slide-toggle {
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        color: $white;
+        font-size: 2em;
+        z-index: 10;
+        i {
+          color: $charcoal;
+          &:after {
+            content: '';
+            width: 1em;
+            height: 1em;
+            background-color: $white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%,-50%));
+            border-radius: 50%;
+            z-index: -1;
+            @include box-shadow;
+          }
+        }
+
+        &.prev {
+          left: 0;
+        }
+        &.next {
+          right: 0;
+        }
+
+      }
+      .slider-images {
+        overflow: hidden;
+        position: relative;
+
+        .slide {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          z-index: -1;
+          @include transform(scale(1.25));
+          transform-origin: center;
+          pointer-events: none;
+          @include transition(transform,opacity);
+          img {
+
+
+          }
+          &.active {
+            position: relative;
+            opacity: 1;
+            z-index: 1;
+            @include transform(scale(1));
+          }
+        }
+      }
+    }
+  }
+}
+
 #home {
   $portfolio-overlap: 4em;
   section {
@@ -53,33 +154,6 @@
   #portfolio {
     margin-top: -$portfolio-overlap;
     position: relative;
-    .project-overlay {
-      position: fixed;
-      padding: 2em;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: rgba($black,0.8);
-      z-index: -1;
-      opacity: 0;
-      overflow-y: scroll;
-      @include transform(translateY(100%));
-      @include transition(transform,opacity);
-
-      &.active {
-        z-index: 10;
-        opacity: 1;
-        @include transform(translateY(0%));
-      }
-      .overlay-content {
-        max-width: $size-large;
-        margin: auto;
-        .project-slider {
-          
-        }
-      }
-    }
     .portfolio-grid {
       max-width: $size-large;
       margin: auto;
@@ -111,7 +185,7 @@
             top: 0;
             left: 0;
             z-index: -1;
-            background-image: linear-gradient(to bottom, $blue, transparent 100%);
+            background-image: linear-gradient(to bottom, $blue, rgba($blue,0.2));
             @include transition(opacity);
           }
         }
@@ -128,7 +202,22 @@
     }
   }
   #about {
-
+    .skills-col {
+      .skill-grid {
+        .skill-category {
+          text-align: center;
+          .skill {
+            margin: 0.5em 10px;
+          }
+          .skill-bin {
+            height: 1em;
+            border-bottom: 5px solid $blue;
+            border-left: 5px solid $blue;
+            border-right: 5px solid $blue;
+          }
+        }
+      }
+    }
   }
   #contact {
     background-color: $blue;

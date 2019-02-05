@@ -1,26 +1,44 @@
 ---
 layout: default
 ---
+<div class="project-overlay">
+  <div class="overlay-content pure-g">
+    <div class="project-info pure-u-1 pure-u-md-1-4">
+      <div>
+        <h3 class="info-title"></h3>
+      </div>
+      <div class="tech">
+        Tech
+      </div>
+    </div>
+    <div class="project-slider pure-u-1 pure-u-md-3-4">
+      <div class="slider-images">
+
+      </div>
+      <div class="slide-toggle prev">
+        <i class="fa fa-angle-left"></i>
+      </div>
+      <div class="slide-toggle next">
+        <i class="fa fa-angle-right"></i>
+      </div>
+    </div>
+
+  </div>
+</div>
 <main id="home">
   <section id="hero">
     <div class="hero-text">
-      <h1 class="text-item">Ed Cupaioli</h1>
-      <h3 class="text-item">Web Developer</h3>
-      <h3 class="text-item">Full-Stack UX Designer</h3>
+      <h1>Ed Cupaioli</h1>
+      <h4 class="text-item">Web Developer</h4>
+      <h4 class="text-item">Full-Stack UX Designer</h4>
     </div>
   </section>
   <section id="portfolio">
-    <div class="project-overlay">
-      <div class="overlay-content">
-        <div class="project-slider">
 
-        </div>
-      </div>
-    </div>
     <div class="pure-g portfolio-grid">
       {% assign projects = site.projects | sort: 'date' | reverse %}
       {% for project in projects %}
-      <div class="pure-u-1 pure-u-md-1-3 project-col" style="background-image: url(/images/{{ project.image[0]}});">
+      <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 project-col" style="background-image: url(/images/{{ project.image[0]}});">
         <div class="col-content">
           <h4 class="project-title">{{ project.title }}</h4>
           <div class="hidden">
@@ -41,24 +59,33 @@ layout: default
       <h2>About</h2>
       <div class="pure-g">
         <div class="pure-u-1 pure-u-md-1-2 skills-col">
-          {% for skill in page.skills %}
-          {% capture years %}
-          {{ site.time | date: '%Y' | minus: skill.years }}
-          {% endcapture %}
-          <div class="skill">
-            <div class="skill-title">
-              {{ skill.title }}
+          <div class="pure-g skill-grid">
+            <div class="skill-category pure-u-1 pure-u-sm-1-2">
+              <h3>Code</h3>
+              {% for skill in page.skills %}
+                {% if skill.category == 'Code' %}
+                <div class="skill">
+                  {{ skill.title }}
+                </div>
+                {% endif %}
+              {% endfor %}
+              <div class="skill-bin"></div>
             </div>
-            <div class="skill-bar" data-level="{{ years }}">
-            </div>
-            <div class="skill-level">
-              {{ years }} years
+            <div class="skill-category pure-u-1 pure-u-sm-1-2">
+              <h3>UX</h3>
+              {% for skill in page.skills %}
+                {% if skill.category == 'UX' %}
+                <div class="skill">
+                  {{ skill.title }}
+                </div>
+                {% endif %}
+              {% endfor %}
+              <div class="skill-bin"></div>
             </div>
           </div>
-          {% endfor %}
 
         </div>
-        <div class="pure-u-1 pure-u-md-1-2 skills-col">
+        <div class="pure-u-1 pure-u-md-1-2 text-col">
           {{ page.about | markdownify }}
         </div>
       </div>
