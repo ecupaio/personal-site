@@ -6,8 +6,7 @@ image:
 - polling_places_2.jpg
 - polling_places_3.jpg
 tech:
-- Google Maps API
-- Google Civic Information API
+- Frontend development
 date: '2016-10-01'
 permalink: 'project/polling-place-locator/'
 ---

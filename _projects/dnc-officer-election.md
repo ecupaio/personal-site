@@ -1,7 +1,7 @@
 ---
 title: DNC Officer Election
 tech:
-- Jekyll
+- Web development
 image:
 - dnc_officer_elections-2.jpg
 - dnc_officer_elections-1.jpg

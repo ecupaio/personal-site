@@ -4,8 +4,9 @@ link: http://www.dcpcsb.org/
 image:
 - dcpcsb.jpg
 tech:
-- Drupal
-- Highcharts
+- Web design
+- Web development
+- Frontend development
 date: '2015-12-04'
 ---
 

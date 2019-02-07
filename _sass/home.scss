@@ -9,8 +9,8 @@ body {
   padding: 2em;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  height: 100%;
+  width: 100%;
   background-color: rgba($black,0.8);
   z-index: -1;
   opacity: 0;
@@ -23,18 +23,25 @@ body {
   &.active {
     z-index: 10;
     opacity: 1;
-    
     @include transform(translateY(0%));
   }
   .overlay-content {
-
     max-width: $size-large;
     margin: auto;
     .project-info {
       background-color: $white;
     }
+    .about-project {
+      background-color: $white;
+      padding: 1em;
+    }
+    .slider-col {
+      padding: 0;
+    }
     .project-slider {
       position: relative;
+
+
       .slide-toggle {
         position: absolute;
         top: 50%;
@@ -58,19 +65,16 @@ body {
             @include box-shadow;
           }
         }
-
         &.prev {
           left: 0;
         }
         &.next {
           right: 0;
         }
-
       }
       .slider-images {
         overflow: hidden;
         position: relative;
-
         .slide {
           position: absolute;
           height: 100%;
@@ -84,8 +88,9 @@ body {
           pointer-events: none;
           @include transition(transform,opacity);
           img {
-
-
+            display: block;
+            margin: auto;
+            width: 100%;
           }
           &.active {
             position: relative;
@@ -98,7 +103,6 @@ body {
     }
   }
 }
-
 #home {
   $portfolio-overlap: 4em;
   section {
@@ -111,8 +115,7 @@ body {
     }
   }
   #hero {
-    padding: 4em 2em;
-    padding-bottom: #{2em + $portfolio-overlap};
+    padding: 4em 2em #{2em + $portfolio-overlap};
     text-transform: uppercase;
     color: $white;
     @include flexbox;
@@ -127,6 +130,7 @@ body {
         opacity: 0;
         @include transform(translateX(-100%));
         @include transition(transform,opacity);
+        transition-delay: 0.5s;
       }
       &:before {
         content: '';
@@ -139,6 +143,7 @@ body {
         top: 0;
         @include transform(translateY(-100%));
         @include transition(transform);
+        transition-delay: 0s;
       }
       &.active {
         &:before {
@@ -152,11 +157,19 @@ body {
     }
   }
   #portfolio {
-    margin-top: -$portfolio-overlap;
     position: relative;
+    background-color: $white;
+    top: 2em;
+    opacity: 0;
+    @include transition(top, opacity);
+    &.active {
+      top: 0;
+      opacity: 1;
+    }
     .portfolio-grid {
       max-width: $size-large;
       margin: auto;
+      margin-top: -$portfolio-overlap;
       background-color: $white;
       .project-col {
         background-size: cover;
@@ -164,6 +177,20 @@ body {
         height: 250px;
         overflow: hidden;
         padding: 0;
+        position: relative;
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          opacity: 0;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          background-image: linear-gradient(to bottom, $charcoal, rgba($charcoal,0.2));
+          @include transition(opacity);
+        }
         .col-content {
           text-align: center;
           position: relative;
@@ -175,27 +202,17 @@ body {
           .project-title {
             color: $white;
           }
-          &:before {
-            content: '';
-            display: block;
-            position: absolute;
-            opacity: 0;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            background-image: linear-gradient(to bottom, $blue, rgba($blue,0.2));
-            @include transition(opacity);
-          }
+
         }
         &:hover {
           cursor: pointer;
+          &:before {
+            opacity: 1;
+            z-index: 1;
+          }
           .col-content {
             @include transform(translateY(0%));
-            &:before {
-              opacity: 1;
-            }
+
           }
         }
       }
@@ -208,9 +225,20 @@ body {
           text-align: center;
           .skill {
             margin: 0.5em 10px;
+            background-color: $blue;
+            color: $white;
+            @include transform(translateY(-2em));
+            opacity: 0;
+            @include transition(transform,opacity);
+            &.active {
+              @include transform(translateY(0));
+              opacity: 1;
+            }
           }
           .skill-bin {
             height: 1em;
+            position: relative;
+            top: -1em;
             border-bottom: 5px solid $blue;
             border-left: 5px solid $blue;
             border-right: 5px solid $blue;
@@ -247,9 +275,7 @@ body {
             font-size: 0.75em;
             font-weight: 700;
           }
-
         }
-
         textarea {
           resize: none;
           height: 150px;
@@ -271,7 +297,7 @@ body {
         @include transition(transform,box-shadow);
         &:hover {
           @include transform(translateY(-2px));
-           @include box-shadow($prop:0px 15px 10px -10px rgba(0,0,0,0.35));
+          @include box-shadow($prop:0px 15px 10px -10px rgba(0,0,0,0.35));
         }
       }
     }

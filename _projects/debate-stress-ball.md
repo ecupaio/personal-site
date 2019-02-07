@@ -4,7 +4,7 @@ link: https://debatestressball.com/
 image:
 - Stress_Ball.jpg
 tech:
-- Blue State Digital
+- Web development
 date: '2016-09-26'
 ---
 

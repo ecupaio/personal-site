@@ -7,16 +7,23 @@ $(document).ready(function() {
   }
   setTimeout(function() {
     $('#home .hero-text').addClass('active');
-  }, 1000);
+  }, 700);
+  setTimeout(function() {
+    $('#portfolio').addClass('active');
+  }, 1400);
   //project overlay
   $('.project-col').click(function(e) {
     $('.project-slider .slider-images').html('');
     var projectTitle = $(this).find('.project-title').text();
     var projectLink = $(this).find('.project-link').text();
-    var projectTech = $(this).find('.project-tech').text();
+    var projectTech = $(this).find('.project-tech').html();
+    var projectText = $(this).find('.project-text').html();
     var projectImages = JSON.parse($(this).find('.project-images').text());
     console.log(projectTitle);
-    $('.info-title').text(projectTitle);
+    $('.selected-title').text(projectTitle);
+    $('.selected-tech').html(projectTech);
+    $('.selected-link').attr('href',projectLink);
+    $('.about-project').html(projectText);
     $.each(projectImages,function(i,img) {
       $('.project-slider .slider-images').append("<div class='slide'><img src='/images/"+img+"' /></div>");
     });
@@ -56,9 +63,28 @@ $(document).ready(function() {
   });
   //menu
   $('#nav-toggle').click(function() {
+    $('.project-overlay, body').removeClass('active');
     $('#nav-toggle, #sidebar-nav, #wrapper').toggleClass('active');
   });
   $('.nav-link').click(function() {
     $('#nav-toggle, #sidebar-nav, #wrapper').removeClass('active');
-  })
+  });
+  //on scroll top sections
+
+  $(window).scroll(function() {
+    function elementScrolled(elem) {
+      var docViewTop = $(window).scrollTop();
+      var docViewBottom = docViewTop + $(window).height();
+      var elemTop = $(elem).offset().top;
+      return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
+    }
+    if (elementScrolled('.skill-grid')) {
+       $('.skill').each(function(i) {
+         var that = this;
+          var t = setTimeout(function() {
+              $(that).addClass('active');
+          }, 500 * i);
+       });
+     }
+  });
 });

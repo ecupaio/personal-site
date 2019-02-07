@@ -1,30 +1,6 @@
 ---
 layout: default
 ---
-<div class="project-overlay">
-  <div class="overlay-content pure-g">
-    <div class="project-info pure-u-1 pure-u-md-1-4">
-      <div>
-        <h3 class="info-title"></h3>
-      </div>
-      <div class="tech">
-        Tech
-      </div>
-    </div>
-    <div class="project-slider pure-u-1 pure-u-md-3-4">
-      <div class="slider-images">
-
-      </div>
-      <div class="slide-toggle prev">
-        <i class="fa fa-angle-left"></i>
-      </div>
-      <div class="slide-toggle next">
-        <i class="fa fa-angle-right"></i>
-      </div>
-    </div>
-
-  </div>
-</div>
 <main id="home">
   <section id="hero">
     <div class="hero-text">
@@ -39,7 +15,7 @@ layout: default
       {% assign projects = site.projects | sort: 'date' | reverse %}
       {% for project in projects %}
       <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 project-col" style="background-image: url(/images/{{ project.image[0]}});">
-        <div class="col-content">
+        <div class="col-content" >
           <h4 class="project-title">{{ project.title }}</h4>
           <div class="hidden">
             <div class="project-link">
@@ -47,6 +23,17 @@ layout: default
             </div>
             <div class="project-images">
               {{ project.image | split: ''}}
+            </div>
+            <div class="project-text">
+              {{ project.content | markdownify }}
+            </div>
+            <div class="project-tech">
+              <ul>
+                {% for tech in project.tech %}
+                <li>{{ tech }}</li>
+                {% endfor %}
+              </ul>
+
             </div>
           </div>
         </div>

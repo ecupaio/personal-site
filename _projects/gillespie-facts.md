@@ -5,7 +5,7 @@ image:
 - Gillespie_Facts.jpg
 - Gillespie_Facts_Interior.jpg
 tech:
-- Jekyll
+- Web development
 date: '2017-09-27 04:05:01'
 ---
 

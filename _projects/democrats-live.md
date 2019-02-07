@@ -1,7 +1,8 @@
 ---
 title: Democrats Live
 tech:
-- Jekyll
+- Web development
+- Frontend development
 link: https://live.democrats.org/
 image:
 - dems_live-1.jpg

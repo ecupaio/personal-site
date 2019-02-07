@@ -5,8 +5,8 @@ link: https://democrats.github.io/commit2vote-va/
 image:
 - Commit_to_Vote.jpg
 tech:
-- Jekyll
-- Google Maps API
+- Web development
+- Frontend development
 date: '2017-10-11 04:22:22'
 ---
 

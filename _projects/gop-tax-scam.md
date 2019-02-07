@@ -5,8 +5,8 @@ link: https://goptaxscam.democrats.org/
 image:
 - Stop%20the%20GOP%20Tax%20Scam%20--%20Make%20Calls.jpeg
 tech:
-- Jekyll
-- Revolution Messaging
+- Web development
+- Frontend development
 date: '2017-11-21 19:00:00'
 ---
 

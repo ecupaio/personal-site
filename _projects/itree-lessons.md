@@ -4,7 +4,8 @@ link: http://www.itreelessons.com/
 image:
 - itree.jpg
 tech:
-- Drupal
+- Web development
+- Web design
 date: '2015-09-30'
 ---
 
