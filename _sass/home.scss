@@ -171,6 +171,7 @@ body {
       margin: auto;
       margin-top: -$portfolio-overlap;
       background-color: $white;
+      @include box-shadow;
       .project-col {
         background-size: cover;
         background-position: top center;
@@ -178,6 +179,7 @@ body {
         overflow: hidden;
         padding: 0;
         position: relative;
+
         &:before {
           content: '';
           display: block;
@@ -188,7 +190,7 @@ body {
           top: 0;
           left: 0;
           z-index: -1;
-          background-image: linear-gradient(to bottom, $charcoal, rgba($charcoal,0.2));
+          background-color: rgba($white,0.8);
           @include transition(opacity);
         }
         .col-content {
@@ -197,10 +199,42 @@ body {
           z-index: 2;
           padding-top: 1em;
           height: 100%;
-          @include transform(translateY(-100%));
-          @include transition(transform);
+          @include flexbox;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
           .project-title {
-            color: $white;
+            color: $blue;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            opacity: 0;
+            &:after {
+              content: '';
+              position: absolute;
+              height: 2px;
+              width: 100%;
+              left: 0;
+              bottom: -0.25em;
+              background-color: $blue;
+              @include transform(scaleX(0));
+              transform-origin: center;
+              @include transition(transform);
+
+            }
+            &:before {
+              content: '\f002';
+              font-family: 'FontAwesome';
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              @include transform(translateX(-50%));
+              @include transition(bottom,opacity);
+              transition-delay: 0.25s;
+              opacity: 0;
+              z-index: -1;
+            }
           }
 
         }
@@ -211,7 +245,17 @@ body {
             z-index: 1;
           }
           .col-content {
-            @include transform(translateY(0%));
+
+            .project-title {
+              opacity: 1;
+              &:before {
+                bottom: -1.5em;
+                opacity: 1;
+              }
+              &:after {
+                @include transform(scaleX(1));
+              }
+            }
 
           }
         }
@@ -230,6 +274,7 @@ body {
             @include transform(translateY(-2em));
             opacity: 0;
             @include transition(transform,opacity);
+            padding: 0.5em;
             &.active {
               @include transform(translateY(0));
               opacity: 1;
