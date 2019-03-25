@@ -20,28 +20,58 @@ body {
   @include flexbox;
   justify-content: center;
   align-items: center;
+  @include bp-small {
+    padding: 1em 0.5em;
+  }
   &.active {
     z-index: 10;
     opacity: 1;
     @include transform(translateY(0%));
   }
+
   .overlay-content {
+    .close-overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: $white;
+      font-size: 2em;
+      &:hover {
+        cursor: pointer;
+      }
+    }
     max-width: $size-large;
     margin: auto;
+    position: relative;
+    .info-title {
+      background-color: $white;
+      display: inline-block;
+      padding: 1em;
+      position: relative;
+      left: -0.5em;
+      top: 0.5em;
+      z-index: 2;
+      @include box-shadow;
+      @include bp-small {
+        left: 0;
+      }
+      .selected-title {
+        position: relative;
+
+      }
+    }
     .project-info {
       background-color: $white;
-    }
-    .about-project {
-      background-color: $white;
       padding: 1em;
+      position: relative;
+      z-index: 2;
+      @include box-shadow(0px -2px 10px 0px rgba(0,0,0,0.35));
     }
     .slider-col {
       padding: 0;
     }
     .project-slider {
       position: relative;
-
-
       .slide-toggle {
         position: absolute;
         top: 50%;
@@ -75,6 +105,7 @@ body {
       .slider-images {
         overflow: hidden;
         position: relative;
+
         .slide {
           position: absolute;
           height: 100%;
@@ -87,10 +118,22 @@ body {
           transform-origin: center;
           pointer-events: none;
           @include transition(transform,opacity);
+          @include bp-small {
+            height: 350px;
+          }
           img {
             display: block;
             margin: auto;
             width: 100%;
+            @include bp-small {
+              position: absolute;
+              left: 50%;
+              top: 0;
+              height: 100%;
+              width: auto;
+              max-width: none;
+              @include transform(translateX(-50%));
+            }
           }
           &.active {
             position: relative;

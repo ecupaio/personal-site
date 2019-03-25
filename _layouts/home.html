@@ -28,12 +28,9 @@ layout: default
               {{ project.content | markdownify }}
             </div>
             <div class="project-tech">
-              <ul>
-                {% for tech in project.tech %}
-                <li>{{ tech }}</li>
-                {% endfor %}
-              </ul>
-
+              {% for tech in project.tech %}
+              {{ tech }}{% unless forloop.last %},{% endunless%}
+              {% endfor %}
             </div>
           </div>
         </div>
