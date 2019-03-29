@@ -62,5 +62,6 @@ defaults:
       type: "posts"
     values:
       permalink: "/blog/:title/"
+      layout: "blog-post"
       tags:
         - ""

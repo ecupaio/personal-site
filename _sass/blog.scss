@@ -1,0 +1,131 @@
+//blog post
+.blog-topbar {
+  position: fixed;
+  background-color: rgba($white,0.9);
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5em;
+  padding-left: 4em;
+  text-align: center;
+  z-index: 9;
+  overflow: hidden;
+  @include transform(translateY(-100%));
+  @include transition(transform);
+  &.active {
+    @include transform(translateY(0%));
+  }
+  .topbar-title {
+    display: inline-block;
+    font-weight: 500;
+  }
+  .topbar-home {
+    float: right;
+    @include bp-small {
+      display: none;
+    }
+  }
+}
+#blog-post {
+
+  #post-title {
+
+    background-color: $blue;
+    color: $white;
+
+    margin: auto;
+    padding: 4em 2em;
+    .title-card {
+      max-width: $size-medium;
+      padding-bottom: 3em;
+      position: relative;
+
+      margin: auto;
+      .post-tags {
+        font-size: 14px;
+        a {
+          color: $white;
+          &:before {
+            background-color: $white;
+
+          }
+          &:hover {
+            @include transition(color);
+            color: $blue;
+
+          }
+        }
+
+      }
+      h1 {
+        position: relative;
+      }
+    }
+  }
+  #post-content {
+    //float: left;
+    @include box-shadow;
+    top: -3em;
+    max-width: $size-medium;
+    margin: auto;
+    background-color: $white;
+    position: relative;
+    padding: 2em;
+    code {
+      background-color: $charcoal;
+      display: block;
+      color: $white;
+    }
+  }
+  #related-posts {
+    max-width: $size-medium;
+    margin: auto;
+    border: 2px solid $charcoal;
+    position: relative;
+
+    .related-title {
+      position: absolute;
+      top: -21px;
+      padding: 0.5em;
+      background-color: $yellow;
+      font-weight: 500;
+      left: 50%;
+      @include transform(translateX(-50%));
+    }
+    .post-list {
+      li {
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+#blog {
+  #intro {
+    padding: 4em;
+    padding-bottom: 7em;
+    background-color: $blue;
+    color: $white;
+    .intro-inner {
+      max-width: $size-large;
+      margin: auto;
+    }
+  }
+  #posts {
+    max-width: $size-medium;
+    position: relative;
+    top: -3em;
+    background-color: $white;
+    margin: auto;
+    @include box-shadow;
+    .post-list {
+      list-style: none;
+      li {
+        margin-bottom: 1rem;
+        .post-link {
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

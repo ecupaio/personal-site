@@ -3,5 +3,9 @@ main:
     url: /#
   - title: Portfolio
     url: /#portfolio
-  - title: About
+  - title: About me
     url: /#about
+  - title: Blog
+    url: /blog/  
+  - title: 'Resumé'
+    url: https://docs.google.com/document/d/1l-1GJuj4FbjXMw56JleAPw2gCv1_f0hvC1jKrNs2NA4/export?format=pdf

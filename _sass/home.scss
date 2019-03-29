@@ -222,7 +222,6 @@ body {
         overflow: hidden;
         padding: 0;
         position: relative;
-
         &:before {
           content: '';
           display: block;
@@ -248,11 +247,12 @@ body {
           flex-direction: column;
           .project-title {
             color: $blue;
-            font-weight: 700;
+            font-weight: 500;
             position: relative;
             z-index: 1;
             display: inline-block;
             opacity: 0;
+            @include transition(opacity);
             &:after {
               content: '';
               position: absolute;
@@ -361,7 +361,7 @@ body {
             top: 0;
             color: $blue;
             font-size: 0.75em;
-            font-weight: 700;
+            font-weight: 500;
           }
         }
         textarea {

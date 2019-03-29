@@ -15,9 +15,11 @@ h1, h2, h3, h4, h5 {
 	font-family: $header-font;
 	margin-top: 0;
 	margin-bottom: 1rem;
+	font-weight: 500;
 }
 h1 {
 	font-size: 2.5em;
+	font-weight: 600;
 }
 h2 {
 	font-size: 2em;
@@ -36,6 +38,9 @@ body {
 	font-size: 14pt;
 	color: $text_color;
 }
+p {
+	margin-top: 0;
+}
 //Links
 a {
 	text-decoration: none;
@@ -50,7 +55,7 @@ a {
 		width: 100%;
 		height: 3px;
 		z-index: -1;
-		background-color: rgba($primary_color,0.5);
+		background-color: rgba($yellow,0.7);
 		@include transition(height);
 	}
 	&:hover, &:active, &:focus {
@@ -64,9 +69,9 @@ img {
 	height: auto;
 }
 #wrapper {
-	min-height: 100%;
 	position:relative;
 }
+
 //semantic elements
 main, section, article, footer, nav {
 	display: block;

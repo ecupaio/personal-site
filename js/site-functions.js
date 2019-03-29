@@ -19,7 +19,7 @@ $(document).ready(function() {
     var projectTech = $(this).find('.project-tech').html();
     var projectText = $(this).find('.project-text').html();
     var projectImages = JSON.parse($(this).find('.project-images').text());
-    console.log(projectTitle);
+
     $('.selected-title').text(projectTitle);
     $('.selected-tech').html(projectTech);
     $('.selected-link').attr('href',projectLink);
@@ -34,6 +34,7 @@ $(document).ready(function() {
     }
     $('.slide').first().addClass('active');
     $('.project-overlay, body').addClass('active');
+    //todo: add force scroll top
   });
   $('.project-overlay').click(function(e) {
     if ($(e.target).hasClass('project-overlay')) {
@@ -84,7 +85,6 @@ $(document).ready(function() {
     $('#nav-toggle, #sidebar-nav, #wrapper').removeClass('active');
   });
   //on scroll top sections
-
   $(window).scroll(function() {
     function elementScrolled(elem) {
       var docViewTop = $(window).scrollTop();
@@ -92,13 +92,22 @@ $(document).ready(function() {
       var elemTop = $(elem).offset().top;
       return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
     }
-    if (elementScrolled('.skill-grid')) {
-       $('.skill').each(function(i) {
-         var that = this;
-          var t = setTimeout(function() {
-              $(that).addClass('active');
-          }, 250 * i);
-       });
-     }
+    if (window.location.pathname === "/") {
+      if (elementScrolled('.skill-grid')) {
+         $('.skill').each(function(i) {
+           var that = this;
+            var t = setTimeout(function() {
+                $(that).addClass('active');
+            }, 250 * i);
+         });
+       }
+    }
+    if (window.location.pathname.indexOf("/blog/") > -1) {
+      if ($(window).scrollTop() > $('#post-content').offset().top) {
+        $('.blog-topbar').addClass('active');
+      } else {
+        $('.blog-topbar').removeClass('active');
+      }
+    }
   });
 });
