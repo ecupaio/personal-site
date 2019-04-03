@@ -1,6 +1,7 @@
 $(document).ready(function() {
   //Universal scrollTop
   function scrollTop(selector,offset) {
+
       $('body,html').animate({
           scrollTop: $(selector).offset().top - offset
       });
@@ -68,7 +69,7 @@ $(document).ready(function() {
   //menu
   $('#nav-toggle').click(function() {
     $('.project-overlay, body').removeClass('active');
-    $('#nav-toggle, #sidebar-nav, #wrapper').toggleClass('active');
+    $('#nav-toggle, #sidebar-nav, main').toggleClass('active');
     if ($('#sidebar-nav').hasClass('active')) {
       $('#sidebar-nav .nav-link').each(function(i) {
         var $this = $(this);
@@ -81,8 +82,8 @@ $(document).ready(function() {
     }
 
   });
-  $('.nav-link').click(function() {
-    $('#nav-toggle, #sidebar-nav, #wrapper').removeClass('active');
+  $('.nav-link').click(function(e) {
+    $('#nav-toggle, #sidebar-nav, main').removeClass('active');
   });
   //on scroll top sections
   $(window).scroll(function() {
@@ -110,4 +111,8 @@ $(document).ready(function() {
       }
     }
   });
+  //copyright year
+  var getYear = new Date();
+  var copyrightYear = getYear.getFullYear();
+  $('.copyright-year').text(copyrightYear);
 });

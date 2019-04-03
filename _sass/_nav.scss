@@ -33,7 +33,7 @@
     @include transform(translateX(0%));
   }
 }
-#wrapper {
+main {
   filter: blur(0);
   @include transition(filter);
   &.active {

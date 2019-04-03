@@ -68,10 +68,6 @@ img {
 	max-width: 100%;
 	height: auto;
 }
-#wrapper {
-	position:relative;
-}
-
 //semantic elements
 main, section, article, footer, nav {
 	display: block;
@@ -79,7 +75,9 @@ main, section, article, footer, nav {
 section {
 	padding: 1em 2em;
 }
-
+main {
+	min-height: calc(100vh - 2em);
+}
 //Form Inputs
 input,textarea {
 	&:not([type=submit]):not([type=file]):not([type=radio]):not([type=checkbox]) {

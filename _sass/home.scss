@@ -226,9 +226,6 @@ body {
   #portfolio {
     position: relative;
     background-color: $white;
-
-    padding: 0;
-
     @include transition(top, opacity);
     &.active {
       .portfolio-grid {
