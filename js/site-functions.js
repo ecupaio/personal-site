@@ -6,7 +6,7 @@ $(document).ready(function() {
       });
   }
   setTimeout(function() {
-    $('#home .hero-text').addClass('active');
+    $('#hero').addClass('active');
   }, 700);
   setTimeout(function() {
     $('#portfolio').addClass('active');
@@ -74,7 +74,7 @@ $(document).ready(function() {
         var $this = $(this);
         setTimeout(function() {
           $this.addClass('active');
-        },i * 200);
+        },i * 100);
       });
     } else {
       $('#sidebar-nav .nav-link').removeClass('active');
