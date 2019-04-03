@@ -1,6 +1,5 @@
 ---
 title: Get a List of Unique Items in Jekyll
-layout: index
 permalink: "/blog/:title/"
 tags:
 - jekyll

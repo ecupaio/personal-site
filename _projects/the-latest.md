@@ -4,7 +4,7 @@ link: https://www.democrats.org/the-latest
 image:
 - Latest.jpg
 tech:
-- Expression Engine
+- Web development
 date: '2016-04-19'
 ---
 

@@ -1,0 +1,419 @@
+body {
+  position: relative;
+  &.active {
+    overflow-y: hidden;
+  }
+}
+.project-overlay {
+  position: fixed;
+  padding: 2em;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba($black,0.8);
+  z-index: -1;
+  opacity: 0;
+  overflow-y: scroll;
+  @include transform(translateY(-100%));
+  @include transition(transform,opacity);
+  @include flexbox;
+  justify-content: center;
+  align-items: center;
+  @include bp-small {
+    padding: 1em 0.5em;
+  }
+  &.active {
+    z-index: 10;
+    opacity: 1;
+    @include transform(translateY(0%));
+  }
+
+  .overlay-content {
+    .close-overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: $white;
+      font-size: 2em;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    max-width: $size-large;
+    margin: auto;
+    position: relative;
+    .info-title {
+      background-color: $white;
+      display: inline-block;
+      padding: 1em;
+      position: relative;
+      left: -0.5em;
+      top: 0.5em;
+      z-index: 2;
+      @include box-shadow;
+      @include bp-small {
+        left: 0;
+      }
+      .selected-title {
+        position: relative;
+
+      }
+    }
+    .project-info {
+      background-color: $white;
+      padding: 1em;
+      position: relative;
+      z-index: 2;
+      @include box-shadow(0px -2px 10px 0px rgba(0,0,0,0.35));
+      .selected-tech {
+        font-size: 14px;
+        color: lighten($charcoal,25%);
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+    }
+    .slider-col {
+      padding: 0;
+    }
+    .project-slider {
+      position: relative;
+      .slide-toggle {
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        color: $white;
+        font-size: 2em;
+        z-index: 10;
+        i {
+          color: $charcoal;
+          &:after {
+            content: '';
+            width: 1em;
+            height: 1em;
+            background-color: $white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%,-50%));
+            border-radius: 50%;
+            z-index: -1;
+            @include box-shadow;
+          }
+        }
+        &.prev {
+          left: 0;
+        }
+        &.next {
+          right: 0;
+        }
+      }
+      .slider-images {
+        overflow: hidden;
+        position: relative;
+
+        .slide {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          z-index: -1;
+          @include transform(scale(1.25));
+          transform-origin: center;
+          pointer-events: none;
+          @include transition(transform,opacity);
+          @include bp-small {
+            height: 350px;
+          }
+          img {
+            display: block;
+            margin: auto;
+            width: 100%;
+            @include bp-small {
+              position: absolute;
+              left: 50%;
+              top: 0;
+              height: 100%;
+              width: auto;
+              max-width: none;
+              @include transform(translateX(-50%));
+            }
+          }
+          &.active {
+            position: relative;
+            opacity: 1;
+            z-index: 1;
+            @include transform(scale(1));
+          }
+        }
+      }
+    }
+  }
+}
+#home {
+  $portfolio-overlap: 4em;
+  section {
+    .inner-section {
+      max-width: $size-large;
+      margin: auto;
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+  #hero {
+    padding: 4em 2em #{2em + $portfolio-overlap};
+    text-transform: uppercase;
+    color: $white;
+    @include flexbox;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $blue;
+    position: relative;
+    &:after {
+      content: '';
+      bottom: 0;
+      background-color: $blue;
+      height: 100vh;
+      width: 100%;
+      display: block;
+      @include transition(height);
+      transition-delay: 0.7s;
+    }
+    .hero-text {
+      padding: 1em 2em;
+      overflow: hidden;
+      position: relative;
+      .text-item {
+        opacity: 0;
+        @include transform(translateX(-100%));
+        @include transition(transform,opacity);
+        transition-delay: 0.5s;
+      }
+      &:before {
+        content: '';
+        display: block;
+        left: 1em;
+        width: 5px;
+        background-color: $white;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        @include transform(translateY(-100%));
+        @include transition(transform);
+        transition-delay: 0s;
+      }
+
+    }
+    &.active {
+      &:after {
+        height: 0;
+      }
+      .hero-text {
+        &:before {
+          @include transform(translateY(0%));
+        }
+        .text-item {
+          opacity: 1;
+          @include transform(translateX(0%));
+        }
+      }
+    }
+  }
+  #portfolio {
+    position: relative;
+    background-color: $white;
+    @include transition(top, opacity);
+    &.active {
+      .portfolio-grid {
+        top: -$portfolio-overlap;
+      }
+    }
+    .portfolio-grid {
+      @include transition(top);
+      max-width: $size-large;
+      margin: auto;
+      position: relative;
+      top: 0;
+      background-color: $white;
+      @include box-shadow;
+      .project-col {
+        background-size: cover;
+        background-position: top center;
+        height: 250px;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          opacity: 0;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          background-color: rgba($white,0.8);
+          @include transition(opacity);
+        }
+        .col-content {
+          text-align: center;
+          position: relative;
+          z-index: 2;
+          padding-top: 1em;
+          height: 100%;
+          @include flexbox;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          .project-title {
+            color: $blue;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            opacity: 0;
+            @include transition(opacity);
+            &:after {
+              content: '';
+              position: absolute;
+              height: 2px;
+              width: 100%;
+              left: 0;
+              bottom: -0.25em;
+              background-color: $blue;
+              @include transform(scaleX(0));
+              transform-origin: center;
+              @include transition(transform);
+
+            }
+            &:before {
+              content: '\f002';
+              font-family: 'FontAwesome';
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              @include transform(translateX(-50%));
+              @include transition(bottom,opacity);
+              transition-delay: 0.25s;
+              opacity: 0;
+              z-index: -1;
+            }
+          }
+
+        }
+        &:hover {
+          cursor: pointer;
+          &:before {
+            opacity: 1;
+            z-index: 1;
+          }
+          .col-content {
+
+            .project-title {
+              opacity: 1;
+              &:before {
+                bottom: -1.5em;
+                opacity: 1;
+              }
+              &:after {
+                @include transform(scaleX(1));
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+  #about {
+    .skills-col {
+      .skill-grid {
+        .skill-category {
+          text-align: center;
+          .skill {
+            margin: 0.5em 10px;
+            background-color: $blue;
+            color: $white;
+            @include transform(translateY(-2em));
+            opacity: 0;
+            @include transition(transform,opacity);
+            padding: 0.5em;
+
+            &.active {
+              @include transform(translateY(0));
+              opacity: 1;
+            }
+          }
+          .skill-bin {
+            height: 1em;
+            position: relative;
+            top: -1em;
+            border-bottom: 5px solid $blue;
+            border-left: 5px solid $blue;
+            border-right: 5px solid $blue;
+          }
+        }
+      }
+    }
+  }
+  #contact {
+    background-color: $blue;
+    color: $white;
+    #contact-form {
+      max-width: 400px;
+      margin: auto;
+      text-align: center;
+      .form-input {
+        margin: 1em 0;
+        color: $charcoal;
+        position: relative;
+        text-align: left;
+        input {
+          padding: 1em 0.5em;
+        }
+        .placeholder {
+          color: rgba($charcoal,0.5);
+          position: absolute;
+          top: 1em;
+          left: 0.5em;
+          font-weight: 400;
+          @include transition(color,top,font-size,font-weight);
+          &.active {
+            top: 0;
+            color: $blue;
+            font-size: 0.75em;
+            font-weight: 500;
+          }
+        }
+        textarea {
+          resize: none;
+          height: 150px;
+          &::placeholder {
+            color: rgba($charcoal,0.5);
+          }
+        }
+      }
+      button {
+        background-color: $white;
+        color: $blue;
+        border: none;
+        padding: 0.5em 1em;
+        width: 100%;
+        font-weight: bold;
+        font-family: $header-font;
+        @include transform(translateY(0));
+        @include box-shadow($prop: 0 0 0 rgba(0, 0, 0, 0.35));
+        @include transition(transform,box-shadow);
+        &:hover {
+          @include transform(translateY(-2px));
+          @include box-shadow($prop:0px 15px 10px -10px rgba(0,0,0,0.35));
+        }
+      }
+    }
+  }
+}

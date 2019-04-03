@@ -1,0 +1,97 @@
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+	width: 100%;
+}
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+//Default Fonts
+h1, h2, h3, h4, h5 {
+	font-family: $header-font;
+	margin-top: 0;
+	margin-bottom: 1rem;
+	font-weight: 500;
+}
+h1 {
+	font-size: 2.5em;
+	font-weight: 600;
+}
+h2 {
+	font-size: 2em;
+}
+h3 {
+	font-size: 1.5em;
+}
+h4 {
+	font-size: 1.25em;
+}
+h5 {
+	font-size: 1em;
+}
+body {
+	font-family: $body-font;
+	font-size: 14pt;
+	color: $text_color;
+}
+p {
+	margin-top: 0;
+}
+//Links
+a {
+	text-decoration: none;
+	color: $text_color;
+	position: relative;
+	z-index: 1;
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 3px;
+		z-index: -1;
+		background-color: rgba($yellow,0.7);
+		@include transition(height);
+	}
+	&:hover, &:active, &:focus {
+		&:before {
+			height: 100%;
+		}
+	}
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+//semantic elements
+main, section, article, footer, nav {
+	display: block;
+}
+section {
+	padding: 1em 2em;
+}
+main {
+	min-height: calc(100vh - 2em);
+}
+//Form Inputs
+input,textarea {
+	&:not([type=submit]):not([type=file]):not([type=radio]):not([type=checkbox]) {
+		width: 100%;
+		padding: 0.5em;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		border: 0;
+	}
+	&:active, &:focus {
+		outline: 0;
+	}
+
+	&.submit {
+		white-space: normal;
+	}
+}

@@ -4,9 +4,8 @@ date: '2016-05-11'
 image:
   - College_Democrats.jpg
 tech:
-  - Jekyll
-  - Google Maps API
-  - Miso Dataset
+  - Web development
+  - Frontend development
 link: 'https://collegedems.com/'
 ---
 

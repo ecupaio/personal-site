@@ -4,7 +4,7 @@ link: https://rebuild.democrats.org/
 image:
 - Rebuild.jpg
 tech:
-- Blue State Digital
+- Web development
 date: '2017-02-10'
 ---
 

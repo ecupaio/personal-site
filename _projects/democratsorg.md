@@ -4,8 +4,8 @@ link: https://democrats.org
 image:
 - Democrats_org.jpg
 tech:
-- Expression Engine
-- Jekyll
+- Web development
+- Frontend development
 date: '2016-02-16'
 ---
 

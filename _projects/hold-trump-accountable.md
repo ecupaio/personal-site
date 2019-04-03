@@ -4,7 +4,7 @@ link: https://trumpaccountability.democrats.org/
 image:
 - Hold_Trump_Accountable.jpg
 tech:
-- Blue State Digital
+- Web development
 date: '2016-12-08'
 ---
 

@@ -4,8 +4,8 @@ link: https://gop-ipsum.com/
 image:
 - GOP_Ipsum.jpg
 tech:
-- Miso Dataset
-- JQuery UI
+- Web development
+- Frontend development
 date: '2016-02-04'
 ---
 

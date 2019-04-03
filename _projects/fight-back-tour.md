@@ -2,8 +2,8 @@
 title: Fight Back Tour
 link: https://fightbacktour.com/
 tech:
-- Jekyll
-- Blue State Digital
+- Web development
+- Frontend development
 image:
 - fight_back_tour-1.jpg
 - fight_back_tour-2.jpg

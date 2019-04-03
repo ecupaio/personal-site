@@ -4,7 +4,8 @@ link: https://dncmembers.democrats.org/
 image:
 - Member_DB.jpg
 tech:
-- Blue State Digital
+- Web development
+- Frontend development
 date: '2016-08-09'
 ---
 

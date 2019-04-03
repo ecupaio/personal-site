@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<div class="blog-topbar">
+  <div class="topbar-title">
+    {{ page.title }}
+  </div>
+  <div class="topbar-home">
+    <a href="/blog">Blog</a>
+  </div>
+</div>
+<main id="blog-post">
+
+  <section id="post-title">
+    <div class="title-card">
+        <h1>{{ page.title }}</h1>
+        <div class="post-tags">
+          {% for tag in page.tags %}
+          <a href="/blog/?tag={{ tag | url_encode }}">{{tag }}</a>{% if forloop.last%}{% else %},{% endif %}
+          {% endfor %}
+        </div>
+    </div>
+
+  </section>
+  <section id="post-content">
+      {{ page.content }}
+  </section>
+  <section id="related-posts">
+    <div class="related-title">Related Reading</div>
+    <ul class="post-list">
+    {% for post in site.posts %}
+      {% for tag in post.tags %}
+        {% if page.tags contains tag and page.title != post.title %}
+        <li class="related-post">
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    </ul>
+  </section>
+</main>
