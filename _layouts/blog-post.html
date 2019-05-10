@@ -25,18 +25,25 @@ layout: default
   <section id="post-content">
       {{ page.content }}
   </section>
+  {% assign related-posts = "" | split: ',' %}
+  {% for post in site.posts %}
+    {% for tag in post.tags %}
+      {% if page.tags contains tag and page.title != post.title %}
+        {% assign related-posts = related-posts | push: post %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+  
+  {% if related-posts.size > 0 %}
   <section id="related-posts">
     <div class="related-title">Related Reading</div>
     <ul class="post-list">
-    {% for post in site.posts %}
-      {% for tag in post.tags %}
-        {% if page.tags contains tag and page.title != post.title %}
-        <li class="related-post">
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-        {% endif %}
-      {% endfor %}
+    {% for post in related-posts %}
+    <li class="related-post">
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
     {% endfor %}
     </ul>
   </section>
+  {% endif %}
 </main>

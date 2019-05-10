@@ -21,7 +21,7 @@
       position: relative;
       display: inline-block;
       @include transform(translateX(-100%));
-      @include transition(opacity, transform);
+      @include transition(opacity, background-position);
       margin-bottom: 0.5em;
       &.active {
           opacity: 1;

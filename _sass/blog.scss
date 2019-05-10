@@ -45,14 +45,10 @@
         font-size: 14px;
         a {
           color: $white;
-          &:before {
-            background-color: $white;
-
-          }
+          @include transition(color, background-position);
           &:hover {
-            @include transition(color);
-            color: $blue;
 
+            color: $charcoal;
           }
         }
 
@@ -71,9 +67,12 @@
     background-color: $white;
     position: relative;
     padding: 2em;
+    pre {
+      display: block;
+      background-color: $charcoal;
+    }
     code {
       background-color: $charcoal;
-      display: block;
       color: $white;
     }
   }
