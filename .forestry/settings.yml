@@ -16,6 +16,8 @@ sections:
   label: Experience
   create: all
   match: "**/*"
+  templates:
+  - experience
 - type: directory
   path: _skills
   label: Skills
@@ -24,6 +26,8 @@ sections:
 - type: jekyll-posts
   label: Posts
   create: all
+  templates:
+  - blog-post
 - type: jekyll-pages
   label: Pages
   create: all
