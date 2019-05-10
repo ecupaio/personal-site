@@ -17,3 +17,10 @@ fields:
 - type: text
   name: link
   label: link
+- name: layout
+  type: text
+  config:
+    required: false
+  label: layout
+  default: default
+  hidden: true
