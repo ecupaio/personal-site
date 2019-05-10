@@ -1,0 +1,16 @@
+---
+label: Experience
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: org
+  label: org
+- type: datetime
+  name: date
+  label: date
+- type: file
+  name: org_logo
+  label: org_logo
