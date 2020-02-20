@@ -2,6 +2,7 @@
 title: Blog
 permalink: "/blog/"
 layout: default
+css: blog
 ---
 <main id="blog">
   <section id="intro">

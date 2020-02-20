@@ -11,7 +11,10 @@ layout: compress
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THQC7Q9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   {% include nav.html %}
+  {% if page.url == '/' %}
   {% include project-overlay.html %}
+  {% endif %}
+
   {{ content }}
   <footer>
     <div class="pure-g footer-grid">

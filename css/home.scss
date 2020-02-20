@@ -1,3 +1,7 @@
+---
+---
+@import "mixins.scss";
+@import "vars.scss";
 body {
   position: relative;
   &.active {
@@ -289,7 +293,6 @@ body {
               @include transform(scaleX(0));
               transform-origin: center;
               @include transition(transform);
-
             }
           }
 

@@ -8,7 +8,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#3e73cb">
-{% include base.html %}
 <meta charset="utf-8">
 {% if page.url == "/404.html" %}
 <meta http-equiv="refresh" content="3; url=/">
@@ -40,6 +39,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- CSS -->
 {% include base.html %}
 <link href="{{ base }}/css/style.css" rel="stylesheet" type="text/css">
+{% if layout.css %}
+  {% assign page-css = layout.css %}
+{% endif %}
+{% if page.css %}
+  {% assign page-css = page.css %}
+{% endif %}
+<link rel="stylesheet" href="/css/{{ page-css }}.css">
 <!-- Font -->
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
 <!-- Font Awesome -->
