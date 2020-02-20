@@ -1,7 +1,7 @@
 ---
-title: Arcadia Power
+title: Arcadia
 
-link: https://arcadiapower.com
+link: https://arcadia.com
 image:
 - arcadia-home.jpg
 - arcadia-home-2.jpg
