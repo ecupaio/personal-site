@@ -44,8 +44,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 {% endif %}
 {% if page.css %}
   {% assign page-css = page.css %}
-{% endif %} 
+{% endif %}
+{% if page-css %}
 <link rel="stylesheet" href="/css/{{ page-css }}.css">
+{% endif %}
 <!-- Font -->
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
 <!-- Font Awesome -->
