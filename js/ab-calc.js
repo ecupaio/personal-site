@@ -1,8 +1,7 @@
 $(function() {
   // use https://www.socscistatistics.com/tests/chisquare/Default2.aspx to check
   function findSig() {
-    //display results
-    $('.results').removeClass('hidden');
+
     //clear results
     $('.not-sig, .is-sig').addClass('hidden');
     $('.donut-segment').attr('stroke-dasharray','0,100').attr('stroke','');
@@ -40,34 +39,44 @@ $(function() {
       confidence = 95;
       $('.is-sig,.sig-chart').removeClass('hidden');
       $('.confidence').text(confidence+'%');
-      $('.donut-segment').attr('stroke-dasharray',confidence+',100').attr('stroke','#26a65b');
+      //$('.donut-segment').attr('stroke-dasharray',confidence+',100').attr('stroke','#26a65b');
+      $('.donut-segment').attr('stroke','#26a65b');
     } else if (chiSq > sig10) {
       confidence = 90;
       confidenceDiff = 100 - confidence;
       $('.is-sig,.sig-chart').removeClass('hidden');
       $('.confidence').text(confidence+'%');
-      $('.donut-segment').attr('stroke-dasharray',confidence+',100').attr('stroke','#e65722');
+      //$('.donut-segment').attr('stroke-dasharray',confidence+',100').attr('stroke','#e65722');
+      $('.donut-segment').attr('stroke','#e65722');
     } else if (chiSq > sig20) {
       confidence = 80;
       $('.is-sig,.sig-chart').removeClass('hidden');
       $('.confidence').text(confidence+'%');
-      $('.donut-segment').attr('stroke-dasharray',confidence+',100').attr('stroke','#dc2a2a');
+      //$('.donut-segment').attr('stroke-dasharray',confidence+',100').attr('stroke','#dc2a2a');
+      $('.donut-segment').attr('stroke','#dc2a2a');
     } else {
       $('.not-sig').removeClass('hidden');
       $('.sig-chart').addClass('hidden');
     }
+    setTimeout(function() {
+      $('.donut-segment').attr('stroke-dasharray',confidence+',100');
+    }, 200);
+    $('html,body').animate({
+      scrollTop: $('#results-section').offset().top
+    }, 300);
+
     //conversion rate chart
 
     $('.rate-a').text((conversionRateA * 100).toFixed(2) +'%');
     $('.rate-b').text((conversionRateB * 100).toFixed(2) +'%');
     var lift = ((conversionRateB / conversionRateA) - 1) * 100;
-    $('.lift').text(lift.toFixed(2)+'%');
+    $('.lift-amt').text(lift.toFixed(2)+'%');
     if (lift > 0) {
-      $('.lift').addClass('pos');
-      $('.lift').removeClass('neg');
+      $('.lift-amt').addClass('pos');
+      $('.lift-amt').removeClass('neg');
     } else {
-      $('.lift').removeClass('pos');
-      $('.lift').addClass('neg');
+      $('.lift-amt').removeClass('pos');
+      $('.lift-amt').addClass('neg');
     }
 
     if (conversionRateA > conversionRateB && chiSq > sig20) {
@@ -82,6 +91,8 @@ $(function() {
     }
     //URL maker
     $('.url-params').val('https://edcupaioli.com/ab-test-calculator/?sessionA='+sessionA+'&sessionB='+sessionB+'&conversionA='+conversionA+'&conversionB='+conversionB);
+    //display results
+    $('.results').removeClass('hidden');
   }
   function getParameterByName(name, url) {
     if (!url) url = window.location.href;
@@ -99,6 +110,10 @@ $(function() {
   $('.copy-btn').click(function () {
     $('.url-params').select();
     document.execCommand("Copy");
+    $('.copy-confirm').addClass('active');
+    setTimeout(function() {
+      $('.copy-confirm').removeClass('active');
+    }, 1000);
   });
   if (window.location.href.indexOf('?sessionA') > -1) {
     $('.sessions-a').val(getParameterByName('sessionA'));

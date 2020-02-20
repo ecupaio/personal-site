@@ -1,26 +1,51 @@
 #ab-calc {
-  padding: 4rem;
-  .data-row {
-    margin: 1em 0;
-    .form-field {
-      display: inline-block;
-      label {
-        font-weight: bold;
 
-      }
-      input {
-        background-color: rgba($blue,0.1);
+  min-height: calc(100% - 2rem);
+  #heading {
+    background-color: $blue;
+    color: $white;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  #calc-form {
+    max-width: $size-small;
+    margin: auto;
+    .data-row {
+      margin: 1rem -1rem;
+      .form-field {
+        display: inline-block;
+        label {
+          font-weight: bold;
+
+        }
+        input {
+          background-color: rgba($blue,0.1);
+        }
       }
     }
+    .btn-row {
+      text-align: center;
+    }
   }
+  #results-section {
+    max-width: $size-large;
+    margin: auto;
+    text-align: center;
+    .data-section {
+      margin-bottom: 2rem;
+    }
+  }
+
   .significance {
 
   }
   .results {
+
+    margin: 1rem 0;
     .sig-chart {
       position: relative;
       width: 200px;
-      margin-top: 1em;
+      margin: 1em auto 0;
 
       .donut {
 
@@ -44,12 +69,12 @@
       }
     }
     .conversion-chart {
-      h3 {
-        margin: 0;
-      }
+
       position: relative;
       .chart-cols {
-        margin-top: 1em;
+        margin-bottom: 1rem;
+        display: inline-block;
+        text-align: left;
       }
       .col-container {
         position: relative;
@@ -93,7 +118,7 @@
         }
       }
     }
-    .lift {
+    .lift-amt {
       font-weight: bold;
       font-family: $header_font;
       margin-bottom: 1rem;
@@ -107,9 +132,11 @@
     }
   }
   .copy-url {
-    margin-top: 1em;
+    margin: 1em auto 2rem;
     .copy-field {
       position: relative;
+      max-width: $size-small;
+      margin: 1em auto 0;
       .copy-btn {
         position: absolute;
         top: 0;
@@ -125,6 +152,32 @@
     .url-params {
       background-color: rgba($blue,0.1);
       padding-right: 1rem;
+    }
+    .copy-confirm {
+      opacity: 0;
+      position: absolute;
+      background-color: $blue;
+      color: $white;
+      padding: 0.5rem;
+      top: 3rem;
+      left: 50%;
+      @include transform(translate(-50%,-100%));
+      @include transition(transform,opacity);
+      z-index: -1;
+      &.active {
+        opacity: 1;
+        @include transform(translate(-50%,0%));
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: 50%;
+        @include transform(translateX(-50%));
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid $blue;
+      }
     }
   }
 }

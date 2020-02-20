@@ -645,4 +645,8 @@
 }
 .pure-g {
 	font-family: $body-font;
+  margin: 0 -1rem;
+}
+.pure-g  div[class*="pure-u-"] {
+  padding: 0.5rem 1rem;
 }
