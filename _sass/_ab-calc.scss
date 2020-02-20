@@ -1,8 +1,16 @@
 #ab-calc {
+  padding: 4rem;
   .data-row {
     margin: 1em 0;
     .form-field {
       display: inline-block;
+      label {
+        font-weight: bold;
+
+      }
+      input {
+        background-color: rgba($blue,0.1);
+      }
     }
   }
   .significance {
@@ -61,8 +69,6 @@
             display: inline-block;
             position: relative;
             font-weight: 700;
-            top: 1.25em;
-
             color: $green;
           }
         }
@@ -70,24 +76,18 @@
       .col-label {
         font-weight: bold;
         font-family: $header_font;
-        top: 24px;
+
         position: relative;
         padding-right: 0.5em;
 
       }
       .rate-col {
-        margin-bottom: 1em;
-        width: 0;
-        text-align: left;
-        background-color: #ffd700;
-        color: #333;
-        height: 4em;
-        text-align: center;
-        transition: width 0.5s ease;
 
+        text-align: left;
+        padding: 1rem;
+        text-align: center;
         span {
           position: relative;
-          top: 24px;
           font-weight: bold;
           font-family: $header_font;
         }
@@ -108,8 +108,23 @@
   }
   .copy-url {
     margin-top: 1em;
-  }
-  .url-params {
-    width: 100%;
+    .copy-field {
+      position: relative;
+      .copy-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: $yellow;
+        padding: 0.5rem;
+        @include flexbox;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .url-params {
+      background-color: rgba($blue,0.1);
+      padding-right: 1rem;
+    }
   }
 }

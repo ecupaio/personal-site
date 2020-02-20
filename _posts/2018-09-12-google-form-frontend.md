@@ -58,7 +58,7 @@ Before we create the funciton, we need the URL to post the data to:
 
 Open the form in the enduser format like before:
 
-https://docs.google.com/forms/d/e/1FAIpQLScfJY0v7xNhp6fyFdmiX6vPiAVgoldqPDNvf1PU1OCVxIu1jg/viewform
+`https://docs.google.com/forms/d/e/1FAIpQLScfJY0v7xNhp6fyFdmiX6vPiAVgoldqPDNvf1PU1OCVxIu1jg/viewform`
 
 Remove the **/viewform** from the end of the url and replace it with **/formResponse**
 

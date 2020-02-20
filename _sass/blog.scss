@@ -74,6 +74,7 @@
     code {
       background-color: $charcoal;
       color: $white;
+      word-break: break-all;
     }
   }
   #related-posts {
@@ -127,7 +128,7 @@
     .post-list {
       list-style: none;
       li {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         .post-link {
           font-size: 1.5rem;
           font-weight: 500;

@@ -69,8 +69,7 @@ $(function() {
       $('.lift').removeClass('pos');
       $('.lift').addClass('neg');
     }
-    $('.col-a .rate-col').attr('style','width: calc('+Math.round(conversionRateA * 100)+'% + 18px);');
-    $('.col-b .rate-col').attr('style','width: calc('+Math.round(conversionRateB * 100)+'% + 18px);');
+
     if (conversionRateA > conversionRateB && chiSq > sig20) {
       $('.col-container').removeClass('winner');
       $('.col-a').addClass('winner');
@@ -83,7 +82,6 @@ $(function() {
     }
     //URL maker
     $('.url-params').val('https://edcupaioli.com/ab-test-calculator/?sessionA='+sessionA+'&sessionB='+sessionB+'&conversionA='+conversionA+'&conversionB='+conversionB);
-
   }
   function getParameterByName(name, url) {
     if (!url) url = window.location.href;
@@ -98,8 +96,9 @@ $(function() {
     e.preventDefault();
     findSig();
   });
-  $('.url-params').click(function () {
-    $(this).select();
+  $('.copy-btn').click(function () {
+    $('.url-params').select();
+    document.execCommand("Copy");
   });
   if (window.location.href.indexOf('?sessionA') > -1) {
     $('.sessions-a').val(getParameterByName('sessionA'));
