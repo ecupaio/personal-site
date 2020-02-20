@@ -11,7 +11,7 @@ footer {
       .icon-link {
         color: $white;
         margin-left: 1rem;
-        @include transition(color);
+        @include transition(color,background-position);
         padding: 0 0.25rem;
         &:hover {
           color: $charcoal;

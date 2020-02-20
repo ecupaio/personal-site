@@ -5,7 +5,8 @@
 //blog post
 .blog-topbar {
   position: fixed;
-  background-color: rgba($white,0.9);
+  background-color: rgba($blue,0.9);
+  color: $white;
   top: 0;
   left: 0;
   width: 100%;
@@ -27,6 +28,13 @@
     float: right;
     @include bp-small {
       display: none;
+    }
+    a {
+      color: $white;
+      @include transition(color,background-position);
+      &:hover {
+        color: $charcoal;
+      }
     }
   }
 }
