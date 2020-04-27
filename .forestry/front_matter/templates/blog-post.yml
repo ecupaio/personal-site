@@ -10,8 +10,12 @@ fields:
   label: tags
 pages:
 - _posts/2018-09-12-google-form-frontend.md
+- _posts/2018-09-12-google-form-frontend.md
+- _posts/2018-10-18-how-to-create-a-jekyll-site-with-github-pages.md
 - _posts/2018-10-18-how-to-create-a-jekyll-site-with-github-pages.md
 - _posts/2018-12-14-add-ssl-to-your-github-page-with-cloudflare.md
+- _posts/2018-12-14-add-ssl-to-your-github-page-with-cloudflare.md
+- _posts/2019-05-10-css-link-highlights-that-work-with-multi-line-text.md
 - _posts/2019-05-10-css-link-highlights-that-work-with-multi-line-text.md
 - _posts/2019-05-10-css-link-highlights-that-work-with-multi-line-text.md
 - _posts/prevent-blur-on-scale-transform-transition.md
