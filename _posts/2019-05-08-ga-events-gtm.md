@@ -50,7 +50,7 @@ Your Google Analytics events used to look like this: `ga('send', 'event', 'Video
 Now they will look like this:
 
     dataLayer.push({
-    				'event': 'gaEvent',
+					'event': 'gaEvent',
                     'eventCategory':'Category',
                     'eventAction': 'Action',
                     'eventLabel':'Label' 
