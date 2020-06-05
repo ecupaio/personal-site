@@ -50,11 +50,11 @@ Your Google Analytics events used to look like this: `ga('send', 'event', 'Video
 Now they will look like this:
 
     dataLayer.push({
-					'event': 'gaEvent',
+                    'event': 'gaEvent',
                     'eventCategory':'Category',
                     'eventAction': 'Action',
-                    'eventLabel':'Label' 
-                  })
+                    'eventLabel':'Label'
+                  });
 
 You will notice that the variables we created earlier are in there. Google Tag Manager will read the `event` object to trigger the Google Analytics Event Tag and will fill in the data for the tracking parameters (category, action, label) that you have a corresponding object defined for each.
 
