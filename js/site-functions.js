@@ -86,6 +86,7 @@ $(document).ready(function() {
     $('#nav-toggle, #sidebar-nav, main').removeClass('active');
   });
   //on scroll top sections
+
   $(window).scroll(function() {
     function elementScrolled(elem) {
       var docViewTop = $(window).scrollTop();
@@ -93,17 +94,21 @@ $(document).ready(function() {
       var elemTop = $(elem).offset().top;
       return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
     }
-    if (window.location.pathname === "/") {
+
+    if ($('.skill-grid').length > 0) {
       if (elementScrolled('.skill-grid')) {
-         $('.skill').each(function(i) {
-           var that = this;
-            var t = setTimeout(function() {
-                $(that).addClass('active');
-            }, 250 * i);
-         });
-       }
+
+        $('.skill-grid .skill').each(function(i) {
+          var that = this;
+           var t = setTimeout(function() {
+
+               $(that).addClass('active');
+           }, 250 * i);
+        });
+      }
     }
-    if (window.location.pathname.indexOf("/blog/") > -1) {
+
+    if ($('#post-content').length > 0) {
       if ($(window).scrollTop() > $('#post-content').offset().top) {
         $('.blog-topbar').addClass('active');
       } else {
