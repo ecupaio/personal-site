@@ -7,6 +7,7 @@ body {
   &.active {
     overflow-y: hidden;
   }
+  
 }
 .project-overlay {
   position: fixed;
@@ -157,18 +158,32 @@ body {
   }
 }
 #home {
-  $portfolio-overlap: 4em;
+  
   section {
+    
     .inner-section {
       max-width: $size-large;
       margin: auto;
       h2 {
         text-align: center;
+        margin-bottom: 2rem;
+      }
+      
+    }
+    &.blue {
+      background-color: $blue;
+      color: $white;
+      a {
+        color: $white;
+        @include transition(color,background-position);
+        &:hover {
+          color: $black;
+        }
       }
     }
   }
   #hero {
-    padding: 4em 2em #{2em + $portfolio-overlap};
+    padding: 2rem;
     text-transform: uppercase;
     color: $white;
     @include flexbox;
@@ -227,15 +242,12 @@ body {
       }
     }
   }
-  #portfolio {
+  #web-portfolio {
     position: relative;
     background-color: $white;
-    @include transition(top, opacity);
-    &.active {
-      .portfolio-grid {
-        top: -$portfolio-overlap;
-      }
-    }
+    padding-top: 2rem;
+    @include transition(opacity);
+    
     .portfolio-grid {
       @include transition(top);
       max-width: $size-large;
@@ -328,8 +340,9 @@ body {
           text-align: center;
           .skill {
             margin: 0.5em 10px;
-            background-color: $blue;
-            color: $white;
+            background-color: $white;
+            color: $blue;
+            font-weight: 700;
             @include transform(translateY(-2em));
             opacity: 0;
             @include transition(transform,opacity);
@@ -344,17 +357,16 @@ body {
             height: 1em;
             position: relative;
             top: -1em;
-            border-bottom: 5px solid $blue;
-            border-left: 5px solid $blue;
-            border-right: 5px solid $blue;
+            border-bottom: 5px solid $white;
+            border-left: 5px solid $white;
+            border-right: 5px solid $white;
           }
         }
       }
     }
   }
   #contact {
-    background-color: $blue;
-    color: $white;
+    
     #contact-form {
       max-width: 400px;
       margin: auto;
@@ -366,13 +378,16 @@ body {
         text-align: left;
         input {
           padding: 1em 0.5em;
+          @include box-shadow;
+          
         }
         .placeholder {
-          color: rgba($charcoal,0.5);
+          color: rgba($charcoal,0.7);
           position: absolute;
           top: 1em;
           left: 0.5em;
           font-weight: 400;
+          
           @include transition(color,top,font-size,font-weight);
           &.active {
             top: 0;
@@ -384,14 +399,16 @@ body {
         textarea {
           resize: none;
           height: 150px;
+          @include box-shadow;
           &::placeholder {
-            color: rgba($charcoal,0.5);
+            color: rgba($charcoal,0.7);
           }
         }
       }
       button {
-        background-color: $white;
-        color: $blue;
+        background-color: $blue;
+        color: $white;
+        
         border: none;
         padding: 0.5em 1em;
         width: 100%;
