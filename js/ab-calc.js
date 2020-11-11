@@ -33,31 +33,39 @@ $(function() {
     var sig20 = 1.642;
     var sig10 = 2.706;
     var sig5 = 3.841;
-    var sig1 = 2.706;
+    var sig2 = 5.412;
+    var sig1 = 6.635;
     var confidence;
-    if (chiSq > sig1) {
+    
+    if (chiSq.toFixed(3) > sig1) {
+      
       confidence = 99;
       $('.is-sig,.sig-chart').removeClass('hidden');
       $('.confidence').text(confidence+'%');
       $('.donut-segment').attr('stroke','#26a65b');
-    } else if (chiSq > sig5) {
+    } else if (chiSq.toFixed(3) > sig2) {
+      confidence = 98;
+      $('.is-sig,.sig-chart').removeClass('hidden');
+      $('.confidence').text(confidence+'%');
+      $('.donut-segment').attr('stroke','#26a65b');
+    } else if (chiSq.toFixed(3) > sig5) {
+      
       confidence = 95;
       $('.is-sig,.sig-chart').removeClass('hidden');
       $('.confidence').text(confidence+'%');
-      //$('.donut-segment').attr('stroke-dasharray',confidence+',100').attr('stroke','#26a65b');
       $('.donut-segment').attr('stroke','#26a65b');
-    } else if (chiSq > sig10) {
+    } else if (chiSq.toFixed(3) > sig10) {
       confidence = 90;
       confidenceDiff = 100 - confidence;
       $('.is-sig,.sig-chart').removeClass('hidden');
       $('.confidence').text(confidence+'%');
-      //$('.donut-segment').attr('stroke-dasharray',confidence+',100').attr('stroke','#e65722');
+      
       $('.donut-segment').attr('stroke','#e65722');
-    } else if (chiSq > sig20) {
+    } else if (chiSq.toFixed(3) > sig20) {
+      
       confidence = 80;
       $('.is-sig,.sig-chart').removeClass('hidden');
       $('.confidence').text(confidence+'%');
-      //$('.donut-segment').attr('stroke-dasharray',confidence+',100').attr('stroke','#dc2a2a');
       $('.donut-segment').attr('stroke','#dc2a2a');
     } else {
       $('.not-sig').removeClass('hidden');
