@@ -33,9 +33,14 @@ $(function() {
     var sig20 = 1.642;
     var sig10 = 2.706;
     var sig5 = 3.841;
+    var sig1 = 2.706;
     var confidence;
-
-    if (chiSq > sig5) {
+    if (chiSq > sig1) {
+      confidence = 99;
+      $('.is-sig,.sig-chart').removeClass('hidden');
+      $('.confidence').text(confidence+'%');
+      $('.donut-segment').attr('stroke','#26a65b');
+    } else if (chiSq > sig5) {
       confidence = 95;
       $('.is-sig,.sig-chart').removeClass('hidden');
       $('.confidence').text(confidence+'%');
