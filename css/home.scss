@@ -169,7 +169,7 @@ body {
   }
   #hero {
     padding: 4em 2em #{2em + $portfolio-overlap};
-    text-transform: uppercase;
+    
     color: $white;
     @include flexbox;
     flex-direction: column;
