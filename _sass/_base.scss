@@ -5,6 +5,9 @@ body {
 	// height:100%;
 	// width: 100%;
 	overflow-x: hidden;
+	&.active {
+		overflow-y: hidden;
+	}
 }
 * {
 	box-sizing: border-box;

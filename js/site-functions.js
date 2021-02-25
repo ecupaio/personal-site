@@ -34,16 +34,12 @@ $(document).ready(function() {
       $('.slide-toggle').removeClass('hidden');
     }
     $('.slide').first().addClass('active');
-    $('.project-overlay, body').addClass('active');
+    $('.project-overlay, body,html').addClass('active');
     //todo: add force scroll top
   });
-  $('.project-overlay').click(function(e) {
-    if ($(e.target).hasClass('project-overlay')) {
-      $('.project-overlay, body').removeClass('active');
-    }
-  });
+  
   $('.close-overlay').click(function(e) {
-    $('.project-overlay, body').removeClass('active');
+    $('.project-overlay, body,html').removeClass('active');
   });
   $('.slide-toggle').click(function() {
     if ($(this).hasClass('next')) {
