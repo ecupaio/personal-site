@@ -36,9 +36,11 @@ about: |-
     <div class="pure-g portfolio-grid">
       {% assign projects = site.projects | sort: 'date' | reverse %}
       {% for project in projects %}
-      <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 project-col" style="background-image: url(/images/{{ project.image[0]}});">
+      <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 project-col">
         <div class="col-content" >
+            <img class="project-image" src="/images/{{ project.image[0]}}">
             <h4 class="project-title">{{ project.title }}</h4>
+
           <div class="hidden">
             <div class="project-link">
               {{ project.link }}

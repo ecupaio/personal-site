@@ -231,6 +231,7 @@ body {
     position: relative;
     background-color: $white;
     @include transition(top, opacity);
+    
     &.active {
       .portfolio-grid {
         top: -$portfolio-overlap;
@@ -242,40 +243,48 @@ body {
       margin: auto;
       position: relative;
       top: 0;
-      background-color: $white;
-      @include box-shadow;
+      background-color: transparent;
+      
       .project-col {
         background-size: cover;
         background-position: top center;
         height: 250px;
         overflow: hidden;
-        padding: 0;
+        padding: 1rem;
         position: relative;
-        &:before {
-          content: '';
-          display: block;
-          position: absolute;
-          opacity: 0;
-          height: 100%;
-          width: 100%;
-          top: 0;
-          left: 0;
-          z-index: -1;
-          background-color: rgba($white,0.8);
-          @include transition(opacity);
-        }
+        
         .col-content {
           text-align: center;
           position: relative;
-          z-index: 2;
-          padding-top: 1em;
           height: 100%;
           @include flexbox;
           justify-content: center;
           align-items: center;
           flex-direction: column;
+          @include box-shadow;
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            opacity: 0;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-color: rgba($charcoal,0.95);
+            @include transition(opacity);
+          }
+          .project-image {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center top;
+            z-index: 0;
+          }
           .project-title {
-            color: $blue;
+            color: $white;
             font-weight: 500;
             position: relative;
             z-index: 1;
@@ -288,7 +297,7 @@ body {
               height: 2px;
               width: 100%;
               left: 0;
-              bottom: -0.25em;
+              bottom: -0.1em;
               background-color: $blue;
               @include transform(scaleX(0));
               transform-origin: center;
@@ -299,17 +308,21 @@ body {
         }
         &:hover {
           cursor: pointer;
-          &:before {
-            opacity: 1;
-            z-index: 1;
-          }
+          
           .col-content {
-
+            padding: 0.5rem;
+            &:after {
+              opacity: 1;
+              z-index: 1;
+            }
             .project-title {
               opacity: 1;
+              z-index: 3;
+              
               &:before {
                 bottom: -1.5em;
                 opacity: 1;
+                z-index: 3;
               }
               &:after {
                 @include transform(scaleX(1));
