@@ -54,6 +54,14 @@ $(document).ready(function() {
         $('.slide').first().addClass('active');
       }
     }
+    if ($(this).hasClass('prev')) {
+      if ($('.slide.active').prev('.slide').length > 0) {
+        $('.slide.active').removeClass('active').prev('.slide').addClass('active');
+      } else {
+        $('.slide.active').removeClass('active');
+        $('.slide').last().addClass('active');
+      }
+    } 
   });
   //contact form
   $('.form-input input').focus(function() {
