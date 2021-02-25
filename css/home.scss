@@ -374,6 +374,7 @@ body {
       overflow: hidden;
       .form-success {
         position: absolute;
+        opacity: 0;
         top: 0;
         left: 0;
         width: 100%;
@@ -381,15 +382,17 @@ body {
         text-align: center;
         display: flex;
         align-items: center;
-        
+        justify-content: center;
         transform: translateY(-100%);
         @include transition(transform);
         background-color: $white;
+        padding: 0.5rem;
         h3 {
           color: $blue;
         }
         &.active {
           transform: translateY(0);
+          opacity: 1;
         }
       }
       .form-input {
@@ -430,11 +433,12 @@ body {
         width: 100%;
         font-weight: bold;
         font-family: $header-font;
-        @include transform(translateY(0));
+        border: 1px solid $white;
         @include box-shadow($prop: 0 0 0 rgba(0, 0, 0, 0.35));
-        @include transition(transform,box-shadow);
+        @include transition(background-color,color,box-shadow);
         &:hover {
-          @include transform(translateY(-2px));
+          background-color: $blue;
+          color: $white;
           @include box-shadow($prop:0px 15px 10px -10px rgba(0,0,0,0.35));
         }
       }

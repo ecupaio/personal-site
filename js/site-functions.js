@@ -120,8 +120,5 @@ $(document).ready(function() {
       }
     }
   });
-  //copyright year
-  var getYear = new Date();
-  var copyrightYear = getYear.getFullYear();
-  $('.copyright-year').text(copyrightYear);
+  
 });
