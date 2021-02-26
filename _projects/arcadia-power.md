@@ -1,15 +1,18 @@
 ---
 title: Arcadia
-
-link: https://arcadia.com
+link: https://welcome.arcadia.com
 image:
 - arcadia-home.jpg
-- arcadia-home-2.jpg
-- arcadia-home-3.jpg
+- arcadia-about.jpg
+- arcadia-careers.jpg
+- arcadia-hiw.jpg
+- arcadia-wind.jpg
+- arcadia-solar.jpg
+- arcadia-our-impact.jpg
 tech:
 - Web development
 - Web design
-- UX testing
+- UX
 - Frontend development
 date: '2018-07-02 04:22:22'
 ---

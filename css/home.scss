@@ -25,7 +25,8 @@ body {
   justify-content: center;
   align-items: center;
   @include bp-small {
-    padding: 1em 0.5em;
+    display: block;
+    padding: 3em 1em 1em;
   }
   &.active {
     z-index: 10;
@@ -52,8 +53,8 @@ body {
       display: inline-block;
       padding: 1em;
       position: relative;
-      left: -0.5em;
-      top: 0.5em;
+      left: -1em;
+      
       z-index: 2;
       @include box-shadow;
       @include bp-small {
@@ -90,12 +91,12 @@ body {
         font-size: 2em;
         z-index: 10;
         i {
-          color: $charcoal;
+          color: $white;
           &:after {
             content: '';
             width: 1em;
             height: 1em;
-            background-color: $white;
+            background-color: $blue;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -137,12 +138,9 @@ body {
             width: 100%;
             @include bp-small {
               position: absolute;
-              left: 50%;
-              top: 0;
-              height: 100%;
-              width: auto;
-              max-width: none;
-              @include transform(translateX(-50%));
+              width: 100%;
+              height: auto;
+              overflow-y: scroll;
             }
           }
           &.active {
@@ -169,7 +167,7 @@ body {
   }
   #hero {
     padding: 4em 2em #{2em + $portfolio-overlap};
-    text-transform: uppercase;
+    
     color: $white;
     @include flexbox;
     flex-direction: column;
@@ -231,6 +229,7 @@ body {
     position: relative;
     background-color: $white;
     @include transition(top, opacity);
+    
     &.active {
       .portfolio-grid {
         top: -$portfolio-overlap;
@@ -242,40 +241,48 @@ body {
       margin: auto;
       position: relative;
       top: 0;
-      background-color: $white;
-      @include box-shadow;
+      background-color: transparent;
+      
       .project-col {
         background-size: cover;
         background-position: top center;
         height: 250px;
         overflow: hidden;
-        padding: 0;
+        padding: 1rem;
         position: relative;
-        &:before {
-          content: '';
-          display: block;
-          position: absolute;
-          opacity: 0;
-          height: 100%;
-          width: 100%;
-          top: 0;
-          left: 0;
-          z-index: -1;
-          background-color: rgba($white,0.8);
-          @include transition(opacity);
-        }
+        
         .col-content {
           text-align: center;
           position: relative;
-          z-index: 2;
-          padding-top: 1em;
           height: 100%;
           @include flexbox;
           justify-content: center;
           align-items: center;
           flex-direction: column;
+          @include box-shadow;
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            opacity: 0;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-color: rgba($charcoal,0.95);
+            @include transition(opacity);
+          }
+          .project-image {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center top;
+            z-index: 0;
+          }
           .project-title {
-            color: $blue;
+            color: $white;
             font-weight: 500;
             position: relative;
             z-index: 1;
@@ -288,7 +295,7 @@ body {
               height: 2px;
               width: 100%;
               left: 0;
-              bottom: -0.25em;
+              bottom: -0.1em;
               background-color: $blue;
               @include transform(scaleX(0));
               transform-origin: center;
@@ -299,17 +306,21 @@ body {
         }
         &:hover {
           cursor: pointer;
-          &:before {
-            opacity: 1;
-            z-index: 1;
-          }
+          
           .col-content {
-
+            padding: 0.5rem;
+            &:after {
+              opacity: 1;
+              z-index: 1;
+            }
             .project-title {
               opacity: 1;
+              z-index: 3;
+              
               &:before {
                 bottom: -1.5em;
                 opacity: 1;
+                z-index: 3;
               }
               &:after {
                 @include transform(scaleX(1));
@@ -363,6 +374,7 @@ body {
       overflow: hidden;
       .form-success {
         position: absolute;
+        opacity: 0;
         top: 0;
         left: 0;
         width: 100%;
@@ -370,15 +382,17 @@ body {
         text-align: center;
         display: flex;
         align-items: center;
-        
+        justify-content: center;
         transform: translateY(-100%);
         @include transition(transform);
         background-color: $white;
+        padding: 0.5rem;
         h3 {
           color: $blue;
         }
         &.active {
           transform: translateY(0);
+          opacity: 1;
         }
       }
       .form-input {
@@ -419,11 +433,12 @@ body {
         width: 100%;
         font-weight: bold;
         font-family: $header-font;
-        @include transform(translateY(0));
+        border: 1px solid $white;
         @include box-shadow($prop: 0 0 0 rgba(0, 0, 0, 0.35));
-        @include transition(transform,box-shadow);
+        @include transition(background-color,color,box-shadow);
         &:hover {
-          @include transform(translateY(-2px));
+          background-color: $blue;
+          color: $white;
           @include box-shadow($prop:0px 15px 10px -10px rgba(0,0,0,0.35));
         }
       }

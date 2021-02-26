@@ -34,16 +34,12 @@ $(document).ready(function() {
       $('.slide-toggle').removeClass('hidden');
     }
     $('.slide').first().addClass('active');
-    $('.project-overlay, body').addClass('active');
+    $('.project-overlay, body,html').addClass('active');
     //todo: add force scroll top
   });
-  $('.project-overlay').click(function(e) {
-    if ($(e.target).hasClass('project-overlay')) {
-      $('.project-overlay, body').removeClass('active');
-    }
-  });
+  
   $('.close-overlay').click(function(e) {
-    $('.project-overlay, body').removeClass('active');
+    $('.project-overlay, body,html').removeClass('active');
   });
   $('.slide-toggle').click(function() {
     if ($(this).hasClass('next')) {
@@ -54,6 +50,14 @@ $(document).ready(function() {
         $('.slide').first().addClass('active');
       }
     }
+    if ($(this).hasClass('prev')) {
+      if ($('.slide.active').prev('.slide').length > 0) {
+        $('.slide.active').removeClass('active').prev('.slide').addClass('active');
+      } else {
+        $('.slide.active').removeClass('active');
+        $('.slide').last().addClass('active');
+      }
+    } 
   });
   //contact form
   $('.form-input input').focus(function() {
@@ -116,8 +120,5 @@ $(document).ready(function() {
       }
     }
   });
-  //copyright year
-  var getYear = new Date();
-  var copyrightYear = getYear.getFullYear();
-  $('.copyright-year').text(copyrightYear);
+  
 });
