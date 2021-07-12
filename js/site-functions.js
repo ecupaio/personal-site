@@ -1,7 +1,6 @@
 $(document).ready(function() {
   //Universal scrollTop
   function scrollTop(selector,offset) {
-
       $('body,html').animate({
           scrollTop: $(selector).offset().top - offset
       });
@@ -23,10 +22,17 @@ $(document).ready(function() {
 
     $('.selected-title').text(projectTitle);
     $('.selected-tech').html(projectTech);
-    $('.selected-link').attr('href',projectLink);
+    console.log(projectLink.length);
+    if (projectLink.length > 1) {
+      $('.selected-link').attr('href',projectLink);
+      $('.selected-link').removeClass('hidden');
+    } else {
+      $('.selected-link').addClass('hidden');
+    }
+    
     $('.about-project').html(projectText);
     $.each(projectImages,function(i,img) {
-      $('.project-slider .slider-images').append("<div class='slide'><img src='/images/"+img+"' /></div>");
+      $('.project-slider .slider-images').append("<div class='slide'><img alt='image of"+projectTitle+"' src='/images/"+img+"' /></div>");
     });
     if (projectImages.length < 2) {
       $('.slide-toggle').addClass('hidden');
