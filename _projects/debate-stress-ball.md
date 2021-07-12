@@ -1,6 +1,6 @@
 ---
 title: Debate Stress Ball
-link: https://debatestressball.com/
+link: http://debatestressball.com/
 image:
 - Stress_Ball.jpg
 tech:

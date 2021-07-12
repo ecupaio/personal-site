@@ -7,7 +7,7 @@ image:
 - trump_russia-1.jpg
 - trump_russia-2.jpg
 - trump_russia-3.jpg
-link: https://trumprussianetwork.com/
+link: ''
 date: '2017-03-30'
 ---
 

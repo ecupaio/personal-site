@@ -1,6 +1,6 @@
 ---
 title: Polling Place Locator
-link: http://pollingplaces-stage.democrats.org
+link: ''
 image:
 - Polling_Places.jpg
 - polling_places_2.jpg

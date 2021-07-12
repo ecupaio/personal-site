@@ -1,6 +1,6 @@
 ---
 title: Hold Trump Accountable
-link: https://trumpaccountability.democrats.org/
+link: ''
 image:
 - Hold_Trump_Accountable.jpg
 tech:

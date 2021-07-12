@@ -3,7 +3,7 @@ title: Democrats Live
 tech:
 - Web development
 - Frontend development
-link: https://live.democrats.org/
+link: ''
 image:
 - dems_live-1.jpg
 - dems_live-2.jpg

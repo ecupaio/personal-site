@@ -1,6 +1,6 @@
 ---
 title: Gillespie Facts
-link: https://gillespiefacts.com/
+link: 'https://democrats.github.io/gillespie-facts/'
 image:
 - Gillespie_Facts.jpg
 - Gillespie_Facts_Interior.jpg

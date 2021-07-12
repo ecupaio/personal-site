@@ -1,6 +1,6 @@
 ---
 title: Victory 2016
-link: https://victory2016.democrats.org/page/event/search_simple
+link: ''
 image:
 - Victory_2016.jpg
 tech:

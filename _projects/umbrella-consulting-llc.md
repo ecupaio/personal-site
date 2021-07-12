@@ -1,6 +1,6 @@
 ---
 title: Umbrella Consulting LLC
-link: https://umbrellaconsultingllc.com/
+link: 'https://ecupaio.github.io/umbrella_wp/'
 tech:
   - Web development
   - Web design

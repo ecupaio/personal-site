@@ -1,6 +1,6 @@
 ---
 title: VA Votes
-link: https://vavotes2017.com/
+link: ''
 tech:
 - Web development
 image:

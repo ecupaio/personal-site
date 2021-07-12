@@ -7,7 +7,7 @@ image:
 tech:
 - Frontend development
 - Web development
-link: https://makecalls.democrats.org/
+link: ''
 date: '2017-01-09'
 ---
 

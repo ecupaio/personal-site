@@ -1,6 +1,6 @@
 ---
 title: My Vote
-link: https://www.democrats.org/my-vote
+link: ''
 image:
 - My_Vote.jpg
 tech:

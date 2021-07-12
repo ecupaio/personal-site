@@ -1,6 +1,6 @@
 ---
 title: Rebuild
-link: https://rebuild.democrats.org/
+link: ''
 image:
 - Rebuild.jpg
 tech:

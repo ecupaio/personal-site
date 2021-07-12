@@ -1,6 +1,6 @@
 ---
 title: Fight Back Tour
-link: https://fightbacktour.com/
+link: ''
 tech:
 - Web development
 - Frontend development

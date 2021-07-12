@@ -1,6 +1,6 @@
 ---
 title: The Latest
-link: https://www.democrats.org/the-latest
+link: ''
 image:
 - Latest.jpg
 tech:

@@ -1,6 +1,6 @@
 ---
 title: 'GOP Ipsum '
-link: https://gop-ipsum.com/
+link: ''
 image:
 - GOP_Ipsum.jpg
 tech:

@@ -1,6 +1,6 @@
 ---
 title: iTree Lessons
-link: http://www.itreelessons.com/
+link: ''
 image:
 - itree.jpg
 tech:

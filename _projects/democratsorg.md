@@ -1,6 +1,6 @@
 ---
 title: Democrats.org
-link: https://democrats.org
+link: ''
 image:
 - Democrats_org.jpg
 tech:

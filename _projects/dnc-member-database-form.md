@@ -1,6 +1,6 @@
 ---
 title: DNC Member Database Form
-link: https://dncmembers.democrats.org/
+link: ''
 image:
 - Member_DB.jpg
 tech:

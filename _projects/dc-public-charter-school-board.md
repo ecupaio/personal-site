@@ -1,6 +1,6 @@
 ---
 title: DC Public Charter School Board
-link: http://www.dcpcsb.org/
+link: ''
 image:
 - dcpcsb.jpg
 tech:

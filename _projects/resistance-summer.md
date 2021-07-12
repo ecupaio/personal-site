@@ -1,6 +1,6 @@
 ---
 title: Resistance Summer
-link: https://resistsummer.com/
+link: ''
 image:
 - Resistance_Summer_home.jpg
 - Resistance_Summer_map.jpg
