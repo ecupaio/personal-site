@@ -6,7 +6,6 @@ image:
 tech:
   - Web development
   - Frontend development
-link: 'https://collegedems.com/'
 ---
 
 ## Description
