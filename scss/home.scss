@@ -281,6 +281,19 @@ body {
       }
 
     }
+    .btn-row {
+      padding-left: 2em;
+      margin-top: 1rem;
+      position: relative;
+      overflow: hidden;
+      .btn {
+        transform: translateY(calc(100% + 6px));
+        opacity: 0;
+        @include transition(transform,opacity);
+        transition-delay: 0.9s;
+        margin: 0;
+      }
+    }
     &.active {
       &:after {
         height: 0;
@@ -292,6 +305,12 @@ body {
         .text-item {
           opacity: 1;
           @include transform(translateX(0%));
+        }
+      }
+      .btn-row {
+        .btn {
+          transform: translateY(0%);
+          opacity: 1;
         }
       }
     }
