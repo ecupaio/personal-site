@@ -11,60 +11,8 @@ $(document).ready(function() {
   setTimeout(function() {
     $('#portfolio').addClass('active');
   }, 1400);
-  //project overlay
-  $('.project-col').click(function(e) {
-    $('.project-slider .slider-images').html('');
-    var projectTitle = $(this).find('.project-title').text();
-    var projectLink = $(this).find('.project-link').text();
-    var projectTech = $(this).find('.project-tech').html();
-    var projectText = $(this).find('.project-text').html();
-    var projectImages = JSON.parse($(this).find('.project-images').text());
-
-    $('.selected-title').text(projectTitle);
-    $('.selected-tech').html(projectTech);
-    console.log(projectLink.length);
-    if (projectLink.length > 1) {
-      $('.selected-link').attr('href',projectLink);
-      $('.selected-link').removeClass('hidden');
-    } else {
-      $('.selected-link').addClass('hidden');
-    }
-    
-    $('.about-project').html(projectText);
-    $.each(projectImages,function(i,img) {
-      $('.project-slider .slider-images').append("<div class='slide'><img alt='image of"+projectTitle+"' src='/images/"+img+"' /></div>");
-    });
-    if (projectImages.length < 2) {
-      $('.slide-toggle').addClass('hidden');
-    } else {
-      $('.slide-toggle').removeClass('hidden');
-    }
-    $('.slide').first().addClass('active');
-    $('.project-overlay, body,html').addClass('active');
-    //todo: add force scroll top
-  });
   
-  $('.close-overlay').click(function(e) {
-    $('.project-overlay, body,html').removeClass('active');
-  });
-  $('.slide-toggle').click(function() {
-    if ($(this).hasClass('next')) {
-      if ($('.slide.active').next('.slide').length > 0) {
-        $('.slide.active').removeClass('active').next('.slide').addClass('active');
-      } else {
-        $('.slide.active').removeClass('active');
-        $('.slide').first().addClass('active');
-      }
-    }
-    if ($(this).hasClass('prev')) {
-      if ($('.slide.active').prev('.slide').length > 0) {
-        $('.slide.active').removeClass('active').prev('.slide').addClass('active');
-      } else {
-        $('.slide.active').removeClass('active');
-        $('.slide').last().addClass('active');
-      }
-    } 
-  });
+  
   //contact form
   $('.form-input input').focus(function() {
     if ($(this).val() === '') {

@@ -30,7 +30,14 @@ layout: compress
       </div>
     </div>
   </footer>
-  <!-- Scripts -->
-  <script src="/js/min/site-functions.min.js"></script>
+  <!-- Scripts --> 
+  <!-- Sitewide -->
+  <script src="/js/min/site-functions.min.js?{{site.time | date: '%s' }}"></script>
+  {% if page.scripts.size > 0 %}
+  <!-- Page -->
+  {% for script in page.scripts %}
+  <script src="/js/min/{{script}}.min.js?{{site.time | date: '%s' }}"></script>
+  {% endfor %}
+  {% endif %}
 </body>
 </html>

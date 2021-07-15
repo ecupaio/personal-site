@@ -7,7 +7,7 @@ css: blog
     {{ page.title }}
   </div>
   <div class="topbar-home">
-    <a href="/blog">Blog</a>
+    <a href="/blog" class="white">Blog</a>
   </div>
 </div>
 <main id="blog-post">
@@ -17,7 +17,7 @@ css: blog
         <h1>{{ page.title }}</h1>
         <div class="post-tags">
           {% for tag in page.tags %}
-          <a href="/blog/?tag={{ tag | url_encode }}">{{tag }}</a>{% if forloop.last%}{% else %},{% endif %}
+          <a href="/blog/?tag={{ tag | url_encode }}" class="white">{{tag }}</a>{% if forloop.last%}{% else %},{% endif %}
           {% endfor %}
         </div>
     </div>

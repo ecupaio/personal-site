@@ -27,13 +27,7 @@
     @include bp-small {
       display: none;
     }
-    a {
-      color: $white;
-      @include transition(color,background-position);
-      &:hover {
-        color: $charcoal;
-      }
-    }
+    
   }
 }
 #blog-post {
@@ -53,15 +47,6 @@
       margin: auto;
       .post-tags {
         font-size: 14px;
-        a {
-          color: $white;
-          @include transition(color, background-position);
-          &:hover {
-
-            color: $charcoal;
-          }
-        }
-
       }
       h1 {
         position: relative;
