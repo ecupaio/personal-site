@@ -10,10 +10,75 @@
   height: 100%;
   background-color: $blue;
   color: $white;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
   &.active {
-    z-index: 10;
+    z-index: 12;
     transform: translateY(0%);
     opacity: 1;
+  }
+  .close-row {
+    text-align: right;
+  }
+  .form-body {
+    overflow: hidden;
+    width: $size-large;
+    max-width: 100%;
+    .form-title {
+      text-align: center;
+    }
+    .form-section {
+      position: absolute;
+      opacity: 0;
+      background-color: $blue;
+      z-index: -1;
+      &.active {
+        position: relative;
+        transform: translateX(0);
+        opacity: 1;
+        z-index: 1;
+      }
+      .section-title {
+        text-align: center;
+        margin-top: 1rem;
+      }
+      .section-inputs {
+        margin-top: 1rem;
+        .service-options {
+          display: flex;
+          .service-col {
+            width: 33.3333%;
+            text-align: center;
+            padding: 1rem;
+            text-align: center;
+            .service {
+              @include border-radius;
+              border: 2px solid $white;;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              padding: 1rem;
+              @include transition(background-color,color,transform);
+              &:hover {
+                transform: translateY(-5px);
+                color: $blue;
+                background-color: $white;
+                cursor: pointer;
+              }
+              .service-icon {
+                font-size: 1.5em;
+
+              }
+              .service-action {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 //separator.html
