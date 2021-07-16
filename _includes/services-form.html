@@ -1,19 +1,33 @@
-<div id="services-form-overlay">
-  <div class="close-row">
-    <span id="close-form">&times;</span>
-  </div>
+<div id="services-form-overlay" class="active">
   <form id="service-form">
+    <div class="close-row">
+      <span id="close-form"><i class="fa fa-times"></i></span>
+    </div>
     <div class="form-body">
       <h1 class="form-title">Work with me</h1>
-      <div class="form-section" data-section="Get Started">
+      <div class="form-section active" data-section="get-started">
         <h2 class="section-title">How can I help?</h2>
-        <div class="section-options">
-          <div class="option" data-section="">
-            <div class="option-icon"><i class="fa fa-laptop-code"></i></div>
-            <h3 class="option-title"></h3>
-            <div class="option-text"></div>
+        <div class="section-inputs">
+          {% assign homepage = site.pages | where: "path", "_pages/home.html" | first %}
+          <div class="service-options">
+          {% for service in homepage.services %}
+          <div class="service-col">
+            <div class="service">
+              <div class="service-icon" data-section="web-dev">{{ service.icon }}</div>
+              <h3 class="service-title" data-section="optimization">{{ service.title }}</h3>
+              <h4 class="service-action" data-section="training">{{ service.action }}</h4>
+            </div>
           </div>
-          
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="form-section">
+        <h2 class="section-title">Web Development</h2>
+        <div class="section-inputs">
+          <div class="form-input">
+            <label></label>
+          </div>
         </div>
       </div>
     </div>
