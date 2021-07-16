@@ -35,6 +35,10 @@ $default-shadow: 0px 2px 10px rgba(#333, 0.35);
   -moz-box-shadow: $prop;
   box-shadow: $prop;
 }
+@mixin border-radius {
+  border-radius: 4px;
+}
+
 //Breakpoints for mobile
 /* Usage: easily set breakpoints for small, medium, and large screens
 Either pass the px number through individually, or set it as a variable */

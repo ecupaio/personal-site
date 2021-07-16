@@ -5,6 +5,31 @@ css: home
 permalink: /
 scripts: 
 - home
+services: 
+- title: Web Development
+  action: Build my website
+  text: |-
+    Get a fast, reliable website that you can manage easily. I give you the tools to edit every piece of content on your site, plus security, accessibility, and little to no-cost hosting. 
+
+    [Learn more &rarr;](/web-development/)
+  image: svg/web-dev.svg
+  icon: <i class="fa fa-laptop-code"></i>
+- title: Optimization
+  action: Improve my website
+  text: |-
+    Whether you’re looking for a performance upgrade or you want to increase sales, I will help bring your website up to speed. From SEO and A/B testing to bug fixes and tracking snippets, I’m here to help you achieve your goals. 
+
+    [Learn more &rarr;](/optimization/)
+  image: svg/optimization.svg
+  icon: <i class="fa fa-chart-line"></i>
+- title: Training
+  action: Help me with my website
+  text: |-
+    Did you get a website with everything you want but the manual? No problem! I’ll help you be in control of your content and integrations. 
+
+    [Learn more &rarr;](/training/)
+  image: svg/training.svg
+  icon: <i class="fa fa-chalkboard-teacher"></i>
 skills:
   - title: HTML
     category: Code
@@ -34,42 +59,75 @@ about: |-
         
       </div>
       <div class="btn-row">
-        <a class="btn" id="open-form" href="#">Work with me</a>
+        <a class="btn" href="#open-form">Work with me</a>
       </div>
     </div>
-    
-    
   </section>
-  <section id="portfolio">
-
-    <div class="pure-g portfolio-grid">
-      {% assign projects = site.projects | sort: 'date' | reverse %}
-      {% for project in projects %}
-      <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 project-col">
-        <div class="col-content" >
-            <img class="project-image" src="/images/{{ project.image[0]}}">
-            <h4 class="project-title">{{ project.title }}</h4>
-
-          <div class="hidden">
-            <div class="project-link">
-              {{ project.link }}
+  <section id="services">
+    <div class="inner-section">
+      <h2>Services</h2>
+      <div class="services-list">
+        {% for service in page.services %}
+        <div class="service {% cycle 'odd', 'even' %}">
+          <div class="service-col text-col">
+            <div class="service-content">
+              <h3 class="service-title">{{ service.title }}</h3>
+              <h4 class="service-action">{{ service.icon }}&nbsp;&nbsp;{{ service.action }}</h4>
+              <div class="mobile-image">
+                {% include {{service.image}} %}  
+              </div>
+              <div class="service-text">
+                {{ service.text | markdownify }}
+              </div>
             </div>
-            <div class="project-images">
-              {{ project.image | split: ''}}
-            </div>
-            <div class="project-text">
-              {{ project.content | markdownify }}
-            </div>
-            <div class="project-tech">
-              {% for tech in project.tech %}
-              {{ tech }}{% unless forloop.last %},{% endunless%}
-              {% endfor %}
+          </div>
+          <div class="service-col image-col">
+            <div class="service-image">
+              {% include {{service.image}} %}
             </div>
           </div>
         </div>
+        {% endfor %}
       </div>
-      {% endfor %}
+      <div class="btn-row">
+        <a class="btn" href="#open-form">Work with me</a>
+      </div>
     </div>
+    
+  </section>
+  {% include separator.html %}
+  <section id="portfolio">
+    <div class="inner-section">
+      <h2>Portfolio</h2>
+      <div class="pure-g portfolio-grid">
+        {% assign projects = site.projects | sort: 'date' | reverse %}
+        {% for project in projects %}
+        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 project-col">
+          <div class="col-content" >
+            <img class="project-image" src="/images/{{ project.image[0]}}">
+            <h4 class="project-title">{{ project.title }}</h4>
+            <div class="hidden">
+              <div class="project-link">
+                {{ project.link }}
+              </div>
+              <div class="project-images">
+                {{ project.image | split: ''}}
+              </div>
+              <div class="project-text">
+                {{ project.content | markdownify }}
+              </div>
+              <div class="project-tech">
+                {% for tech in project.tech %}
+                {{ tech }}{% unless forloop.last %},{% endunless%}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    
   </section>
   <section id="about">
     <div class="inner-section">

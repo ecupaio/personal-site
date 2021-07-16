@@ -227,7 +227,6 @@ body {
   }
 }
 #home {
-  $portfolio-overlap: 4em;
   section {
     .inner-section {
       max-width: $size-large;
@@ -238,7 +237,7 @@ body {
     }
   }
   #hero {
-    padding: 4em 2em #{2em + $portfolio-overlap};
+    padding: 2em;
     color: $white;
     @include flexbox;
     flex-direction: column;
@@ -257,14 +256,23 @@ body {
       transition-delay: 0.7s;
     }
     .hero-text {
-      padding: 1em 2em;
+      padding: 0 2em;
+      margin-bottom: 2rem;
       overflow: hidden;
       position: relative;
       .text-item {
         opacity: 0;
-        @include transform(translateX(-100%));
+        transform: translateX(-100%);
         @include transition(transform,opacity);
-        transition-delay: 0.5s;
+        
+        &:last-child {
+          margin-bottom: 0;
+          
+        }
+        &.active {
+          opacity: 1;
+          transform: translateX(0%);
+        }
       }
       &:before {
         content: '';
@@ -287,7 +295,7 @@ body {
       position: relative;
       overflow: hidden;
       .btn {
-        transform: translateY(calc(100% + 6px));
+        transform: translateY(calc(-100%));
         opacity: 0;
         @include transition(transform,opacity);
         transition-delay: 0.9s;
@@ -302,10 +310,7 @@ body {
         &:before {
           @include transform(translateY(0%));
         }
-        .text-item {
-          opacity: 1;
-          @include transform(translateX(0%));
-        }
+        
       }
       .btn-row {
         .btn {
@@ -315,18 +320,88 @@ body {
       }
     }
   }
+  #services {
+    
+    .inner-section {
+      
+    }
+    .btn-row {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .services-list {
+      .service {
+        display: flex;
+        align-items: center;
+        @include bp-medium {
+          display: block;
+        }  
+        &:not(:last-child) {
+          margin-bottom: 5rem;
+          @include bp-medium {
+            margin-bottom: 2rem;
+          }  
+        }
+        .text-col {
+          width: 60%;
+          padding: 1rem;
+          @include bp-medium {
+            width: 100%;
+          }
+          .service-content {
+            padding: 2rem; 
+            @include box-shadow;
+            @include border-radius;
+            .service-title {
+              margin-bottom: 0.5rem;
+              @include bp-medium {
+                text-align: center;
+              }  
+            } 
+            .service-action {
+              color: $grey-text;
+              margin-bottom: 0.5rem;
+              font-weight: 400;
+              @include bp-medium {
+                text-align: center;
+              }
+            }
+            .mobile-image {
+              display: none;
+              @include bp-medium {
+                margin: 2rem auto 1rem;
+                display: block;
+                svg {
+                  height: 200px;
+                }
+                
+              }  
+            }
+          }
+        }
+        .image-col {
+          width: 40%;
+          position: relative;
+          padding: 0 2rem;
+          @include bp-medium {
+            width: 100%;
+          }
+          .service-image {
+            @include bp-medium {
+              display: none;
+            }
+          }
+        }
+        &.even {
+          flex-direction: row-reverse; 
+        }
+      }
+    }
+  }
   #portfolio {
     position: relative;
     background-color: $white;
-    @include transition(top, opacity);
-    
-    &.active {
-      .portfolio-grid {
-        top: -$portfolio-overlap;
-      }
-    }
     .portfolio-grid {
-      @include transition(top);
       max-width: $size-large;
       margin: auto;
       position: relative;

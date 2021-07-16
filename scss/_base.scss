@@ -67,7 +67,7 @@ a {
 		}	
 	}
 }
-img {
+img,svg {
 	max-width: 100%;
 	height: auto;
 }
@@ -76,10 +76,10 @@ main, section, article, footer, nav {
 	display: block;
 }
 section {
-	padding: 1em 2em;
+	padding: 2rem;
 }
 main {
-	min-height: calc(100vh - 2em);
+	min-height: calc(100vh - 2rem);
 }
 //Form Inputs
 input,textarea {
@@ -105,4 +105,5 @@ input,textarea {
 	font-weight: bold;
 	border: none;
 	display: inline-block;
+	@include border-radius;
 }

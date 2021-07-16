@@ -10,11 +10,12 @@ layout: compress
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THQC7Q9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+  {% include services-form.html %}
   {% include nav.html %}
   {% if page.url == '/' %}
   {% include project-overlay.html %}
   {% endif %}
-
+  
   {{ content }}
   <footer>
     <div class="pure-g footer-grid">
@@ -23,9 +24,9 @@ layout: compress
       </div>
       <div class="pure-u-1 pure-u-sm-1-2 footer-right">
         <div class="icon-row">
-          <a class="icon-link" href="https://github.com/ecupaio" target="_blank"><i class="fa fa-github-alt"></i></a>
-          <a class="icon-link" href="https://www.linkedin.com/in/ed-cupaioli-10a9849/" target="_blank"><i class="fa fa-linkedin"></i></a>
-          <a class="icon-link" href="mailto:ecupaio@gmail.com"><i class="fa fa-envelope-o"></i></a>
+          <a class="icon-link" href="https://github.com/ecupaio" target="_blank"><i class="fab fa-github-alt"></i></a>
+          <a class="icon-link" href="https://www.linkedin.com/in/ed-cupaioli-10a9849/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a class="icon-link" href="mailto:ecupaio@gmail.com"><i class="fa fa-envelope"></i></a>
         </div>
       </div>
     </div>

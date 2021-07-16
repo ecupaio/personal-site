@@ -5,12 +5,7 @@ $(document).ready(function() {
           scrollTop: $(selector).offset().top - offset
       });
   }
-  setTimeout(function() {
-    $('#hero').addClass('active');
-  }, 700);
-  setTimeout(function() {
-    $('#portfolio').addClass('active');
-  }, 1400);
+  
   
   
   //contact form
