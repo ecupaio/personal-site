@@ -5,8 +5,31 @@ $(document).ready(function() {
           scrollTop: $(selector).offset().top - offset
       });
   }
-  
-  
+  //services form
+  $('a[href="#open-form"]').click(function(e) {
+    e.preventDefault();
+    $('#services-form-overlay').addClass('active');
+  });
+  $('#close-form').click(function() {
+    $('#services-form-overlay').removeClass('active');
+  });
+  $('#service-form .radio-options .option').click(function() {
+    var optionInput = $(this).text();
+
+    $(this).addClass('active')
+    $(this).siblings('.option').removeClass('active');
+    $(this).parents('.radio-options').find('.option-input').val(optionInput);
+    
+    if ($(this).parents('.form-input.active').next('.form-input').length > 0) {
+      $(this).parents('.form-input.active').removeClass('active');
+      $(this).parents('.form-input').next('.form-input').addClass('active');
+    }
+  });
+  $('#service-form .form-section').each(function() {
+    var section = $(this).data('section')
+    $('#service-form .progress-tracker').append('<div data-section="'+section+'" class="tracker-block"></div>')
+  });
+  $('/')
   
   //contact form
   $('.form-input input').focus(function() {
