@@ -2,22 +2,27 @@
 var lastInput;
 $('a[href="#open-form"]').click(function(e) {
   e.preventDefault();
-  $('#services-form-overlay, body,html').addClass('active');
+  
+  $('#services-form-overlay, body,html, #service-form .form-section[data-section="get-started"], #service-form .form-section[data-section="get-started"] .form-input').addClass('active');
 });
 $('#close-form').click(function() {
   $('#services-form-overlay, body,html').removeClass('active');
+  $('#service-form .form-section, #service-form .form-section .form-input').removeClass('active');
+  $('#service-form .toggle.prev, #service-form .toggle.next').addClass('hidden');
 });
 //open contact section 
 $('.open-contact').click(function(e) {
   e.preventDefault();
   if ($('#services-form-overlay').hasClass('active')) {
     $('#service-form .form-section[data-section="get-started"]').removeClass('active');
-    $('#service-form .form-section[data-section="contact"]').addClass('active');
+    $('#service-form .form-section[data-section="contact"], #service-form .form-section[data-section="contact"] .form-input').addClass('active');
     $('#services-form-overlay, body,html').addClass('active');
+    $('#service-form .toggle.prev').removeClass('hidden');
   } else {
     $('#service-form .form-section[data-section="get-started"]').removeClass('active');
-    $('#service-form .form-section[data-section="contact"]').addClass('active');
+    $('#service-form .form-section[data-section="contact"], #service-form .form-section[data-section="contact"] .form-input').addClass('active');
     $('#services-form-overlay, body,html').addClass('active');
+    $('#service-form .toggle.prev').removeClass('hidden');
 
   }
   
@@ -88,22 +93,29 @@ function prevInput() {
   var prevIndex = currentIndex - 1;
   var prevInput = $('.form-section.active .form-input:eq('+prevIndex+')');
   $('#service-form .form-error').slideUp();
-  if (currentInput.parents('.form-section').data('section') === 'contact') {
-    lastInput.parents('.form-section').addClass('active');
-    lastInput.addClass('active');
-    currentInput.removeClass('active');
-    currentInput.parents('.form-section').removeClass('active');
-    $('#service-form .toggle.next').removeClass('hidden');
-  } else if (currentIndex == 0) {
-    currentInput.removeClass('active');  
-    currentInput.parents('.form-section').removeClass('active');
-    $('.form-section[data-section="get-started"], .form-section[data-section="get-started"] .form-input').addClass('active');
-    $('#service-form .toggle').addClass('hidden');
-    $('#service-form .progress-tracker').addClass('hidden');
-  } else {      
-    prevInput.addClass('active');
-    currentInput.removeClass('active');
+  if (lastInput) {
+    if (currentInput.parents('.form-section').data('section') === 'contact') {
+      lastInput.parents('.form-section').addClass('active');
+      lastInput.addClass('active');
+      currentInput.removeClass('active');
+      currentInput.parents('.form-section').removeClass('active');
+      $('#service-form .toggle.next').removeClass('hidden');
+    } else if (currentIndex == 0) {
+      currentInput.removeClass('active');  
+      currentInput.parents('.form-section').removeClass('active');
+      $('.form-section[data-section="get-started"], .form-section[data-section="get-started"] .form-input').addClass('active');
+      $('#service-form .toggle').addClass('hidden');
+      $('#service-form .progress-tracker').addClass('hidden');
+    } else {      
+      prevInput.addClass('active');
+      currentInput.removeClass('active');
+    }
+  } else {
+    $('#service-form .form-section[data-section="get-started"],#service-form .form-section[data-section="get-started"] .form-input').addClass('active');
+    $('#service-form .form-section[data-section="contact"],#service-form .form-section[data-section="contact"] .form-input').removeClass('active');
+    $('#service-form .toggle.prev').addClass('hidden');
   }
+  
   $('.tracker-block:eq('+prevIndex+')').removeClass('active');
 }
 //next input
