@@ -119,9 +119,7 @@ body {
        }
        &.active {
          opacity: 1;
-         
        }
-       
        @keyframes scroll {
         0% {
           top: 4px;
@@ -298,7 +296,7 @@ body {
         transform: translateY(calc(-100%));
         opacity: 0;
         @include transition(transform,opacity);
-        transition-delay: 0.9s;
+        transition-delay: 1.3s;
         margin: 0;
       }
     }
@@ -400,7 +398,8 @@ body {
   }
   #portfolio {
     position: relative;
-    background-color: $white;
+    background-color: $blue;
+    color: $white;
     .portfolio-grid {
       max-width: $size-large;
       margin: auto;
@@ -425,6 +424,8 @@ body {
           align-items: center;
           flex-direction: column;
           @include box-shadow;
+          @include border-radius;
+          overflow: hidden;
           &:after {
             content: '';
             display: block;
