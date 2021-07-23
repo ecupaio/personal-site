@@ -34,9 +34,6 @@ $(function() {
     } else {
       $('.slide-toggle').removeClass('hidden');
     }
-    
-    
-    
     $('.slide').first().addClass('active');
     if ($('.slide.active img').height() > 525) {  
       $('.scroller').addClass('active');  

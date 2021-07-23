@@ -1,4 +1,4 @@
-<div id="services-form-overlay" class="active">
+<div id="services-form-overlay">
   <form id="service-form">
     <div class="close-row">
       <span id="close-form"><i class="fa fa-times"></i></span>
@@ -6,14 +6,9 @@
     <div class="form-body large">
       <h1 class="form-title">Work with me</h1>
       <div class="progress-tracker hidden">
-        
-      </div>
-      <div class="form-error">
-        Please enter information in the field.
       </div>
       <div class="form-section active" data-section="get-started">
         <h2 class="section-title">How can I help?</h2>
-        
         <div class="section-inputs service-inputs">
           {% assign homepage = site.pages | where: "path", "_pages/home.html" | first %}
           <div class="form-input active">
@@ -24,7 +19,7 @@
                   <div class="service-icon" >{{ service.icon }}</div>
                   <h3 class="service-title" >{{ service.title }}</h3>
                   <h4 class="service-action">{{ service.action }}</h4>
-                  <input type="hidden" class="option-input" value="" name="" required/>
+                  <input type="hidden" class="option-input input-data" value="" name="entry.2033422187" />
                 </div>
               </div>
               {% endfor %}
@@ -40,7 +35,7 @@
             <div class="radio-options">
               <div class="option">Yes</div>
               <div class="option">No</div>
-              <input type="hidden" class="option-input" value="" name="" required/>
+              <input type="hidden" class="option-input input-data" value="" name="entry.1031377647" />
             </div>
           </div>
           <div class="form-input">
@@ -48,13 +43,13 @@
             <div class="radio-options">
               <div class="option">Yes</div>
               <div class="option">No</div>
-              <input type="hidden" class="option-input" value="" name="" required/>
+              <input type="hidden" class="option-input input-data" value="" name="entry.23473092" />
             </div>
           </div>
           <div class="form-input">
             <label class="input-label">What is your website URL?</label>
             <div class="text-input">
-              <input class="input-field" type="text" placeholder="www.mysite.com" name="" required/>
+              <input class="input-field input-data" type="text" placeholder="www.mysite.com" name="entry.1677220950" />
               <div class="auto-input">I don't have URL yet</div>
             </div>
           </div>
@@ -63,13 +58,13 @@
             <div class="radio-options">
               <div class="option">Yes</div>
               <div class="option">No</div>
-              <input type="hidden" class="option-input" value="" name="" required/>
+              <input type="hidden" class="option-input input-data" value="" name="entry.1519917642" />
             </div>
           </div>
           <div class="form-input">
             <label class="input-label">What is your budget?</label>
             <div class="text-input">
-              <input class="input-field" type="text" placeholder="" name="" required/>
+              <input class="input-field input-data" type="text" placeholder="" name="entry.84585792" />
               <div class="auto-input">I don't have a budget</div>
             </div>
           </div>
@@ -77,7 +72,7 @@
             <label class="input-label">When is your ideal launch date?</label>
             <div class="text-input">
               {% assign next-year = site.time | date: "%Y" %}
-              <input class="input-field" type="text" placeholder="5-5-{{ next-year | plus: 1 }}" name="" required/>
+              <input class="input-field input-data" type="text" placeholder="5-5-{{ next-year | plus: 1 }}" name="entry.457903519" />
               <div class="auto-input">I don't have a launch date in mind</div>
             </div>
           </div>
@@ -89,21 +84,21 @@
           <div class="form-input">
             <label class="input-label">What is your website URL?</label>
             <div class="text-input">
-              <input class="input-field" type="text" placeholder="www.mysite.com" name="" required/>
+              <input class="input-field input-data" type="text" placeholder="www.mysite.com" name="entry.1162300467" />
               <div class="auto-input">I don't have a launch date in mind</div>
             </div>
           </div>
           <div class="form-input">
             <label class="input-label">What is your average conversion rate?</label>
             <div class="text-input">
-              <input class="input-field" type="text" placeholder="10%" name="" required/>
+              <input class="input-field input-data" type="text" placeholder="10%" name="entry.1317354301" />
               <div class="auto-input">I don't have conversions setup</div>
             </div>
           </div>
           <div class="form-input">
             <label class="input-label">How many sessions do you have per week on average?</label>
             <div class="text-input">
-              <input class="input-field" type="text" placeholder="10%" name="" required/>
+              <input class="input-field input-data" type="text" placeholder="10%" name="entry.345239757" />
               <div class="auto-input">I don't have tracking setup</div>
             </div>
           </div>
@@ -115,7 +110,7 @@
           <div class="form-input">
             <label class="input-label">What can I help you with?</label>
             <div class="text-input">
-              <textarea class="textarea-field" type="text" value="" name=""></textarea>
+              <textarea class="textarea-field input-data" type="text" value="" name="entry.1782078809"></textarea>
             </div>
           </div>
         </div>
@@ -128,31 +123,25 @@
               <div class="contact-field">
                 <label class="input-label">Name</label>
                 <div class="text-input">
-                  <input class="input-field" type="text" value="" name=""/>
+                  <input class="input-field input-data" type="text" value="" name="entry.1154354546" required/>
                 </div>
               </div>
               <div class="contact-field">
                 <label class="input-label">Business/Org</label>
                 <div class="text-input">
-                  <input class="input-field" type="text" value="" name=""/>
-                </div>
-              </div>
-              <div class="contact-field">
-                <label class="input-label">Phone</label>
-                <div class="text-input">
-                  <input class="input-field" type="text" value="" name=""/>
+                  <input class="input-field input-data" type="text" value="" name="entry.973990923" required/>
                 </div>
               </div>
               <div class="contact-field">
                 <label class="input-label">Email</label>
                 <div class="text-input">
-                  <input class="input-field" type="email" value="" name=""/>
+                  <input class="input-field input-data" type="email" value="" name="entry.1918023028" required/>
                 </div>
               </div>
               <div class="contact-field">
                 <label class="input-label">Message (optional)</label>
                 <div class="text-input">
-                  <textarea class="textarea-field" type="text" value="" name=""></textarea>
+                  <textarea class="textarea-field input-data" type="text" value="" name="entry.129372055" required></textarea>
                 </div>
               </div>
               <div class="contact-field">
@@ -162,10 +151,17 @@
           </div>
         </div>
       </div>
+      <div class="form-error">
+        Please enter information in the field.
+      </div>
       <div class="section-toggles">
         <div class="toggle prev hidden"><i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Prev</div>
         <div class="toggle next hidden">Next&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></div>
       </div>
+    </div>
+    <div class="form-success">
+      <h2>Thanks for getting in touch!</h2>
+      <p>I'll follow up with you soon.</p>
     </div>
   </form>
 </div>

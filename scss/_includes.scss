@@ -56,15 +56,19 @@
     width: 100%;
     overflow-y: scroll;
   }
+  .form-success {
+    display: none;
+    max-width: $size-medium;
+    margin: auto;
+    text-align: center;
+  }
   .form-body {
     overflow: hidden;
     
     .form-title {
       text-align: center;
     }
-    .form-error {
-      display: none;
-    }
+    
     .progress-tracker {
       display: flex;
       max-width: $size-medium;
@@ -92,6 +96,14 @@
           
         }
       }
+    }
+    .form-error {
+      display: none;
+      text-align: center;
+      max-width: $size-medium;
+      margin: auto;
+      padding: 1rem;
+      font-weight: 700;
     }
     .section-toggles {
       display: flex;

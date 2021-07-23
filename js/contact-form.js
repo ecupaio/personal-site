@@ -6,7 +6,8 @@ $(function() {
       data: $(this).serialize(),
       type: 'POST'
     }).always(function(data) {
-      $('.form-success').addClass('active');
+      $('.form-body').slideDown();
+      $('.form-success').slideDown();
     });
   });
   
