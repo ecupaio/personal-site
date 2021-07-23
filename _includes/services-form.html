@@ -3,32 +3,168 @@
     <div class="close-row">
       <span id="close-form"><i class="fa fa-times"></i></span>
     </div>
-    <div class="form-body">
+    <div class="form-body large">
       <h1 class="form-title">Work with me</h1>
+      <div class="progress-tracker hidden">
+        
+      </div>
+      <div class="form-error">
+        Please enter information in the field.
+      </div>
       <div class="form-section active" data-section="get-started">
         <h2 class="section-title">How can I help?</h2>
-        <div class="section-inputs">
+        
+        <div class="section-inputs service-inputs">
           {% assign homepage = site.pages | where: "path", "_pages/home.html" | first %}
-          <div class="service-options">
-          {% for service in homepage.services %}
-          <div class="service-col">
-            <div class="service">
-              <div class="service-icon" data-section="web-dev">{{ service.icon }}</div>
-              <h3 class="service-title" data-section="optimization">{{ service.title }}</h3>
-              <h4 class="service-action" data-section="training">{{ service.action }}</h4>
+          <div class="form-input active">
+            <div class="service-options">
+              {% for service in homepage.services %}
+              <div class="service-col">
+                <div class="service" data-section="{{ service.id }}">
+                  <div class="service-icon" >{{ service.icon }}</div>
+                  <h3 class="service-title" >{{ service.title }}</h3>
+                  <h4 class="service-action">{{ service.action }}</h4>
+                  <input type="hidden" class="option-input" value="" name="" required/>
+                </div>
+              </div>
+              {% endfor %}
             </div>
-          </div>
-          {% endfor %}
           </div>
         </div>
       </div>
-      <div class="form-section">
-        <h2 class="section-title">Web Development</h2>
+      <div class="form-section" data-section="web-dev">
+        <h4 class="section-title"><i class="fa fa-laptop-code"></i> Web Development</h4>
         <div class="section-inputs">
           <div class="form-input">
-            <label></label>
+            <label class="input-label">Do you have a design?</label>
+            <div class="radio-options">
+              <div class="option">Yes</div>
+              <div class="option">No</div>
+              <input type="hidden" class="option-input" value="" name="" required/>
+            </div>
+          </div>
+          <div class="form-input">
+            <label class="input-label">Do you have all your content (images and copy) ready for publishing?</label>
+            <div class="radio-options">
+              <div class="option">Yes</div>
+              <div class="option">No</div>
+              <input type="hidden" class="option-input" value="" name="" required/>
+            </div>
+          </div>
+          <div class="form-input">
+            <label class="input-label">What is your website URL?</label>
+            <div class="text-input">
+              <input class="input-field" type="text" placeholder="www.mysite.com" name="" required/>
+              <div class="auto-input">I don't have URL yet</div>
+            </div>
+          </div>
+          <div class="form-input">
+            <label class="input-label">Will you need e-commerce?</label>
+            <div class="radio-options">
+              <div class="option">Yes</div>
+              <div class="option">No</div>
+              <input type="hidden" class="option-input" value="" name="" required/>
+            </div>
+          </div>
+          <div class="form-input">
+            <label class="input-label">What is your budget?</label>
+            <div class="text-input">
+              <input class="input-field" type="text" placeholder="" name="" required/>
+              <div class="auto-input">I don't have a budget</div>
+            </div>
+          </div>
+          <div class="form-input">
+            <label class="input-label">When is your ideal launch date?</label>
+            <div class="text-input">
+              {% assign next-year = site.time | date: "%Y" %}
+              <input class="input-field" type="text" placeholder="5-5-{{ next-year | plus: 1 }}" name="" required/>
+              <div class="auto-input">I don't have a launch date in mind</div>
+            </div>
           </div>
         </div>
+      </div>
+      <div class="form-section" data-section="optimization">
+        <h4 class="section-title"><i class="fa fa-chart-line"></i> Optimization</h4>
+        <div class="section-inputs">
+          <div class="form-input">
+            <label class="input-label">What is your website URL?</label>
+            <div class="text-input">
+              <input class="input-field" type="text" placeholder="www.mysite.com" name="" required/>
+              <div class="auto-input">I don't have a launch date in mind</div>
+            </div>
+          </div>
+          <div class="form-input">
+            <label class="input-label">What is your average conversion rate?</label>
+            <div class="text-input">
+              <input class="input-field" type="text" placeholder="10%" name="" required/>
+              <div class="auto-input">I don't have conversions setup</div>
+            </div>
+          </div>
+          <div class="form-input">
+            <label class="input-label">How many sessions do you have per week on average?</label>
+            <div class="text-input">
+              <input class="input-field" type="text" placeholder="10%" name="" required/>
+              <div class="auto-input">I don't have tracking setup</div>
+            </div>
+          </div>
+        </div>
+      </div> 
+      <div class="form-section" data-section="training">
+        <h4 class="section-title"><i class="fa fa-chalkboard-teacher"></i> Training</h4>
+        <div class="section-inputs">
+          <div class="form-input">
+            <label class="input-label">What can I help you with?</label>
+            <div class="text-input">
+              <textarea class="textarea-field" type="text" value="" name=""></textarea>
+            </div>
+          </div>
+        </div>
+      </div>    
+      <div class="form-section" data-section="contact">
+        <h4 class="section-title"><i class="fa fa-envelope"></i> Contact</h4>
+        <div class="section-inputs">
+          <div class="form-input active">
+            <div class="contact-fields">
+              <div class="contact-field">
+                <label class="input-label">Name</label>
+                <div class="text-input">
+                  <input class="input-field" type="text" value="" name=""/>
+                </div>
+              </div>
+              <div class="contact-field">
+                <label class="input-label">Business/Org</label>
+                <div class="text-input">
+                  <input class="input-field" type="text" value="" name=""/>
+                </div>
+              </div>
+              <div class="contact-field">
+                <label class="input-label">Phone</label>
+                <div class="text-input">
+                  <input class="input-field" type="text" value="" name=""/>
+                </div>
+              </div>
+              <div class="contact-field">
+                <label class="input-label">Email</label>
+                <div class="text-input">
+                  <input class="input-field" type="email" value="" name=""/>
+                </div>
+              </div>
+              <div class="contact-field">
+                <label class="input-label">Message (optional)</label>
+                <div class="text-input">
+                  <textarea class="textarea-field" type="text" value="" name=""></textarea>
+                </div>
+              </div>
+              <div class="contact-field">
+                <button type="submit" class="btn">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-toggles">
+        <div class="toggle prev hidden"><i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Prev</div>
+        <div class="toggle next hidden">Next&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></div>
       </div>
     </div>
   </form>

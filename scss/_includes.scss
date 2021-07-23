@@ -1,7 +1,7 @@
 //services form 
 #services-form-overlay {
   position: fixed;
-  transform: translateY(100%);
+  transform: translateY(-100%);
   z-index: -1;
   opacity: 0;
   top: 0; 
@@ -13,6 +13,7 @@
   display: flex;
   justify-content: center;
   padding: 2rem;
+  @include transition(transform);
   &.active {
     z-index: 12;
     transform: translateY(0%);
@@ -20,19 +21,133 @@
   }
   .close-row {
     text-align: right;
+    #close-form {
+      padding: 1rem;
+      position: relative;
+      @include transition(color);
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 25px;
+        width: 25px;
+        transform: translate(-50%,-50%) scale(0);
+        transform-origin: center;
+        background-color: $white;
+        opacity: 0;
+        @include transition(transform,opacity);
+        z-index: -1;
+        border-radius: 50%;
+      }
+      &:hover {
+        cursor: pointer;
+        color: $blue;
+        &:before {
+          opacity: 1;
+          transform: translate(-50%,-50%) scale(1);
+        }  
+      }
+    }
+  }
+  #service-form {
+    max-width: $size-large;
+    width: 100%;
+    overflow-y: scroll;
   }
   .form-body {
     overflow: hidden;
-    width: $size-large;
-    max-width: 100%;
+    
     .form-title {
       text-align: center;
+    }
+    .form-error {
+      display: none;
+    }
+    .progress-tracker {
+      display: flex;
+      max-width: $size-medium;
+      margin: auto;
+      .tracker-block {
+        background-color: rgba($white,0.7);
+        height: 5px;
+        flex: 1 0 auto;
+        position: relative;
+
+        &:before {
+          content: '';
+          width: 0;
+          height: 100%;
+          background-color: $white;
+          position: absolute;
+          left: 0;
+          top: 0;
+          @include transition(width);
+        }
+        &.active {
+          &:before  {
+            width: 100%;
+          }
+          
+        }
+      }
+    }
+    .section-toggles {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 2rem;
+      max-width: $size-medium;
+      margin: auto;
+      .toggle {
+        position: relative;
+        @include transition(color);
+        overflow: hidden;
+        padding: 1rem;
+        line-height: 1;
+        &:before {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          
+          z-index: -1;
+          background-color: $white;
+          
+          @include transition(transform);
+        }
+        
+        &.prev {
+          &:before {
+            transform: translateX(100%);
+            right: 0;
+          }
+        }
+        &.next {
+          text-align: right;
+          &:before {
+            transform: translateX(calc(-100% - 1px));
+            left: 0;
+          }
+        }
+        &:hover {
+          cursor: pointer;
+          color: $blue;
+          &:before {
+            transform: translateX(0%);
+          }
+        }
+      }
     }
     .form-section {
       position: absolute;
       opacity: 0;
       background-color: $blue;
       z-index: -1;
+      transform: translateX(-100%);
+      @include transition(transform);
       &.active {
         position: relative;
         transform: translateX(0);
@@ -41,10 +156,18 @@
       }
       .section-title {
         text-align: center;
-        margin-top: 1rem;
+        margin-top: 2rem;
+        font-weight: 400;
       }
       .section-inputs {
-        margin-top: 1rem;
+        margin: 1rem auto 0;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        max-width: $size-small;
+        &.service-inputs {
+          max-width: $size-large;
+        }
         .service-options {
           display: flex;
           .service-col {
@@ -73,6 +196,97 @@
               }
               .service-action {
                 margin-bottom: 0;
+              }
+            }
+          }
+        }
+        .form-input {
+          display: inline-block;
+          text-align: left;
+          
+          transform: translateX(100%);
+          opacity: 0;
+          position: absolute;
+          @include transition(transform,opacity);
+          
+          background-color: $blue;
+          &.active {
+            transform: translateX(0%);
+            opacity: 1;
+            position: relative;
+          }
+          .input-label {
+            font-weight: 700;
+            font-size: 1.5em;
+            display: block;
+            margin-bottom: 0.5rem;
+          }
+          .contact-field {
+            margin-bottom: 2rem;
+            .input-label {
+              margin-bottom: 0;
+            }
+            .textarea-field {
+              margin-top: 1rem;
+            }
+          }
+          .text-input {
+            max-width: 250px;
+            margin: auto;
+            .input-field {
+              background-color: $blue;
+              color: $white;
+              border-bottom: 2px solid $white;
+              padding: 0.5rem 0; 
+              &::placeholder {
+                color: rgba($white,0.7);
+                font-style: italic;
+              }
+            }
+            .auto-input {
+              font-size: 16px;
+              margin-top: 1rem;
+              &:hover {
+                cursor: pointer;
+              }
+            }
+            .textarea-field {
+              background-color: $blue;
+              border: 2px solid $white;
+              color: $white;
+              height: 200px;
+              font-size: 16px;
+              min-width: 250px;
+              max-width: 100%;
+            }
+            
+          }
+          .radio-options {
+            
+            .option {
+              position: relative;
+              padding-left: 2rem;
+              margin-bottom: 0.5rem;
+              &:hover {
+                cursor: pointer;
+              }
+              &:before {
+                content: '';
+                display: block;
+                height: 15px;
+                width: 15px;
+                border: 2px solid $white;
+                border-radius: 50%;
+                position: absolute;
+                left: 0;
+                top: 4px;
+                @include transition(background-color);
+                overflow: hidden;
+              }
+              &.active {
+                &:before {
+                  background-color: $white;
+                }
               }
             }
           }

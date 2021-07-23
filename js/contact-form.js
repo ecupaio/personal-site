@@ -9,4 +9,15 @@ $(function() {
       $('.form-success').addClass('active');
     });
   });
+  
+  $('.form-input input').focus(function() {
+    if ($(this).val() === '') {
+      $(this).parent().find('.placeholder').addClass('active');
+    }
+  });
+  $('.form-input input').focusout(function() {
+    if ($(this).val() === '') {
+      $(this).parent().find('.placeholder').removeClass('active');
+    }
+  });
 });
