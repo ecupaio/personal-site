@@ -1,0 +1,35 @@
+---
+title: Blog
+permalink: "/blog/"
+layout: default
+css: blog
+intro: |-
+  Simple, concise guides for coders and users of all levels.
+---
+<main id="blog">
+  <section id="intro">
+    <div class="inner-section">
+      <h1>{{ page.title }}</h1>
+        {{ page.intro | markdownify }}
+    </div>
+  </section>
+  <section id="posts">
+    <div class="inner-section">
+      <ul class="post-list">
+        {% for post in site.posts %}
+        <li class="post">
+          <h4 class="post-title"><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></h4>
+          <div class="post-tags">
+            {% for tag in post.tags %}
+            <span class="post-tag">{{ tag }}</span>{% unless forloop.last %},&nbsp;{% endunless %}
+            {% endfor %}
+          </div>
+          <div class="post-clip">
+          {{ post.content | markdownify | strip_html | truncatewords: 25 }}
+          </div>
+        </li>
+        {% endfor %}
+      </ul>  
+    </div>
+  </section>
+</main>

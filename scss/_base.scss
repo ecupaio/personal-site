@@ -85,6 +85,10 @@ section {
 		background-color: $blue;
 		color: $white;
 	}
+	.inner-section {
+		margin: auto;
+		max-width: $size-large;
+	}
 }
 main {
 	min-height: calc(100vh - 2rem);
