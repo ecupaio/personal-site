@@ -7,7 +7,21 @@ $('a[href="#open-form"]').click(function(e) {
 $('#close-form').click(function() {
   $('#services-form-overlay, body,html').removeClass('active');
 });
+//open contact section 
+$('.open-contact').click(function(e) {
+  e.preventDefault();
+  if ($('#services-form-overlay').hasClass('active')) {
+    $('#service-form .form-section[data-section="get-started"]').removeClass('active');
+    $('#service-form .form-section[data-section="contact"]').addClass('active');
+    $('#services-form-overlay, body,html').addClass('active');
+  } else {
+    $('#service-form .form-section[data-section="get-started"]').removeClass('active');
+    $('#service-form .form-section[data-section="contact"]').addClass('active');
+    $('#services-form-overlay, body,html').addClass('active');
 
+  }
+  
+});
 //service select 
 $('#service-form .service').click(function() {
   $('#service-form .progress-tracker').html('');
