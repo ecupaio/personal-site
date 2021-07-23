@@ -60,6 +60,7 @@ a {
 	overflow: hidden;
 	background-position: 0 1.2em;
 	@include transition(background-position,color);
+	font-weight: 700;
 	&:hover, &:active, &:focus {
 		background-position: 0 0em;
 	}
@@ -80,6 +81,10 @@ main, section, article, footer, nav {
 }
 section {
 	padding: 2rem;
+	&.blue {
+		background-color: $blue;
+		color: $white;
+	}
 }
 main {
 	min-height: calc(100vh - 2rem);

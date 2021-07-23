@@ -123,10 +123,13 @@
     .post-list {
       list-style: none;
       li {
-        margin-bottom: 2rem;
+        margin: 2rem 0;
+        padding: 1rem;
+        @include box-shadow;
+        @include border-radius;
         .post-link {
           font-size: 1.5rem;
-          font-weight: 500;
+          
         }
       }
     }

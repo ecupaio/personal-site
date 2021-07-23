@@ -48,7 +48,6 @@ $('#service-form .service').click(function() {
   } 
   var serviceName = $(this).find('.service-title').text()
   $('#service-form [data-section="get-started"] .input-data').val(serviceName);
-  console.log(serviceName);
 });
 //radio options
 $('#service-form .radio-options .option').click(function() {
