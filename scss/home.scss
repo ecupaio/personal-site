@@ -331,6 +331,7 @@ body {
       .service {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         @include bp-medium {
           display: block;
         }  
@@ -350,6 +351,9 @@ body {
             padding: 2rem; 
             @include box-shadow;
             @include border-radius;
+            @include bp-medium {
+              padding: 1rem 2rem;
+            }  
             .service-title {
               margin-bottom: 0.5rem;
               @include bp-medium {
@@ -390,9 +394,25 @@ body {
             }
           }
         }
+        &.odd {
+          
+          .text-col {
+            padding-right: 4rem;
+            @include bp-medium {
+              padding: 1rem;
+            }
+          }
+        }
         &.even {
           flex-direction: row-reverse; 
+          .text-col {
+            padding-left: 4rem;
+            @include bp-medium {
+              padding: 1rem;
+            }
+          }
         }
+
       }
     }
   }
@@ -449,7 +469,7 @@ body {
           }
           .project-title {
             color: $white;
-            font-weight: 500;
+            font-weight: 700;
             position: relative;
             z-index: 1;
             display: inline-block;

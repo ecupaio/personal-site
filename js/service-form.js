@@ -92,29 +92,29 @@ function prevInput() {
   var prevIndex = currentIndex - 1;
   var prevInput = $('.form-section.active .form-input:eq('+prevIndex+')');
   $('#service-form .form-error').slideUp();
-  if (lastInput) {
-    if (currentInput.parents('.form-section').data('section') === 'contact') {
+  if (currentInput.parents('.form-section').data('section') === 'contact') {
+    if (lastInput) {
       lastInput.parents('.form-section').addClass('active');
       lastInput.addClass('active');
       currentInput.removeClass('active');
       currentInput.parents('.form-section').removeClass('active');
       $('#service-form .toggle.next').removeClass('hidden');
-    } else if (currentIndex == 0) {
-      currentInput.removeClass('active');  
+    } else {
       currentInput.parents('.form-section').removeClass('active');
       $('.form-section[data-section="get-started"], .form-section[data-section="get-started"] .form-input').addClass('active');
       $('#service-form .toggle').addClass('hidden');
       $('#service-form .progress-tracker').addClass('hidden');
-    } else {      
-      prevInput.addClass('active');
-      currentInput.removeClass('active');
     }
-  } else {
-    $('#service-form .form-section[data-section="get-started"],#service-form .form-section[data-section="get-started"] .form-input').addClass('active');
-    $('#service-form .form-section[data-section="contact"],#service-form .form-section[data-section="contact"] .form-input').removeClass('active');
-    $('#service-form .toggle.prev').addClass('hidden');
-  }
-  
+    
+  } else if (currentIndex == 0) {
+    currentInput.parents('.form-section').removeClass('active');
+    $('.form-section[data-section="get-started"], .form-section[data-section="get-started"] .form-input').addClass('active');
+    $('#service-form .toggle').addClass('hidden');
+    $('#service-form .progress-tracker').addClass('hidden');
+  } else {      
+    prevInput.addClass('active');
+    currentInput.removeClass('active');
+  } 
   $('.tracker-block:eq('+prevIndex+')').removeClass('active');
 }
 //next input

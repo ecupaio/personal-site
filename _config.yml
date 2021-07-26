@@ -37,18 +37,18 @@ collections:
     output: true
     permalink: /project/:title/
   experience:
-    output: true
-    test: ""
+    output: false
   skills:
     output: true
+  services: 
+    output: true
+    permalink: /services/:title/  
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       layout: "default"
-  -
-    scope:
+  - scope:
       type: "projects"
     values:
       link: ""
@@ -57,11 +57,14 @@ defaults:
       tech:
         - ""
       date: "2017-01-01"
-  -
-    scope:
+  - scope:
       type: "posts"
     values:
       permalink: "/blog/:title/"
       layout: "blog-post"
       tags:
         - ""
+  - scope: 
+      type: "services"      
+    values: 
+      layout: service  
