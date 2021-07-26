@@ -73,23 +73,36 @@
     }
   }
   #related-posts {
-    max-width: $size-medium;
-    margin: auto;
-    border: 2px solid $charcoal;
-    position: relative;
-
+    
+    padding: 2rem;
+    .inner-section {
+      max-width: $size-medium;
+      margin: auto;
+      border: 2px solid $charcoal;
+      position: relative;
+      padding: 2rem;
+    }
     .related-title {
       position: absolute;
       top: -21px;
       padding: 0.5em;
-      background-color: $yellow;
+      background-color: $blue;
+      color: $white;
       font-weight: 500;
       left: 50%;
       @include transform(translateX(-50%));
     }
     .post-list {
       li {
+        list-style: none;
         margin-bottom: 1em;
+        padding-left: 1.25rem;
+        position: relative;
+        &:before {
+          content: '\2013';
+          position: absolute;
+          left: 0;
+        }
       }
     }
   }

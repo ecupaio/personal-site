@@ -36,14 +36,17 @@ css: blog
   {% endfor %}
   {% if related-posts.size > 0 %}
   <section id="related-posts">
-    <div class="related-title">Related Reading</div>
-    <ul class="post-list">
-    {% for post in related-posts %}
-    <li class="related-post">
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-    {% endfor %}
-    </ul>
+    <div class="inner-section">
+      <div class="related-title">Related Reading</div>
+      <ul class="post-list">
+        {% for post in related-posts limit: 5 %}
+        <li class="related-post">
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
   </section>
   {% endif %}
+  {% include footer-cta.html %}
 </main>

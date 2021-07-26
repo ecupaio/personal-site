@@ -1,14 +1,15 @@
 //services form
 var lastInput;
+var btnLocation;
 $('a[href="#open-form"]').click(function(e) {
   e.preventDefault();
-  
+  btnLocation = $(this).data('location');
   $('#services-form-overlay, body,html, #service-form .form-section[data-section="get-started"], #service-form .form-section[data-section="get-started"] .form-input').addClass('active');
 });
 $('#close-form').click(function() {
   $('#services-form-overlay, body,html').removeClass('active');
   $('#service-form .form-section, #service-form .form-section .form-input').removeClass('active');
-  $('#service-form .toggle.prev, #service-form .toggle.next').addClass('hidden');
+  $('#service-form .toggle.prev, #service-form .toggle.next, #service-form .progress-tracker').addClass('hidden');
 });
 //open contact section 
 $('.open-contact').click(function(e) {
@@ -142,8 +143,15 @@ $('#service-form').submit(function(e) {
     url: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSfSJvq5RgFLzQgAnhSlwKAlZihL6_vCDM2NYVw0Cn3oktrfSQ/formResponse',
     data: $(this).serialize()
   }).always(function(data) {
+    
+    if (btnLocation) {
+      dataLayer.push({'event': 'gaEvent','eventCategory':'Form','eventAction': 'Submission','eventLabel': btnLocation});
+    } else {
+      dataLayer.push({'event': 'gaEvent','eventCategory':'Form','eventAction': 'Submission'});
+    }
+    
     $('#service-form .form-body').slideUp();
-    $('service-form .form-success').slideDown();
+    $('#service-form .form-success').slideDown();
     setTimeout(function() {
       $('#services-form-overlay, body,html').removeClass('active');
     }, 3000);

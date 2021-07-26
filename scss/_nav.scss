@@ -1,6 +1,6 @@
 #sidebar-nav {
   position: fixed;
-  max-width: 215px;
+  max-width: 240px;
   width: 100%;
   height: 100%;
   background-color: $white;
@@ -16,12 +16,14 @@
     list-style: none;
     margin: 0.75em 0 0 1em;
     padding: 0;
+    overflow: hidden;
+    
     .nav-link {
       opacity: 0;
       position: relative;
       display: inline-block;
       @include transform(translateX(-100%));
-      @include transition(opacity, background-position);
+      @include transition(opacity, transform);
       margin-bottom: 0.5em;
       &.active {
           opacity: 1;

@@ -93,9 +93,7 @@ about: |-
         </div>
         {% endfor %}
       </div>
-      <div class="btn-row">
-        <a class="btn" href="#open-form">Work with me</a>
-      </div>
+      {% include form-button.html location="Services Section" %}
     </div>
   </section>
   
@@ -194,5 +192,6 @@ about: |-
       </div>
     </div>
   </section>
+  {% include footer-cta.html color="white" %}
 </main>
 <script type="text/javascript" src="/js/min/contact-form.min.js"></script>

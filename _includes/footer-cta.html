@@ -1,0 +1,21 @@
+{% assign title = "Let's get started" %}
+{% assign text = "Tell me about your goals and let's achieve them together" %}
+{% if layout.footer-cta.title %}
+  {% assign title = layout.footer-cta.title %}
+{% endif %}
+{% if page.footer-cta.title %}
+  {% assign title = page.footer-cta.title %}
+{% endif %}
+{% if layout.footer-cta.text %}
+  {% assign text = layout.footer-cta.text %}
+{% endif %}
+{% if page.footer-cta.text %}
+  {% assign text = page.footer-cta.text %}
+{% endif %}
+<section id="footer-cta" class="{{ include.color }}">
+  <div class="inner-section">
+    <h2>{{ title }}</h2>
+    {{ text | markdownify }}
+    {% include form-button.html location="CTA Footer" %}
+  </div>
+</section>

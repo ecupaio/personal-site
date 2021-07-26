@@ -326,4 +326,25 @@
   &.small {
     max-width: $size-small;
   }
+}//footer-cta.html 
+#footer-cta {
+  text-align: center;
+  background-color: $blue;
+  color: $charcoal;
+  &.white {
+    background-color: $white;
+    color: $charcoal;
+    
+  }
+  .inner-section {
+    max-width: $size-small;
+    @include border-radius;
+    @include box-shadow;
+    background-color: $white;
+    padding: 2rem 1rem;
+  }
+}
+//form-button 
+.form-button {
+  text-align: center;
 }
