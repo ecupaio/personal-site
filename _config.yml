@@ -41,7 +41,7 @@ collections:
   skills:
     output: true
   services: 
-    output: true
+    output: false
     permalink: /services/:title/  
 defaults:
   - scope:
