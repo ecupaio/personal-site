@@ -185,11 +185,17 @@
           }
           .service-options {
             display: flex;
+            @include bp-medium {
+              display: block;
+            }
             .service-col {
               width: 33.3333%;
               text-align: center;
               padding: 1rem;
               text-align: center;
+              @include bp-medium {
+                width: 100%;
+              }
               .service {
                 @include border-radius;
                 border: 2px solid $white;;
