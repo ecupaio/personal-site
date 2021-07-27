@@ -337,11 +337,6 @@
   text-align: center;
   background-color: $blue;
   color: $charcoal;
-  &.white {
-    background-color: $white;
-    color: $charcoal;
-    
-  }
   .inner-section {
     max-width: $size-small;
     @include border-radius;
@@ -349,6 +344,15 @@
     background-color: $white;
     padding: 2rem 1rem;
   }
+  &.white {
+    background-color: $white;
+    color: $charcoal;
+    .inner-section {
+      @include box-shadow(none);
+      border: 2px solid $black;
+    }
+  }
+  
 }
 //form-button 
 .form-button {

@@ -5,6 +5,8 @@ layout: default
 css: blog
 intro: |-
   Simple, concise guides for coders and users of all levels.
+scripts:
+- blog  
 ---
 <main id="blog">
   <section id="intro">
@@ -15,6 +17,9 @@ intro: |-
   </section>
   <section id="posts">
     <div class="inner-section">
+      <div class="tag-filter hidden">
+
+      </div>
       <ul class="post-list">
         {% for post in site.posts %}
         <li class="post">

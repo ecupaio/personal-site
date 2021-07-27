@@ -348,7 +348,7 @@ body {
           }
           .service-content {
             padding: 2rem; 
-            @include box-shadow;
+            border: 2px solid $black;
             @include border-radius;
             @include bp-medium {
               padding: 1rem 2rem;

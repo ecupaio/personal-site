@@ -62,6 +62,7 @@
     background-color: $white;
     position: relative;
     padding: 2em;
+    @include border-radius;
     pre {
       display: block;
       background-color: $charcoal;
@@ -75,12 +76,14 @@
   #related-posts {
     
     padding: 2rem;
+    
     .inner-section {
       max-width: $size-medium;
       margin: auto;
       border: 2px solid $charcoal;
       position: relative;
       padding: 2rem;
+      @include border-radius;
     }
     .related-title {
       position: absolute;
@@ -90,6 +93,7 @@
       color: $white;
       font-weight: 500;
       left: 50%;
+      @include border-radius;
       @include transform(translateX(-50%));
     }
     .post-list {
@@ -118,15 +122,46 @@
     }
   }
   #posts {
-    
+    .tag-filter {
+      max-width: $size-medium;
+      margin: 0 auto 2rem;
+      .tag-block {
+        margin-right: 1rem;
+        //background-color: $grey;
+        display: inline-block;
+        overflow: hidden;
+        @include border-radius;
+        border: 2px solid $black;
+        font-weight: 700;
+        .tag-text {
+          display: inline-block;
+          padding: 4px 8px;
+        }
+        .remove-tag {
+          display: inline-block;
+          background-color: $yellow;
+          padding: 2px 8px;
+          @include transition(background-color,color);
+          border-left: 2px solid $black;
+          font-size: 22px;
+          &:hover {
+            cursor: pointer;
+            background-color: $black;
+            color: $yellow;
+          }
+        }
+      }
+    }
     .post-list {
       list-style: none;
       max-width: $size-medium;
       margin: auto;
+      padding: 0;
       .post {
         margin-bottom: 2rem;
         padding: 1rem;
-        @include box-shadow;
+        //@include box-shadow;
+        border: 2px solid $black;
         @include border-radius;
         .post-title {
           margin-bottom: 0;
