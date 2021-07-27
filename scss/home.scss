@@ -250,7 +250,7 @@ body {
       width: 100%;
       display: block;
       @include transition(height);
-      transition-delay: 0.7s;
+      transition-delay: 1.7s;
     }
     .hero-text {
       padding: 0 2em;
@@ -419,6 +419,9 @@ body {
     position: relative;
     background-color: $blue;
     color: $white;
+    .btn-row {
+      text-align: center;
+    }
     .portfolio-grid {
       max-width: $size-large;
       margin: auto;

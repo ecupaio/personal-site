@@ -41,7 +41,25 @@ $(function() {
       $('.scroller').removeClass('active');  
     }
     $('.project-overlay, body,html').addClass('active');
-    //todo: add force scroll top
+    
+  });
+  $('.load-more-projects').click(function (e) {
+    e.preventDefault();
+    var firstHidden = $('.project-col.hidden').first()
+    
+    $('.project-col.hidden').each(function (i) {
+      if (i < 9) {
+        $(this).removeClass('hidden');
+      } 
+      
+    });
+    $('body,html').animate({
+      scrollTop: firstHidden.offset().top
+    });
+    if ($('.project-col.hidden').length == 0 ) {
+      $('.load-more-projects').addClass('hidden');
+    }
+    
   });
   
   $('.close-overlay').click(function(e) {

@@ -97,7 +97,7 @@ about: |-
       <div class="pure-g portfolio-grid">
         {% assign projects = site.projects | sort: 'date' | reverse %}
         {% for project in projects %}
-        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 project-col">
+        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 project-col {% if forloop.index > 9 %}hidden{% endif %}">
           <div class="col-content" >
             <img class="project-image" src="/images/{{ project.image[0]}}">
             <h4 class="project-title">{{ project.title }}</h4>
@@ -120,6 +120,9 @@ about: |-
           </div>
         </div>
         {% endfor %}
+      </div>
+      <div class="btn-row">
+        <a href="#" class="load-more-projects btn">Load more</a>
       </div>
     </div>
     
