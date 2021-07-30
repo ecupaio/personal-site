@@ -4,7 +4,7 @@ tags:
 - Security
 
 ---
-I received this email today and spotted a very obvious spam email I chucked immediately in the junk can.
+I received this email today and spotted a very obvious spam email that I chucked immediately in the junk folder.
 
 ![](/images/spam-email.jpg)
 
@@ -58,6 +58,10 @@ A couple of my friends received this email so I went through these steps of chec
 ## Attempt the call to action through the site
 
 Like I demonstrated with Norton Support earlier. Go to the actual site of the company requesting your action and see if you can change your password or update your billing info or check if you even have an account with them. You can even contact support to see what the deal is. A lot of companies pay for dedicated support staffs since word of mouth about customer satisfaction is the most effect form of advertisement. I knew I didn't have a Norton account so I didn't call the number, but I did have an instagram account. I didn't click the button and logged in through their website and made sure my details hadn't changed. 
+
+## Don't download any files
+
+This one should be obvious, but if you get a file from someone you don't know: don't open it, don't look at it, call in the bomb squad and have it detonated. There's no reason name-bunch of numbers is sending you a million dollars in totally-not-a-virus.exe. Chuck it in the junk folder and burn some sage. 
 
 ## Bonus tip: Enable Multi-Factor Authentication on your accounts
 
