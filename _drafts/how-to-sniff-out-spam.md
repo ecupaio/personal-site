@@ -59,6 +59,6 @@ A couple of my friends received this email so I went through these steps of chec
 
 Like I demonstrated with Norton Support earlier. Go to the actual site of the company requesting your action and see if you can change your password or update your billing info or check if you even have an account with them. You can even contact support to see what the deal is. A lot of companies pay for dedicated support staffs since word of mouth about customer satisfaction is the most effect form of advertisement. I knew I didn't have a Norton account so I didn't call the number, but I did have an instagram account. I didn't click the button and logged in through their website and made sure my details hadn't changed. 
 
-## Enable Multi-Factor Authentication on your accounts
+## Bonus tip: Enable Multi-Factor Authentication on your accounts
 
-The best way to avoid someone logging into your account that has swiped your login credentials is to enable Multi-Factor Authentication (MFA)
+The best way to avoid someone logging into your account that has swiped your login credentials is to enable Multi-Factor Authentication (MFA). I call it mother f-ing auth as a silly joke, but it is a serious security layer. How it works is that upon entering your login credentials, another test occurs: most commonly a text or an email with a 6-character code. An even more secure way and better experience to get this second layer of security is using an authenticator software from [Google](https://support.google.com/accounts/answer/1066447?hl=en&co=GENIE.Platform%3DAndroid) or [LastPass](https://lastpass.com/auth/). However you choose to secure your account, please do enable MFA on every account you use to protect yourself. 
