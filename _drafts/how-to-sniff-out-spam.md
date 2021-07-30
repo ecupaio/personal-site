@@ -1,0 +1,50 @@
+---
+title: How to Sniff Out Spam
+tags:
+- Security
+
+---
+I received this email today and spotted a very obvious spam email I chucked immediately in the junk can. 
+
+![](/images/spam-email.jpg)
+
+But for other people who aren't extremely online like me, it might not be so obvious. Phishing attacks are becoming more common. Instead of a malicious file download, spammers are sending emails pretending to be a company on false pretenses of renewing your password or updating your payment info like the one above in order to steal your sensitive information. 
+
+Here's some tips to keep you safe: 
+
+## Check the sender address
+
+Let's look at that above email. Though the name is Norton Billing, the actual email address is a Gmail account. Why would a huge software company have some dude named Peter send all their subscribers emails? 
+
+The spam artist did a really simple email trick to achieve this and you can do it too:
+
+* Open your mail client 
+* Type in any name you want in the To field: Bob Barker
+* Then hit space, and put your email address between two greater and less than signs: <youremail@gmail.com>
+* "Put come on down!"in the subject line, and then send the email to your friends for a good laugh. 
+
+Though most desktop clients making checking the sender simple by displaying both the name and address, mobile devices just use the name field. Here's some guides below on how to check the address on mobile devices: 
+
+* [iPhone (iOS)](https://apple.stackexchange.com/a/358815)
+* [Android (Gmail)](https://support.google.com/mail/thread/9692180/how-to-display-the-email-address-of-the-sender-of-an-email?hl=en)
+
+You'll notice both of these answers are in support forums and not on the official app documentation. I'm not sure why these companies wouldn't make seeing a sender address intuitive or at the very least give the user information how to do it. Perhaps they're in cahoots with Peter, but I think the answer is that they have no incentive to help the users on a free product and engineers hate writing documentation for the products they create. Not me however, let's see the next tip! 
+
+## Check the URL/Phone Number
+
+This email told me to give them a ring so I could conveniently give them my social security number and a map of where all my valuable belongings are stored.  Not so fast Peter! Let's first google this phone number. As you can see from the [results page](https://www.google.com/search?q=855+-+659+-+3308&sxsrf=ALeKk02lI-8aSxC2YFXUpqQgjBx8uq1ftQ%3A1627682004334&ei=1HQEYdb1E6GGwbkPnrGA8A4&oq=855+-+659+-+3308&gs_lcp=Cgdnd3Mtd2l6EANKBAhBGAFQ1X5Y0ZEBYJaUAWgCcAB4AIABd4gBuQSSAQMwLjWYAQCgAQHAAQE&sclient=gws-wiz&ved=0ahUKEwjWr7P944vyAhUhQzABHZ4YAO4Q4dUDCA8&uact=5), a lot of phishy (heh) stuff comes back. If you're still not convinced, let's go to the actual [support site for Norton Security](). They make you fill out a form to get a phone number! They really want you to RTFM (a common engineer phrase: read the f-ing manual) or use their chat. Why would they give out their number and invite you to call them?  
+
+Let's say you get a more savvy hacker that uses a link (c'mon Peter, put some more effort into your hacks). Open the link in [an incognito window](https://support.google.com/chrome/answer/95464?hl=en&co=GENIE.Platform%3DDesktop) and let's look at the URL. For this example I'm using a suspicious email I received from Instagram asking me to login: 
+
+![](/images/insta-email.jpg)
+
+This was the link from the login button: 
+
+https://www.instagram.com/_n/web_emaillogin?uid=4edutd&token=7jSnQm&auto_send=0
+
+Whole lotta stuff going on here so let's break this url down. We'll use the slashes, dots, and question mark as our delimiters: 
+
+* **https://** is the **protocol** by which we access the site. Defined is **H**yper**T**ext **T**ransfer **P**rotocol **S**ecure. Never enter sensitive information in a site that doesn't have that extra S at the end. Your browser will display a lock icon to indicate it at least has the [Secure Sockets Layer (SSL) Certificate](https://www.cloudflare.com/learning/ssl/what-is-an-ssl-certificate/). Though anyone can get a cert for free so it doesn't mean they're legit.
+* **www.** is the **sub-domain**. www is very common, but it can be whatever you want. The subdomain of the Norton Support page I linked earlier was support. Only the owner of the domain can create sub-domains for their site. Instagram could have hacks.instagram.com since they own the instagram.com domain. 
+* **instagram.com** is the **domain name**. A domain name has two levels: second-level (instagram) and top-level (.com). Only one entity can own a domain name. I own the domain for this site: edcupaioli.com, but someone could buy edcupaioli.org. We can test instagram.com in our browser and see that instragram.com redirects to  https://www.instagram.com and see all the influencers peddling their wares. A common trick hackers will do is buy a slightly misspelt domain like gooogle.com and hope you don't notice the extra o since there's a huge path and query string.
+* 
