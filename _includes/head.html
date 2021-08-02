@@ -30,8 +30,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 {% endif %}
 
 {% if page.layout == 'blog-post' %}
-
 {% assign description = page.excerpt | strip_html %}
+
+<script type="text/javascript" async="" src="https://platform.twitter.com/widgets.js"></script>
+<script> window.fbAsyncInit = function() { FB.init({ appId : '227787841708160', autoLogAppEvents : true, xfbml : true, version : 'v8.0' }); }; </script>
+<script async="" defer="" crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 {% endif %}
 
 {% if page.meta_img %}
