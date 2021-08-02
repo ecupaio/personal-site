@@ -232,7 +232,14 @@
         .post-tags {
           color: $grey-text;
           .post-tag {
+            color: $grey-text;
             font-size: 16px;
+            font-weight: normal;
+            background: none;
+            padding: 0;
+            &:hover {
+              color: $black;
+            }
           }
         }
         .post-clip {
