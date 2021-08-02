@@ -1,6 +1,8 @@
 ---
 layout: default
 css: blog
+scripts:
+- blog
 ---
 <div class="blog-topbar">
   <div class="topbar-title">
@@ -11,7 +13,6 @@ css: blog
   </div>
 </div>
 <main id="blog-post">
-
   <section id="post-title">
     <div class="title-card">
         <h1>{{ page.title }}</h1>
@@ -21,10 +22,34 @@ css: blog
           {% endfor %}
         </div>
     </div>
-
   </section>
-  <section id="post-content">
+  <section id="content-section">
+    <div class="post-date">
+      {{ page.date | date: "%B %e, %Y" }}
+    </div>
+    <div class="post-content">
       {{ page.content }}
+    </div>
+    {% include separator.html %}
+    <div class="share-post">
+      <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url | url_encode}}{{ page.url | url_encode }}" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a class="share-btn fbook" href="{{ site.url }}{{ page.url }}" data-title="{{ page.title }}">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a class="share-btn" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url | url_encode}}{{ page.url | url_encode }}">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a class="share-btn" href="mailto:?subject={{ page.title }}&body={{ site.url }}{{ page.url | url_encode }}">
+        <i class="fa fa-envelope"></i>
+      </a>
+      <a class="share-btn copy" href="#">
+        <i class="fa fa-check"></i>
+        <i class="fa fa-link"></i>
+        <input class="copy-link" value="{{ site.url }}{{ page.url }}">
+      </a>
+    </div> 
   </section>
   {% assign related-posts = "" | split: ',' %}
   {% for post in site.posts %}
