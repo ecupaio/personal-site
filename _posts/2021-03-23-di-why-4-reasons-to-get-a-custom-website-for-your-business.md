@@ -1,11 +1,10 @@
 ---
-date: 2021-03-23 16:00:23 +0000
+date: '2021-03-23T16:00:23.000+00:00'
 title: DI-Why? 4 Reasons to Get a Custom Website for Your Business
-
 tags:
 - UX
-- Security
 - Web Development
+
 ---
 _This post originally appeared in the blog for [eStreet.co](https://estreet.co/blog/di-why-4-reasons-to-get-a-custom-website-for-your-business/)_
 
