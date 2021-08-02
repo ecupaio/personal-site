@@ -581,6 +581,15 @@ body {
           @include box-shadow;
           .post-tags {
             color: $grey-text;
+            .post-tag {
+              color: $grey-text;
+              font-weight: normal;
+              background: none;
+              padding: 0;
+              &:hover {
+                color: $black;
+              }
+            }
           }
         }
       }
