@@ -521,12 +521,17 @@ body {
     }
   }
   #about {
-    .text-col {
+    .inner-section {
       max-width: $size-small;
+      padding: 1rem 2rem;;
       margin: auto;
+      border: 2px solid $black;
+      
+      @include border-radius;
     }
     .btn-row {
       text-align: center;
+      margin-top: 1.5rem;
     }
     .skills-col {
       .skill-grid {

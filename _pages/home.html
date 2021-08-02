@@ -137,12 +137,13 @@ about: |-
   <section id="about">
     <div class="inner-section">
       <h2>About me</h2>
-      <div class="text-col">
+      
         {{ page.about | markdownify }}
-      </div>
-      <div class="btn-row">
-        <a class="btn open-contact" href="#">Get in touch</a>
-      </div>
+        <div class="btn-row">
+          <a class="btn open-contact" href="#">Get in touch</a>
+        </div>
+      
+      
       <!-- <div class="skills-col">
         <div class="pure-g skill-grid">
           {% for skill in page.skills %}
