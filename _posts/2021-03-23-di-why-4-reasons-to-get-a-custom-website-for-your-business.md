@@ -6,8 +6,6 @@ tags:
 - Web Development
 
 ---
-_This post originally appeared in the blog for [eStreet.co](https://estreet.co/blog/di-why-4-reasons-to-get-a-custom-website-for-your-business/)_
-
 WordPress, SquareSpace, Wix, Shopify, and the like are really great tools for people that need an online space to showcase their business and sell their wares. However, if you have used one of these tools, you probably noticed some limitations. Or, maybe you got sticker shock from the hosting fees and extra costs for additional features. It may have been easy to set up your homepage, but does your site follow best practices? Is it secure? Is it accessible to people with disabilities? (You can get sued for that, you know?) DIY builders are convenient to set up, but they leave the rest up to you. Here at eStreet.co, we know what it takes to create a good website because we are dedicated to the best SEO practices. We can help you convert your DIY website into one that is fully customized and functionable on the front- and back-end. Here are some reasons why you should switch:
 
 ## WordPress is notoriously not secure
@@ -38,6 +36,6 @@ As a business owner, you’re most likely worried about the Merlot harvest or ro
 
 Speaking of performance, do you have analytics installed? Can your marketing team tell you the value of your landing pages in terms of dollars? Do you know what search terms people use to get to your site? Do you know which pages have the highest bounce rates? That isn’t a problem with eStreet.co websites because our sites come standard with Google Analytics, Search Console, and Tag Manager installed.
 
-## In conclusion...
+## Your website is your business
 
 Because you put everything into your business, you want everything to shine, from your labels to your storefront. So why settle for just any website? Your website is the first thing potential customers will see. Think about it: when you want to find the best plumber, what do you do? Google it of course! Now with customers stuck at home and not conversing with their co-workers at the water cooler, you need to make a great first impression. Let eStreet.co create a custom website that will look great and perform flawlessly.
