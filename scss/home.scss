@@ -521,6 +521,13 @@ body {
     }
   }
   #about {
+    .text-col {
+      max-width: $size-small;
+      margin: auto;
+    }
+    .btn-row {
+      text-align: center;
+    }
     .skills-col {
       .skill-grid {
         .skill-category {
@@ -529,6 +536,7 @@ body {
             margin: 0.5em 10px;
             background-color: $blue;
             color: $white;
+            font-weight: 700;
             @include transform(translateY(-2em));
             opacity: 0;
             @include transition(transform,opacity);
