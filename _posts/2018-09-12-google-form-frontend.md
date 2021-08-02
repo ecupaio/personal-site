@@ -2,10 +2,10 @@
 title: How to create a custom front-end for a Google Form
 date: 2018-09-12 18:25:38 +0000
 permalink: "/blog/google-form-front-end/"
+meta_img: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80
 tags:
 - Google Apps
-- jQuery
-
+- Web Development
 ---
 **Problem:** you have a Google Form but you don't want an ugly embed on your site.
 

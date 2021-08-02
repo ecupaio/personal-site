@@ -1,8 +1,10 @@
 ---
 title: Iterations on Each/For Loops
 permalink: "/blog/:title/"
+meta_img: https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=925&q=80
 tags:
-- jekyll
+- Jekyll
+- Web Development
 ---
 
 Let's say you want to apply specific behaviors to every 3rd item of an array. Technically, you can use nth-child, but you can't apply nth-child to specific children.

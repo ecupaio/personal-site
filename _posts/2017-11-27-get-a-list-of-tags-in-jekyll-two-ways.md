@@ -1,9 +1,10 @@
 ---
 title: Get a List of Unique Items in Jekyll
 permalink: "/blog/:title/"
+meta_img: https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80
 tags:
-- jekyll
-- liquid
+- Jekyll
+- Web Development
 ---
 
 I ran into this problem when I was creating a tag filter for my blog: I needed a list of all the tags I used in my posts, but I wanted to filter out any duplicates. I also wanted tags from only published posts, so I needed to use the [where filter](https://www.siteleaf.com/blog/advanced-liquid-where/). Below is how I achieved this result:

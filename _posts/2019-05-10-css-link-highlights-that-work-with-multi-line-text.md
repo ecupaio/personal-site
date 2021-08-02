@@ -1,6 +1,9 @@
 ---
 title: CSS Link Highlights that work with multi-line text
-tags: []
+meta_img: https://images.unsplash.com/photo-1585247226801-bc613c441316?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHdlYiUyMGRldmVsb3BtZW50fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60
+tags:
+- Web Development
+- CSS
 
 ---
 I originally thought just adding a pseudo element beneath the text and growing the height would do the trick, but I figured out that they don't account for when the link wraps around a border. Fortunately, I found two ways to create that neat highlight effect across multiple lines:

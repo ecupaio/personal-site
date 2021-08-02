@@ -1,5 +1,6 @@
 ---
 title: Use inline Google Analytics Events with Google Tag Manager
+meta_img: https://images.unsplash.com/photo-1599658880436-c61792e70672?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80
 tags:
 - Google Analytics
 - Google Tag Manager
