@@ -3,6 +3,9 @@ title: How to Set Up Conversions with Google Analytics for Beginners
 meta_img: https://images.unsplash.com/photo-1599658880436-c61792e70672?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80
 tags:
 - Google Analytics
+footer-cta:
+  title: Still need help?
+  text: Let's find a solution together.
 
 ---
 For this tutorial, I am assuming your are using the Universal Analytics version of Google Analytics. You can verify information in this guide by following along with [Google's official documentation](https://support.google.com/analytics/answer/1032415?hl=en&ref_topic=6150889#zippy=%2Cin-this-article "Google's official documentation"). Fair warning Google sunsets features and changes layouts constantly and doesn't reflect the most up-to-date user interface like me.
