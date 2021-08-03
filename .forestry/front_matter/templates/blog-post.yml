@@ -13,6 +13,21 @@ fields:
 - type: tag_list
   name: tags
   label: tags
+- name: footer-cta
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: title
+  - name: text
+    type: text
+    config:
+      required: false
+    label: text
+  label: footer cta
 pages:
 - _posts/2018-09-12-google-form-frontend.md
 - _posts/2018-09-12-google-form-frontend.md
