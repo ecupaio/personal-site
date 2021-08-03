@@ -17,6 +17,10 @@ title: Ed Cupaioli
 description: Web Development, UX, Training
 url: https://edcupaioli.com # the base hostname & protocol for your site, e.g. http://example.com
 meta_img: "/images/meta-img.png"
+email: "ed.cupaioli@gmail.com"
+favicon: "/images/favicon.png"
+first-name: Ed
+last-name: Cupaioli
 gtm: 'GTM-THQC7Q9'
 future: true
 timezone: "America/New_York"

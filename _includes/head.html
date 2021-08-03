@@ -31,10 +31,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 {% if page.layout == 'blog-post' %}
 {% assign description = page.excerpt | strip_html %}
-
 <script type="text/javascript" async="" src="https://platform.twitter.com/widgets.js"></script>
 <script> window.fbAsyncInit = function() { FB.init({ appId : '227787841708160', autoLogAppEvents : true, xfbml : true, version : 'v8.0' }); }; </script>
 <script async="" defer="" crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+<!-- Schema -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "url": "{{ site.url }}{{ page.url }}",
+    "name": {{ page.title | jsonify }},
+    "headline": {{ page.title | jsonify }},
+    "keywords": {{ page.tags | join: ',' | jsonify }},
+    "description": {{ page.excerpt | strip_newlines | strip | jsonify }},
+    "articleBody": {{ page.content | strip_html | jsonify }},
+    "datePublished": {{ page.date | jsonify }},
+    "dateModified": {{ page.last_modified_at | default: page.date | jsonify }},
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.first-name }} {{ site.last-name }}",
+      "givenName": {{ site.first-name | jsonify }},
+      "familyName": {{ site.last-name | jsonify }},
+      "email": {{ site.email | jsonify }}
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ed Cupaioli LLC",
+      "url": "{{ site.url }}",
+      "logo": {
+        "@type": "ImageObject",
+        "width": 32,
+        "height": 32,
+        "url": "{{ site.url }}{{ site.favicon }}"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ site.url }}{{ page.url }}"
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "{{ page.meta_img | default: site.meta_img }}"
+    }
+  }
+  </script>
 {% endif %}
 
 {% if page.meta_img %}
@@ -47,7 +87,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta content="{{ description }}" name="description">
 <link rel="canonical" href="{{ site.url }}{{ page.url | remove: ".html" }}">
 <!-- favicon -->
-<link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+<link rel="shortcut icon" type="image/png" href="{{ site.favicon }}">
 <!-- Facebook Meta -->
 <meta property="og:url" content="{{ site.url }}{{ page.url | remove: ".html" }}">
 <meta property="og:type" content="website">
