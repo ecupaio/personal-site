@@ -18,9 +18,18 @@ description: Web Development, UX, Training
 url: https://edcupaioli.com # the base hostname & protocol for your site, e.g. http://example.com
 meta_img: "/images/meta-img.png"
 email: "ed.cupaioli@gmail.com"
+phone: 469-867-3438
 favicon: "/images/favicon.png"
+org-name: Ed Cupaioli LLC
 first-name: Ed
 last-name: Cupaioli
+address: 2925 43rd St
+city: Sacramento 
+state: CA
+zip: 95817
+social: 
+- https://www.linkedin.com/in/ed-cupaioli-10a9849/
+- https://github.com/ecupaio
 gtm: 'GTM-THQC7Q9'
 future: true
 timezone: "America/New_York"

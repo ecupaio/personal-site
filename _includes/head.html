@@ -34,7 +34,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="text/javascript" async="" src="https://platform.twitter.com/widgets.js"></script>
 <script> window.fbAsyncInit = function() { FB.init({ appId : '227787841708160', autoLogAppEvents : true, xfbml : true, version : 'v8.0' }); }; </script>
 <script async="" defer="" crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-<!-- Schema -->
+<!-- Blog Schema -->
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -75,6 +75,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
   }
   </script>
+{% else %}  
+<!-- Sitewide schema -->
+<script type="application/ld+json">
+  { "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ site.org-name }}",
+  "legalName" : "{{ site.org-name }}",
+  "url": "{{ site.url }}",
+  "logo": "{{ site.url }}{{ site.meta_img }}",
+  "foundingDate": "2021",
+  "founders": [
+  {
+  "@type": "Person",
+  "name": "{{ site.first-name }} {{ site.last-name }}"
+  }
+  ],
+  "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "{{ site.address }}",
+  "addressLocality": "{{ site.city }}",
+  "addressRegion": "{{ site.state }}",
+  "postalCode": "{{ site.zip }}",
+  "addressCountry": "USA"
+  },
+  "contactPoint": {
+  "@type": "ContactPoint",
+  "contactType": "General",
+  "phone" : " {{ site.phone }}",
+  "email": "{{ site.email }}"
+  },
+  "sameAs": {{ site.social | jsonify }}
+  }
+ </script>
 {% endif %}
 
 {% if page.meta_img %}
