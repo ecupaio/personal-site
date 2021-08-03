@@ -35,7 +35,57 @@ Google has [full documentation](https://support.google.com/analytics/answer/1116
 
 Leave Value and Funnel in the off position, then select Save and you're all set.
 
-Skip ahead to the Test Event section to see how we can verify that our goal is triggering. 
+## Test your Event
+
+Now that you have your event set up, **select the Clock icon for the Realtime Report:**
+
+**Select the Events option** in the dropdown that appears below the Realtime Report menu: 
+
+You should now see a live report of your site. You can also select Events (Last 30 min) to see what happened before:
+
+Open a separate window or use your phone to view your website. Navigate to the page that you are triggering the event on and watch the realtime report. 
+
+You should see the event populate under in the table: 
+
+If you want to check the label, select the link in the  **Category** column. 
+
+If you are not seeing the event populate, here are some trouble shooting tips: 
+
+### Check the URL in the Goal Set
+
+This sounds silly, but it has tripped up the best of us. Google is looking for that EXACT url so if your URL uses http and you typed in https you could be in error. If there's an extra slash at the end, that could trip you up as well. Just make sure it's the exact URL. 
+
+### Make sure you're using the right browser
+
+Firefox does not allow tracking software on its browser so make sure you're using either Chrome, Safari, or Edge. Incognito and private windows block traffic as well so make sure you're using a regular window with any privacy settings disabled. 
+
+### Use 4G service on your phone
+
+Your web developer could have blocked your office's IP from getting tracked on Google Analytics. It's helpful so everyone working on the site doesn't skew your data, but in this case, you are testing your tracking. Using the 4G network on your will put you on a different IP address so you will be tracked. 
+
+### Check the Last 30 Minutes report
+
+I mentioned this earlier: You can **select the Events (Last 30 mins)** right next to the Active Users tab in order to see events that occurred in the last 30 minutes. Google's Active Users report is for users actively viewing the site and it will time out after a wee bit. The other option is to wait 24 hours is see the previous day's report which we will get into next. 
+
+## View the Conversions Report
+
+Now that your conversion is set up and functioning properly, let's get into the data. 
+
+**Select Conversions from the left-hand menu, then select Goals > Overview** from the dropdown: 
+
+From here you can see all of the Goal completions of the past week:
+
+You can change the date range by selecting the date range in the top-right corner: 
+
+You can narrow down the Goals if you set up multiple, in the top-left corner of the report: 
+
+You can see where people came from by using the Source/Medium filter in the bottom left corner of the report: 
+
+Outside of Overview, the Reverse Goal Path view is helpful to see the pages users viewed before converting. 
+
+Here's some other helpful reports and how to get to them so see your conversions: 
+
+**Behavior > Site Content > Landing Pages**  
 
 #### Event
 
@@ -58,8 +108,14 @@ There's no requirement for what fields you need to fill it just has to be at lea
 
 Before we hack into the Matrix, we need to make sure we have the correct setup for our Goal trigger method.
 
-* Open you website in the Chrome browser 
+* Open you website in the Chrome browser
 * Right-click anywhere on the page and select View Page Source
-* Press control/command + F and type in "gtm.js" 
-  * If the finder locates that text, then you have Google Analytics installed via Google Tag Manager. Go to the Google Tag Manager Event 
+* Press control/command + F and type in "gtm.js"
+  * If the finder locates that text, then you have Google Analytics installed via Google Tag Manager. Go to the Google Tag Manager Event
   * If not, then type in "gtag.js". If the finder locates that script, you have Universal Analytics installed. Go the the Universal Analytics Event
+
+##### Google Tag Manager Event
+
+In order to to 
+
+##### Universal Analytics Event
