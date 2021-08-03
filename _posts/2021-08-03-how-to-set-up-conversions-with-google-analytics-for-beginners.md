@@ -14,11 +14,17 @@ For this tutorial, I am assuming your are using the Universal Analytics version 
 
 First, open your [Analytics Property](https://analytics.google.com/) then navigate to the admin section by **selecting the gear icon in the bottom left corner**:
 
+![](/images/admin-select.jpg)
+
 Now that you are in the Admin dashboard, **select the Goals link in the View column**:
+
+![](/images/ga-admin-menu-1.png)
 
 ## Add a New Goal
 
 With the Goal's dashboard open, **select the New Goal button**:
+
+![](/images/new-goal.jpg)
 
 **Give your goal a Name** that you can easily know what it is. I track submissions to my form and the conversion is aptly named "Form Submission"
 
@@ -34,6 +40,8 @@ For most novices, I will suggest using the **Destination Type**. Let's say you h
 
 Once you determine your goal page users will end up on, **enter the full URL** into the Destination field with Equals to selected in the dropdown:
 
+![](/images/destination-goal.jpg)
+
 Google has [full documentation](https://support.google.com/analytics/answer/1116091?hl=en#zippy=%2Cin-this-article) on all the possibilities and parameters for entering a Destination goal URL, but you are not a computer science graduate and you just want to know how many people signed up for your newsletter on a Saturday so I suggest using the full URL (**example: https://www.mywebsite.com/thanks**) like I demonstrated above.
 
 Leave Value and Funnel in the off position, then select Save and you're all set.
@@ -42,13 +50,19 @@ Leave Value and Funnel in the off position, then select Save and you're all set.
 
 Now that you have your event set up, **select the Clock icon for the Realtime Report:**
 
+![](/images/realtime-from-admin.jpg)
+
 **Select the Events option** in the dropdown that appears below the Realtime Report menu:
 
-You should now see a live report of your site. You can also select Events (Last 30 min) to see what happened before:
+![](/images/realtime-events-report.jpg)
+
+You should now see a live report of your site. You can also select Events (Last 30 min) to see what happened before.
 
 Open a separate window or use your phone to view your website. Navigate to the page that you are triggering the event on and watch the realtime report.
 
 You should see the event populate under in the table:
+
+![](/images/realtime-event.jpg)
 
 If you want to check the label, select the link in the  **Category** column.
 
@@ -76,13 +90,17 @@ Now that your conversion is set up and functioning properly, let's get into the 
 
 **Select Conversions from the left-hand menu, then select Goals > Overview** from the dropdown:
 
-From here you can see all of the Goal completions of the past week:
+![](/images/conversions-report.jpg)
+
+From here you can see all of the Goal completions of the past week.
 
 You can change the date range by selecting the date range in the top-right corner:
 
+![](/images/date-range.jpg)
+
 You can narrow down the Goals if you set up multiple, in the top-left corner of the report:
 
-You can see where people came from by using the Source/Medium filter in the bottom left corner of the report:
+![](/images/goal-option.jpg)
 
 Outside of Overview, the Reverse Goal Path view is helpful to see the pages users viewed before converting.
 
