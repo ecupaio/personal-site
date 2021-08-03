@@ -87,6 +87,12 @@ Here's some other helpful reports and how to get to them so see your conversions
 
 **Behavior > Site Content > Landing Pages**  
 
+See where users who converted started their journey on your website. This can be helpful to determining what pages on your site are performers and which ones have room for improvement
+
+**Acquisition >  All Traffic > Channels, Source/Medium, Referrals**
+
+See a more drilled down view of how people are coming to your site and where they are most likely to convert from in order to determine what channels are most successful. 
+
 #### Event
 
 Now if you don't have a confirmation page, you're going to need to **select the Event type**. This set up is a wee bit more complicated but I can walk you through it. Take a deep breath, we're going to do some light javascript. Don't worry, you can copy/paste it in, which is actually what most of us engineers do (shh, keep it a secret!).
