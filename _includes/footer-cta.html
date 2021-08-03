@@ -1,15 +1,15 @@
 {% assign title = "Let's get started" %}
 {% assign text = "Tell me about your goals and let's achieve them together" %}
-{% if layout.footer-cta.title %}
+{% if layout.footer-cta.title.size > 1 %}
   {% assign title = layout.footer-cta.title %}
 {% endif %}
-{% if page.footer-cta.title %}
+{% if page.footer-cta.title.size > 1 %}
   {% assign title = page.footer-cta.title %}
 {% endif %}
-{% if layout.footer-cta.text %}
+{% if layout.footer-cta.text.size > 1 %}
   {% assign text = layout.footer-cta.text %}
 {% endif %}
-{% if page.footer-cta.text %}
+{% if page.footer-cta.text.size > 1 %}
   {% assign text = page.footer-cta.text %}
 {% endif %}
 <section id="footer-cta" class="{{ include.color }}">
