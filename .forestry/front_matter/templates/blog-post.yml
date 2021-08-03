@@ -13,6 +13,21 @@ fields:
 - type: tag_list
   name: tags
   label: tags
+- name: footer-cta
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: title
+  - name: text
+    type: text
+    config:
+      required: false
+    label: text
+  label: footer cta
 pages:
 - _posts/2018-09-12-google-form-frontend.md
 - _posts/2018-09-12-google-form-frontend.md
@@ -24,8 +39,9 @@ pages:
 - _posts/2019-05-10-css-link-highlights-that-work-with-multi-line-text.md
 - _posts/2019-05-10-css-link-highlights-that-work-with-multi-line-text.md
 - _posts/2021-07-30-how-to-sniff-out-spam.md
+- _posts/2021-08-03-how-to-set-up-conversions-with-google-analytics-for-beginners.md
 - _posts/helping-people-with-technical-issues.md
-- _posts/how-to-set-up-conversions-with-google-analytics-for-beginners.md
 - _posts/prevent-blur-on-scale-transform-transition.md
+- _posts/set-up-analytics-events-advanced.md
 - _posts/setup-retropie-on-a-raspberry-pi.md
 - _posts/source-tree-github-org.md
