@@ -19,9 +19,13 @@ I want to track whenever people click the Work with me button on this website wi
 
 [Open Tag Manager](https://tagmanager.google.com/) to get started, then select your property.
 
+### Add the Tag
+
 Once in your Property's workspace Tags from the sidebar menu, and then select the New  button on the right side of the tags list to add a new tag
 
 ![](/images/gtm-tags-menu.jpg)
+
+### Select a Tag Type
 
 A window should pop-up from the right. Give your tag a name and select the Tag Configuration field
 
@@ -33,10 +37,20 @@ A new window will pop up on the right side again, prompting you to choose a tag 
 
 Now you should have **Google Analytics: Universal Analytics added to the Tag Type field**.
 
-Go to the dropdown under the label **Track Type and select Event**. Now you should see a new set of fields labeled **Event Tracking Parameters**. Fill out each of the Category, Action, and Label fields. 
+### Configure the Tag
 
-Add your Google Analytics settings variable. If you don't already have one, follow [Google's documentation](https://support.google.com/tagmanager/answer/9207621?hl=en).  
+Go to the dropdown under the label **Track Type and select Event**. Now you should see a new set of fields labeled **Event Tracking Parameters**. Fill out each of the Category, Action, and Label fields.
 
-The Non-Interaction Hit field can stay as False because this is an interaction and we want to count it as such for Google Analytics. [There's an explanation](https://support.google.com/analytics/answer/1033068?hl=en#NonInteractionEvents) fit for Computer Science doctorates, but for this case, it will be False. 
+Add your Google Analytics settings variable. If you don't already have one, follow [Google's documentation](https://support.google.com/tagmanager/answer/9207621?hl=en).
+
+The Non-Interaction Hit field can stay as False because this is an interaction and we want to count it as such for Google Analytics. [There's an explanation](https://support.google.com/analytics/answer/1033068?hl=en#NonInteractionEvents) fit for Computer Science doctorates, but for this case, it will be False.
 
 ![](/images/tracking-params.jpg)
+
+Now that our tag is configured, let's set up the Triggering. **Select the Triggering field** below for the Choose a trigger menu to pop up. 
+
+![](/images/triggering-field.jpg)
+
+For this step, we'll need to add a new trigger. Select the plus sign in the upper right corner. 
+
+![](/images/choose-trigger-1.jpg)
