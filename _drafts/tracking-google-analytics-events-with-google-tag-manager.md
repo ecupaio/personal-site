@@ -54,3 +54,47 @@ Now that our tag is configured, let's set up the Triggering. **Select the Trigge
 For this step, we'll need to add a new trigger. Select the plus sign in the upper right corner. 
 
 ![](/images/choose-trigger-1.jpg)
+
+Yet another popup will appear. Add a title ("Work with me click"), then **select the Trigger Configuration field** for, you guessed it, another popup for selecting the type of trigger. 
+
+**Select All Elements** in the Choose type menu and you will be treated with yet another popup window. 
+
+![](/images/trigger-type.jpg)
+
+For "This trigger fires on" select **Some Clicks**
+
+Now we can set the conditions. Select the first dropdown and select Choose built in variable for, the last one I swear, a popup window with variable options. 
+
+![](/images/trigger-condition-select.jpg)
+
+I'm using **Click URL** because I might choose later on to change the button text, but the URL will stay the say unless I make some major changes. 
+
+![](/images/choose-variable.jpg)
+
+With the variable chose, I set up the rest of the conditions. I selected contains then entered open-form because I only want to trigger this even when a user clicks a button with this particular link. **Select Save** in the upper right corner to add the trigger. 
+
+![](/images/trigger-conditions-1.jpg)
+
+With all our settings configured, we are ready to add the tag. **Select Save** in the upper-right corner to add the tag. 
+
+### Test the Tag
+
+Before we submit the tag, let's test it first. **Select the Preview button** next to Submit in the upper right-hand corner. 
+
+A new tab will open as a result. **Add your URL** to the Your website's URL input , then **select Connect**. 
+
+![](/images/connect-tag-assistant.jpg)
+
+A popup window will appear with your site and the Tag Assistant will startup in the tab. 
+
+Go ahead and test the event by clicking the button with the conditions you created earlier. 
+
+Navigate back to the Tab with Tag Assistant open and select the Click event. 
+
+![](/images/tag-assistant.jpg)
+
+You should see your tag under Tags fired. If not, go back to your trigger conditions, refine them, and select Preview to restart the Tag Assistant until you see the tag get triggered. 
+
+You can also open Google Analytics and use the [Real-Time events report](https://support.google.com/analytics/answer/1638635?hl=en#zippy=%2Cin-this-article) to confirm that the event is being recorded (RealTime > Events) 
+
+Once you see your tag is working, go back to the tab with Google Tag Manager open and select Submit then Publish to make your new tag live. 
