@@ -56,6 +56,9 @@ collections:
   services: 
     output: false
     permalink: /services/:title/  
+  studies: 
+    output: true
+    permalink: /study/:title/   
 defaults:
   - scope:
       path: ""
@@ -81,3 +84,7 @@ defaults:
       type: "services"      
     values: 
       layout: service  
+  - scope: 
+      type: "studies"      
+    values: 
+      layout: study      

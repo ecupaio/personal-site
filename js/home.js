@@ -108,5 +108,8 @@ $(function() {
       }, i * 300);
     });
   }, 1000);
+
+  //studies slider
+  
   
 });

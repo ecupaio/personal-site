@@ -59,5 +59,41 @@ $(document).ready(function() {
       }
     }
   });
-  
+  function getNumberOfMovies(substr) {
+    /*
+     * Endpoint: "https://jsonmock.hackerrank.com/api/movies/search/?Title=substr"
+     */
+    var xmlreq = new XMLHttpRequest();
+    xmlreq.onreadystatechange = function() {
+        
+      if (this.readyState == 4 && this.status == 200) {
+            var data = JSON.parse(this.responseText);
+            
+      }      
+          
+    }
+    xmlreq.open("GET","https://jsonmock.hackerrank.com/api/movies/search/?Title=maze");
+    xmlreq.send();
+  }
+  getNumberOfMovies('maze');   
+  function longestEvenWord(sentence) {
+    var sentArray = sentence.split(" ");
+    console.log(sentArray);
+    var longest = 0; 
+    var longestEven = '';
+    for (let i = 0; i < sentArray.length; i++) {
+        if (sentArray[i].length > longest) {
+            longest = sentArray[i].length;
+            longestEven = sentArray[i];
+            console.log(longestEven);
+            
+        } 
+        
+    }
+    return longestEven;
+        console.log(sentArray[i]);
+        console.log(longestEven);
+
+}
+longestEvenWord('It is a pleasant day today');
 });

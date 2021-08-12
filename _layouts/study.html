@@ -1,0 +1,92 @@
+---
+layout: default
+css: study
+scripts:
+- study
+---
+<div id="image-lightbox" >
+  <div class="image-container">
+    <div class="close-lightbox">&times;</div>
+    <img src="" alt="" class="selected-image" />
+  </div>
+</div>
+<main id="study">
+  
+  <section id="study-intro">
+    <div class="inner-section">
+      <div class="title-block">
+        <h1 class="intro-title">{{ page.title }}</h1>
+        <h5 class="intro-client">{{ page.client }}</h5>
+      </div>
+      <div class="text-block">
+        <div class="intro-text">
+          {{ page.intro.text | markdownify }}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="study-objective">
+    <div class="inner-section">
+      <div class="image-block">
+        <img src="{{ page.intro.image }}" class="study-image" alt="sample image of {{ page.title }}" />
+      </div>
+      <div class="obj-block">
+        <h4 class="obj-title">Objectives</h4>
+        <div class="obj-list">
+          {% for obj in page.intro.objectives %}
+          <div class="obj">{{ obj }}</div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="study-problems" class="study-content">
+    <div class="inner-section">
+      <h2 class="section-title"><i class="fa fa-question"></i> Problems</h2>
+      <div class="problems-list study-item-list">
+        {% for problem in page.problems %}
+        <div class="problem {% cycle 'odd','even' %} study-item">
+          <div class="text-col">
+            <h3 class="problem-title"><span class="dash">&ndash;</span> {{ problem.title }}</h3>
+            <div class="problem-text">
+              {{ problem.text | markdownify }}
+            </div>
+          </div>
+          <div class="image-col">
+            <img src="{{ problem.image }}" class="problem-image item-image" />
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  
+  <section id="study-solutions" class="study-content">
+    <div class="inner-section">
+      <h2 class="section-title"><i class="fa fa-lightbulb"></i> Solutions</h2>
+      <div class="solutions-list  study-item-list">
+        {% for solution in page.solutions %}
+        <div class="solution  {% cycle 'odd','even' %} study-item">
+          <div class="text-col">
+            <h3 class="solution-title"><span class="dash">&ndash;</span> {{ solution.title }}</h3>
+            <div class="solution-text">{{ solution.text | markdownify }}</div>
+          </div>
+          <div class="image-col">
+            <img src="{{ solution.image }}" class="solution-image item-image" />
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  
+  <section id="results-section">
+    <div class="inner-section">
+      <h2 class="section-title"><i class="fa fa-chart-line"></i> Results</h2>
+      <div class="results-text">
+        {{ page.results.text | markdownify }}
+      </div>
+    </div>
+  </section>
+  {% include footer-cta.html %}
+</main>

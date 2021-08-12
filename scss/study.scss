@@ -1,0 +1,180 @@
+@import "mixins.scss";
+@import "vars.scss";
+#image-lightbox {
+  z-index: -1;
+  opacity: 0;
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: scale(0);
+  transform-origin: center;
+  background-color: rgba($black,0.7); 
+  padding: 1rem;
+  text-align: center;
+  @include transition(transform,top,left,opacity);
+  overflow-y: hidden;
+  
+  &.active {
+    transform: scale(1);
+    z-index: 11;
+    opacity: 1;
+    top: 0 !important;
+    left: 0 !important;
+    overflow-y: scroll;
+  }
+  .image-container {
+    overflow-y: scroll;
+    display: inline-block;
+    text-align: right;
+  }
+  .close-lightbox {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $white;
+    position: relative;
+    
+    display: inline-block;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  
+}
+#study {
+  background-color: $white;
+  #study-intro {
+    background-color: $blue;
+    color: $white;
+    padding-bottom: 4rem;
+    .inner-section {
+      max-width: $size-medium;
+      margin: auto;
+    }
+    .title-block {
+      
+    }
+    .text-block {
+      
+    }
+    .image-block {
+
+    }
+    
+  }
+  #study-objective {
+    .inner-section {
+      
+    }
+    .image-block {
+      margin-top: -4rem;
+      .study-image {
+        @include border-radius;
+        overflow: hidden;
+        @include box-shadow;
+      }
+    }
+    .obj-block {
+      max-width: $size-small;
+      @include border-radius;
+      background-color: $blue;
+      color: $white;
+      padding: 2rem;
+      margin: 2rem auto 0;
+      
+      .obj-list {
+        .obj {
+          padding-left: 1rem;
+          position: relative;
+          margin-bottom: 1rem;
+          &:before {
+            content: '\2013';
+            position: absolute;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+  .study-content {
+    .inner-section {
+      padding: 2rem;
+      border: 2px solid $grey;  
+      @include border-radius;
+      text-align: center;
+    }
+    .section-title {
+      text-align: center;
+      position: relative;
+      display: inline-block;
+      
+      i {
+        color: $blue;
+        
+      }
+    }
+    .study-item-list {
+      
+      .study-item {
+        display: grid;
+        grid-template-columns:  repeat(2, 1fr);
+        column-gap: 2rem;
+        
+        margin: 4rem 0;
+        align-items: center;
+        .text-col {
+          text-align: right;
+          .dash {
+            color: $blue;
+          }
+        }
+        .image-col {
+          .item-image {
+            &:hover {
+              cursor: zoom-in;
+            }
+          }
+        }
+        @include bp-medium {
+          display: block;
+        }
+        &.even {
+          .image-col {
+            order: 1;
+            
+          }
+          .text-col {
+            order: 2;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+  #results-section {
+    .inner-section {
+      padding: 2rem;
+      border: 2px solid $grey;  
+      @include border-radius;
+      text-align: center;
+    }
+    .section-title {
+      text-align: center;
+      position: relative;
+      display: inline-block;
+      
+      i {
+        color: $blue;
+        
+      }
+    }
+    .results-text {
+      text-align: left;
+      max-width: $size-medium;
+      margin: auto;
+    }
+  }
+  
+}

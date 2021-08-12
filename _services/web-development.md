@@ -6,7 +6,7 @@ intro:
 features: 
 - title: No-stress edits
   text: |-
-    I strongly believe that your website should be simple to edit. I make every single piece of content editable down to the links on the menu. Everything is customized to your exact needs and you get a guide and a training session to set you up for success. 
+    I strongly believe that your website should be simple to edit. I make every single piece of content editable down to the links on the menu. Everything is customized to your exact needs, plus you get a guide and a training session to set you up for success. 
   image: 
 - title: High performance, low maintenance 
   text: |- 
@@ -27,3 +27,5 @@ steps:
   text: <i class="fa fa-chalkboard-teacher"></i>
   icon: You will receive written guidance and a training on how to update every bit of content on your site. 
 ---
+My stack
+I use a combination of Jekyll, Forestry.io, and Github to create sites quickly with a fully customized content management system (CMS) and free hosting. Wordpress and Drupal use insecure codebases with a menagerie of plugins that can crash your site at any moment. What I built will allow you to control and create your content without the headaches and fees of the websites of old. My stack is known as a JAMstack, a modern way of website development and deployment,  but all you need to know is that your website won’t crash and you have control over your content. 

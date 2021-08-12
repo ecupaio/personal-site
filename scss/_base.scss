@@ -76,6 +76,8 @@ a {
 img,svg {
 	max-width: 100%;
 	height: auto;
+	margin: auto;
+	display: block;
 }
 //semantic elements
 main, section, article, footer, nav {
