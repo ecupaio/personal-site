@@ -125,13 +125,16 @@
         margin: 4rem 0;
         align-items: center;
         .text-col {
-          text-align: right;
+          text-align: left; 
           .dash {
             color: $blue;
           }
         }
         .image-col {
           .item-image {
+            @include border-radius;
+            @include box-shadow;
+            max-height: 400px;
             &:hover {
               cursor: zoom-in;
             }
@@ -147,7 +150,7 @@
           }
           .text-col {
             order: 2;
-            text-align: left;
+            
           }
         }
       }

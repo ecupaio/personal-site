@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Ed Cupaioli
-description: Web Development, UX, Training
+description: Web Development | UX | Training
 url: https://edcupaioli.com # the base hostname & protocol for your site, e.g. http://example.com
 meta_img: "/images/meta-img.png"
 email: "ed.cupaioli@gmail.com"

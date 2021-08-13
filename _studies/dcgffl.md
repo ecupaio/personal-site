@@ -20,17 +20,17 @@ solutions:
   - title: Relational content
     text: |-
       I created three post types: Teams, Games, and Locations. At the beginning of each season, content editors will add the teams, then their respective games where they would select the team they added from a dropdown of team pages. Then they could add a location from the Locations dropdown so they wouldn't have to add the address and details a bunch of times over.
-    image: 
+    image: /images/dcgffl-cms.jpg
   - title: Automated score-keeping and records
     text: |-
       The Scoreboard page was set up to feed in games as they were scored. This way content editors could enter the games for the season ahead of time and when I game score was entered through the mobile-friendly Foresty.io CMS, they would populate immediately on the scoreboard page. Wins and losses are automatically determined as well as records through the ease of coding in Liquid versus the former,cumbersome PHP of Wordpress. 
-    image:   
+    image: /images/dcgffl-scoreboard.jpg
   - title: One place for players
     text: |-
       Since all the game content was synced, team pages were now a one-stop shop for checking for results, seeing who your teammates are, seeing rankings, planning for upcoming matches. 
 
       I also added a League page so that players had a central hub to find out info about the season. For the content editors, they simply updated the season and week data to create site wide conditions of what results are shown throughout the site. 
-    image:     
+    image: /images/dcgffl-league.jpg    
 results: 
   text: |-
     Content editors are ready for the next upcoming season and referees will be able to score games live from the field. Now my beloved and sorely missed flag football league will have an updated site that can be edited without headaches. 
