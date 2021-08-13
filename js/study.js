@@ -11,4 +11,11 @@ $(function () {
   $('.close-lightbox').click(function() {
     $('#image-lightbox, body,html').removeClass('active');
   });
+  $('#image-lightbox').click(function (e) {
+    if (!$(e.target).hasClass('selected-image') && !$(e.target).hasClass('image-container')) {
+      $('#image-lightbox, body,html').removeClass('active');
+    } else {
+      
+    }
+  });
 });
