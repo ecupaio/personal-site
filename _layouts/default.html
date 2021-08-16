@@ -32,6 +32,9 @@ layout: compress
     </div>
   </footer>
   <!-- Scripts --> 
+  {% if page.slick == true or layout.slick == true %}
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  {% endif %}
   <!-- Sitewide -->
   <script src="/js/min/site-functions.min.js?{{site.time | date: '%s' }}"></script>
   <script src="/js/min/service-form.min.js?{{site.time | date: '%s' }}"></script>

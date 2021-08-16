@@ -138,6 +138,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
 <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-min.css">
 <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+{% if page.slick == true or layout.slick == true %}
+<!-- Slick -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+{% endif %}
 <!-- CSS -->
 <!-- Base CSS -->
 {%- capture base-css -%}
