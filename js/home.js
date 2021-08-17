@@ -110,6 +110,8 @@ $(function() {
   }, 1000);
 
   //studies slider
-  
+  $('#studies-slider').slick({
+    slidesToShow: 1,
+  });
   
 });
