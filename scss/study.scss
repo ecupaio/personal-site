@@ -124,11 +124,17 @@
         
         margin: 4rem 0;
         align-items: center;
+        &.full-width {
+          display: block;
+          max-width: $size-small;
+          margin: 4rem auto;   
+        }
         .text-col {
           text-align: left; 
           .dash {
             color: $blue;
           }
+          
         }
         .image-col {
           .item-image {
@@ -163,6 +169,7 @@
       @include border-radius;
       text-align: center;
     }
+    
     .section-title {
       text-align: center;
       position: relative;
@@ -171,6 +178,30 @@
       i {
         color: $blue;
         
+      }
+    }
+    .results-stats {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      gap: 0 2rem;
+      @include bp-medium {
+        display: block;
+      }
+      .stat {
+        width: 33.3333%;
+        text-align: center;
+        @include bp-medium {
+          width: 100%;
+          margin-bottom: 1rem;
+        }
+        .stat-number {
+          color: $blue;
+          margin-bottom: 0;
+        }
+        .stat-title {
+
+        }
       }
     }
     .results-text {

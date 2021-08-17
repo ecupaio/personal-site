@@ -45,17 +45,21 @@ scripts:
       <h2 class="section-title"><i class="fa fa-question"></i> Problems</h2>
       <div class="problems-list study-item-list">
         {% for problem in page.problems %}
-        <div class="problem {% cycle 'odd','even' %} study-item">
-          <div class="text-col">
+        <div class="problem {% cycle 'odd','even' %} study-item {% if problem.image.size == 0  %}full-width{% endif %}">
+          <div class="text-col ">
+            
             <h3 class="problem-title"><span class="dash">&ndash;</span> {{ problem.title }}</h3>
             <div class="problem-text">
               {{ problem.text | markdownify }}
             </div>
           </div>
+          {% if problem.image.size > 0 %}
           <div class="image-col">
             <img src="{{ problem.image }}" class="problem-image item-image" />
           </div>
+          {% endif %}
         </div>
+        
         {% endfor %}
       </div>
     </div>
@@ -66,14 +70,16 @@ scripts:
       <h2 class="section-title"><i class="fa fa-lightbulb"></i> Solutions</h2>
       <div class="solutions-list  study-item-list">
         {% for solution in page.solutions %}
-        <div class="solution  {% cycle 'odd','even' %} study-item">
+        <div class="solution  {% cycle 'odd','even' %} study-item {% if solution.image.size == 0 %}full-width{% endif %}">
           <div class="text-col">
             <h3 class="solution-title"><span class="dash">&ndash;</span> {{ solution.title }}</h3>
             <div class="solution-text">{{ solution.text | markdownify }}</div>
           </div>
+          {% if solution.image.size > 0 %}
           <div class="image-col">
             <img src="{{ solution.image }}" class="solution-image item-image" />
           </div>
+          {% endif %}
         </div>
         {% endfor %}
       </div>
@@ -83,6 +89,16 @@ scripts:
   <section id="results-section">
     <div class="inner-section">
       <h2 class="section-title"><i class="fa fa-chart-line"></i> Results</h2>
+      {% if page.results.stats.size > 0 %}
+      <div class="results-stats">
+        {% for stat in page.results.stats %}
+        <div class="stat">
+          <h1 class="stat-number">{{ stat.number }}</h1>
+          <div class="stat-title small">{{ stat.title }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
       <div class="results-text">
         {{ page.results.text | markdownify }}
       </div>
