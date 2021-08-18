@@ -101,7 +101,7 @@ So the only scenario, I have run into this is where there is scrollable content 
 
 ## Scroll Jacking
 
-Surfing the web is fun, but have you ever tried surfing the web [on weeeeed](https://www.youtube.com/watch?v=j0B7bzP-Gog&ab_channel=bcmca). 
+Surfing the web is fun, but have you ever tried surfing the web [on weeeeed](https://www.youtube.com/watch?v=j0B7bzP-Gog&ab_channel=bcmca). When you scroll on a mouse-wheel, trackpad, or touchscreen you expect to navigate with the save velocity as you swiped, but CSS3 allowed developers to add a chopped and screwed 
 
 ## Social Media Feeds
 
