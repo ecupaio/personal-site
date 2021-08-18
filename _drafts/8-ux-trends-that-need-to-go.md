@@ -25,14 +25,80 @@ You might think, "Oh but how will people get back to my site?" That big ol' left
 
 Google Analytics starts a session when you open the page and will stop it once you exit from the page. If you are opening links in new tabs, then Google doesn't know that the user has left the page since it's still open in a tab. 
 
+### Solution: Only open new tabs if the page needs to remain loaded
+
+An example of this scenario is the terms and conditions link on a form. If the user selects the link then their form progress will be obliterated. That's it, that's the one circumstance. Outside of that, just open them in the same window. If the user loves your site, [they will come back](https://www.digitalstrategyconsulting.com/ecommerce-and-eretailing/savvy-shoppers-make-9-visits-to-a-retailers-site-before-deciding-to-buy/12142/). 
+
 ## Video Backgrounds
+
+Video backgrounds look really slick but cause slow loading, cost bandwidth, and are inaccessible. 
+
+### Videos slow down page load time
+
+Videos are big files and loading that file can take a wee bit, especially for mobile users. According to [ZMOT](https://www.thinkwithgoogle.com/marketing-strategies/search/zmot-why-it-matters-now-more-than-ever/), Google's manifesto on website performance, users will decide whether or not they want to stay on a website within 1 second. So are they gonna wait for your background video they have to view through some text or look at cute pet pics on instagram?    
+
+### Videos take up bandwidth 
+
+I have used YouTube and Vimeo to offset video loading to another host in the past, but if you're using Wordpress or another site-builder, you probably are directly loading your video to your server. Loading a large video file over and over for your users 
+
+### Video backgrounds are inaccessible
+
+[According to WCAG](https://www.w3.org/WAI/media/av/av-content/), background videos need a pause button in case users have difficulty seeing the text in front of it. Also there's no way to guarantee the text color will sufficiently  contrast against the moving and changing background colors. Not only is it a moral imperative to provide an equal experience to all users regardless of ability, you can get sued under the Americans with Disabilities Act. Trust me when I say, that background video just ain't worth it.
+
+### Solution: Play videos on demand
+
+You paid for that videographer, let users see your fantastic movie about your organization or product. You can use the aforementioned video hosts to embed your video or [hire me](#open-form) to make a slick play button with a light-box. 
+
+![Example of video lightbox](/images/lightbox.jpg)
 
 ## Full-width Image Heroes
 
+Like the above background videos, full-width Image heroes have the same pitfalls: 
+
+* Contrast between text and background isn't guaranteed
+* Page load is impacted
+* Bandwidth is used to load the large files
+
+### Solution: Make the image the focus
+
+Also like the video, the image should be the an accompaniment to your content, not something you stick in the back. 
+
 ## Fade-in Content
 
+Like I mentioned before with ZMOT, users have very short attention spans so why are you hiding content from them. Most of these content fade-ins are performed on scroll so if you're quickly skimming through a website for information or wanting to click on a button, you might not see it immediately. There's no advantage to hiding content from your users, only disadvantages so show 'em what they clicked on your website for! 
+
+### Solution: Fade in hidden content on demand and make it quick
+
+I have all my content ready to view on load, except for my [contact form](#open-form) since it doesn't fit snuggly anywhere. Go ahead and click on the link. Whoah! That sure looked snazzy and I didn't delay you too long.  
+
+## Full-Screen Popups
+
+Another scenario: you see an ad for delicious, fair-trade, expertly roasted coffee beans. You are [thinking about those beans](https://knowyourmeme.com/memes/im-thinking-about-thos-beans) so you click on the ad and there they are: a 16 oz bag of Ethiopia's finest java. But just before you click on that add to cart button a full screen popup appears on your viewport asking you to signup for a newsletter. You ain't trying to read some emails about coffee! You wanna sip that fine bean juice. You can't even exit out of it. You have to find some small hidden text that says "I hate emails and every copy writer making them and their mothers." You're so worked up you second guess your need for caffeine and leave the site. 
+
+### Never ever ever ever prevent the user from completing a conversion
+
+Why would you hide your primary conversion behind a secondary ask? If you pay my hourly rate, I will do it for you but I won't like it. No friction should ever come in between a user and completing a conversion unless it is legally required (eg age gate, terms agreement, etc). The quicker they can convert, the more likely they are to convert. Just stay out of the way and get their email signup after they bought something because they'll need to give their email for a receipt anyway. 
+
+### Solution: Use a top bar
+
+Your newsletter is still important. I get it, but there's a better way to make announcements for users. The top bar is great because it will be at a point of prominence and fixed to follow the user as they scroll, but it won't prevent them from smashing that buy button. 
+
+![](/images/topbar-ex.jpg)
+
 ## Scroll Hints
+
+What did you do to get to this section? You scrolled down here didn't ya? Did you need a reminder to scroll when you were up at the top? Probably not, unless you are a 19th century time traveller discovering the internet. If you are a time traveller, welcome to the 21st century: we've learned nothing just go back. 
+
+### Users already know to scroll
+
+If you don't need a wee animation to know to scroll, your users don't either. Always think "how would I use this site", not "I think people would like". The other case I hear for these wiggly boys is "some tech illiterate people may not know to scroll". As the defacto tech support for every person I know over the age of 40, let me tell you all of them know to scroll. Hell, our imaginary time traveller would figure it out if left to their devices. 
+
+### Solution: Only indicate scrolling is possible when it is not immediately obvious
+
+So the only scenario, I have run into this is where there is scrollable content embedded within a page. In my portfolio, you 
 
 ## Scroll Jacking
 
 ## Social Media Feeds
+
+## 
