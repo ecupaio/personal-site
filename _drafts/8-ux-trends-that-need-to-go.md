@@ -95,7 +95,7 @@ If you don't need a wee animation to know to scroll, your users don't either. Al
 
 ### Solution: Only indicate scrolling is possible when it is not immediately obvious
 
-So the only scenario, I have run into this is where there is scrollable content embedded within a page. In my portfolio, you 
+So the only scenario, I have run into this is where there is scrollable content embedded within a page. In my portfolio, you can see this. I took full height screenshots of my websites, but cut them off at 520px so you can easily navigate to other screenshots and see the details of each project. I have seen other examples of when websites embed terms and need users to scroll all the way to the end before agreeing. These scenarios are rare and it's best you leave the shivering chevron out. 
 
 ## Scroll Jacking
 
