@@ -101,7 +101,15 @@ So the only scenario, I have run into this is where there is scrollable content 
 
 ## Scroll Jacking
 
-Surfing the web is fun, but have you ever tried surfing the web [on weeeeed](https://www.youtube.com/watch?v=j0B7bzP-Gog&ab_channel=bcmca). When you scroll on a mouse-wheel, trackpad, or touchscreen you expect to navigate with the save velocity as you swiped, but CSS3 allowed developers to add a chopped and screwed 
+Surfing the web is fun, but have you ever tried surfing the web [on weeeeed](https://www.youtube.com/watch?v=j0B7bzP-Gog&ab_channel=bcmca). When you scroll on a mouse-wheel, trackpad, or touchscreen you expect to navigate with the save velocity as you swiped, but CSS3 allowed developers to add a [chopped and screwed property to scrolling](https://thinkbear.net/). Worse yet some developers use [javascript to disable the scroll](https://www.bertani.net/) all together and make scrolls just go from one section to the next. 
+
+### Let users go at their own speed
+
+As I mentioned in the last no-no, scrolling is the default action users will take when they visit a website so don't augment that behavior for them. If a user is trying to scroll to a buy button, why make it hard? Or worse, why give them the potential to miss their target? 
+
+### Solution: Don't jack the scroll
+
+There's no use case for changing the default behavior of scrolling. It's an awful experience and will cost you lots of developer hours to achieve the effect. 
 
 ## Social Media Feeds
 
