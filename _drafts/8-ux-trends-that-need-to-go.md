@@ -63,6 +63,8 @@ Like the above background videos, full-width Image heroes have the same pitfalls
 
 Also like the video, the image should be the an accompaniment to your content, not something you stick in the back. 
 
+![Example of image with focus](/images/side-image.jpg)
+
 ## Fade-in Content
 
 Like I mentioned before with ZMOT, users have very short attention spans so why are you hiding content from them. Most of these content fade-ins are performed on scroll so if you're quickly skimming through a website for information or wanting to click on a button, you might not see it immediately. There's no advantage to hiding content from your users, only disadvantages so show 'em what they clicked on your website for! 
@@ -113,4 +115,12 @@ There's no use case for changing the default behavior of scrolling. It's an awfu
 
 ## Social Media Feeds
 
-## 
+I have built custom feeds for Twitter and Instagram before that pulled in content from their respective API (raw data from the sites' databases), but they're all broken now. Why? Because the APIs were sunset and they sunset the APIs because Twitter and Instagram wanted users viewing their content on their site. 
+
+### Social media sites want users on their sites to show ads to
+
+Now some plugin authors have found some non-public backchannels to get that data and I myself have used those backchannels but Instagram is smart and started blocking IPs and disabling access. These plugins will eventually crash and you'll be left with a bunch of [blank spots where images are supposed to be](https://welcome.arcadia.com/powermove). 
+
+### Solution: Follow buttons and links to profiles
+
+[Instagram](https://developers.facebook.com/docs/instagram/embed-button/), [Twitter](https://developer.twitter.com/en/docs/twitter-for-websites/follow-button/overview#:\~:text=The%20Follow%20button%20is%20a,into%20our%20recognizable%20Follow%20button.), and [Facebook](https://developers.facebook.com/docs/plugins/like-button/) all offer follow buttons and post embeds that you can add to your website. If the goal is to get users to follow your accounts then this is the perfect solution. If you just want users to view your social media content, then just link them out with an icon and let twitter or instagram deal with serving the images. 
