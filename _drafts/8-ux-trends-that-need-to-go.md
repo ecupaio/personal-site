@@ -1,5 +1,5 @@
 ---
-title: '8 UX Trends That Need to Go '
+title: 8 UX Trends That Need to Go Away
 meta_img: ''
 tags: []
 footer-cta:
