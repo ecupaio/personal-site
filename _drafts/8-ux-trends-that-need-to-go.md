@@ -1,6 +1,6 @@
 ---
 title: 8 UX Trends That Need to Go Away
-meta_img: ''
+meta_img: "/images/computer-rage.jpg"
 tags: []
 footer-cta:
   title: ''
