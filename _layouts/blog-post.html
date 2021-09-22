@@ -32,22 +32,25 @@ scripts:
     </div>
     {% include separator.html %}
     <div class="share-post">
-      <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url | url_encode}}{{ page.url | url_encode }}" target="_blank">
-        <i class="fab fa-linkedin-in"></i>
+      <a class="share-btn" aria-label="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url | url_encode}}{{ page.url | url_encode }}" target="_blank" rel="noreferrer noopener">
+        <i class="fab fa-linkedin-in" aria-hidden="true" title="Share on LinkedIn"></i>
+        
       </a>
-      <a class="share-btn fbook" href="{{ site.url }}{{ page.url }}" data-title="{{ page.title }}">
+      <a class="share-btn fbook" aria-label="Share on Facebook" href="{{ site.url }}{{ page.url }}" data-title="{{ page.title }}" rel="noreferrer noopener">
         <i class="fab fa-facebook-f"></i>
+        
       </a>
-      <a class="share-btn" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url | url_encode}}{{ page.url | url_encode }}">
+      <a class="share-btn" aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url | url_encode}}{{ page.url | url_encode }}" rel="noreferrer noopener">
         <i class="fab fa-twitter"></i>
+        
       </a>
-      <a class="share-btn" href="mailto:?subject={{ page.title }}&body={{ site.url }}{{ page.url | url_encode }}">
+      <a class="share-btn" aria-label="Share on Email" href="mailto:?subject={{ page.title }}&body={{ site.url }}{{ page.url | url_encode }}" rel="noreferrer noopener">
         <i class="fa fa-envelope"></i>
       </a>
-      <a class="share-btn copy" href="#">
+      <a class="share-btn copy" aria-label="Copy Link" href="#">
         <i class="fa fa-check"></i>
         <i class="fa fa-link"></i>
-        <input class="copy-link" value="{{ site.url }}{{ page.url }}">
+        <input class="copy-link" aria-label="Copy Link Text" value="{{ site.url }}{{ page.url }}">
       </a>
     </div> 
   </section>
