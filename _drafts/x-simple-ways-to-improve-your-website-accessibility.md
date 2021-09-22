@@ -10,3 +10,5 @@ footer-cta:
 Add aria-label to icon links and form inputs
 
 Check Contrast Ratios
+
+Create a heading class to avoid sequential ordering 
