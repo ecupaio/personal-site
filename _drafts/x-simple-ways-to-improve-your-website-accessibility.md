@@ -37,14 +37,46 @@ Now you should see a report with a bunch of metrics. Select the Accessibility fi
 
 ![](/images/report-heading.jpg)
 
-Once you're at the Acecessibility section report
+Once you're at the Accessibility section of the report, Google will give you suggestions on what you need to fix. Just select the drop-downs for each suggestion for more details. 
 
-## Check Contrast Ratios
+![Image of accessibility report](/images/accessibility-report.jpg)
 
-Make links descriptive.
+Though Google has a habit of writing suggestions fit for computer science PhDs and not the average user so I have outlined some common issues and easy fixes for you below. 
+
+## Contrast foreground and background colors
+
+**Error:** [Background and foreground colors do not have a sufficient contrast ratio](https://web.dev/color-contrast/)
+
+This is a very obvious one I see all the time. Colors need to contrast for visually impaired and color blind people to properly read the text. WCAG calculates the ratio between background and foreground colors and has acceptable ratios for regular or large/bold text. Fortunately, you don't have to calculate any of this since Google's Developer Tools provides a solution. With Developer Tools open, select the wee arrow in a box icon at the top of the tools dashboard, then hover over the element.
+
+![Image of how to select Element Inspector](/images/element-inspector.jpg)
+
+Now you should see a wee report pop up: 
+
+![Image of an element inspection report](/images/element-inspection.jpg)
+
+If you get green checks, you're accessible. If not then it's time to adjust those colors. Now I know what you're thinking "Our brand colors are essential to our company and will cause a disturbance in the universe if we don't adhere to the brand standards." I'm here to say after hundreds of experiments on websites that won't happen and I have a great tool to help you out. Use the [Accessible Color Generator](https://learnui.design/tools/accessible-color-generator.html) to get as close to your color as possible within the limits of WCAG contrast ratio standards. Make sure to use colors that are for the appropriate text size and weight to pass that accessibility audit. 
+
+## Make links descriptive
+
+**Error:** [Links do not have descriptive text](https://web.dev/link-text/) 
+
+Would you like to click [here](https://images.squarespace-cdn.com/content/v1/574f0b9a37013b939ab0b866/1496756132867-73OIJLCK4ERLZZ9ETFQF/image-asset.png) to know more or simply just [know more](https://images.squarespace-cdn.com/content/v1/574f0b9a37013b939ab0b866/1496756132867-73OIJLCK4ERLZZ9ETFQF/image-asset.png)?  As you can see a descriptive link text is more eye-catching and it has the added benefit of being accessible.  
+
+## Add aria-label to icon links and form inputs without labels
+
+Now you might have a situation where using text is not an option like an x for a close button or a twitter icon to direct users to your twitter page. Fortunately there's an HTML solution that you can use to solve this conundrum: [aria-label](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute). 
+
+    <a href="https://twitter.com/user" aria-label="My Twitter Page">
+    	<i class="fab fa-twitter"></i>
+    </a>
+
+In the example above I added **aria-label="My Twitter Page"** to tell the screenreader that the icon symbolizes a link to my twitter page. You can add the same attribute to form inputs that don't have labels so that the user will know which form input they are filling out:
+
+    <input type="text" name="fname" aria-label="First Name" placeholder="First Name" />
 
 ## Add aria-hidden to decorative elements
 
-## Add aria-label to icon links and form inputs
+## 
 
 ## Create a heading class to avoid sequential ordering
