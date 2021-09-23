@@ -1,7 +1,9 @@
 ---
 title: Simple Ways to Improve your Website Accessibility
 meta_img: https://images.pexels.com/photos/4050296/pexels-photo-4050296.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
-tags: []
+tags:
+- Accessibility
+- SEO
 footer-cta:
   title: Want 100s across the board?
   text: Get in touch with me and I'll make sure your website is accessible without
