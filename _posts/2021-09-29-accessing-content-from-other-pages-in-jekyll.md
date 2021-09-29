@@ -30,7 +30,7 @@ In this example, we will pull in front matter content from the about page (about
     <section id="about-section">
       <h2>About</h2>
       <div class="about-intro">
-      	<div class="intro-text"></div>
+        <div class="intro-text"></div>
         <a class="about-link" href="">Learn more</a>
       </div>
     </section>
@@ -58,8 +58,8 @@ Now let's see it in practice:
     <section id="about-section">
       <h2>About</h2>
       <div class="about-intro">
-      	{% assign about-page = site.pages | where: "path", "about.html" | first %}
-      	<div class="intro-text"></div>
+        {% raw %}{% assign about-page = site.pages | where: "path", "about.html" | first %}{% endraw %}
+        <div class="intro-text"></div>
         <a class="about-link" href="">Learn more</a>
       </div>
     </section>
@@ -79,8 +79,8 @@ Now we can just use this page variable like we would use [page variables](https:
     <section id="about-section">
       <h2>About</h2>
       <div class="about-intro">
-      	{% assign about-page = site.pages | where: "path", "about.html" | first %}
-      	<div class="intro-text">{% raw %}{{ about-page.intro }}{% endraw %}</div>
+        {% raw %}{% assign about-page = site.pages | where: "path", "about.html" | first %}{% endraw %}
+        <div class="intro-text">{% raw %}{{ about-page.intro }}{% endraw %}</div>
         <a class="about-link" href="{%raw%}{{ about-page.url }}{% endraw %}">Learn more</a>
       </div>
     </section>

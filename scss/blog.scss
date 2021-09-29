@@ -127,12 +127,17 @@
     .post-content {
       pre {
         display: block;
-        background-color: $charcoal;
+        padding: 0.5rem;
       }
       code {
+        display: inline-block;
+      }
+      pre,code {
         background-color: $charcoal;
         color: $white;
-        word-break: break-all;
+        
+        overflow-x: auto;
+        
       }
     }
   }
