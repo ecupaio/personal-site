@@ -104,4 +104,4 @@ In order to access content from other pages into a page, you need to:
 
 Thanks for tuning in for another Jekyll lesson! 
 
-PS: If you want to show Jekyll page variables as plain strings, use the [raw](https://jekyllrb.com/docs/liquid/tags/) liquid tag. 
+PS: If you want to show Jekyll page variables as plain strings, use the [raw](https://jekyllrb.com/docs/liquid/tags/) liquid tag.
