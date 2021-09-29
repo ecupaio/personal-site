@@ -80,14 +80,14 @@ Now we can just use this page variable like we would use [page variables](https:
       <h2>About</h2>
       <div class="about-intro">
       	{% assign about-page = site.pages | where: "path", "about.html" | first %}
-      	<div class="intro-text">\{\{ about-page.intro \}\}</div>
-        <a class="about-link" href="\{\{ about-page.url \}\}">Learn more</a>
+      	<div class="intro-text">{% raw %}{{ about-page.intro }}{% endraw %}</div>
+        <a class="about-link" href="{{ about-page.url }}">Learn more</a>
       </div>
     </section>
 
 In the above snippet I have brought in the front matter from the about page.
 
-{{ about-page.intro }} is from the intro: front matter on the about.html page. 
+{% raw %}{{ about-page.intro }}{% endraw %} is from the intro: front matter on the about.html page. 
 
 {{ about-page.url }} is the link to the about.html page. I use the url variable here because I don't want the link to break if we change the permalink to /our-story/ or whatever. 
 
