@@ -9,9 +9,9 @@ footer-cta:
   text: 'I really like talking with fellow coders on that grind. My inbox is open. '
 
 ---
-**Scenario:** You want to feed in content from another page into your homepage. You frantically googled this title and my post came up in the search results after all the unhelpful jerks in StackOverflow. Welcome! I'll sort you out right and you can always contact me if you have questions. 
+**Scenario:** You want to feed in content from another page into your homepage. You frantically googled this title and my post came up in the search results after all the unhelpful jerks in StackOverflow. Welcome! I'll sort you out right and you can always contact me if you have questions.
 
-In this example, we will pull in front matter content from the about page (about.html) into the home page (index.html). Specifically we're going to pull in the link to the about page and the intro text. 
+In this example, we will pull in front matter content from the about page (about.html) into the home page (index.html). Specifically we're going to pull in the link to the about page and the intro text.
 
 **about.html**
 
@@ -36,3 +36,26 @@ In this example, we will pull in front matter content from the about page (about
     </section>
 
 ## Create a variable with the page content
+
+    {% assign about-page = site.pages | where: "path", "about.html" | first %}
+
+Let's break this down. You already know how to [create a variable](https://shopify.github.io/liquid/tags/variable/), so we'll skip that. What I did above was create an array, then filtered it and finally selected the item. 
+
+site.pages is a 
+
+Now let's see it in practice: 
+
+**index.html**
+
+    ---
+    title: Home
+    permalink: /
+    ---
+    <section id="about-section">
+      <h2>About</h2>
+      <div class="about-intro">
+      	{% assign about-page = site.pages | where: "path", "about.html" | first %}
+      	<div class="intro-text"></div>
+        <a class="about-link" href="">Learn more</a>
+      </div>
+    </section>
