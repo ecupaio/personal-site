@@ -103,3 +103,5 @@ In order to access content from other pages into a page, you need to:
   * Just use dot notation like you would for a page but use the variable instead
 
 Thanks for tuning in for another Jekyll lesson! 
+
+PS: If you want to show Jekyll page variables as plain strings, use the [raw](https://jekyllrb.com/docs/liquid/tags/) liquid tag. 
