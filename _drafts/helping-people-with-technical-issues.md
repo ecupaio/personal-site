@@ -1,10 +1,11 @@
 ---
 title: Helping People with technical issues
-tags: []
-meta_img: ''
+tags:
+- Training
+meta_img: https://images.pexels.com/photos/1181472/pexels-photo-1181472.jpeg?cs=srgb&dl=pexels-christina-morillo-1181472.jpg
 footer-cta:
-  title: ''
-  text: ''
+  title: Need some help from me?
+  text: I'm all ears. Send me a line and let's find a solution together.
 
 ---
 A little coding humor folks: 
