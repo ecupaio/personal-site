@@ -1,0 +1,48 @@
+@import "mixins.scss";
+@import "vars.scss";
+#theme-landing {
+  #hero {
+    background-color: $blue;
+    color: $white;
+    padding: 4rem 2rem;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 33.3333% 66.6667%;
+      gap: 2rem;
+      @include bp-medium {
+        grid-template-columns: repeat(1,1fr);
+      }
+      .text-col {
+        .btn {
+          margin-top: 1rem;
+        } 
+      }
+    }
+  }
+  #product-section {
+    .section-title {
+      text-align: center;
+
+    }
+    .attr-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      margin-top: 2rem;
+      gap: 2rem;
+      @include bp-medium {
+        grid-template-columns: repeat(1,1fr);
+      }
+      .attr-col {
+        padding: 2rem;
+        text-align: center;
+        background-color: $white;
+        color: $black; 
+        @include border-radius;
+        @include box-shadow;
+        .attr-icon {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

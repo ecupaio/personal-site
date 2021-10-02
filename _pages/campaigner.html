@@ -1,0 +1,132 @@
+---
+title: Campaigner Theme
+permalink: /campaigner-theme/
+css: theme-landing
+hero: 
+  title: Focus on the trail, not the HTML
+  text: A ready made political campaign site with everything you need, plus the tools to edit on the fly.
+  button: 
+    text: Live demo
+    link: "https://campaigner.netlify.app/"
+  image: "/images/campaigner-demo.png"
+steps: 
+  title: "How it works"
+  items:
+  - title: Supply your brand assets
+    text: Give me your campaign logo, colors, and any other assets (fonts, icons, etc), then I will upload them to the site and ensure they load properly and pass WCAG compliance. 
+    image: 
+  - title: Customize your layout
+    text: Select your homepage layout from a variety of modular elements that can be placed in any order or combination.
+    image: 
+  - title: Add in your content
+    text: Everything in your site will be editable and I will provide you with step-by-step guidance to help you with content entry.
+    image: 
+  - title: Launch your website
+    text: Either supply me with a domain already bought or I can purchase one for you. Then I'll make it live using my best in class host and proxy service for an extra layer of security. 
+    image: 
+features: 
+  title: Features
+  list: 
+  - title: 100% editable
+    text: I've built a completely custom content management system (CMS), just for this site. Every word and image on the site is editable down the links in the 
+    image:  
+  - title: Performance, Security, and Compliance  
+    text: Fast, secure, and accessible sites are preferred by SEO engines and users are more likely to take action. 
+    image:
+  - title: Maintenance free
+    text: Wordpress sites require constant core security updates and can cause plugins to break. This template is based on Jekyll, which deploys a static site that is unhackable and never requires updates. 
+    image:
+  - title: Ready for launch
+    text: I've thought of every possible thing a candidate would need from my years of experience working in politics so that you can focus on the content rather than the design or features. We can be ready for launch in as little as 1 week! 
+    image: 
+  - title: NGP VAN and ActBlue integrated
+    text: It's what most democrat candidates use so why not have it ready to go? All you need to do is drop in your form IDs and you'll be ready for donors and volunteers visiting your site.
+    image: 
+  - title: Customizations available
+    text: I've made variants of each of the sections on the homepage, plus I can change the site-wide colors with just two lines of code. Everything on the template is modular and I can make it your way with relative ease. 
+    image: 
+  - title: Cheap, reliable hosting
+    text: $5 a month for hosting from [Netlify](https://www.netlify.com/customers/), an industry leading hosting provider with the best in class security and performance. 
+    image: 	
+product:
+  title: What you get
+  items:
+  - title: Campaign site
+    text: 1 fast, secure, accessible campaign site that will be launched in no time. 
+    icon: <i class="fa fa-desktop"></i>
+  - title: Guidance and Training
+    text: You a full, step-by-step guide to editing your site, plus training if you need it. 
+    icon: <i class="fa fa-book"></i>	
+  - title: Customizations and setup
+    text: I will customize the template to your exact specifications and handle the launch.
+    icon: <i class="fa fa-cogs"></i>
+  - title: Support
+    text: Though this template is built to last, sometimes things happen and I'll be there to help.
+    icon: <i class="fa fa-tools"></i>
+comparison: 
+  title: 
+  items:
+  - title: Pricing
+    me: Less than $20K
+    them: $50K or more
+  - title: Time to launch
+    me: 1 week
+    them: 2 - 3 Months
+  - title:  
+    me: 
+    them:
+pricing: 
+  title: Pricing 
+  text: Let's chat
+  form:
+---
+<main id="theme-landing">
+  <section id="hero">
+    <div class="inner-section">
+      <div class="hero-grid">
+        <div class="hero-col text-col">
+          <h1 class="hero-title">{{ page.hero.title }}</h1>
+          <div class="hero-text">{{ page.hero.text }}</div>
+          <a class="btn" href="{{ page.hero.button.link }}">{{ page.hero.button.text }}</a>
+        </div>
+        <div class="hero-col image-col">
+          <img class="hero-image" alt="Demo of campaigner theme on mobile and desktop" src="{{ page.hero.image }}" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="features-section">
+    <div class="inner-section">
+      <h2 class="section-title">{{ page.features.title }}</h2>
+      <div class="features-list">
+        {% for feature in page.features.list %}
+        <div class="feature-block">
+          <div class="text-col">
+
+          </div>
+          <div class="image-col">
+            <img class="feature-image" src="{{ feature.image }}" alt="{{ feature.title }}"/>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <section id="product-section">
+    <div class="inner-section">
+      <h2 class="section-title">{{ page.product.title }}</h2>
+      <div class="attr-grid">
+        {% for attr in page.product.items %}
+        <div class="attr-col">
+          <div class="attr-icon">
+            {{ attr.icon }}
+          </div>
+          <div class="attr-title heading-3">{{ attr.title }}</div>
+          <div class="attr-text">{{ attr.text }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      {% include button-row.html link="#footer-cta" text="Get started" %}
+    </div>
+  </section>
+</main>
