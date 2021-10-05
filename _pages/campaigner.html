@@ -2,6 +2,8 @@
 title: Campaigner Theme
 permalink: /campaigner-theme/
 css: theme-landing
+scripts: 
+- campaigner
 hero: 
   title: Focus on the trail, not the HTML
   text: A ready made political campaign site with everything you need, plus the tools to edit on the fly.
@@ -14,45 +16,64 @@ steps:
   items:
   - title: Supply your brand assets
     text: Give me your campaign logo, colors, and any other assets (fonts, icons, etc), then I will upload them to the site and ensure they load properly and pass WCAG compliance. 
-    image: 
+    
   - title: Customize your layout
     text: Select your homepage layout from a variety of modular elements that can be placed in any order or combination.
-    image: 
+    
   - title: Add in your content
     text: Everything in your site will be editable and I will provide you with step-by-step guidance to help you with content entry.
-    image: 
+    
   - title: Launch your website
     text: Either supply me with a domain already bought or I can purchase one for you. Then I'll make it live using my best in class host and proxy service for an extra layer of security. 
-    image: 
+    
 features: 
   title: Features
   list: 
   - title: 100% editable
-    text: I've built a completely custom content management system (CMS), just for this site. Every word and image on the site is editable down the links in the 
-    image:  
+    text: I've built a completely custom content management system (CMS) with [Forestry.io](https://forestry.io/). Every word and image on the site is editable down the links in the footer.
   - title: Performance, Security, and Compliance  
-    text: Fast, secure, and accessible sites are preferred by SEO engines and users are more likely to take action. 
-    image:
+    text: Fast load times, safe browsing, and WCAG compliant design all point to better SEO and user experience. 
   - title: Maintenance free
     text: Wordpress sites require constant core security updates and can cause plugins to break. This template is based on Jekyll, which deploys a static site that is unhackable and never requires updates. 
-    image:
+    
   - title: Ready for launch
     text: I've thought of every possible thing a candidate would need from my years of experience working in politics so that you can focus on the content rather than the design or features. We can be ready for launch in as little as 1 week! 
-    image: 
+    
   - title: NGP VAN and ActBlue integrated
     text: It's what most democrat candidates use so why not have it ready to go? All you need to do is drop in your form IDs and you'll be ready for donors and volunteers visiting your site.
-    image: 
+    
   - title: Customizations available
     text: I've made variants of each of the sections on the homepage, plus I can change the site-wide colors with just two lines of code. Everything on the template is modular and I can make it your way with relative ease. 
-    image: 
+    
   - title: Cheap, reliable hosting
     text: $5 a month for hosting from [Netlify](https://www.netlify.com/customers/), an industry leading hosting provider with the best in class security and performance. 
-    image: 	
+  categories: 
+  - title: Developed for the campaign
+    image: /images/about-section.jpg
+    list: 
+    - Content management for everything you can see 
+    - Pre-made pages awaiting your personal touch
+    - Launch in as little as one week
+    - NGP VAN and ActBlue integrations
+  - title: Build to perform, built to last
+    image: /images/campaigner-donate-section.jpg
+    list: 
+    - No plugin or security updates needed  
+    - Lighting fast page load
+    - Optimized for mobile
+    - $5/month hosting
+  - title: Everything you didn't know you needed
+    image: /images/campaigner-issues.jpg
+    list: 
+    - Secure against hacks and DDoS attacks
+    - Google Analytics and Tag Manager integrated
+    - Meta data and schema markup for SEO and social media
+    - WCAG compliant
 product:
   title: What you get
   items:
   - title: Campaign site
-    text: 1 fast, secure, accessible campaign site that will be launched in no time. 
+    text: A fast, secure, accessible campaign site that will be launched in no time. 
     icon: <i class="fa fa-desktop"></i>
   - title: Guidance and Training
     text: You a full, step-by-step guide to editing your site, plus training if you need it. 
@@ -67,18 +88,52 @@ comparison:
   title: 
   items:
   - title: Pricing
-    me: Less than $20K
+    me: Less than $25K
     them: $50K or more
   - title: Time to launch
     me: 1 week
-    them: 2 - 3 Months
-  - title:  
-    me: 
-    them:
-pricing: 
-  title: Pricing 
-  text: Let's chat
+    them: At least 3 Months
+  - title: Maintenance   
+    me: No updates required, ever
+    them: Constant wordpress security updates
+  - title: Content management 
+    me: Everything is editable and bespoke to your needs
+    them: Only certain pages and post types   
+  - title: Guidance
+    me: Step-by-step guide for every component on the site 
+    them: No guide and an engineer tries their best to speak human
+  - title: Security
+    me: Unhackable static site, plus an extra layer of security with cloudflare
+    them: Numerous holes that you're on the hook to plug 
+  - title: Performance 
+    me: Built to load in 0.5 seconds and optimized for mobile
+    them: Built to please your aesthetic and pad their portfolio
+  - title: Accessibility 
+    me: 100% accessible according to Google's Accessibility standards
+    them: Didn't even check the color contrasts
+footer-cta: 
+  title: Get a quote 
   form:
+    success: Thanks for your interest! We'll be in touch soon.
+    fields: 
+    - label: Candidate/Official Name
+      name: entry.57708989
+      placeholder: Barack Obama
+    - label: Office
+      name: entry.214708384
+      options:  
+      - State House/Municipal seat
+      - State Senate/Governor
+      - US House/Senate
+    - label: Your Name
+      name: entry.1089443413
+      placeholder: David Axelrod
+    - label: Email
+      name: entry.953549571
+      placeholder: youremail@email.com
+    - label: Phone   
+      name: entry.71561304
+      placeholder: 555-555-5555
 ---
 <main id="theme-landing">
   <section id="hero">
@@ -87,7 +142,7 @@ pricing:
         <div class="hero-col text-col">
           <h1 class="hero-title">{{ page.hero.title }}</h1>
           <div class="hero-text">{{ page.hero.text }}</div>
-          <a class="btn" href="{{ page.hero.button.link }}">{{ page.hero.button.text }}</a>
+          <a class="btn" href="{{ page.hero.button.link }}" target="_blank">{{ page.hero.button.text }}</a>
         </div>
         <div class="hero-col image-col">
           <img class="hero-image" alt="Demo of campaigner theme on mobile and desktop" src="{{ page.hero.image }}" />
@@ -95,22 +150,29 @@ pricing:
       </div>
     </div>
   </section>
+  
   <section id="features-section">
-    <div class="inner-section">
-      <h2 class="section-title">{{ page.features.title }}</h2>
-      <div class="features-list">
-        {% for feature in page.features.list %}
-        <div class="feature-block">
-          <div class="text-col">
-
-          </div>
-          <div class="image-col">
-            <img class="feature-image" src="{{ feature.image }}" alt="{{ feature.title }}"/>
+    
+    {% for category in page.features.categories %}
+    <div class="category-block {% cycle 'odd', 'even' %}">
+      <div class="category-content">
+        <div class="text-col content-col">
+          <h2 class="category-title">{{ category.title }}</h2>
+          <div class="feature-list">
+            {% for feature in category.list %}
+            <div class="feature">
+              {{ feature }}
+            </div>
+            {% endfor %}
           </div>
         </div>
-        {% endfor %}
+        <div class="image-col content-col">
+          <img src="{{ category.image }}" class="category-image" />
+        </div>
       </div>
     </div>
+    {% endfor %}
+    {% include button-row.html text="Get a quote" link="#footer-cta" %}
   </section>
   <section id="product-section">
     <div class="inner-section">
@@ -126,7 +188,61 @@ pricing:
         </div>
         {% endfor %}
       </div>
-      {% include button-row.html link="#footer-cta" text="Get started" %}
+      {% include button-row.html link="#footer-cta" text="Get a quote" %}
+    </div>
+  </section>
+  <section id="steps-section">
+    <div class="inner-section">
+      <h2 class="section-title">{{ page.steps.title }}</h2>
+      <div class="steps-list">
+        {% for step in page.steps.items %}
+        <div class="step">
+          <div class="step-index heading-1"><span class="number">{{ forloop.index }}</span></div>
+          <h3 class="step-title">{{ step.title }}</h3>
+          <div class="step-text">{{ step.text }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <section id="footer-cta" class="blue">
+    <div class="inner-section">
+      <h2>{{ page.footer-cta.title }}</h2>
+      {{ page.footer-cta.text | markdownify }}
+      <form id="campaigner-form">
+        <div class="form-body">
+          {% for field in page.footer-cta.form.fields %}
+          {% if field.options.size > 0 %}
+          <div class="form-field select">
+            <label>{{ field.label }}</label>
+            <select class="office-select" required> 
+              <option disables>Select one</option>
+              {% for option in field.options %}
+              <option class="office-option">
+                {{ option }}
+              </option>
+              {% endfor %}
+              <option>Other</option>
+            </select>
+            <input type="hidden" class="office-selection" name="{{field.name}}" />
+          </div>
+          {% else %}
+          <div class="form-field text">
+            <label>{{ field.label }}</label>
+            <input name="{{ field.name }}" class="text-input" {% if field.label == "Email" %}type="email"{% else %}type="text"{% endif %} required placeholder="{{ field.placeholder }}" />
+          </div>
+          {% endif %}
+          {% endfor %}
+          <div class="btn-row">
+            <button type="submit" class="btn">Submit</button>
+          </div>
+        </div>
+        <div class="form-success">
+          <div class="success-text">
+            {{ page.footer-cta.form.success }}
+          </div>
+        </div>
+      </form>
     </div>
   </section>
 </main>
