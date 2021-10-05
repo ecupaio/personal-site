@@ -1,11 +1,16 @@
 $(document).ready(function() {
   //Universal scrollTop
-  function scrollTop(selector,offset) {
+  function scrollTop(selector) {
       $('body,html').animate({
-          scrollTop: $(selector).offset().top - offset
+          scrollTop: $(selector).offset().top
       });
   }
-  
+  //Link scroll top
+  $('a[href^="#"]').click(function(e) {
+    e.preventDefault();
+    var selector = $(this).attr('href');
+    scrollTop(selector);
+  })
   
 
   
