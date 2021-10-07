@@ -1,9 +1,40 @@
+---
+layout: default
+css: service
+---
 <main id="service-page">
-  <section id="intro">
+  <section id="intro-section" class="blue">
     <div class="inner-section">
       <h1>{{ page.intro.title }}</h1>
       {{ page.intro.text }}
       {% include form-button.html %}
     </div>
+  </section>
+  <section id="features-section">
+    <div class="inner-section">
+      <h2 class="section-title">
+        {{ page.features.title }}
+      </h2>
+      <div class="features-list">
+        {% for feature in page.features.list %}
+        <div class="feature {% cycle 'odd', 'even' %}">
+          <div class="feature-col text-col">
+            <h3 class="feature-title">{{ feature.title }}</h3>
+          <div class="feature-text">
+            {{ feature.text | markdownify }}
+          </div>
+          </div>
+          <div class="feature-col image-col">
+            <img class="feature-image" src="{{ feature.image }}"/>
+          </div>
+          
+        </div>
+        {% endfor %}
+        {% include form-button.html %}
+      </div>
+    </div>
+  </section>
+  <section id="">
+    <div class=""></div>
   </section>
 </main>
