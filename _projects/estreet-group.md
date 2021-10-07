@@ -6,6 +6,7 @@ image:
 - est-grp-services.jpg
 - est-grp-about.jpg
 - est-grp-contact.jpg
+tags: Jekyll
 tech:
 - Web development
 date: '2020-08-03 04:22:22'

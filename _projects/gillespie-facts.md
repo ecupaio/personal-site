@@ -4,6 +4,7 @@ link: 'https://democrats.github.io/gillespie-facts/'
 image:
 - Gillespie_Facts.jpg
 - Gillespie_Facts_Interior.jpg
+tags: Jekyll
 tech:
 - Web development
 date: '2017-09-27 04:05:01'

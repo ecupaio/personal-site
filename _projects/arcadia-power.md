@@ -9,6 +9,7 @@ image:
 - arcadia-wind.jpg
 - arcadia-solar.jpg
 - arcadia-our-impact.jpg
+tags: Jekyll
 tech:
 - Web development
 - Web design

@@ -7,6 +7,7 @@ image:
 - trump_russia-1.jpg
 - trump_russia-2.jpg
 - trump_russia-3.jpg
+tags: Jekyll
 link: ''
 date: '2017-03-30'
 ---

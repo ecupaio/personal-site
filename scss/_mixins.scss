@@ -59,6 +59,11 @@ Either pass the px number through individually, or set it as a variable */
     @content;
   }
 }
+@mixin bp-x-small {
+  @media only screen and (max-width: $size-x-small) {
+    @content;
+  }
+}
 //Flexbox
 @mixin flexbox {
   display: -webkit-box;

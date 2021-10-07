@@ -1,0 +1,164 @@
+@import "mixins.scss";
+@import "vars.scss";
+#service-page {
+  #intro-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    .inner-section {
+      max-width: $size-small;
+    }
+    .btn-row {
+      margin-top: 1rem;
+    }
+  }
+  #features-section {
+    .features-list {
+      .feature {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 4rem;
+        align-items: center;
+        padding: 5rem 0;
+        @include bp-medium {
+          grid-template-columns: repeat(1,1fr);
+          
+          padding: 2rem 0;
+        }
+        .text-col {
+          @include border-radius;
+          @include box-shadow;
+          padding: 2rem;
+          p {
+            margin-bottom: 0;
+          }
+        }
+        .image-col {
+          @include bp-medium {
+            display: none;
+          }
+          position: relative;
+          
+          &::before {
+            content: '';
+            width: 300px;
+            height: 300px;
+            bottom: -4rem;
+            right: -2rem;
+            
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: right bottom;
+            position: absolute;
+            z-index: -1;
+          }
+        }
+        &.even {
+          .image-col {
+            grid-column: 1;
+            grid-row: 1;
+            &:before {
+              
+              left: -2rem;
+              right: initial;
+            }
+            @include bp-medium {
+              grid-column: auto;
+              grid-row: auto;
+            }  
+          }
+        }
+        &:nth-child(1) {
+          .image-col {
+            &:before {
+              background-image: url('/images/blob-2.svg');
+            }
+          }
+        }
+        &:nth-child(2) {
+          .image-col {
+            &:before {
+              background-image: url('/images/blob-1.svg');
+            }
+          }
+        }
+        &:nth-child(3) {
+          .image-col {
+            &:before {
+              background-image: url('/images/blob-3.svg');
+            }
+          }
+        }
+      }
+      
+    }
+  }
+  #about-section {
+    .section-text {
+      text-align: center;
+      max-width: $size-medium;
+      margin: auto;
+    }
+    .about-items {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+      .item {
+        @include border-radius;
+        @include box-shadow;
+        padding: 2rem;
+        text-align: center;
+        .item-logo {
+          height: 100px;
+          width: 150px;
+          margin: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .logo-image {
+            max-height: 100%;;
+          }
+        }
+        .item-text {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    .about-benefits {
+      margin: 2rem auto 0;
+      @include border-radius;
+        @include box-shadow;
+        max-width: 400px;
+        overflow: hidden;
+        
+      .benefits-title {
+        text-align: center;
+        padding: 2rem;
+        background-color: $blue;
+        color: $white;
+        
+      }
+
+      .benefits-list {
+        
+        padding: 2rem;
+        .benefit {
+          padding-left: 2rem;
+          position: relative;
+          &:not(:last-child) {
+            margin-bottom: 1rem;
+          }
+          &:before {
+            content: "\f058";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: $blue;
+            position: absolute;
+            left: 0;
+            top: 3px;
+          }
+        }
+      }
+    }
+  }
+}

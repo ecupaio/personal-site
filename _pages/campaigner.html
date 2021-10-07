@@ -192,20 +192,7 @@ footer-cta:
       {% include button-row.html link="#footer-cta" text="Get a quote" %}
     </div>
   </section>
-  <section id="steps-section">
-    <div class="inner-section">
-      <h2 class="section-title">{{ page.steps.title }}</h2>
-      <div class="steps-list">
-        {% for step in page.steps.items %}
-        <div class="step">
-          <div class="step-index heading-1"><span class="number">{{ forloop.index }}</span></div>
-          <h3 class="step-title">{{ step.title }}</h3>
-          <div class="step-text">{{ step.text }}</div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
+  {% include steps-section.html %}
   <section id="footer-cta" class="blue">
     <div class="inner-section">
       <h2>{{ page.footer-cta.title }}</h2>

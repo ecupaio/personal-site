@@ -4,6 +4,7 @@ link: 'https://democrats.github.io/vote-va/'
 tech:
   - Frontend development
   - Web development
+tags: Jekyll
 image:
   - Vote_VA_1.jpg
   - Vote_VA_2.jpeg
