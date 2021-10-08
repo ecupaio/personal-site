@@ -7,9 +7,11 @@ $(document).ready(function() {
   }
   //Link scroll top
   $('a[href^="#"]').click(function(e) {
-    e.preventDefault();
-    var selector = $(this).attr('href');
-    scrollTop(selector);
+    if ($(this).attr('href').length > 1) {
+      e.preventDefault();
+      var selector = $(this).attr('href');
+      scrollTop(selector);
+    }
   })
   
 
