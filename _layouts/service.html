@@ -69,21 +69,22 @@ css: service
       </div>
     </div>
   </section>
-  <section id="samples-section">
+  <!-- <section id="samples-section">
     <div class="inner-section">
       <h2 class="section-title">{{ page.work.title }}</h2>
       <div class="samples-list">
-
         {% assign samples = site.projects | where_exp: 'item', 'item.tags contains "Jekyll"' | reverse %}
-        
         {% for sample in samples %}
         <div class="sample">
-          <div class="sample-title">{{ sample.title }}</div>
-          <img src="/images/{{ sample.image[0] }}" />
+          <div class="sample-title">
+            <div class="title-text heading-4">{{ sample.title }}</div>
+          </div>
+          {%- capture image -%}/images/{{sample.image[0]}}{%- endcapture -%}
+          <img src="{{ image | resize: '350x' }}" class="sample-image" />
         </div>
         {% endfor %}
-      </div>
+      </div> 
     </div>
-  </section>
+  </section> -->
   {% include footer-cta.html %}
 </main>

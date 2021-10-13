@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/MichaelCurrin/jekyll-resize
+  revision: 5f449c9b2ed23288f01c1a6072eeb4b616f919d7
+  specs:
+    jekyll-resize (1.1.0)
+      jekyll (> 3.3, < 5.0)
+      mini_magick (~> 4.8)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -44,6 +52,7 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
+    mini_magick (4.11.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.6)
@@ -64,7 +73,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jekyll
+  jekyll (= 4.2.0)
+  jekyll-resize!
   jekyll-sitemap
   webrick (~> 1.7)
 

@@ -129,12 +129,14 @@
           .text-input {
             background-color: $lt-grey;
             border: 2px solid $white;
+            color: $black;
             @include transition(border-color);
             &:focus {
               border-color: $blue;
             }
           }
           select {
+            color: $black;
             padding: 0.5em;
             width: 100%;
             background-color: $lt-grey;

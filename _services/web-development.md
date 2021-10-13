@@ -64,7 +64,7 @@ about:
     - WCAG compliance
 work: 
   title: My work speaks for itself
-  text: Developed with Jekyll, these sites we're built 
+  text: Check out my portfolio for all of my web projects.
   collection: projects 
   filter: "tags"
 ---
