@@ -12,7 +12,7 @@ A little coding humor, folks:
 
     var forest = document.querySelectors('.tree');
 
-See the forest for the trees, get it? It's a [running joke](https://i.redd.it/av1g54jp94i71.png) that stackoverflow, a tech help forum, is filled with awful toxic little babies, but I think we can do better. Now that people, including me, are learning code from a non-technical background, there's a lot of lingo and unwritten rules people just don't know about. The solution shouldn't be to [shun them](https://meta.stackoverflow.com/questions/289336/is-it-okay-to-downvote-questions-asking-if-some-code-could-work-but-not-actually/412023#412023) but help them along in their journey. If you're a level 99 python wizard, then please read this guide from me, an average human learning something new everyday.
+See the forest for the trees, get it? It's a [running joke](https://i.redd.it/av1g54jp94i71.png) that Stackoverflow, a tech help forum, is filled with awful, toxic little babies, but I think we can do better. Now that people, including me, are learning code from a non-technical background, there's a lot of lingo and unwritten rules people just don't know about. The solution shouldn't be to [shun them](https://meta.stackoverflow.com/questions/289336/is-it-okay-to-downvote-questions-asking-if-some-code-could-work-but-not-actually/412023#412023) but help them along in their journey. If you're a level 99 python wizard, then please read this guide from me, an average human learning something new everyday.
 
 ## Get the big picture
 
