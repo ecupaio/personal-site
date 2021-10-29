@@ -8,7 +8,7 @@ footer-cta:
   text: I'm all ears. Send me a line and let's find a solution together.
 
 ---
-A little coding humor folks:
+A little coding humor, folks:
 
     var forest = document.querySelectors('.tree');
 
