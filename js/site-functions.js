@@ -12,7 +12,6 @@ $(document).ready(function() {
       var selector = $(this).attr('href');
       scrollTop(selector);
     }
-    
   })
   
 
