@@ -4,6 +4,7 @@ link: ''
 tech:
 - Web development
 - Frontend development
+tags: Jekyll
 image:
 - fight_back_tour-1.jpg
 - fight_back_tour-2.jpg

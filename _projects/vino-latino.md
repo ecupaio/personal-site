@@ -8,6 +8,7 @@ image:
 - vl-shop.jpg
 - vl-story.jpg
 - vl-agegate.jpg
+tags: Jekyll
 tech:
 - Web development
 - Frontend development

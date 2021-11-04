@@ -1,0 +1,18 @@
+<section id="steps-section" class="{{ include.class }}">
+  <div class="inner-section">
+    <h2 class="section-title">{{ page.steps.title }}</h2>
+    <div class="steps-list">
+      {% for step in page.steps.items %}
+      <div class="step">
+        <div class="step-index heading-1"><span class="number">{{ forloop.index }}</span></div>
+        <h3 class="step-title">{{ step.title }}</h3>
+        <div class="step-text">{{ step.text | markdownify }}</div>
+      </div>
+      {% endfor %}
+    </div>
+    {% if include.button-text and include.button-link %}
+    
+    {% include button-row.html text=include.button-text link=include.button-link %}
+    {% endif %}
+  </div>
+</section>

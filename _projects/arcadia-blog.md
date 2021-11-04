@@ -4,6 +4,7 @@ link: https://blog.arcadia.com/
 image:
 - arcadia-blog.jpg
 - arcadia-blog-post.jpg
+tags: Jekyll
 tech:
 - Web development
 - UX

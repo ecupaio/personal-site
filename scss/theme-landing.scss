@@ -110,53 +110,7 @@
       }
     }
   }
-  #steps-section {
-    .steps-list {
-      margin-top: 2rem;
-      .step {
-        max-width: $size-small;
-        margin: 0 auto 4rem;
-        text-align: center;
-        padding: 2rem;
-        border: 2px solid $grey;
-        @include border-radius;
-        position: relative;
-        &:not(:last-child) {
-          &:after {
-            content: '';
-            width: 2px;
-            height: 4rem;
-            position: absolute;
-            bottom: -4rem;
-            left: 50%;
-            transform: translate(-50%,2px);
-            display: block;
-            background-color: $grey;
-          }
-        }
-        .step-index {
-          background-color: $blue;
-          color: $white;
-          height: 1.5em;
-          width: 1.5em;
-          margin: 0 auto 1rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          line-height: 1;
-          border-radius: 50%;
-          
-        
-        }
-        .step-title {
-          
-        }
-        .step-text {
-
-        }
-      }
-    }
-  }
+  
   #footer-cta {
     #campaigner-form {
       max-width: 350px;
@@ -175,12 +129,14 @@
           .text-input {
             background-color: $lt-grey;
             border: 2px solid $white;
+            color: $black;
             @include transition(border-color);
             &:focus {
               border-color: $blue;
             }
           }
           select {
+            color: $black;
             padding: 0.5em;
             width: 100%;
             background-color: $lt-grey;

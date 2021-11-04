@@ -8,6 +8,7 @@ image:
 - rr-about.jpg
 - rr-press.jpg
 - rr-visit.jpg
+tags: Jekyll
 tech:
 - Web development
 - UX

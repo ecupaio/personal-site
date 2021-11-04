@@ -92,6 +92,9 @@ section {
 		background-color: $blue;
 		color: $white;
 	}
+	&.grey {
+		background-color: $lt-grey;
+	}
 	.inner-section {
 		margin: auto;
 		max-width: $size-large;

@@ -4,6 +4,7 @@ tech:
 - Web development
 - Frontend development
 link: ''
+tags: Jekyll
 image:
 - dems_live-1.jpg
 - dems_live-2.jpg

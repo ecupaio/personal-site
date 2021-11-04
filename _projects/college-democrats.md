@@ -3,6 +3,7 @@ title: College Democrats
 date: '2016-05-11'
 image:
   - College_Democrats.jpg
+tags: Jekyll  
 tech:
   - Web development
   - Frontend development

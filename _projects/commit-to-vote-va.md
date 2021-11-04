@@ -3,6 +3,7 @@ title: Commit to Vote VA
 link: https://democrats.github.io/commit2vote-va/
 image:
 - Commit_to_Vote.jpg
+tags: Jekyll
 tech:
 - Web development
 - Frontend development

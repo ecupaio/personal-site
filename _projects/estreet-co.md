@@ -10,6 +10,7 @@ image:
 - estreet-co-projects.jpg
 - estreet-co-services.jpg
 - estreet-co-team.jpg
+tags: Jekyll
 tech:
 - Web development
 - UX

@@ -54,8 +54,8 @@ collections:
   skills:
     output: true
   services: 
-    output: false
-    permalink: /services/:title/  
+    output: true
+    permalink: /service/:title/  
   studies: 
     output: true
     permalink: /study/:title/   

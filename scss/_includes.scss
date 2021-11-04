@@ -336,12 +336,11 @@
 #footer-cta {
   text-align: center;
   background-color: $blue;
-  color: $charcoal;
+  color: $white;
   .inner-section {
     max-width: $size-small;
-    @include border-radius;
-    @include box-shadow;
-    background-color: $white;
+    
+    
     padding: 2rem 1rem;
   }
   &.white {
@@ -361,4 +360,53 @@
 .btn-row {
   text-align: center;
   margin-top: 2rem;
+}
+//steps-section.html
+#steps-section {
+  .steps-list {
+    margin-top: 2rem;
+    .step {
+      max-width: $size-small;
+      margin: 0 auto 4rem;
+      text-align: center;
+      padding: 2rem;
+      border: 2px solid $grey;
+      @include border-radius;
+      position: relative;
+      background-color: $white;
+      &:not(:last-child) {
+        &:after {
+          content: '';
+          width: 2px;
+          height: 4rem;
+          position: absolute;
+          bottom: -4rem;
+          left: 50%;
+          transform: translate(-50%,2px);
+          display: block;
+          background-color: $grey;
+        }
+      }
+      .step-index {
+        background-color: $blue;
+        color: $white;
+        height: 1.5em;
+        width: 1.5em;
+        margin: 0 auto 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        border-radius: 50%;
+        
+      
+      }
+      .step-title {
+        
+      }
+      .step-text {
+
+      }
+    }
+  }
 }

@@ -10,6 +10,7 @@ image:
 - tolenas-reservations.jpg
 - tolenas-trade.jpg
 - tolenas-age-gate.jpg
+tags: Jekyll
 tech:
 - Web development
 - Frontend development

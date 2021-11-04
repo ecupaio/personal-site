@@ -347,7 +347,7 @@ body {
           }
           .service-content {
             padding: 2rem; 
-            border: 2px solid $grey;
+            @include box-shadow;
             @include border-radius;
             @include bp-medium {
               padding: 1rem 2rem;
@@ -416,8 +416,7 @@ body {
   }
   #portfolio {
     position: relative;
-    background-color: $blue;
-    color: $white;
+    
     .btn-row {
       text-align: center;
     }
@@ -581,17 +580,9 @@ body {
       max-width: $size-small;
       padding: 1rem 2rem;;
       margin: auto;
-      p {
-        a {
-          color: $white;
-          &:hover {
-            color: $black;
-          }
-        }
-      }
-      
-      
+      background-color: $white;
       @include border-radius;
+      border: 1px solid $grey;
     }
     .btn-row {
       text-align: center;
