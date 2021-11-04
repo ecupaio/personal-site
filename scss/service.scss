@@ -67,27 +67,27 @@
             }  
           }
         }
-        &:nth-child(1) {
-          .image-col {
-            &:before {
-              background-image: url('/images/blob-2.svg');
-            }
-          }
-        }
-        &:nth-child(2) {
-          .image-col {
-            &:before {
-              background-image: url('/images/blob-1.svg');
-            }
-          }
-        }
-        &:nth-child(3) {
-          .image-col {
-            &:before {
-              background-image: url('/images/blob-3.svg');
-            }
-          }
-        }
+        // &:nth-child(1) {
+        //   .image-col {
+        //     &:before {
+        //       background-image: url('/images/blob-2.svg');
+        //     }
+        //   }
+        // }
+        // &:nth-child(2) {
+        //   .image-col {
+        //     &:before {
+        //       background-image: url('/images/blob-1.svg');
+        //     }
+        //   }
+        // }
+        // &:nth-child(3) {
+        //   .image-col {
+        //     &:before {
+        //       background-image: url('/images/blob-3.svg');
+        //     }
+        //   }
+        // }
       }
       
     }

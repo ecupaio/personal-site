@@ -6,7 +6,7 @@
       <div class="step">
         <div class="step-index heading-1"><span class="number">{{ forloop.index }}</span></div>
         <h3 class="step-title">{{ step.title }}</h3>
-        <div class="step-text">{{ step.text }}</div>
+        <div class="step-text">{{ step.text | markdownify }}</div>
       </div>
       {% endfor %}
     </div>

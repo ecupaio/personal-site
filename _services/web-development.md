@@ -15,21 +15,21 @@ features:
     image: /images/content-edit.svg
   - title: High performance, low maintenance 
     text: |- 
-      With my proprietary stack you get the bleeding edge in web, which includes fast loading pages, top-notch security, and free hosting. Don't worry about updates crashing your plugins or site: my sites are coded from scratch and built to last. The only thing you'll need to update is your content. 
+      With my proprietary stack you get fast loading pages, top-notch security, and free hosting. Don't worry about updates crashing your plugins or site: my sites are coded from a proven base template and built to last. The only thing you'll need to update is your content. 
     image: /images/pagespeed.svg
   - title: Everything else you never knew you needed
     text: |-
-      Ad pixels, WCAG, Analytics, SEO, UX, and CCPA are all confusing industry jargon I've mastered. Due to my years of experience embedded in marketing and digital teams, I know exactly what you need to run ads on your page, comply with privacy and disability regulations, and monitor the performance of you page.
+      Ad pixels, WCAG, Analytics, SEO, UX, and CCPA are all confusing industry jargon I've mastered. Due to my years of experience embedded in marketing and digital teams, I know exactly what you need to run ads on your page, comply with privacy and disability regulations, and monitor the performance of your site.
     image: /images/backend.svg
 steps: 
   title: How it works
   items: 
   - title: Goal Setting
-    text: Your website should serve your organization's goals. We'll go over what those are and how to help achieve them with your website.
+    text: Your website should serve your organization's goals. We'll go over what those are and how to achieve them through your website.
   - title: Design & Content 
-    text: Submit your layout and content to me or let's create something together. 
+    text: Send your designs and content to me or let's create something together. 
   - title: Code
-    text: I'll develop your website and give you access to the code incase I get taken out of the matrix for my elite coding skills. 
+    text: I'll develop your website and give you access to the code along with instructions for the next developer if we part ways. 
   - title: Training
     text: You will receive written guidance and a training on how to update every bit of content on your site. 
 about: 
@@ -54,7 +54,6 @@ about:
     logo: /images/cf-logo-v.svg
     link: https://www.cloudflare.com/hp/      
   benefits: 
-    title: Here's what you get
     list: 
     - Control all of your content
     - No keeping up-to-date with updates
