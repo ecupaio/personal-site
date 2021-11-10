@@ -23,7 +23,10 @@
       
       @include transform(translateX(-100%));
       @include transition(opacity, transform);
-      margin-bottom: 0.5em;
+      a {
+        display: inline-block;
+        margin-bottom: 0.5em;
+      }
       &.active {
           opacity: 1;
           @include transform(translateX(0%));
