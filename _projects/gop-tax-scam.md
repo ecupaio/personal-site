@@ -2,7 +2,7 @@
 title: GOP Tax Scam
 link: https://goptaxscam.democrats.org/
 image:
-- Stop%20the%20GOP%20Tax%20Scam%20--%20Make%20Calls.jpeg
+- make-calls.jpeg
 tech:
 - Web development
 - Frontend development

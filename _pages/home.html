@@ -13,7 +13,7 @@ services:
   text: |-
     Get a fast, reliable website that you can manage easily. I give you the tools to edit every piece of content on your site, plus security, accessibility, and little to no-cost hosting. 
 
-    [Learn more](/service/web-development/)
+    [Service info](/service/web-development/)
   image: svg/web-dev.svg
   icon: <i class="fa fa-laptop-code"></i>
 - title: Optimization
@@ -22,7 +22,7 @@ services:
   text: |-
     Whether you’re looking for a performance upgrade or you want to increase sales, I will help bring your website up to speed. From SEO and A/B testing to bug fixes and tracking snippets, I’m here to help you achieve your goals. 
 
-    [Learn more](/service/optimization/)
+    [Service info](/service/optimization/)
   image: svg/optimization.svg
   icon: <i class="fa fa-chart-line"></i>
 - title: Training
@@ -107,7 +107,10 @@ about: |-
         {% for project in projects %}
         <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 project-col {% if forloop.index > 9 %}hidden{% endif %}">
           <div class="col-content" >
-            <img class="project-image" src="/images/{{ project.image[0]}}" alt="image of {{ project.title }}">
+            {%- capture project-image -%}
+            /images/{{ project.image[0]}}
+            {%- endcapture -%}
+            <img class="project-image" src="{{ project-image | resize: '310x'}}" alt="{{ project.title }}">
             <h4 class="project-title">{{ project.title }}</h4>
             <div class="hidden">
               <div class="project-link">
@@ -158,7 +161,7 @@ about: |-
                   {% endfor %}
                 </div>
                 <div class="study-link-block">
-                  <a class="btn study-link" href="{{ study.url }}">Read more</a>
+                  <a class="btn study-link" href="{{ study.url }}">Read study</a>
                 </div>
               </div>
             </div>

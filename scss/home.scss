@@ -27,11 +27,9 @@ body {
     padding: 3em 1em 1em;
   }
   &.active {
-    
     opacity: 1;
     @include transform(translateY(0%));
   }
-
   .overlay-content {
     max-width: $size-large;
     margin: auto;
@@ -455,7 +453,7 @@ body {
             width: 100%;
             top: 0;
             left: 0;
-            z-index: -1;
+            
             background-color: rgba($charcoal,0.95);
             @include transition(opacity);
           }
