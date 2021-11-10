@@ -20,7 +20,7 @@
     .nav-link {
       opacity: 0;
       position: relative;
-      display: inline-block;
+      
       @include transform(translateX(-100%));
       @include transition(opacity, transform);
       margin-bottom: 0.5em;

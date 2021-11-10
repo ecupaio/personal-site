@@ -51,7 +51,7 @@ p {
 	margin-top: 0;
 }
 //Links
-a {
+a, .text-link {
 	&:not(.btn) {
 		text-decoration: none;
 		color: $text_color;
