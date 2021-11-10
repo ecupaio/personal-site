@@ -8,12 +8,12 @@
 <nav id="sidebar-nav">
   <ul class="nav-link-list">
     {% for nav in site.data.nav.main %}
-    <li>
-      <a class="nav-link" href="{{ nav.url }}">{{ nav.title }}</a>
+    <li class="nav-link">
+      <a class="text-link" href="{{ nav.url }}">{{ nav.title }}</a>
     </li>
     {% endfor %}
-    <li>
-      <a class="btn nav-link" href="#open-form" data-location="Menu">Work with me</a>
+    <li class="nav-link">
+      <a class="btn" href="#open-form" data-location="Menu">Work with me</a>
     </li>
   </ul>
 </nav>
