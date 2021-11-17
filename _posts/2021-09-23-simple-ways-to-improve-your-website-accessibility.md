@@ -14,7 +14,7 @@ footer-cta:
 
 Accessibility in the context of websites, refers to how easily someone with disabilities is able to read and interact with your website. There are standards known as [Website Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) that serve as a reference point for how to create a website that is accessible.
 
-I believe we have a moral imperative to all do our part in creating an equitable world for all people, but there are also legal requirements under the Americans with Disabilities Act (ADA) that can leave you open to litigation if your site is not compliant. Accessibility can also impact on SEO as shown by their [push for accessibility](https://www.google.com/accessibility/). Even if you're not motivated by a sense of justice, having an inaccessible site can seriously hurt your bottom line so let's find some easy fixes.
+I believe we have a moral imperative to all do our part in creating an equitable world for all people, but there are also legal requirements under the Americans with Disabilities Act (ADA) that can leave you open to litigation if your site is not compliant. Accessibility can also impact on SEO as shown by [Google's push for accessibility](https://www.google.com/accessibility/). Even if you're not motivated by a sense of justice, having an inaccessible site can seriously hurt your bottom line so let's find some easy fixes.
 
 ## Use Lighthouse to measure accessibility
 
@@ -113,4 +113,4 @@ on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
-In the above example you can see that the markup for the next heading after the H1 is an H2, but I have added a class (see the CSS tab) that follows the style of the H4 element. This way we get the desired aesthetic without sacrificing the accessibility. 
+In the above example you can see that the markup for the next heading after the H1 is an H2, but I have added a class (see the CSS tab) that follows the style of the H4 element. This way we get the desired aesthetic without sacrificing the accessibility.
