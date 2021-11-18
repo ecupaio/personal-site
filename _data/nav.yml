@@ -6,7 +6,7 @@ main:
   - title: Portfolio
     url: /#portfolio
   - title: 'Resumé'
-    url: https://docs.google.com/document/d/14mqtDjwDJh-vT51j8bRTG4Im9m9qmdcJmt74Sf0_HNs/export?format=pdf
+    url: /resume/
   - title: About me
     url: /#about
   - title: Blog
