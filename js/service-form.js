@@ -12,7 +12,7 @@ $('#close-form').click(function() {
   $('#service-form .toggle.prev, #service-form .toggle.next, #service-form .progress-tracker').addClass('hidden');
 });
 //open contact section 
-$('.open-contact').click(function(e) {
+$('.open-contact,a[href="#open-contact"]').click(function(e) {
   e.preventDefault();
   if ($('#services-form-overlay').hasClass('active')) {
     $('#service-form .form-section[data-section="get-started"]').removeClass('active');

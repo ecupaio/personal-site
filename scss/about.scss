@@ -1,0 +1,180 @@
+@import "mixins.scss";
+@import "vars.scss";
+#about-page {
+  #hero {
+    text-align: center;
+    .hero-image {
+      height: 200px;
+      margin-bottom: 1rem;
+    }
+    .hero-text {
+      max-width: $size-medium;
+      margin: auto;
+    }
+    .btn-row {
+      margin-top: 1rem;
+    }
+  }
+  #experience-section {
+    .timeline {
+      margin-top: 1rem;
+      .experience-block {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 2rem;
+        
+        &:last-child {
+          .details-col {
+            &::before {
+              display: none;
+            }
+          }
+        }
+        .date-col {
+          width: 31%;
+          text-align: right;
+          position: relative;
+          padding-right: 1rem;
+          @include bp-medium {
+            display: none;
+          }
+          .daterange {
+            margin-bottom: 0;
+          }
+        }
+        
+        .details-col {
+          width: 69%;
+          padding-left: 1rem;
+          position: relative;
+          padding-bottom: 3rem;
+          
+          @include bp-medium {
+            width: 100%;
+          }
+          &:before {
+            content: '';
+            width: 3px;
+            height: 100%;
+            display: block;
+            position: absolute;
+            background-color: $blue;
+            left: calc(-1rem + 1.5px);
+          }
+          &:after {
+            $circle: 1rem;
+            content: '';
+            position: absolute;
+            height: $circle;
+            width: $circle;
+            border: 3px solid $blue;
+            border-radius: 50%;
+            background-color: $white;
+            top: 0;
+            left: -1.5rem;
+          }
+          .title {
+            margin-bottom: 0;
+            position: relative;
+            top: -3px;
+          }
+          .company {
+            .mobile-daterange {
+              display: none;
+              @include bp-medium {
+                display: inline-block;
+              }
+            }
+          }
+          .task-list {
+            margin-top: 1rem;
+            
+            .task {
+              padding-left: 1rem;
+              position: relative;
+              margin-bottom: 0.5rem;
+              &:before {
+                content: '\2013';
+                position: absolute;
+                left: 0;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+  #skills-section {
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem auto 0;
+      max-width: $size-medium;
+      @include bp-medium {
+        grid-template-columns: repeat(1,1fr);
+        max-width: 375px;
+      }
+      .skill-category {
+        @include box-shadow;
+        @include border-radius;
+        padding: 1rem;
+        background-color: $white;
+        .skills-list {
+          
+
+          .skill {
+            margin-bottom: 1.5rem;
+            .skill-title-block {
+              display: flex;
+              justify-content: space-between;
+              .skill-label {
+                margin: 0;
+              }
+              .skill-years {
+                flex: 1 0 auto;
+                text-align: right;
+                align-self: flex-end;
+                padding-left: 0.5rem;
+              }
+            }
+            .skill-bar {
+              background-color: $lt-grey;
+              width: 100%;
+              .bar {
+                background-color: $blue;
+                height: 5px;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #recruiters {
+    text-align: center;
+    .section-text {
+      
+      max-width: $size-medium;
+      margin: auto;
+    }
+    .info-list {
+      max-width: $size-small;
+      margin: auto;
+      display: inline-block;
+      
+      .info-block {
+        margin-bottom: 1rem;
+        .info-title {
+          margin: 0;
+        }
+      }
+    }
+    .btn-row {
+      margin-top: 1rem;
+    }
+  }
+}

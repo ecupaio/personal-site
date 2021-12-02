@@ -6,13 +6,13 @@ $(document).ready(function() {
       });
   }
   //Link scroll top
-  $('a[href^="#"]').click(function(e) {
-    if ($(this).attr('href').length > 1) {
+  $('a[href^="#"],a[href^="/#"]').click(function (e) {
+    if ($(this).attr("id", selector).length > 1) {
       e.preventDefault();
-      var selector = $(this).attr('href');
+      var selector = $(this).attr("href");
       scrollTop(selector);
     }
-  })
+  });
   
 
   
