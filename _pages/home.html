@@ -176,9 +176,7 @@ about: |-
       <h2>About me</h2>
       
         {{ page.about | markdownify }}
-        <div class="btn-row">
-          <a class="btn open-contact" href="#">Get in touch</a>
-        </div>
+        {% include button-row.html text="Meet me" link="/about/" %}
     </div>
   </section>
   <section id="blog-posts" >

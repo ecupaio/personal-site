@@ -8,7 +8,7 @@ main:
   - title: 'Resumé'
     url: /resume/
   - title: About me
-    url: /#about
+    url: /about/
   - title: Blog
     url: /blog/
   - title: "A/B Test Calc"
