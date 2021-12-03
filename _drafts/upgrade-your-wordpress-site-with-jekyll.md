@@ -11,7 +11,7 @@ You are part of or lead an organization or business, you have a website, and you
 
 ## What is Jekyll?
 
-[Jekyll](https://jekyllrb.com/) is part of the [JAMStack](https://jamstack.org/) movement to create faster, more secure websites. It's what I made this website with and countless other websites with. It's relatively simple to develop on, free to host, and comes with several options for content management. I've spent 4 years developing an optimized template ready to launch sites in a fraction of the time of any of the LAMP stack sites like Wordpress or Drupal with no hosting fees and no maintenance. My current record for an e-commerce site is 3 days and I was able to create a landing page site in 4 hours once. I should mention here that I like most developers charge hourly.
+[Jekyll](https://jekyllrb.com/) is part of the [JAM stack](https://jamstack.org/) movement to create faster, more secure websites. It's what I made this website with and countless other websites with. It's relatively simple to develop on, free to host, and comes with several options for content management. I've spent 4 years developing an optimized template ready to launch sites in a fraction of the time of any of the [LAMP stack](https://wpshout.com/wordpress-lamp-introduction-wordpress-infrastructure/) sites like Wordpress or Drupal with no hosting fees and no maintenance. My current record for an e-commerce site is 3 days and I was able to create a landing page site in 4 hours once. I should mention here that I like most developers charge hourly.
 
 ## Wordpress requires constant updates
 
