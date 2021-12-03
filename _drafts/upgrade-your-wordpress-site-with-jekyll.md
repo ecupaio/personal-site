@@ -49,4 +49,12 @@ A really helpful feature of Jekyll is that every single change to the site is re
 
 In this case, an editor logged into to Forestry.io, the CMS I use for my Jekyll sites, and edited a link on the [home page](https://www.republicrestoratives.com/). I can see the exact letters my content editor changed so if they used some sort of forbidden character and it caused the site to have a build failure, an error that will not effect the site, I could go in and see exactly what happened after receiving an automated message from Github. You don't even have to email me, I'll know and get to work on it immediately with full knowledge of what changes were made. 
 
-I should also take this time to mention that when I make a website, every single piece of content will be editable and I include a visual guide and walkthrough as part of [my development services](/service/web-development/). 
+I should also take this time to mention that when I make a website, every single piece of content will be editable and Frequently asked questions
+
+### If Jekyll is so good, why is Wordpress so popular and I've never heard of it? 
+
+Simply explained: you can build a Wordpress site without writing a single line or code and you have to know how to code when [setting up a Jekyll site](/blog/?tag=Jekyll). There's lots of drag and drop themes like Elementor and Divi where you can configure an entire site without knowing what a div tag and a class declaration are, which is a plus if you want to DIY. Unfortunately, lots of cut-rate developers take advantage of these templates and their clients, and then I have to fix these sites later because they don't include any guidance on how it all works. 
+
+### I want to manage all of my content, will I still be able to do that with Jekyll?
+
+Absolutely. In fact, you'll be able to manage your content so much better with my Jekyll build. I customize Forestry.io, a free content management system, to your exact content structure by making all content editable and I include a visual guide and walkthrough as part of [my development services](/service/web-development/). Good luck navigating the Wordpress dashboard trying to update the copyright year at the bottom of your site. You'll be lucky if it isn't hardcoded into the PHP templates. 
