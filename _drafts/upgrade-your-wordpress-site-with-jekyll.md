@@ -33,4 +33,10 @@ Wordpress is such a common culprit in slowing down load times, Google has a spec
 
 Even if you clean up your plugins, the other culprit of poor performance is the very nature of how Wordpress renders. As I mentioned earlier, Wordpress builds the pages you see by using templates to communicate with a backend database. This process occurs client-side which means every time a user views your homepage, the browser builds the page they see. This process of building the page on demand can be fast on desktop with a reliable connection, it can be quite slow for mobile users on data. Jekyll builds server-side which means when I make this blog post, my host builds the page and saves a static copy of the rendered page that can be viewed immediately. This process is better for the user because they don't have to wait for the page to build, it's better for me since the page builds within 1 second, and it's better for everyone since the static copy is un-hackable. 
 
-### Wordpress is expensive to host
+## Wordpress is expensive and tedious to host
+
+Introductory offers on popular hosts seem cheap until that first month passes and you notice you need more storage. That $9 a month will turn into $25, then $50, and then $100 very quick. Also you have to maintain everything on your in that you're responsible for keeping up with your core updates and plugin updates. If you're unfortunate to have your site go down, you'll be met with shoulder shrugs since most support staff is there to upsell you or remind you to update your core. I know this all too well because I've been the one to have to deal with outages and poor performance. 
+
+Jekyll is free to host with Github Pages. For people not familiar with Github it is the world's largest code repository. Every developer job has a slot in the application form for applicants to paste in their Github profile. It's a pretty big deal and one of Github's principal engineers helped develop Jekyll so they made their platform a free host for it. Plus, if I mess something up and the page isn't able to build properly, Github Pages will simply not update the site and send me a notification that it wasn't able to build because of errors. Users will still see the same old site instead of a database error message. 
+
+## Wordpress errors are difficult to diagnose
