@@ -15,8 +15,14 @@ You are part of or lead an organization or business, you have a website, and you
 
 ## Wordpress requires constant updates
 
-Wordpress generates by making pages based on PHP functions making calls to a SQL database which leaves security vulnerabilities that hackers continuously try to exploit. In non-code speak, this means that the very nature of how Wordpress works is never going to be fully secure, so that means you're going to need to keep up with those core updates that your hosting service reminds you about. What's worse is that all of the plugins you have installed are independently maintained so if they don't want to update for the newest Wordpress core version, you're SOL. You have probably seen this image: 
+Wordpress generates by making pages based on PHP functions in your templates making calls to a SQL database in order to build the pages that you see. The SQL database includes your content, but it also includes your passwords and credit card info if you have any paid plugins or use e-commerce that hackers try to access by interrupting the calls between your templates and database. In non-code speak, this means that the very nature of how Wordpress works is never going to be fully secure. Fortunately, Wordpress is vigilant about these vulnerabilities, but that means you're going to need to keep up with those core updates that your hosting service reminds you about. To add another layer of complication, all of the plugins you have installed are independently maintained so if they stopped maintaining the plugin to be compatible with the newest Wordpress core version, you're SOL. Some of you have probably seen this image:
 
 ![Wordpress database error as a result of a plugin error](/images/wp-err.jpg)
 
-The great thing about Jekyll is that it doesn't need updates or plugins to function. It's static which means that all your pages are made server side and un-hackable. No plugins are necessary as I will code the site bespoke to your exact specifications instead of relying on someone else's code that they might forget about. 
+The great thing about Jekyll is that it doesn't need updates or plugins to function. It's static which means that all your pages are made server side and un-hackable. No plugins are necessary as I will code the site bespoke to your exact specifications instead of relying on someone else's code that they might forget about.
+
+## Wordpress is slow
+
+[Run a lighthouse test](https://developers.google.com/web/tools/lighthouse#devtools) on your Wordpress site. Under the Performance suggestions, select Eliminate render-blocking resources and you'll see something like this: 
+
+![render-blocking resources suggestion indicating Wordpress is the cause](/images/screen-shot-2021-12-03-at-11-12-00-am.png)
