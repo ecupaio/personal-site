@@ -19,7 +19,7 @@ Wordpress generates by making pages based on PHP functions in your templates mak
 
 ![Wordpress database error as a result of a plugin error](/images/wp-err.jpg)
 
-The great thing about Jekyll is that it doesn't need updates or plugins to function. It's static which means that all your pages are made server side and un-hackable. No plugins are necessary as I will code the site bespoke to your exact specifications instead of relying on someone else's code that they might forget about.
+The great thing about Jekyll is that it doesn't need updates or plugins to function. It's static which means that all your pages are made server side and secure from hackers. No plugins or security updates are necessary as I will code the site bespoke to your exact specifications instead of relying on someone else's code that they might forget about.
 
 ## Wordpress is slow
 
@@ -27,7 +27,7 @@ The great thing about Jekyll is that it doesn't need updates or plugins to funct
 
 ![render-blocking resources suggestion indicating Wordpress is the cause](/images/screen-shot-2021-12-03-at-11-12-00-am.png)
 
-Wordpress is such a common culprit in slowing down load times, Google has a specific error message for them and took care to include their branding. Your Wordpress website functions with a menagerie of plugins that all require their own code (CSS and JS) to run which will load on every single page on your site regardless of if they're used or not. 
+Wordpress is such a common culprit in slowing down load times, Google has a specific error message for them and took care to include their branding. Your Wordpress website functions with a menagerie of plugins that all require their own code (CSS and JS) to run which will load on every single page on your site regardless of if they're used or not. Also to note, Google factors in your mobile site speed in page rankings so it's very important that your site is optimized to be seen by users. 
 
 ### Client-side vs Server-side
 
