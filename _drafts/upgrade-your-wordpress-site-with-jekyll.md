@@ -26,3 +26,11 @@ The great thing about Jekyll is that it doesn't need updates or plugins to funct
 [Run a lighthouse test](https://developers.google.com/web/tools/lighthouse#devtools) on your Wordpress site. Under the Performance suggestions, select Eliminate render-blocking resources and you'll see something like this: 
 
 ![render-blocking resources suggestion indicating Wordpress is the cause](/images/screen-shot-2021-12-03-at-11-12-00-am.png)
+
+Wordpress is such a common culprit in slowing down load times, Google has a specific error message for them and took care to include their branding. Your Wordpress website functions with a menagerie of plugins that all require their own code (CSS and JS) to run which will load on every single page on your site regardless of if they're used or not. 
+
+### Client-side vs Server-side
+
+Even if you clean up your plugins, the other culprit of poor performance is the very nature of how Wordpress renders. As I mentioned earlier, Wordpress builds the pages you see by using templates to communicate with a backend database. This process occurs client-side which means every time a user views your homepage, the browser builds the page they see. This process of building the page on demand can be fast on desktop with a reliable connection, it can be quite slow for mobile users on data. Jekyll builds server-side which means when I make this blog post, my host builds the page and saves a static copy of the rendered page that can be viewed immediately. This process is better for the user because they don't have to wait for the page to build, it's better for me since the page builds within 1 second, and it's better for everyone since the static copy is un-hackable. 
+
+### Wordpress is expensive to host
