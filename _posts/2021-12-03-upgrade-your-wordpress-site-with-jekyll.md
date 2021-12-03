@@ -1,7 +1,9 @@
 ---
 title: Upgrade your Wordpress Site with Jekyll
-meta_img: ''
-tags: []
+meta_img: https://repository-images.githubusercontent.com/65252/f2b7c780-70b6-11e9-85d2-f4bda8708a2d
+tags:
+- Jekyll
+- Wordpress
 footer-cta:
   title: Ready to make the switch?
   text: 'Let''s talk about your goals and make your website work for you. '
