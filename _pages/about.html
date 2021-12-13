@@ -209,7 +209,7 @@ recruiters:
   - title: Education/Year
     text: Bachelor of Arts - Political Science/2009        
   resume: 
-    title: Download my resumé
+    title: Download resumé
     link: /resume/    
 ---
 <main id="about-page">
@@ -247,6 +247,7 @@ recruiters:
         </div>
         {% endfor %}
       </div>
+      {% include button-row.html link="/resume/" text="Download resumé" target="_blank" %}
     </div>
   </section>
   <section id="skills-section" class="grey">
@@ -301,7 +302,7 @@ recruiters:
         </div>
         {% endfor %}
       </div>
-      {% include button-row.html link=page.recruiters.resume.link text=page.recruiters.resume.title %}
+      {% include button-row.html link=page.recruiters.resume.link text=page.recruiters.resume.title target="_blank" %}
     </div>
   </section>
 </main>
