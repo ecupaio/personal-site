@@ -16,6 +16,9 @@
     }
   }
   #experience-section {
+    .btn-row {
+      margin-top: 0;
+    }
     .timeline {
       margin-top: 1rem;
       .experience-block {
@@ -25,9 +28,11 @@
         
         &:last-child {
           .details-col {
+            padding-bottom: 2rem;
             &::before {
               display: none;
             }
+
           }
         }
         .date-col {
