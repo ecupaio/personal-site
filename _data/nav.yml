@@ -5,12 +5,12 @@ main:
     url: /#services  
   - title: Portfolio
     url: /#portfolio
-  - title: 'Resumé'
-    url: /resume/
   - title: About me
-    url: /about/
+    url: /about/  
   - title: Blog
     url: /blog/
+  - title: 'Resumé'
+    url: /resume/  
   - title: "A/B Test Calc"
     url: /ab-test-calculator/
   - title: Campaigner Theme
