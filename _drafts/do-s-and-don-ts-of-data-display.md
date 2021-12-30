@@ -28,3 +28,11 @@ As I mentioned earlier, users are aware of their physical location barring a maj
 ### Free Embedded Map
 
 If you still want to view your empire and weep á la Alexander the Great, you can use [Google My Maps](https://mymaps.google.com/) to create a map and embed it on your website. However, users will not be able to find the closest point to them. I made a [test map](https://www.google.com/maps/d/u/0/viewer?mid=1TeeHoHwf37HRbaExJOZRcCuNy1N9K-Kg&ll=38.567868306175214%2C-121.44627360000001&z=14) so you can try it on for size. 
+
+## DON'T: Tables
+
+Although HTML and CSS have multiple methods for displaying data in organized columns, I still see HTML tables like it's 1996.  Tables are not mobile optimized, thus users on their phones will not be able to read your product feature comparison that reads like a ledger. Even if you made your table mobile friendly, it's a hard way to digest information at a glance. Remember, your users don't have to read every word on your page, but you really want them to so make it engaging and simple. 
+
+## DO: Stackable Columns
+
+Columns can go side by side on desktop so users can compare bullet points of information at a glance, then stack on mobile so they can read in the vertical format they're used to. Columns also give you an opportunity to highlight options and insert calls to action (CTAs) for each piece of data you're presenting to the user. 
