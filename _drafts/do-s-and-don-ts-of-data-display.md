@@ -9,9 +9,11 @@ footer-cta:
 ---
 Seeing all the charting and graphing fails on [r/dataisugly](https://www.reddit.com/r/dataisugly/) is always worth a chuckle, but I consistently see websites with some confusing, inaccessible, or just plain bad methods of displaying data to the user. In order to be successful in displaying information to a user, you first need to determine what is the purpose of displaying the information, in that what do you want the user to do after seeing the information. Follow these tips below to effectively communicate with users in order to increase your conversions.
 
-## DON'T: Embedded Maps
+## DON'T: Maps
 
 [My wife is a scientist](https://jessicasandersphd.com/). Specifically she is an urban forestry expert that uses maps to display tree canopy cover across cities. This is an effective use of maps, your distribution map of store locations is not. Think about that you are trying to get the user to do: Find a store near them so they can visit your business. The user lives in Los Angeles, so why are you showing them stores in Sacramento? Furthermore, Google Maps is no longer offering a free tier of it's API that can support multiple locations so you'll need to pay for the service plus the developer hours to set it up, which is all moot because you aren't effectively helping the customer find a store near them.
+
+Another bad example of maps I see and get asked to make are distribution maps, in which states are highlighted on a contiguous US map (sorry AK and HI, I know you exist but most comms people forget). These provide 0 value to the user and are much harder to read at a glance as opposed to text and the issue that a US map will get squeezed down on mobile to the point that users will need to squint if they're on the Northeastern Seaboard. 
 
 # DO: List of Locations
 
