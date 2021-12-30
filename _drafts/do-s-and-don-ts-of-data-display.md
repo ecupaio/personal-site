@@ -45,4 +45,4 @@ The reason should't add one of those [number animations](https://inorganik.githu
 
 ## DO: Show the numbers
 
-Just remove the animation. There's no point to it. It doesn't catch their eye and they can't decipher digits flashing at fractions of a second. 
+Just remove the animation. There's no point to it. A user can read a still set of digits and interpret a number, they can't read digits changing at a fraction at a second. 
