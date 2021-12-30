@@ -38,3 +38,11 @@ Although HTML and CSS have multiple methods for displaying data in organized col
 ## DO: Stackable Columns
 
 Columns can go side by side on desktop so users can compare bullet points of information at a glance, then stack on mobile so they can read in the vertical format they're used to. Columns also give you an opportunity to highlight options and insert calls to action (CTAs) for each piece of data you're presenting to the user. 
+
+## DON'T: Number count-up animation
+
+The reason should't add one of those [number animations](https://inorganik.github.io/countUp.js/) is, drumroll please... (wait another 2 seconds): you shouldn't obscure information you want your users to read in order to convert them. See how annoying that was? Don't obfuscate information you really want users to see at a glance. They aren't obligated to sit there and wait while a bunch of numbers flicker. If you're boasting 1.2 million users on your platform, let them know immediately while they're scrolling through the page so you can get them to read that amazing data. 
+
+## DO: Show the numbers
+
+Just remove the animation. There's no point to it. It doesn't catch their eye and they can't decipher digits flashing at fractions of a second. 
