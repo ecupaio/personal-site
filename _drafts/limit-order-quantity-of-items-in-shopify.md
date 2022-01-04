@@ -40,6 +40,8 @@ In line 1, I create a variable for an array of all items in the cart and filter 
   * You can get the product ID from the product's URL in the Shopify admin: mystore.shopify.com/admin/products/PRODUCT-ID, or just run a loop and get the id from there.
 * [first](https://shopify.github.io/liquid/filters/first/) plucks the first item out of the array so we can treat it as an object get the quantity from the product. 
 
-In lines 2-10, I create a conditional to define variables that I use to affect the display of the button and error message. I use the [quantity](https://shopify.dev/api/liquid/objects/line_item#line_item-quantity) object to determine if there is more then one 
+In lines 2-10, I create a conditional to define variables that I use to affect the display of the button and error message. I use the [quantity](https://shopify.dev/api/liquid/objects/line_item#line_item-quantity) object to determine if there is more than one trial pack according to its [line_item data](https://shopify.dev/api/liquid/objects/line_item). If there are no trial packs in the cart\_items array then it will return empty and go to the else condition. 
+
+
 
 ### Limit repeat purchase
