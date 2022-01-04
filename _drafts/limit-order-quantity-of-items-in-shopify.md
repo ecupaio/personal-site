@@ -44,8 +44,25 @@ In lines 2-10, I create a conditional to define variables that I use to affect t
 
 * btn-text is the text of the button.
 * btn-class adds or omits a class that will disable the button with CSS and add opacity to it.
-* err-viz shows or hides the error message based on a CSS class affecting the display. 
+* err-viz shows or hides the error message based on a CSS class affecting the display.
 
-Though I could just conditionally add the HTML for the button and error message, I'll need the elements present to 
+Though I could just conditionally add the HTML for the button and error message, I'll need the elements present in order to modify their display based on the cookies
 
 ### Limit repeat purchase
+
+_cart-sidebar.liquid_
+
+    <script>
+        var trialPackQty; 
+        {% if trial-pack.quantity %}
+        trialPackQty = {{ trial-pack.quantity }};
+        {% else %}
+        trialPackQty = 0;
+        {% endif %} 
+        if (document.cookie.indexOf('has_trial_pack=true') > -1 && trialPackQty > 0) {
+            $('.mig-cart__cta').addClass('disabled').val('order not valid');
+            $('.trial-pack-err').removeClass('hidden');
+        } 
+    </script>
+
+Now that customers can't add multiple trial packs to the cart, we need to prevent repeat customers from purchasing a trial pack twice. I added the above script at the bottom of the cart-sidebar.liquid code. Though it's better to add script at the bottom of the body tag, I only want this script to fire on pages with the cart-sidebar component so this method is most convenient. 
