@@ -38,10 +38,14 @@ In line 1, I create a variable for an array of all items in the cart and filter 
 * [cart.items](https://shopify.dev/api/liquid/objects/cart#cart-items) is an array of all of the items in the cart.
 * where is a filter I use to reduce the array to only objects that contain the product with a specific [product_id](https://shopify.dev/api/liquid/objects/line_item#line_item-product_id)
   * You can get the product ID from the product's URL in the Shopify admin: mystore.shopify.com/admin/products/PRODUCT-ID, or just run a loop and get the id from there.
-* [first](https://shopify.github.io/liquid/filters/first/) plucks the first item out of the array so we can treat it as an object get the quantity from the product. 
+* [first](https://shopify.github.io/liquid/filters/first/) plucks the first item out of the array so we can treat it as an object get the quantity from the product.
 
-In lines 2-10, I create a conditional to define variables that I use to affect the display of the button and error message. I use the [quantity](https://shopify.dev/api/liquid/objects/line_item#line_item-quantity) object to determine if there is more than one trial pack according to its [line_item data](https://shopify.dev/api/liquid/objects/line_item). If there are no trial packs in the cart\_items array then it will return empty and go to the else condition. 
+In lines 2-10, I create a conditional to define variables that I use to affect the display of the button and error message. I use the [quantity](https://shopify.dev/api/liquid/objects/line_item#line_item-quantity) object to determine if there is more than one trial pack according to its [line_item data](https://shopify.dev/api/liquid/objects/line_item). If there are no trial packs in the cart_items array then it will return empty and go to the else condition. Here's a breakdown of the variables:
 
+* btn-text is the text of the button.
+* btn-class adds or omits a class that will disable the button with CSS and add opacity to it.
+* err-viz shows or hides the error message based on a CSS class affecting the display. 
 
+Though I could just conditionally add the HTML for the button and error message, I'll need the elements present to 
 
 ### Limit repeat purchase
