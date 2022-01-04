@@ -52,6 +52,33 @@ Though I could just conditionally add the HTML for the button and error message,
 
 Before we add the script to check for the cookies and the product present in the cart, we need to add the cookie to the user's browser. This solution won't work if the user browses incognito or switches devices/browsers when shopping a second time. The only way to prevent this behavior for sure will be to create a webhook that pings the customer data and validates that this is their first and only trial pack. 
 
+Navigate to the Checkout settings in your admin dashboard: Settings > Checkout or mystore.myshopify.com/admin/settings/checkout
+
+Scroll to the [Order status page section](https://help.shopify.com/en/manual/orders/status-tracking) and paste the following code into the text box: 
+
+    <script>
+    var hasTrialPack;
+    {% assign trial-pack = checkout.line_items | where: "product_id", XXXXXXXX %}
+    {% if trial-pack.size == 0 %}
+    hasTrialPack = false;
+    {% else %} 
+	hasTrialPack =  true;
+    {% endif %}
+    var hasTrialPack = {{ hasTrialPack }};
+    if (hasTrialPack == true ) {
+      //change this to your product name
+      document.cookie = "has_product_name=true;";  
+    }
+    </script>
+
+The code will be on your thank you page when the customer has completed their order and they get the details about shipping and what not.
+
+First, we'll create the hasTrialPack variable. We are going to assign it a true or false value in order to determine if the cookie needs to be added. 
+
+On line 3, I create an array and filter again, but I don't need to pull out an object. We are also using the [checkout object](https://shopify.dev/api/liquid/objects/checkout), but still using the [line\_items](https://shopify.dev/api/liquid/objects/line_item) object in order to scan the product\_id property for the trial pack. 
+
+Now that I have an array only made of products that match the product ID, I can see if the array is populated. On line 4, I run a [liquid conditional](https://shopify.github.io/liquid/basics/truthy-and-falsy/) that checks for how many objects are in the array: [size](https://shopify.github.io/liquid/filters/size/). If there's no objects in the array that is only trial packs, then  
+
 _cart-sidebar.liquid_
 
     <script>
@@ -69,4 +96,4 @@ _cart-sidebar.liquid_
 
 Now that customers can't add multiple trial packs to the cart, we need to prevent repeat customers from purchasing a trial pack twice. I added the above script at the bottom of the cart-sidebar.liquid code. Though it's better to add script at the bottom of the body tag, I only want this script to fire on pages with the cart-sidebar component so this method is most convenient. 
 
-In this formula we will check if there are trial packs 
+In this formula we will check if there are trial packs
