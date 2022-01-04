@@ -97,5 +97,3 @@ _cart-sidebar.liquid_
     </script>
 
 Now that customers can't add multiple trial packs to the cart, we need to prevent repeat customers from purchasing a trial pack twice. I added the above script at the bottom of the cart-sidebar.liquid code. Though it's better to add script at the bottom of the body tag, I only want this script to fire on pages with the cart-sidebar component so this method is most convenient.
-
-In this formula we will check if there are trial packs
