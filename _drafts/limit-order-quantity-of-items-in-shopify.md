@@ -3,8 +3,8 @@ title: Limit order quantity of items in Shopify
 meta_img: https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
 tags: []
 footer-cta:
-  title: ''
-  text: ''
+  title: 'Need help with your Shopify store? '
+  text: 'Hit me up. I clearly know my way around. '
 
 ---
 [Skip to the snippets](#shopify-code-section)
@@ -50,6 +50,8 @@ Though I could just conditionally add the HTML for the button and error message,
 
 ### Limit repeat purchase
 
+Before we add the script to check for the cookies and the product present in the cart, we need to add the cookie to the user's browser. This solution won't work if the user browses incognito or switches devices/browsers when shopping a second time. The only way to prevent this behavior for sure will be to create a webhook that pings the customer data and validates that this is their first and only trial pack. 
+
 _cart-sidebar.liquid_
 
     <script>
@@ -66,3 +68,5 @@ _cart-sidebar.liquid_
     </script>
 
 Now that customers can't add multiple trial packs to the cart, we need to prevent repeat customers from purchasing a trial pack twice. I added the above script at the bottom of the cart-sidebar.liquid code. Though it's better to add script at the bottom of the body tag, I only want this script to fire on pages with the cart-sidebar component so this method is most convenient. 
+
+In this formula we will check if there are trial packs 
