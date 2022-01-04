@@ -54,7 +54,7 @@ Before we add the script to check for the cookies and the product present in the
 
 Navigate to the Checkout settings in your admin dashboard: Settings > Checkout or mystore.myshopify.com/admin/settings/checkout
 
-Scroll to the [Order status page section](https://help.shopify.com/en/manual/orders/status-tracking) and paste the following code into the text box: 
+Scroll to the [Order status page section](https://help.shopify.com/en/manual/orders/status-tracking) and paste, then modify for your product the following code into the text box: 
 
     <script>
     var hasTrialPack;
@@ -77,7 +77,10 @@ First, we'll create the hasTrialPack variable. We are going to assign it a true 
 
 On line 3, I create an array and filter again, but I don't need to pull out an object. We are also using the [checkout object](https://shopify.dev/api/liquid/objects/checkout), but still using the [line\_items](https://shopify.dev/api/liquid/objects/line_item) object in order to scan the product\_id property for the trial pack. 
 
-Now that I have an array only made of products that match the product ID, I can see if the array is populated. On line 4, I run a [liquid conditional](https://shopify.github.io/liquid/basics/truthy-and-falsy/) that checks for how many objects are in the array: [size](https://shopify.github.io/liquid/filters/size/). If there's no objects in the array that is only trial packs, then  
+Now that I have an array only made of products that match the product ID, I can see if the array is populated. On line 4, I run a [liquid conditional](https://shopify.github.io/liquid/basics/truthy-and-falsy/) that checks for how many objects are in the array: [size](https://shopify.github.io/liquid/filters/size/). If there's no objects in the array that is only trial packs, then we define the hasTrialPack variable as false. If there's at least one object in the array of trial packs only, then we'll define the hasTrialPack as true. 
+
+Now it's time for our function. This is pure javascript, so we check if the hasTrialPack variable is true then we add the cookie with the [document.cookie](https://www.w3schools.com/js/js_cookies.asp) method. Next, we'll add some script to our cart component in order to detect the cookie and disable the order button. 
+
 
 _cart-sidebar.liquid_
 
