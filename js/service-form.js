@@ -140,20 +140,29 @@ function nextInput() {
 $('#service-form').submit(function(e) {
   e.preventDefault();
   $.ajax({
-    url: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSfSJvq5RgFLzQgAnhSlwKAlZihL6_vCDM2NYVw0Cn3oktrfSQ/formResponse',
-    data: $(this).serialize()
-  }).always(function(data) {
-    
+    url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfSJvq5RgFLzQgAnhSlwKAlZihL6_vCDM2NYVw0Cn3oktrfSQ/formResponse",
+    data: $(this).serialize(),
+  }).always(function (data) {
     if (btnLocation) {
-      dataLayer.push({'event': 'gaEvent','eventCategory':'Form','eventAction': 'Submission','eventLabel': btnLocation});
+      dataLayer.push({
+        event: "gaEvent",
+        eventCategory: "Form",
+        eventAction: "Submission",
+        eventLabel: btnLocation,
+      });
     } else {
-      dataLayer.push({'event': 'gaEvent','eventCategory':'Form','eventAction': 'Submission'});
+      dataLayer.push({
+        event: "gaEvent",
+        eventCategory: "Form",
+        eventAction: "Submission",
+      });
     }
-    
-    $('#service-form .form-body').slideUp();
-    $('#service-form .form-success').slideDown();
-    setTimeout(function() {
-      $('#services-form-overlay, body,html').removeClass('active');
+
+    $("#service-form .form-body").slideUp();
+    $("#service-form .form-success").slideDown();
+    setTimeout(function () {
+      $("#services-form-overlay, body,html").removeClass("active");
     }, 3000);
   });
+
 });
