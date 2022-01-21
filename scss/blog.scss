@@ -125,6 +125,10 @@
       }
     }
     .post-content {
+      //for code vlocks
+      p {
+        overflow-x: scroll;
+      }
       pre {
         display: block;
         padding: 0.5rem;
