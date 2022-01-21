@@ -18,11 +18,11 @@ layout: compress
   
   {{ content }}
   <footer>
-    <div class="pure-g footer-grid">
-      <div class="pure-u-1 pure-u-sm-1-2 footer-left">
-        <span class="copyright-year">{{ site.time | date: '%Y' }}</span> &copy; Ed Cupaioli
+    <div class="footer-grid">
+      <div class="footer-col footer-left">
+        &copy;  <span class="copyright-year">{{ site.time | date: '%Y' }}</span> Ed Cupaioli
       </div>
-      <div class="pure-u-1 pure-u-sm-1-2 footer-right">
+      <div class="footer-col footer-right">
         <div class="icon-row">
           <a class="icon-link" href="https://github.com/ecupaio" target="_blank" aria-label="My github" rel="noopener noreferrer"><i class="fab fa-github-alt"></i></a>
           <a class="icon-link" href="https://www.linkedin.com/in/ed-cupaioli-10a9849/" aria-label="My LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
@@ -31,7 +31,8 @@ layout: compress
       </div>
     </div>
   </footer>
-  <!-- Scripts --> 
+  <!-- Scripts -->
+  
   {% if page.slick == true or layout.slick == true %}
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   {% endif %}

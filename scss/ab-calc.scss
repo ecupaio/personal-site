@@ -2,7 +2,7 @@
 @import "vars.scss";
 #ab-calc {
 
-  min-height: calc(100% - 2rem);
+  min-height: calc(100vh - 2rem);
   #heading {
     background-color: $blue;
     color: $white;
@@ -13,7 +13,17 @@
     max-width: $size-small;
     margin: auto;
     .data-row {
-      margin: 1rem -1rem;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 1rem;
+      @include bp-small {
+        grid-template-columns: repeat(1,1fr);
+      }
+      &.data-b {
+        @include bp-small {
+          margin-top: 1rem;
+        }  
+      }
       .form-field {
         display: inline-block;
         label {

@@ -424,7 +424,14 @@ body {
       position: relative;
       top: 0;
       background-color: transparent;
-      
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      @include bp-medium {
+        grid-template-columns: repeat(2,1fr);
+      }
+      @include bp-small {
+        grid-template-columns: repeat(1,1fr);
+      }
       .project-col {
         background-size: cover;
         background-position: top center;
@@ -437,7 +444,7 @@ body {
           text-align: center;
           position: relative;
           height: 100%;
-          @include flexbox;
+          display: flex;
           justify-content: center;
           align-items: center;
           flex-direction: column;
