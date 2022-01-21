@@ -102,10 +102,10 @@ about: |-
   <section id="portfolio" class="grey">
     <div class="inner-section">
       <h2>Portfolio</h2>
-      <div class="pure-g portfolio-grid">
+      <div class="portfolio-grid">
         {% assign projects = site.projects | sort: 'date' | reverse %}
         {% for project in projects %}
-        <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-3 project-col {% if forloop.index > 9 %}hidden{% endif %}">
+        <div class="project-col {% if forloop.index > 9 %}hidden{% endif %}">
           <div class="col-content" >
             {%- capture project-image -%}
             /images/{{ project.image[0]}}
@@ -206,4 +206,3 @@ about: |-
   </section>
   {% include footer-cta.html  %}
 </main>
-<script type="text/javascript" src="/js/min/contact-form.min.js"></script>

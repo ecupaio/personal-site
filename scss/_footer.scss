@@ -1,13 +1,22 @@
 footer {
   background-color: $charcoal;
   color: $white;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
+  @include bp-small {
+    padding: 1rem;
+  }
   .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    @include bp-small {
+      grid-template-columns: repeat(1,1fr);
+      text-align: center;
+    }
     .footer-right {
       text-align: right;
       @include bp-small {
-        text-align: left;
-        padding-top: 0;
+        text-align: center;
+        padding-top: 0.5rem;
       }
       .icon-link {
         color: $white;

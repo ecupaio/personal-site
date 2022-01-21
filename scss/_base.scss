@@ -109,6 +109,8 @@ main {
 }
 //Form Inputs
 input,textarea {
+	font-family: $body-font;
+	font-size: 18px;
 	&:not([type=submit]):not([type=file]):not([type=radio]):not([type=checkbox]) {
 		width: 100%;
 		padding: 0.5em;
@@ -133,9 +135,14 @@ input,textarea {
 	display: inline-block;
 	@include border-radius;
 	text-decoration: none;
+	font-family: $body-font;
+	font-size: 18px;
 	@include transition(background-color,color);
 	&:hover {
 		background-color: $black;
 		color: $yellow;
 	}
+}
+.hidden {
+	display: none !important;
 }
