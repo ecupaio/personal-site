@@ -14,7 +14,7 @@ footer-cta:
 
 Accessibility in the context of websites, refers to how easily someone with disabilities is able to read and interact with your website. There are standards known as [Website Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) that serve as a reference point for how to create a website that is accessible.
 
-I believe we have a moral imperative to all do our part in creating an equitable world for all people, but there are also legal requirements under the Americans with Disabilities Act (ADA) that can leave you open to litigation if your site is not compliant. Accessibility can also impact on SEO as shown by [Google's push for accessibility](https://www.google.com/accessibility/). Even if you're not motivated by a sense of justice, having an inaccessible site can seriously hurt your bottom line so let's find some easy fixes.
+I believe we have a moral imperative to all do our part in creating an equitable world for all people, but there are also legal requirements under the Americans with Disabilities Act (ADA) that can leave you open to litigation if your site is not compliant. Accessibility can also impact your SEO as shown by [Google's push for accessibility](https://www.google.com/accessibility/). Even if you're not motivated by a sense of justice, having an inaccessible site can seriously hurt your bottom line so let's find some easy fixes.
 
 ## Use Lighthouse to measure accessibility
 
