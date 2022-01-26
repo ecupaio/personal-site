@@ -104,7 +104,7 @@ In the above example, the image does not provide any necessary context to the co
 
 **Error:** [Heading elements are not in a sequentially-descending order]()
 
-Headings are great to use when you want some big bold text, but they need to be in order for users with screen readers to effectively browse sections. For example, if you title your page with an H1 element, then the next heading element in the section needs to be an H2 or else the user will think then missed something if they skip down and it's a H4 element. This is sort of advanced so just keep things sequential if you don't have access to the base code. I have created a codepen to demonstrate how to achieve using non-sequential headings:
+Headings are great to use when you want some big bold text, but they need to be in sequential order for users with screen readers to effectively browse sections. For example, if you title your page with an H1 element, then the next heading element in the section needs to be an H2 or else the user will think then missed something if they skip down and it's a H4 element. This is sort of advanced so just keep things sequential if you don't have access to the base code. I have created a codepen to demonstrate how to achieve using non-sequential headings:
 
 <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="jOwvVvZ" data-preview="true" data-user="ecupaio" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
 <span>See the Pen <a href="https://codepen.io/ecupaio/pen/jOwvVvZ">
