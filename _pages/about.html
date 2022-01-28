@@ -198,10 +198,6 @@ recruiters:
   info: 
   - title: Full Name
     text: Edward A Cupaioli
-  - title: Email
-    text: ed.cupaioli@gmail.com
-  - title: Phone
-    text: 469-867-3438
   - title: Hourly Rate
     text: $75 for W2, $100 for 1099
   - title: Desired Salary
@@ -219,6 +215,12 @@ recruiters:
   resume: 
     title: Download resumé
     link: /resume/    
+footer-cta: 
+  title: Let's chat
+  text: I'm available 9am to 5pm Pacific Monday through Friday. Schedule something with me. 
+  button: 
+    link: 'https://calendly.com/ed-cupaioli/meeting-with-ed-cupaioli'
+    text: Schedule a call
 ---
 <main id="about-page">
   <section id="hero" class="blue">
@@ -313,4 +315,5 @@ recruiters:
       {% include button-row.html link=page.recruiters.resume.link text=page.recruiters.resume.title target="_blank" %}
     </div>
   </section>
+  {% include footer-cta.html %}
 </main>
