@@ -1,0 +1,21 @@
+@import "mixins.scss";
+@import "vars.scss";
+#basic-page {
+  .branded-topbar {
+    width: 100%;
+    background-color: $blue;
+    padding: 1rem 3rem;
+    @include bp-small {
+      padding: 1rem;
+    }
+    &__content {
+      text-align: right;
+      .heading-4 {
+        margin: 0;
+      }
+      a.white {
+        background: none;
+      }
+    }
+  }
+}
