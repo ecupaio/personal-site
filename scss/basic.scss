@@ -1,6 +1,6 @@
 @import "mixins.scss";
 @import "vars.scss";
-#basic-page {
+.basic-page {
   .branded-topbar {
     width: 100%;
     background-color: $blue;
@@ -13,9 +13,20 @@
       .heading-4 {
         margin: 0;
       }
-      a.white {
-        background: none;
-      }
+      
+    }
+  }
+  &__content {
+    .inner-section {
+      max-width: $size-medium;
+    }
+    
+  }
+  .services-list {
+    
+    padding: 0 0 0 1em;
+    &__item {
+      margin-bottom: 0.5rem;
     }
   }
 }

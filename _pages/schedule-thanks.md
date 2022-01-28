@@ -9,7 +9,7 @@ In the meantime, check out what I can do for you:
 <ul class="services-list">
 {% for service in site.services %}
 <li class="services-list__item">
-  <a class="services-list__link" href="{{service.link}}">{{ service.title }}</a>
+  <a class="services-list__link" href="{{ service.url }}">{{ service.title }}</a>
 </li>
 {% endfor %}
 </ul>
