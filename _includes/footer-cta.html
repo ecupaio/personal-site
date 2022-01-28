@@ -16,6 +16,10 @@
   <div class="inner-section">
     <h2>{{ title }}</h2>
     {{ text | markdownify }}
+    {% if page.footer-cta.button %}
+    <a class="btn" href="{{ page.footer-cta.button.link }}">{{ page.footer-cta.button.text }}</a>
+    {% else %}
     {% include form-button.html location="CTA Footer" %}
+    {% endif %}
   </div>
 </section>
