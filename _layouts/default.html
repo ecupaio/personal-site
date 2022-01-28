@@ -10,7 +10,7 @@ layout: compress
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THQC7Q9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  {% include services-form.html %}
+  {% include schedule-overlay.html %}
   {% include nav.html %}
   {% if page.url == '/' %}
   {% include project-overlay.html %}
@@ -38,7 +38,9 @@ layout: compress
   {% endif %}
   <!-- Sitewide -->
   <script src="/js/min/site-functions.min.js?{{site.time | date: '%s' }}"></script>
-  <script src="/js/min/service-form.min.js?{{site.time | date: '%s' }}"></script>
+  
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>  
+  <script src="/js/min/schedule-form.min.js?{{site.time | date: '%s' }}"></script>
   {% if layout.scripts.size > 0 %}
   <!-- Layout -->
   {% for script in layout.scripts %}

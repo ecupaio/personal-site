@@ -61,12 +61,4 @@ $(document).ready(function() {
       }
     }
   });
-  //open form on load
-  if (window.location.href.indexOf("#open-form") > -1) {
-    $(
-      '#services-form-overlay, body,html, #service-form .form-section[data-section="get-started"], #service-form .form-section[data-section="get-started"] .form-input'
-    ).addClass("active");
-  } else {
-    console.log(window.location.href.indexOf("#open-form"));
-  }
 });

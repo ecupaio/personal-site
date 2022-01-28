@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         tasks: ['newer:terser:target']
       },
       css: {
-        files: ['scss/*.scss'],
+        files: ['scss/**/*.scss'],
         tasks: ['sass', 'postcss']
       }
     },

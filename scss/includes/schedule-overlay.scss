@@ -1,0 +1,67 @@
+.schedule-overlay {
+  background-color: $blue;
+  color: $white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 12;
+  transform: translateY(-100%);
+  padding: 2rem;
+  opacity: 0;
+  @include transition(opacity,transform);
+  &.active {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  &__body {
+    height: 100%;
+    max-width: $size-medium;
+    margin: auto;
+  }
+  &__close {
+    text-align: right;
+    
+    &-btn {
+      display: inline-block;
+      font-size: 2rem;
+      position: relative;
+      @include transition(color);
+      &:before {
+        content: '';
+        display: block;
+        height: 2rem;
+        width: 2rem;
+        position: absolute;
+        background-color: $white;
+        border-radius: 50%;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(0);
+        transform-origin: center;
+        @include transition(transform);
+      }
+      &:hover {
+        color: $blue;
+        cursor: pointer;
+        &:before {
+          transform: translate(-50%,-50%) scale(1);
+        }
+      }
+    } 
+  }
+  &__copy {
+    text-align: center;
+  }
+  &__form {
+    height: 100%;
+    margin-top: -66px;
+    @include bp-small {
+      margin-top: 0;
+    }
+  }
+}
+
+  
