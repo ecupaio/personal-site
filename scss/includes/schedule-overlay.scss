@@ -10,6 +10,7 @@
   transform: translateY(-100%);
   padding: 2rem;
   opacity: 0;
+  overflow-y: scroll;
   @include transition(opacity,transform);
   &.active {
     z-index: 12;
@@ -58,10 +59,7 @@
   }
   &__form {
     height: 100%;
-    margin-top: -66px;
-    @include bp-small {
-      margin-top: 0;
-    }
+    
   }
 }
 
