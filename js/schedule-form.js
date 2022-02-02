@@ -11,19 +11,23 @@ const open = document.querySelectorAll('a[href^="#open-form"]');
 var btnLocation;
 
 //close overlay
-close.addEventListener('click', event => {
+function closeForm() {
   overlay.classList.remove('active');
   document.documentElement.classList.remove('active');
-  
+}
+close.addEventListener('click', event => {
+  closeForm();
 });
 
 //open overlay
+function openForm() {
+  overlay.classList.add('active');
+  document.documentElement.classList.add('active');
+}
 open.forEach(btn => {
   btn.addEventListener('click', event => {
     event.preventDefault();
-    
-    overlay.classList.add('active');
-    document.documentElement.classList.add('active');
+    openForm();
     btnLocation = event.target.dataset.location;
   });
 });
@@ -85,5 +89,7 @@ if (window.location.href.indexOf('/schedule-thanks/') > -1) {
   document.querySelector('.event-info.answer-2').innerHTML = answer2;
   document.querySelector('.event-info.answer-3').innerHTML = answer3;
 }
-//https://help.calendly.com/hc/en-us/articles/360040257613#information-you-can-send-in-the-redirect-url-0-0
-//?assigned_to=Ed%20Cupaioli&event_type_uuid=15dba590-0377-4178-80bb-592bef526822&event_type_name=30%20Minute%20Meeting&event_start_time=2022-01-31T11%3A00%3A00-08%3A00&event_end_time=2022-01-31T11%3A30%3A00-08%3A00&invitee_uuid=e1df4b7e-41c0-4b70-8053-f2b8c6139c93&invitee_full_name=Ed%20Cupaioli&invitee_email=ed.cupaioli%40gmail.com&answer_1=test%20What%20can%20I%20help%20you%20with%3F%20%2A&answer_2=test%20What%20is%20your%20timeline%3F&answer_3=test%20What%20is%20your%20budget%3F
+//open form on load
+if (window.location.href.indexOf('#open-form') > -1) {
+  openForm();
+}
