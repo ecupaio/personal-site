@@ -1,0 +1,22 @@
+<section id="portfolio" class="grey">
+  <div class="inner-section">
+    <h2>Portfolio</h2>
+    <div class="portfolio-grid">
+      {% assign projects = site.projects | sort: 'date' | reverse %}
+      {% for project in projects %}
+      <div class="project-col {% if forloop.index > 9 %}hidden{% endif %}" >
+        <div class="col-content" >
+          {%- capture project-image -%}
+          /images/{{ project.image[0]}}
+          {%- endcapture -%}
+          <img class="project-image" src="{{ project-image | resize: '310x'}}" alt="{{ project.title }}">
+          <h4 class="project-title">{{ project.title }}</h4>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="btn-row">
+      <a href="#" class="load-more-projects btn">Load more</a>
+    </div>
+  </div>
+</section>

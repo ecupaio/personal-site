@@ -6,6 +6,7 @@ slick: true
 permalink: /
 scripts: 
 - home
+- portfolio
 services: 
 - title: Web Development
   id: web-dev
@@ -98,46 +99,7 @@ about: |-
       {% include form-button.html location="Services Section" %}
     </div>
   </section>
-  
-  <section id="portfolio" class="grey">
-    <div class="inner-section">
-      <h2>Portfolio</h2>
-      <div class="portfolio-grid">
-        {% assign projects = site.projects | sort: 'date' | reverse %}
-        {% for project in projects %}
-        <div class="project-col {% if forloop.index > 9 %}hidden{% endif %}">
-          <div class="col-content" >
-            {%- capture project-image -%}
-            /images/{{ project.image[0]}}
-            {%- endcapture -%}
-            <img class="project-image" src="{{ project-image | resize: '310x'}}" alt="{{ project.title }}">
-            <h4 class="project-title">{{ project.title }}</h4>
-            <div class="hidden">
-              <div class="project-link">
-                {{ project.link }}
-              </div>
-              <div class="project-images">
-                {{ project.image | split: ''}}
-              </div>
-              <div class="project-text">
-                {{ project.content | markdownify }}
-              </div>
-              <div class="project-tech">
-                {% for tech in project.tech %}
-                {{ tech }}{% unless forloop.last %},{% endunless%}
-                {% endfor %}
-              </div>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-      <div class="btn-row">
-        <a href="#" class="load-more-projects btn">Load more</a>
-      </div>
-    </div>
-    
-  </section>
+  {% include portfolio-section.html %}
   <section id="studies">
     <div class="inner-section">
       <h2>Studies</h2>
