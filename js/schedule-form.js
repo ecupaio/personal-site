@@ -7,7 +7,7 @@ Calendly.initInlineWidget({
 });
 const close = document.querySelector('.schedule-overlay__close-btn'); 
 const overlay = document.querySelector('.schedule-overlay');
-const open = document.querySelectorAll('a[href^="#open-form"]');
+const open = document.querySelectorAll('a[href^="#open-form"], a[href^="#open-contact"]');
 var btnLocation;
 
 //close overlay
@@ -90,6 +90,6 @@ if (window.location.href.indexOf('/schedule-thanks/') > -1) {
   document.querySelector('.event-info.answer-3').innerHTML = answer3;
 }
 //open form on load
-if (window.location.href.indexOf('#open-form') > -1) {
+if (window.location.href.indexOf('#open-form') > -1 || window.location.href.indexOf('#open-contact') > -1) {
   openForm();
 }
