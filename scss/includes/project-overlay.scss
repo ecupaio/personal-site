@@ -1,0 +1,12 @@
+.project-overlay {
+  .close-row {
+    text-align: right;
+    .close-project-overlay {
+      color: $white;
+      font-size: 1.5rem;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
