@@ -45,9 +45,15 @@ selectedProject.forEach(item => {
           spaceBetween: 32,
           loop: true,
           paginationClickable: true,
+          autoHeight: true,
           navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
+          },
+          breakpoints: {
+            568: {
+              autoHeight: false
+            }
           }
         });
         document.documentElement.classList.add('active');

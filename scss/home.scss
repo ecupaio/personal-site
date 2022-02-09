@@ -6,32 +6,6 @@ body {
     overflow-y: hidden;
   }
 }
-.project-overlay {
-  position: fixed;
-  padding: 2em;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba($black,0.8);
-  z-index: 10;
-  opacity: 0;
-  overflow-y: scroll;
-  @include transform(translateY(-100%));
-  @include transition(transform,opacity);
-  @include flexbox;
-  justify-content: center;
-  align-items: center;
-  @include bp-small {
-    display: block;
-    padding: 3em 1em 1em;
-  }
-  &.active {
-    opacity: 1;
-    @include transform(translateY(0%));
-  }
-  
-}
 #home {
   section {
     .inner-section {
@@ -226,7 +200,9 @@ body {
   }
   #portfolio {
     position: relative;
-    
+    @include bp-small {
+      padding: 2rem 1rem;
+    }
     .btn-row {
       text-align: center;
     }
