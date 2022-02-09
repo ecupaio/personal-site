@@ -1,11 +1,11 @@
 //project overlay
 
-const project = document.querySelectorAll('.project-col');
+const selectedProject = document.querySelectorAll('.project-col');
 const projectOverlay = document.querySelector('.project-overlay');
 const projectSwiper = document.querySelector('.swiper-wrapper');
 let swiper; 
 
-project.forEach(item => {
+selectedProject.forEach(item => {
   item.addEventListener('click', event => {
     const projectTitle = event.currentTarget.querySelector('.project-title').innerText;  
     
@@ -100,3 +100,26 @@ window.onclick = event => {
     closeOverlay()
   } 
 };
+//load more projects 
+document.querySelector('.load-more-projects').addEventListener('click', event => {
+  event.preventDefault();
+  const hiddenProjects = document.querySelectorAll('.project-col.hidden');
+  
+  hiddenProjects.forEach((element,index) => {
+    if (index <= 8) {
+      element.classList.remove('hidden');
+    }
+    
+  });
+
+  const offsetTop = window.scrollY + hiddenProjects[0].getBoundingClientRect().top;
+  scroll({
+    top: offsetTop,
+    behavior: "smooth"
+  })
+  console.log(hiddenProjects.length);
+  if (hiddenProjects.length < 9) {
+    document.querySelector('.load-more-projects').classList.add('hidden');
+  }
+});
+

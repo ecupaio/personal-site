@@ -31,9 +31,7 @@
       display: inline-block;
       padding: 1em;
       position: relative;
-      
       margin-bottom: 0;
-
       z-index: 2;
       @include box-shadow;
       @include bp-small {
@@ -70,9 +68,6 @@
         width: 2rem;
         border-radius: 50%;
         background-color: $blue;
-        &::after {
-          
-        }
         &.swiper-button-next {
           right: 0;
         }

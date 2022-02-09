@@ -4,7 +4,7 @@
     <div class="portfolio-grid">
       {% assign projects = site.projects | sort: 'date' | reverse %}
       {% for project in projects %}
-      <div class="project-col {% if forloop.index > 9 %}hidden{% endif %}" >
+      <div class="project-col {% if forloop.index > 9 %}hidden{% endif %}" data-project="{{ project.title }}">
         <div class="col-content" >
           {%- capture project-image -%}
           /images/{{ project.image[0]}}
