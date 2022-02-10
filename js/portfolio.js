@@ -13,19 +13,16 @@ function loadProject(projectTitle) {
     .then(projects => {
       //get project object by title
       const project = projects.find( ({ title }) => title === projectTitle);
+      
       //product object data
       const projectImages = project.images;
       const projectLink = project.link;
-      const projectText = decodeURI(project.text); 
+      const projectText = decodeURIComponent(project.text).replace(/\+/g,' '); 
       const projectTech = project.tech;
-      //add content to portfolio 
-      function decodeHtml(html) {
-        var txt = document.createElement("textarea");
-        txt.innerHTML = html;
-        return txt.value;
-      }
+      
+      //insert content
       document.querySelector('.selected-tech').innerHTML = projectTech;
-      document.querySelector('.about-project').innerHTML = decodeHtml(projectText);
+      document.querySelector('.about-project').innerHTML = projectText;
       if (projectLink.length > 0 ) {
         document.querySelector('.selected-link').setAttribute('href',projectLink);
         document.querySelector('.selected-link').classList.remove('hidden');
@@ -46,22 +43,42 @@ function loadProject(projectTitle) {
         projectSwiper.insertAdjacentHTML('beforeend', projectSlide);
       });
       let imageHeight;
-      swiper = new Swiper('.swiper', {
-        slidesPerView: 1,
-        spaceBetween: 32,
-        loop: true,
-        paginationClickable: true,
-        autoHeight: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-          568: {
-            autoHeight: false
+      if (projectImages.length > 1) {
+        document.querySelectorAll('.swiper-button').forEach(el => {
+          el.classList.remove('hidden');
+        });
+        swiper = new Swiper('.swiper', {
+          slidesPerView: 1,
+          spaceBetween: 32,
+          loop: true,
+          paginationClickable: true,
+          autoHeight: true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          breakpoints: {
+            568: {
+              autoHeight: false
+            }
           }
-        }
-      });
+        });
+        swiper.on('transitionEnd', function () {
+        imageHeight = document.querySelector('[data-swiper-slide-index="'+swiper.realIndex+'"] .project-image').height;
+        scrollerDisplay();  
+        });
+        swiper.on('imagesReady', function () {
+          imageHeight = document.querySelector('[data-swiper-slide-index="0"] .project-image').height;
+          scrollerDisplay();  
+        });
+      } else {
+        document.querySelectorAll('.swiper-button').forEach(el => {
+          el.classList.add('hidden');
+        });
+        imageHeight = document.querySelector('.project-image').height;
+        scrollerDisplay();
+      }
+      
       document.documentElement.classList.add('active');
       projectOverlay.classList.add('active');
       //show scroller 
@@ -73,14 +90,7 @@ function loadProject(projectTitle) {
           document.querySelector('.scroller').classList.remove('active');
         }
       }
-      swiper.on('transitionEnd', function () {
-        imageHeight = document.querySelector('[data-swiper-slide-index="'+swiper.realIndex+'"] .project-image').height;
-        scrollerDisplay();  
-      });
-      swiper.on('imagesReady', function () {
-        imageHeight = document.querySelector('[data-swiper-slide-index="0"] .project-image').height;
-        scrollerDisplay();  
-      });
+      
       //hide scroller
       const slides = document.querySelectorAll('.swiper-slide');
       slides.forEach(item => {
@@ -99,6 +109,7 @@ function loadProject(projectTitle) {
 selectedProject.forEach(item => {
   item.addEventListener('click', event => {
     const projectTitle = event.currentTarget.querySelector('.project-title').innerText; 
+    console.log(projectTitle);
     loadProject(projectTitle);
   });  
 });
@@ -108,7 +119,9 @@ function closeOverlay() {
   projectSwiper.innerHTML = '';
   projectOverlay.classList.remove('active');
   document.documentElement.classList.remove('active');
-  swiper.destroy(true,true);
+  if (swiper) {
+    swiper.destroy(true,true);
+  }
 }
 document.querySelector('.close-project-overlay').onclick = event => {
   closeOverlay();
@@ -135,7 +148,7 @@ document.querySelector('.load-more-projects').addEventListener('click', event =>
     top: offsetTop,
     behavior: "smooth"
   })
-  console.log(hiddenProjects.length);
+  
   if (hiddenProjects.length < 9) {
     document.querySelector('.load-more-projects').classList.add('hidden');
   }
