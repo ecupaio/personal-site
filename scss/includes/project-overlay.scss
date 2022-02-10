@@ -1,7 +1,6 @@
 .project-overlay {
   padding: 1rem;
   position: fixed;
-  
   top: 0;
   left: 0;
   height: 100%;
@@ -76,6 +75,63 @@
         color: lighten($charcoal,25%);
         font-weight: 500;
         margin-bottom: 1rem;
+      }
+    }
+    .project-cta {
+      .share-project {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        .share-btn {
+          margin: 0;
+          padding: 0;
+          height: 2.25rem;
+          width: 2.25rem;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
+          i {
+            
+          }
+          &.copy {
+            position: relative;
+            .fa-link {
+              backface-visibility: hidden;
+              @include transition(transform);
+            }
+            .fa-check {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              
+              transform: translate(-50%,-50%) rotateY(180deg);
+              @include transition(transform);
+              backface-visibility: hidden;
+              z-index: -1;
+            }
+            &.active {
+              .fa-check {
+                transform: translate(-50%,-50%) rotateY(0deg);
+                z-index: 1;
+              }
+              .fa-link {
+                transform: rotateY(180deg);
+              }
+            }
+            .copy-link {
+              position: absolute;
+              opacity: 0;
+              z-index: -1;
+              height: 0;
+              overflow: hidden;
+            }
+          }
+        }
       }
     }
     .slider-col {
