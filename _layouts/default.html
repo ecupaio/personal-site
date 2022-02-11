@@ -34,8 +34,11 @@ layout: compress
   <!-- Scripts -->
   <!-- Sitewide -->
   <script src="/js/min/site-functions.min.js?{{site.time | date: '%s' }}"></script>
+  <!-- Sitewide - Calendly Form -->
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>  
   <script src="/js/min/schedule-form.min.js?{{site.time | date: '%s' }}"></script>
+  <!-- Sitewide - Nav -->
+  <script src="/js/min/nav.min.js?{{site.time | date: '%s' }}"></script>
   {% if layout.scripts.size > 0 %}
   <!-- Layout -->
   {% for script in layout.scripts %}
