@@ -2,7 +2,7 @@
 title: Home
 layout: default
 css: home
-slick: true
+swiper: true
 permalink: /
 scripts: 
 - home
@@ -104,32 +104,36 @@ about: |-
     <div class="inner-section">
       <h2>Studies</h2>
       <div id="studies-slider">
-        {% for study in site.studies %}
-        <div class="study-slide">
-          <div class="study">
-            <div class="image-col">
-              <div class="image-block">
-                <img src="{{ study.intro.image }}" alt="image of {{ study.title }}" class="study-image"/>
-              </div>
-            </div>
-            <div class="text-col">
-              <div class="text-content">
-                <h2 class="study-title">
-                  {{ study.title }}
-                </h2>
-                <div class="study-obj-list">
-                  {% for obj in study.intro.objectives %}
-                  <div class="obj">{{ obj }}</div>
-                  {% endfor %}
+        <div class="swiper-wrapper">
+          {% for study in site.studies %}
+          <div class="study-slide swiper-slide">
+            <div class="study">
+              <div class="image-col">
+                <div class="image-block">
+                  <img src="{{ study.intro.image }}" alt="image of {{ study.title }}" class="study-image"/>
                 </div>
-                <div class="study-link-block">
-                  <a class="btn study-link" href="{{ study.url }}">Read study</a>
+              </div>
+              <div class="text-col">
+                <div class="text-content">
+                  <h2 class="study-title">
+                    {{ study.title }}
+                  </h2>
+                  <div class="study-obj-list">
+                    {% for obj in study.intro.objectives %}
+                    <div class="obj">{{ obj }}</div>
+                    {% endfor %}
+                  </div>
+                  <div class="study-link-block">
+                    <a class="btn study-link" href="{{ study.url }}">Read study</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          {% endfor %}
         </div>
-        {% endfor %}
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </div>
   </section>
