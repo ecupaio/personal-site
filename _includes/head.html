@@ -134,12 +134,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="twitter:title" content="{{ title }}">
 <meta name="twitter:description" content="{{ description }}">
 <meta name="twitter:image" content="{{ meta_img }}">
-{% if page.slick == true or layout.slick == true %}
-<!-- Slick -->
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="/css/slick.min.css?{{site.time | date: '%s'}}" />
+{% if page.swiper == true or layout.swiper == true %}
+<!-- Swiper -->
 <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="/css/swiper.min.css?{{site.time | date: '%s'}}" />
 {% endif %}
 <!-- CSS -->
 <!-- Base CSS -->

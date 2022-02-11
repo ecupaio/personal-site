@@ -16,8 +16,16 @@ $(function() {
   }, 1000);
 
   //studies slider
-  $('#studies-slider').slick({
-    slidesToShow: 1,
-  });
-  
+  const studiesSwiper = new Swiper('#studies-slider' , {
+    slidesPerView: 1,
+    spaceBetween: 32,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    paginationClickable: true,
+  });  
 });
+
+  

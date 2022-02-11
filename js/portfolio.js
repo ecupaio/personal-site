@@ -33,7 +33,7 @@ function loadProject(projectTitle) {
       //add share links
       const projectOpen = window.location.origin+"/?project="+encodeURI(projectTitle);
       document.querySelector('.copy-link').setAttribute('value',projectOpen);
-      const linkedinShare = 'https://www.linkedin.com/sharing/share-offsite/?url='+encodeURI(projectTitle);
+      const linkedinShare = 'https://www.linkedin.com/sharing/share-offsite/?url='+encodeURI(projectOpen);
       document.querySelector('.share-btn.linkedin').setAttribute('href',linkedinShare);
       //add images and init swiper
       projectImages.forEach(image => {
