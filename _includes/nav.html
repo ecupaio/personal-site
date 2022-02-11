@@ -10,11 +10,11 @@
     {% for nav in site.data.nav.main %}
     <li class="nav-link">
       {% if nav.submenu and nav.submenu.size > 0 %}
-      <a class="text-link white toggle-link" href="{{ nav.url }}">{{ nav.title }}&nbsp;<i class="fa fa-caret-right"></i></a>
+      <a class="text-link white toggle-link" href="{{ nav.url }}">{{ nav.title }}&nbsp;&nbsp;<i class="fa fa-caret-right"></i></a>
       <ul class="nav-submenu toggle-box">
         {% for item in nav.submenu %}
         <li class="submenu-item ">
-          <a class="submenu-link white" href="{{ item.link }}">{{ item.title }}</a>
+          <a class="submenu-link white" href="{{ item.url }}">{{ item.title }}</a>
         </li>
         {% endfor %}
       </ul>

@@ -22,7 +22,7 @@ const body = document.querySelector('body, main');
 const nav = document.querySelector('#sidebar-nav');
 const navLinks = document.querySelectorAll('#sidebar-nav .nav-link');
 navToggle.addEventListener('click', e => {
-  document.querySelectorAll('#nav-toggle, #sidebar-nav, main,body').forEach(el =>{
+  document.querySelectorAll('#nav-toggle, #sidebar-nav, main,html').forEach(el =>{
     el.classList.toggle('active');
     if (nav.classList.contains('active')) {
       navLinks.forEach((link,i) => {
