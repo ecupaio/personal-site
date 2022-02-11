@@ -1,17 +1,24 @@
 main:
   - title: Home
     url: /#
-  - title: Services
-    url: /#services  
   - title: Portfolio
     url: /#portfolio
   - title: About me
     url: /about/  
+  - title: Services
+    url: '#'
+    submenu: 
+    - title: Optimization
+      url: /service/optimization/
+    - title: Web Development
+      url: /service/web-development/  
+  - title: Tools & Themes    
+    url: '#'
+    submenu: 
+    - title: "A/B Test Calc"
+      url: /ab-test-calculator/
+    - title: Campaigner Theme
+      url: /campaigner-theme/
   - title: Blog
     url: /blog/
-  - title: 'Resumé'
-    url: /resume/  
-  - title: "A/B Test Calc"
-    url: /ab-test-calculator/
-  - title: Campaigner Theme
-    url: /campaigner-theme/  
+  
