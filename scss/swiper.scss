@@ -1,0 +1,15 @@
+@import "mixins.scss";
+@import "vars.scss";
+[class^='swiper-button'] {
+  color: $white;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: $blue;
+  &.swiper-button-next {
+    right: 0;
+  }
+  &.swiper-button-prev {
+    left: 0;
+  }
+}

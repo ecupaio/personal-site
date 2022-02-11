@@ -1,6 +1,6 @@
 ---
 title: eStreet.co
-link: https://estreet.co
+link: ''
 image:
 - estreet-co-home.jpg
 - estreet-co-blog.jpg

@@ -32,13 +32,8 @@ layout: compress
     </div>
   </footer>
   <!-- Scripts -->
-  
-  {% if page.slick == true or layout.slick == true %}
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  {% endif %}
   <!-- Sitewide -->
   <script src="/js/min/site-functions.min.js?{{site.time | date: '%s' }}"></script>
-  
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>  
   <script src="/js/min/schedule-form.min.js?{{site.time | date: '%s' }}"></script>
   {% if layout.scripts.size > 0 %}
