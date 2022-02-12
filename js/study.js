@@ -1,17 +1,23 @@
-$(function () {
-  $('.item-image').click(function () {
-    const selectedImage = $(this).attr('src');
-    $('.selected-image').attr('src',selectedImage);
-    $('#image-lightbox, body,html').addClass('active');
-  });
-  $('.close-lightbox').click(function() {
-    $('#image-lightbox, body,html').removeClass('active');
-  });
-  $('#image-lightbox').click(function (e) {
-    if (!$(e.target).hasClass('selected-image') && !$(e.target).hasClass('image-container')) {
-      $('#image-lightbox, body,html').removeClass('active');
-    } else {
-      
-    }
+//open lightbox and populate image
+document.querySelectorAll('.item-image').forEach(el => {
+  el.addEventListener('click', event => { 
+    const selectedImage = el.getAttribute('src');
+    document.querySelector('.selected-image').setAttribute('src',selectedImage);
+    document.querySelector('#image-lightbox').classList.add('active');
+    document.querySelector('html').classList.add('active');
   });
 });
+// close lightbox 
+document.querySelector('.close-lightbox').addEventListener('click', event => {
+  closeLightbox();
+});
+window.onclick = event => {
+  if (event.target === document.querySelector('#image-lightbox')) {
+    closeLightbox();
+  } 
+};
+function closeLightbox() {
+  document.querySelector('#image-lightbox').classList.remove('active');
+  document.querySelector('html').classList.remove('active');
+}
+
