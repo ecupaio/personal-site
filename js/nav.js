@@ -16,7 +16,7 @@ navToggle.addEventListener('click', e => {
     navLinks.forEach((link,i) => {
       setTimeout(e =>{
         link.classList.add('active');
-      }, (i+1) * 100);
+      }, i * 100);
     });
   } else {
     //remove active class from each link

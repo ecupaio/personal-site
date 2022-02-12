@@ -1,16 +1,13 @@
-$(function() {
-  
-  
+document.addEventListener("DOMContentLoaded",function(){  
   //hero animation
   setTimeout(function() {
-    $('#hero').addClass('active');
-    
+    document.querySelector('#hero').classList.add('active');
   }, 700);
   setTimeout(function() {
-    $('#hero .text-item').each(function(i) {
-      var $this= $(this);
+    document.querySelectorAll('#hero .text-item').forEach((el,i) =>{
+      
       setTimeout(function() {
-        $this.addClass('active');
+        el.classList.add('active');
       }, i * 300);
     });
   }, 1000);
@@ -27,5 +24,4 @@ $(function() {
     paginationClickable: true,
   });  
 });
-
   
