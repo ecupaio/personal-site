@@ -21,4 +21,15 @@ main:
       url: /campaigner-theme/
   - title: Blog
     url: /blog/
+social: 
+- title: My github
+  icon: '<i class="fab fa-github-alt"></i>'
+  url: https://github.com/ecupaio
+- title: My LinkedIn
+  icon: '<i class="fab fa-linkedin-in"></i>'
+  url: https://www.linkedin.com/in/ed-cupaioli-10a9849/
+- title: Send me an email
+  icon: '<i class="fa fa-envelope"></i>'
+  url: mailto:ed.cupaioli@gmail.com       
+
   
