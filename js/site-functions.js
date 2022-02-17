@@ -1,19 +1,19 @@
-$(document).ready(function() {
+ 
   //Universal scrollTop
-  function scrollTop(selector) {
-    $("body,html").animate({
-      scrollTop: $(selector).offset().top,
-    });
-  }
-  //Link scroll top
-  $('a[href^="#"],a[href^="/#"]').click(function (e) {
-    if ($(this).attr("id", selector).length > 1) {
-      e.preventDefault();
-      var selector = $(this).attr("href");
-      scrollTop(selector);
-    }
-  });
-});
+  // function scrollTop(selector) {
+  //   $("body,html").animate({
+  //     scrollTop: $(selector).offset().top,
+  //   });
+  // }
+  // //Link scroll top
+  // $('a[href^="#"],a[href^="/#"]').click(function (e) {
+  //   if ($(this).attr("id", selector).length > 1) {
+  //     e.preventDefault();
+  //     var selector = $(this).attr("href");
+  //     scrollTop(selector);
+  //   }
+  // });
+
 //Get params 
 function getParams(name) {
   const params = new Proxy(new URLSearchParams(window.location.search), {
