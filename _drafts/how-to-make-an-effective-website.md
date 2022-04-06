@@ -23,3 +23,5 @@ _Alec Baldwin voice:_ PUT THAT COFFEE DOWN...coffee is for converters.
 Now that you have your objectives for users visiting your site, let's see which of them are conversions. Conversions are when you turn a user into a customer. For example, when someone schedules a meeting with me, that's a conversion. They saw my site and we're impressed with my portfolio, so they scheduled a meeting with me. I actually log that conversion into Google Analytics and now I can see which pages are most effective at helping me convert users. Since this is the primary objective of my site and my only conversion, I make it available in every section. It's at the bottom of this post! Always make sure your users can convert at a point of interest. If you are describing your services, then allow the user to take action upon reading how wonderful your business is. 
 
 ## One thing at a time
+
+Now you have your objectives for your site and you know which ones will directly help your business grow, you can start on your layout. 
