@@ -108,7 +108,7 @@ main {
 	min-height: calc(100vh - 2rem);
 }
 //Form Inputs
-input,textarea {
+input,textarea, select {
 	font-family: $body-font;
 	font-size: 18px;
 	&:not([type=submit]):not([type=file]):not([type=radio]):not([type=checkbox]) {
