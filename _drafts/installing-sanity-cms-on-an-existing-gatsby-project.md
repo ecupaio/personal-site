@@ -7,6 +7,8 @@ footer-cta:
   text: ''
 
 ---
+## Initial setup
+
 Create a directory called 'web' and move all your site files into there
 
 Create a directory called 'studio' and cd into it. then run sanity init
