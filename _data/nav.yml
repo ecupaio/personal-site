@@ -21,6 +21,11 @@ main:
       url: /campaigner-theme/
   - title: Blog
     url: /blog/
+contact: 
+  phone: '469.867.3438'
+  linkedin: 'https://www.linkedin.com/in/ed-cupaioli-10a9849/'
+  github: 'https://github.com/ecupaio'
+  email: 'ed.cupaioli@gmail.com'
 social: 
 - title: My github
   icon: '<i class="fab fa-github-alt"></i>'

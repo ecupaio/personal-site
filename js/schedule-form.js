@@ -90,6 +90,9 @@ if (window.location.href.indexOf('/schedule-thanks/') > -1) {
   document.querySelector('.event-info.answer-3').innerHTML = answer3;
 }
 //open form on load
-if (window.location.href.indexOf('#open-form') > -1 || window.location.href.indexOf('#open-contact') > -1) {
+if (
+  window.location.href.indexOf("#open-form") > -1 ||
+  window.location.href.indexOf("#open-contact") > -1
+) {
   openForm();
 }

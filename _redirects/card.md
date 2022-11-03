@@ -1,5 +1,5 @@
 ---
 title: Card
 permalink: /card/
-redirect_url: /#open-form
+redirect_url: /contact/
 ---
