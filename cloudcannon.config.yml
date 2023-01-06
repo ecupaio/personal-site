@@ -13,7 +13,8 @@ collections_config:
     output: true
     permalink: /:categories/:year/:month/:day/:title:output_ext
     create:
-      path: [relative_base_path]/{date|year}-{date|month}-{date|day}-{title|slugify}.[ext]
+      path: >-
+        [relative_base_path]/{date|year}-{date|month}-{date|day}-{title|slugify}.[ext]
   drafts:
     path: _drafts
     output: false
