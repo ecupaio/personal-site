@@ -19,7 +19,12 @@ You may notice while tabbing through your page, that you don't see the selection
 
 I will use this magnificent website I created in 5 minutes to serve as our example:&nbsp;
 
-\[code pen embed\]
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="KKBNExG" data-user="ecupaio" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/ecupaio/pen/KKBNExG">
+  Accessible Overlay - Original</a> by Ed Cupaioli (<a href="https://codepen.io/ecupaio">@ecupaio</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ## Hide your overlay from tabbing
 
@@ -27,7 +32,12 @@ First step is to add the [visibility CSS property](https://www.w3schools.com/css
 
 Next, you need to add the [aria-modal property](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal) with a value of true to the overlay element so that screen readers know it's outside of the page flow when you focus on it.&nbsp;
 
-\[code pen step 2\]
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="eYjBoYO" data-user="ecupaio" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/ecupaio/pen/eYjBoYO">
+  Accessible Overlay - Step 1</a> by Ed Cupaioli (<a href="https://codepen.io/ecupaio">@ecupaio</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 You should now be able to tab from your nav bar down to the content seamlessly without getting tripped up on the overlay.&nbsp;
 
@@ -37,7 +47,12 @@ You should now be able to tab from your nav bar down to the content seamlessly w
 
 You're not done yet\! When users trigger their overlay, they need to know that the overlay is opened. You will need to trigger a focus event on a focusable element: a button or an input. I focus on the close button since it will allow the user to back out of the overlay if they don't wish to view the overlay and read the rest of the site. Also it's the first focusable element at the top of the overlay.&nbsp;
 
-\[codepen step 3\]
+<p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="YzjpMPQ" data-user="ecupaio" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/ecupaio/pen/YzjpMPQ">
+  Accessible Overlay - Step 2</a> by Ed Cupaioli (<a href="https://codepen.io/ecupaio">@ecupaio</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 Now you're all set\!&nbsp;
 
