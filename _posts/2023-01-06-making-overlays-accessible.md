@@ -17,12 +17,28 @@ You may notice while tabbing through your page, that you don't see the selection
 * Hide your overlay from tabbing
 * Dynamically focus on your overlay&nbsp;
 
-I will use this maginificent website I created in 5 minutes to serve as our example:&nbsp;
+I will use this magnificent website I created in 5 minutes to serve as our example:&nbsp;
 
-&nbsp;
+\[code pen embed\]
 
 ## Hide your overlay from tabbing
 
-First step is to add a few properties that will tell screen readers to not read this quite yet:&nbsp;
+First step is to add the [visibility CSS property](https://www.w3schools.com/cssref/pr_class_visibility.php) with a value of hidden which will tell screen readers to not read this while it's hidden.&nbsp;
 
-aria-hiden&nbsp;
+Next, you need to add the [aria-modal property](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal) with a value of true to the overlay element so that screen readers know it's outside of the page flow when you focus on it.&nbsp;
+
+\[code pen step 2\]
+
+You should now be able to tab from your nav bar down to the content seamlessly without getting tripped up on the overlay.&nbsp;
+
+**Note:&nbsp;**You may see some documentation that says to use the aria-hidden property and set it to true. This will achieve in hiding your overlay, but it will not make it visible on click. Once it's set to hidden, you cannot dynamically put it back into view of the tab order. It's a similar case with setting the tab-index property to -1. Again it will set it on init and the screen reader will not detect it when you dynamically change it. The visibility property can be set dynamically and the screen reader will recognize it.&nbsp;
+
+## Dynamically focus on your overlay&nbsp;
+
+You're not done yet\! When users trigger their overlay, they need to know that the overlay is opened. You will need to trigger a focus event on a focusable element: a button or an input. I focus on the close button since it will allow the user to back out of the overlay if they don't wish to view the overlay and read the rest of the site. Also it's the first focusable element at the top of the overlay.&nbsp;
+
+\[codepen step 3\]
+
+Now you're all set\!&nbsp;
+
+&nbsp;
