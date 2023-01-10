@@ -11,7 +11,7 @@ collections_config:
   posts:
     path: _posts
     output: true
-    permalink: /:categories/:year/:month/:day/:title:output_ext
+    permalink: /blog/:title
     create:
       path: >-
         [relative_base_path]/{date|year}-{date|month}-{date|day}-{title|slugify}.[ext]
@@ -67,7 +67,7 @@ paths:
   collections:
   layouts: _layouts
   static:
-  uploads: uploads
+  uploads: images
   includes: _includes
   dam_uploads:
   dam_static:
@@ -77,4 +77,4 @@ source_editor:
 
 # Timezone of your site in IANA format. This is used by date and datetime inputs
 # within the CloudCannon Data Editor.
-timezone: America/New_York
+timezone: America/Los_Angeles
