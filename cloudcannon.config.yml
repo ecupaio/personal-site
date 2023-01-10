@@ -72,3 +72,5 @@ _inputs:
     hidden: true  
   text:
     type: textarea
+  categories:
+    type: array  
