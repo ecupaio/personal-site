@@ -53,6 +53,7 @@ collections_config:
   pages:
     name: Pages
     path: ''
+
 collection_groups:
   - heading: Content
     collections:
@@ -69,3 +70,5 @@ _inputs:
     hidden: true
   css: 
     hidden: true  
+  text:
+    type: textarea
