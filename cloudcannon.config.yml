@@ -50,11 +50,6 @@ collections_config:
   skills:
     name: Skills
     path: _skills
-  posts:
-    name: Posts
-    path: _posts
-    schemas:
-      default: *ref_0
   pages:
     name: Pages
     path: ''
@@ -73,3 +68,5 @@ paths:
 _inputs:
   template:
     hidden: true
+  css: 
+    hidden: true  
