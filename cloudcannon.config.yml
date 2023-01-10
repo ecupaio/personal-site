@@ -52,7 +52,7 @@ collections_config:
     path: _skills
   pages:
     name: Pages
-    path: ''
+    path: _pages
 
 collection_groups:
   - heading: Content
