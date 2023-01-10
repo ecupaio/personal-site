@@ -217,7 +217,11 @@ footer-cta:
           {% else %}
           <div class="form-field text">
             <label>{{ field.label }}</label>
-            <input name="{{ field.name }}" class="text-input" {% if field.label == "Email" %}type="email"{% else %}type="text"{% endif %} required placeholder="{{ field.placeholder }}" />
+            {% if field.label == "Email" %}
+            <input name="{{ field.name }}" class="text-input" type="email"  required placeholder="{{ field.placeholder }}" />
+            {% else %}
+            <input name="{{ field.name }}" class="text-input" type="text"  required placeholder="{{ field.placeholder }}" />
+            {% endif %}
           </div>
           {% endif %}
           {% endfor %}
