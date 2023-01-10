@@ -1,4 +1,5 @@
 ---
+_schema: blog-post
 title: Accessing Content from Other Pages in Jekyll
 meta_img: ''
 tags:

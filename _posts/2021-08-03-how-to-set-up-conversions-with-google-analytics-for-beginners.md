@@ -1,4 +1,5 @@
 ---
+_schema: blog-post
 title: How to Set Up Conversions with Google Analytics for Beginners
 meta_img: https://images.unsplash.com/photo-1599658880436-c61792e70672?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80
 tags:

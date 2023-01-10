@@ -1,4 +1,5 @@
 ---
+_schema: blog-post
 title: How to create a custom front-end for a Google Form
 date: 2018-09-12 18:25:38 +0000
 permalink: "/blog/google-form-front-end/"

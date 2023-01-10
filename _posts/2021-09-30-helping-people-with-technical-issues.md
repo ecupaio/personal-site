@@ -1,4 +1,5 @@
 ---
+_schema: blog-post
 title: Helping people with technical issues
 tags:
 - Training

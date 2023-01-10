@@ -1,4 +1,5 @@
 ---
+_schema: blog-post
 title: CSS Link Highlights that work with multi-line text
 meta_img: https://images.unsplash.com/photo-1585247226801-bc613c441316?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHdlYiUyMGRldmVsb3BtZW50fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60
 tags:

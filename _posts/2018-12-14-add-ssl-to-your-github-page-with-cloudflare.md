@@ -1,4 +1,5 @@
 ---
+_schema: blog-post
 title: Add SSL (https) to your Github Page with CloudFlare and NameCheap
 date: '2018-12-14T17:55:38+00:00'
 meta_img: 'https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1066&q=80'

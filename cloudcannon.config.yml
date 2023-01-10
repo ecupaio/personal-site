@@ -1,80 +1,75 @@
-# Read the CloudCannon documentation for more information on how to use this file:
-# https://cloudcannon.com/documentation/articles/setting-global-configuration/?ssg=Jekyll
-
-# Collections are related sets of content files, typically grouped by folder.
-# Here you can define your collections, as well as any
-# CloudCannon configuration specific to those collections.
 collections_config:
-  data:
-    path: _data
-    output: false
-  posts:
+  blog-posts:
+    name: Blog posts
     path: _posts
-    output: true
-    permalink: /blog/:title
-    create:
-      path: >-
-        [relative_base_path]/{date|year}-{date|month}-{date|day}-{title|slugify}.[ext]
-  drafts:
-    path: _drafts
-    output: false
-    create:
-      publish_to: posts
-  pages:
-    path:
-    output: true
-    filter: strict
+    schemas:
+      blog-post: &ref_0
+        path: .cloudcannon/schemas/blog-post.md
+        name: Blog Post
+        _enabled_editors:
+          - content
+        _inputs:
+          $.meta_img:
+            label: Meta Image
+          $.tags:
+            type: multiselect
+            options:
+              values: []
+              allow_create: true
+              allow_empty: true
   projects:
-    output: true
-    permalink: /project/:title/
+    name: Projects
     path: _projects
+    schemas:
+      default:
+        path: .cloudcannon/schemas/project.md
+        name: Project
+        _enabled_editors:
+          - content
+        _inputs:
+          $.image[*]:
+            type: image
+          $.image:
+            type: array
+          $.tech:
+            type: array
+          $.layout:
+            hidden: true
   experience:
-    output: false
+    name: Experience
     path: _experience
+    schemas:
+      default:
+        path: .cloudcannon/schemas/experience.md
+        name: Experience
+        _enabled_editors:
+          - content
+        _inputs:
+          $.org_logo:
+            type: file
   skills:
-    output: true
+    name: Skills
     path: _skills
-  services:
-    output: true
-    permalink: /service/:title/
-    path: _services
-  studies:
-    output: true
-    permalink: /study/:title/
-    path: _studies
-  redirects:
-    output: true
-    layout: redirect
-    path: _redirects
-
-# Control which collections are displayed in the CloudCannon site navigation,
-# and how those collections are grouped.
+  posts:
+    name: Posts
+    path: _posts
+    schemas:
+      default: *ref_0
+  pages:
+    name: Pages
+    path: ''
 collection_groups:
-
-# Set this to true to disable auto-detection of collections.
-collections_config_override: false
-
-# Control which data sets are available to populate select and multiselect inputs.
-data_config:
-
-# Base path to your source files, relative to the root folder of your repository.
-source:
-
-# The locations of various types of files within your site.
-# Each path is relative to your site's source folder.
+  - heading: Content
+    collections:
+      - blog-posts
+      - projects
+      - experience
+      - skills
+      - posts
+      - pages
 paths:
-  data: _data
-  collections:
-  layouts: _layouts
-  static:
+  static: ''
   uploads: images
-  includes: _includes
-  dam_uploads:
-  dam_static:
-
-# Lets you control the look and behaviour of the Source Editor.
-source_editor:
-
-# Timezone of your site in IANA format. This is used by date and datetime inputs
-# within the CloudCannon Data Editor.
-timezone: America/Los_Angeles
+_inputs:
+  template:
+    hidden: true

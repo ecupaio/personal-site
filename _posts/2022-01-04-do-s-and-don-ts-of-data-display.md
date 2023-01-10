@@ -1,4 +1,5 @@
 ---
+_schema: blog-post
 title: Do's and Don'ts of Data Display
 meta_img: https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
 tags:
