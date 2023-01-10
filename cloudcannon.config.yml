@@ -65,12 +65,16 @@ collection_groups:
 paths:
   static: ''
   uploads: images
+
+about_page: _/pages/about.md
+
 _inputs:
   template:
     hidden: true
   css: 
-    hidden: true  
-  text:
-    type: textarea
-  categories:
-    type: array  
+    hidden: true
+  about_page: 
+    categories:
+      type: array    
+  
+    
