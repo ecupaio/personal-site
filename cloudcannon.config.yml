@@ -60,7 +60,6 @@ collection_groups:
       - projects
       - experience
       - skills
-      - posts
       - pages
 paths:
   static: ''
