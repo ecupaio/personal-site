@@ -9,6 +9,9 @@ collections_config:
       editor: content
       collection: drafts
       schema: default  
+    _inputs: 
+      $.published: 
+        type: switch  
     schemas:
       blog-post: 
         path: .cloudcannon/schemas/post.md
@@ -24,8 +27,7 @@ collections_config:
               values: []
               allow_create: true
               allow_empty: true
-          $.published: 
-            type: switch       
+                 
   drafts:
     path: _drafts
     output: false
@@ -33,7 +35,7 @@ collections_config:
       publish_to: posts
     _inputs: 
       $.published: 
-      type: switch    
+        type: switch    
   projects:
     name: Projects
     path: _projects
