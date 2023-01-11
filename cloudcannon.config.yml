@@ -24,11 +24,16 @@ collections_config:
               values: []
               allow_create: true
               allow_empty: true
+          $.published: 
+            type: switch       
   drafts:
     path: _drafts
     output: false
     create:
       publish_to: posts
+    _inputs: 
+      $.published: 
+      type: switch    
   projects:
     name: Projects
     path: _projects
@@ -86,5 +91,7 @@ _inputs:
     hidden: true
   css: 
     hidden: true
+
+timezone: America/Los_Angeles    
   
     
