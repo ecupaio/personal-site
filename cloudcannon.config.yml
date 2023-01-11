@@ -1,10 +1,17 @@
 collections_config:
-  blog-posts:
-    name: Blog posts
+  posts:
+    name: Posts
     path: _posts
+    add_options: 
+    - name: Add Post
+      editor: content
+    - name: Add Draft
+      editor: content
+      collection: drafts
+      schema: default  
     schemas:
-      blog-post: &ref_0
-        path: .cloudcannon/schemas/blog-post.md
+      blog-post: 
+        path: .cloudcannon/schemas/post.md
         name: Blog Post
         _enabled_editors:
           - content
@@ -17,6 +24,11 @@ collections_config:
               values: []
               allow_create: true
               allow_empty: true
+  drafts:
+    path: _drafts
+    output: false
+    create:
+      publish_to: posts
   projects:
     name: Projects
     path: _projects
@@ -57,7 +69,7 @@ collections_config:
 collection_groups:
   - heading: Content
     collections:
-      - blog-posts
+      - posts
       - projects
       - experience
       - skills
