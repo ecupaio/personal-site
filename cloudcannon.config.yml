@@ -70,6 +70,7 @@ collection_groups:
   - heading: Content
     collections:
       - posts
+      - drafts
       - projects
       - experience
       - skills
