@@ -5,4 +5,5 @@ tags:
 footer-cta:
   title: ''
   text: ''
+published: true  
 ---

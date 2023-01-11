@@ -26,7 +26,7 @@ collections_config:
               allow_create: true
               allow_empty: true
           $.published: 
-            type: switch        
+            type: checkbox        
   drafts:
     path: _drafts
     output: false
