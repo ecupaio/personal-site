@@ -1,12 +1,11 @@
 ---
 title: How to Make an Effective Website
-meta_img: 
+meta_img:
 tags:
-- UX
+  - UX
 footer-cta:
-  title: 
-  text: 
-
+  title:
+  text:
 ---
 Although I [warn against DIY](https://edcupaioli.com/blog/di-why-5-reasons-to-get-a-custom-website-for-your-business/), some of y'all don't have a spare 10 to 20 grand to drop on a shiny new website so I've written this guide to help you in your journey into amateur web design and development.
 
