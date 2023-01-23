@@ -5,11 +5,7 @@ collections_config:
     add_options: 
     - name: Add Post
       editor: content
-      schema: post
-    - name: Add Draft
-      editor: content
-      collection: drafts
-      schema: default  
+      schema: default
     schemas:
       post: 
         path: .cloudcannon/schemas/post.md
@@ -25,8 +21,10 @@ collections_config:
               values: []
               allow_create: true
               allow_empty: true
+          $.date:
+            instance_value: NOW   
           $.published: 
-            type: checkbox        
+            type: switch
   drafts:
     path: _drafts
     output: false
@@ -34,7 +32,7 @@ collections_config:
       publish_to: posts
     _inputs: 
       $.published: 
-        type: switch    
+        type: switch
   projects:
     name: Projects
     path: _projects
