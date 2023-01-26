@@ -6,8 +6,9 @@ layout: none
   {
     "title": "{{ project.title | escape }}",
     "link": "{{ project.link }}",
+    "page" : "{{ project.url }}",
     "images": {{project.image | split: ',' | join: ',' }},
-    "text": "{{ project.content | markdownify | url_encode | strip_newlines }}",
+    "text": "{{ project.content | markdownify | url_encode | strip_newlines | truncate: 500, '...' }}",
     "tech": "{{project.tech  |join: ', ' }}"
   }{%- unless forloop.last -%},{%- endunless -%}
 {%- endfor -%}

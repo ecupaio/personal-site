@@ -19,10 +19,12 @@ function loadProject(projectTitle) {
       const projectLink = project.link;
       const projectText = decodeURIComponent(project.text).replace(/\+/g,' '); 
       const projectTech = project.tech;
+      const projectPage = project.page;
       
       //insert content
       document.querySelector('.selected-tech').innerHTML = projectTech;
       document.querySelector('.about-project').innerHTML = projectText;
+      document.querySelector('.project-page').setAttribute("href",projectPage);
       if (projectLink.length > 0 ) {
         document.querySelector('.selected-link').setAttribute('href',projectLink);
         document.querySelector('.selected-link').classList.remove('hidden');

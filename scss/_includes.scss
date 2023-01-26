@@ -354,12 +354,21 @@
       background-color: $white;
     }
   }
+  .btn-row {
+    margin-top: 1rem;
+  }
   
 }
 //button-row.html
 .btn-row {
   text-align: center;
   margin-top: 2rem;
+  &.left {
+    text-align: left;
+  }
+  &.right {
+    text-align: right;
+  }
 }
 //steps-section.html
 #steps-section {

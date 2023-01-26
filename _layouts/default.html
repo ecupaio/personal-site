@@ -39,6 +39,10 @@ layout: compress
   <script src="/js/min/schedule-form.min.js?{{site.time | date: '%s' }}"></script>
   <!-- Sitewide - Nav -->
   <script src="/js/min/nav.min.js?{{site.time | date: '%s' }}"></script>
+  {% if page.swiper == true or layout.swiper == true %}
+  <!-- Swiper -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  {% endif %}
   {% if layout.scripts.size > 0 %}
   <!-- Layout -->
   {% for script in layout.scripts %}

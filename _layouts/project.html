@@ -1,0 +1,83 @@
+---
+layout: default
+css: project
+swiper: true
+scripts: 
+- project-swiper
+footer-cta:
+  title: Like what you see?
+  text: Let's get in touch to discuss your next project! 
+  button: 
+    text: Schedule a call
+---
+<div class="overlay zoom-overlay">
+  <div class="overlay__body">
+    <div class="overlay__close">
+      <button class="overlay__close-btn close-project-zoom" aria-label="Close overlay">
+        <i class="fa fa-times"></i>
+      </button>
+      
+    </div>
+    <div class="swiper project-swiper-large">
+      <div class="swiper-wrapper">
+        {% for image in page.image %}
+        <div class="swiper-slide">
+          <img src="/images/{{ image }}" />
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<main class="project-page">
+  <section class="project-hero">
+    <div class="inner-section">
+      <h1 class="project-hero__title">{{ page.title }}</h1>
+      <div class="project-hero__text">
+        {{ content }}
+      </div>
+      {% if page.link %}
+      {% include button-row.html position="left" text="View Live" link=page.link %}
+      {% endif %}
+      <div class="project-hero__linkback">
+        <a href="/#portfolio" class="white"><i class="fa fa-long-arrow-alt-left"></i> Back to portfolio</a>
+      </div>
+    </div>
+  </section>
+  <section class="project-images">
+    
+    <div class="swiper project-images__swiper">
+      <div class="swiper-wrapper">
+        {% for image in page.image %}
+        <div class="swiper-slide project-slide">
+          <img src="/images/{{ image }}" />
+          <div class="project-images__zoom">
+            <i class="fa fa-search-plus"></i>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+    </div>
+  </section>
+  <hr />
+  <section class="project-recent">
+    <h2>Recent Projects</h2>
+    <div class="project-recent__grid">
+      {% assign recent-projects = site.projects | sort: 'date' | reverse  %}
+      {% for project in recent-projects  limit: 3 %}
+      <div class="project-recent__col">
+        <a class="project-recent__link" href="{{ project.url }}">
+        <img src="/images/{{ project.image[0] }}" />
+        </a>
+        <div class="project-recent__title">{{ project.title }}</div>
+      </div>
+      {% endfor %}
+    </div>
+    {% include button-row.html text="View All" link="/#portfolio" %}
+  </section>
+  {% include footer-cta.html %}
+</main>

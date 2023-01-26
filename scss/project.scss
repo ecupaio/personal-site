@@ -1,0 +1,91 @@
+@import "mixins.scss";
+@import "vars.scss";
+.project {
+  &-hero {
+    background-color: $blue;
+    color: $white;
+    &__text {
+      a {
+        color: $white;
+      }
+    }
+    .btn-row {
+      margin-top: 1rem;
+    }
+    &__linkback {
+      margin-top: 1rem;
+      text-align: right;
+    }
+  }
+  &-images {
+    padding-left: 0;
+    padding-right: 0;
+    &__swiper {
+      height: 500px;
+      padding: 2rem;
+      .swiper-wrapper {
+        
+      }
+      .swiper-button-prev {
+        left: 0.5rem;
+      }
+      .swiper-button-next {
+        right: 0.5rem;
+      }
+      .swiper-slide {
+        border-radius: 6px;
+        overflow: hidden;
+        @include box-shadow;
+        position: relative;
+        &:hover {
+          cursor: pointer;
+          .project-images__zoom {
+            transform: translate(-50%,-50%) scale(1);
+          }
+        }
+      }
+      
+    }
+    &__zoom {
+      position: absolute;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      background-color: $yellow;
+      transform: translate(-50%,-50%) scale(0);
+      transform-origin: center center;
+      top: 50%;
+      left: 50%;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include transition(transform);
+      i {
+        color: $charcoal;
+        
+        font-size: 2rem;  
+      }
+    }
+  }
+  
+  &-recent {
+    h2 {
+      text-align: center;
+    }
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 1rem;
+      max-width: $size-large;
+      margin: auto;
+    }
+    &__col {
+      height: 200px;
+      overflow: hidden;
+      
+    }
+  }
+}

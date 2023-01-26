@@ -157,3 +157,10 @@ input,textarea, select {
 		display: block;
 	}
 }
+hr {
+	max-width: $size-large;
+	background-color: $grey;
+	height: 1px;
+	border: none;
+}
+@import "_overlay.scss";
