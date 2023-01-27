@@ -1,19 +1,29 @@
 
 const projectSwiper = new Swiper(".project-images__swiper", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 10,
-  //loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  
+  breakpoints: {
+    1024: {
+      slidesPerView: 3
+    },  
+    768: {
+      slidesPerView: 2
+    }, 
+  }
 });
 
 const projectSwiperLarge = new Swiper(".project-swiper-large", {
   slidesPerView: 1,
-  //loop: true,
-  thumbs: projectSwiper,
+  
+  speed: 1,
+  thumbs: {
+    swiper: projectSwiper,
+  },
+  autoHeight: true,
 });
 
 const zoomOverlay = document.querySelector(".zoom-overlay");

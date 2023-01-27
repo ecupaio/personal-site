@@ -41,26 +41,8 @@ css: service
       <div class="section-text">
         {{ page.about.text | markdownify }}
       </div>
-      <!-- <div class="about-items">
-        {% for item in page.about.items %}
-        <div class="item">
-          {% if item.logo %}
-          <div class="item-logo">
-            <img class="logo-image" src="{{ item.logo }}" alt="{{ item.title }} logo"/>
-          </div>
-          {% endif %}
-          {% if item.icon %}
-          {{ item.icon }}
-          {% endif %}
-          <div class="item-text">{{ item.text }}</div>
-          {% if item.link %}
-          <a href="{{ item.link }}">{{ item.title }} website <i class="fa fa-external-link-alt"></i></a>
-          {% endif %}
-        </div>
-        {% endfor %}
-      </div> -->
+      
       <div class="about-benefits">
-        <!-- <h3 class="benefits-title">{{ page.about.benefits.title }}</h3> -->
         <div class="benefits-list">
           {% for benefit in page.about.benefits.list %}
           <div class="benefit">{{ benefit }}</div>
@@ -69,22 +51,5 @@ css: service
       </div>
     </div>
   </section>
-  <!-- <section id="samples-section">
-    <div class="inner-section">
-      <h2 class="section-title">{{ page.work.title }}</h2>
-      <div class="samples-list">
-        {% assign samples = site.projects | where_exp: 'item', 'item.tags contains "Jekyll"' | reverse %}
-        {% for sample in samples %}
-        <div class="sample">
-          <div class="sample-title">
-            <div class="title-text heading-4">{{ sample.title }}</div>
-          </div>
-          {%- capture image -%}/images/{{sample.image[0]}}{%- endcapture -%}
-          <img src="{{ image | resize: '350x' }}" class="sample-image" />
-        </div>
-        {% endfor %}
-      </div> 
-    </div>
-  </section> -->
   {% include footer-cta.html %}
 </main>

@@ -2,10 +2,10 @@
 title: DCGFFL
 link: https://dcgffl.org/
 image: 
-- dcgffl-home.jpg
-- dcgffl-league.jpg
-- dcgffl-team.jpg
-- dcgffl-scoreboard.jpg
+- /images/dcgffl-home.jpg
+- /images/dcgffl-league.jpg
+- /images/dcgffl-team.jpg
+- /images/dcgffl-scoreboard.jpg
 tech: 
 - Web Development
 - Web Design

@@ -1,12 +1,13 @@
 ---
 title: Rebuild
-link: ''
+link: 'https://web.archive.org/web/20170329031949/https://rebuild.democrats.org/'
 image:
-- Rebuild.jpg
+- /images/Rebuild.jpg
 tech:
 - Web development
 date: '2017-02-10'
+description: |-
+  Rebuild is a microsite that integrates a Blue State Digital form so that users can provide constructive feedback for the new DNC chair.
 ---
 
-## Description
-Rebuild is a microsite that features a BSD form so that users can provide constructive feedback for the new DNC chair.
+

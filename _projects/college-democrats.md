@@ -1,18 +1,18 @@
 ---
 title: College Democrats
+link: 'https://web.archive.org/web/20170701230144/https://collegedems.com/'
 date: '2016-05-11'
 image:
-  - College_Democrats.jpg
+  - /images/College_Democrats.jpg
 tags: Jekyll  
 tech:
   - Web development
   - Frontend development
+description: |-
+  Collegedems.com  is the official site for College Democrats. This started as a static microsite and later converted into a Jekyll site so that content editors could update content on the site.
 ---
+Here's some neat features to look out for on College Democrats: 
 
-## Description
-Collegedems.com  is the official site for College Democrats. This started as a static microsite and later converted into a Jekyll site so that content editors could update content on the site.
-
-## Features
 [Twitter Timeline](http://)  
 I used [Twitter Post Fetcher](https://github.com/jasonmayes/Twitter-Post-Fetcher)  and [Slick Carousel](http://kenwheeler.github.io/slick/) to make a custom branded twitter timeline. It's fully interactive and mobile ready.
 

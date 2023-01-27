@@ -15,6 +15,9 @@
     &__linkback {
       margin-top: 1rem;
       text-align: right;
+      @include bp-small {
+        text-align: left;
+      }
     }
   }
   &-images {
@@ -68,6 +71,7 @@
         
         font-size: 2rem;  
       }
+      
     }
   }
   
@@ -80,12 +84,54 @@
       grid-template-columns: repeat(3,1fr);
       gap: 1rem;
       max-width: $size-large;
-      margin: auto;
+      margin: 2rem auto 0; 
     }
     &__col {
-      height: 200px;
-      overflow: hidden;
       
+      
+    }
+    &__link {
+      background-image: none !important;
+      padding: 0 !important;
+      border-radius: 4px;
+      
+      display: block;
+      height: 100%;
+      @include transition(box-shadow !important);
+      &:hover, &:active, &:focus {
+        
+        
+        
+        .project-recent__title {
+          background-position: 0 0em;
+        }
+      }  
+    }
+    &__title {
+      display: inline-block;
+      @include linkHiglight; 
+    }
+    &__image {
+      height: 200px;
+      width: 100%;
+      object-position: center top;
+      object-fit: cover;
+    }
+    &__tech {
+      color: $grey-text;
+      font-weight: 400;
+      margin-top: 0.5rem;
+    }
+  }
+
+  
+}
+
+.zoom-overlay {
+  .swiper {
+    .swiper-button-next, .swiper-button-prev {
+      position: fixed;
+      top: 50%;
     }
   }
 }
