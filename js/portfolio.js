@@ -20,7 +20,6 @@ function loadProject(projectTitle) {
       const projectText = decodeURIComponent(project.text).replace(/\+/g,' '); 
       const projectTech = project.tech;
       const projectPage = project.page;
-      console.log(projectText);
       //insert content
       document.querySelector('.selected-tech').innerHTML = projectTech;
       document.querySelector('.about-project').innerHTML = projectText;

@@ -23,6 +23,7 @@
   &-images {
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 1rem;
     &__swiper {
       height: 500px;
       padding: 2rem;
@@ -74,7 +75,9 @@
       
     }
   }
-  
+  &-text {
+    padding-top: 0;
+  }
   &-recent {
     h2 {
       text-align: center;
@@ -123,6 +126,7 @@
       margin-top: 0.5rem;
     }
   }
+
 
   
 }

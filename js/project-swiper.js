@@ -1,6 +1,6 @@
-
 const projectSwiper = new Swiper(".project-images__swiper", {
   slidesPerView: 1,
+  centerInsufficientSlides: true,
   spaceBetween: 10,
   navigation: {
     nextEl: ".swiper-button-next",
