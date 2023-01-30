@@ -7,7 +7,7 @@ collections_config:
       editor: content
       schema: default
     schemas:
-      post: 
+      default: 
         path: .cloudcannon/schemas/post.md
         name: Blog Post
         _enabled_editors:
