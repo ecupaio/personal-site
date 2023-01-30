@@ -27,9 +27,21 @@ I wanted to create a generic event tag so I didn't have to configure each and ev
 
 ![](/images/screen-shot-2023-01-30-at-3-23-43-pm.png){: width="1268" height="688"}
 
-In the new,&nbsp;
+In the new model that pops up, you will select your Configuration tag (I cover how to set up GA4 on GTM here) then add your event name variable by selecting the wee lego piece:&nbsp;
+
+![](/images/screen-shot-2023-01-30-at-3-30-39-pm.png){: width="670" height="670"}
 
 ## Adding the Variable
+
+Since we want to pass different data to this tag each time (eg 'newsletter\_signup', 'search\_submission', etc.), we need to create a variable that will be able to pass that event name through the dataLayer onto Google Analytics.&nbsp;
+
+In the Choose a variable model that pops up, select the plus icon in the upper-righthand corner to add your variable, which will open another model for the Variable Configuration.&nbsp;
+
+Add a name for your variable (I named mine&nbsp; GA4 Event Name, but do whatever makes sense to you), then select the Variable Configuration to choose the variable type and select **Data Layer Variable**\:
+
+&nbsp;![](/images/screen-shot-2023-01-30-at-3-39-09-pm.png){: width="1272" height="1176"}
+
+Now to get&nbsp;
 
 ## Setting the Trigger
 
