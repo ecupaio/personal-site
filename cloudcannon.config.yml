@@ -23,7 +23,7 @@ collections_config:
               allow_empty: true
           $.date:
             instance_value: NOW   
-          $.published: 
+          published: 
             type: switch
   drafts:
     path: _drafts
