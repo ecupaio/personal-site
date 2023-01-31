@@ -10,7 +10,7 @@ tags:
 footer-cta:
   title: ''
   text: ''
-published:
+published: true
 ---
 Google is sunsetting Universal Analytics on July 1, 2023 so it's time to hop on the Google Analytics 4 train if you haven't already. The one key difference outside of the new UI that's somehow even more opaque,&nbsp; are how events are tracked. Previously you would add an event action, category, and label to track an event. Now you just add an event name and you're good to go.
 
@@ -68,13 +68,15 @@ Hit save and your trigger is now ready to receive data from the dataLayer.&nbsp;
 
 We will use the [dataLayer push method](https://support.google.com/tagmanager/answer/6164391?hl=en) in order to trigger the event. Add the following snippet to your javascript:&nbsp;
 
-window.dataLayer.push(\{
+```
+window.dataLayer.push({
 
-&nbsp; "event": "ga4\_event",
+ "event": "ga4_event",
 
-&nbsp; "eventName": "my\_custom\_event"
+ "eventName": "my_custom_event"
 
-\});
+});
+```
 
 Let's break this down so you're not blindly copy pasting my code and getting frustrated:&nbsp;
 
@@ -97,7 +99,7 @@ Select the preview button and enter the URL you want to test your new trigger on
 
 If you select the GA4 Event, you should be able to see all the details of the tag, including the definition of your eventName variable in the Event Name object we pass that data into:&nbsp;
 
-##
+\##
 
 ![](/images/screen-shot-2023-01-30-at-4-25-40-pm.png){: width="752" height="926"}
 
@@ -105,4 +107,4 @@ Now lets head over to our Analytics Property and view the realtime data to see o
 
 ![](/images/screen-shot-2023-01-30-at-4-27-00-pm.png){: width="626" height="844"}
 
-Hooray! We did it...hopefully. Please reach out if you had any issues configuring your event.&nbsp;
+Hooray! We did it…hopefully. Please reach out if you had any issues configuring your event.&nbsp;
