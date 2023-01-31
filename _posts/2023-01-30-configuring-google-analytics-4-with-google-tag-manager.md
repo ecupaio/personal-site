@@ -9,7 +9,7 @@ tags:
 footer-cta:
   title: ''
   text: ''
-published: true
+published: false
 ---
 Google Analytics 4 is here and Universal Analytics is [set to end on July 1, 2023](https://support.google.com/analytics/answer/11583528)&nbsp;so let's take advantage of the update and set up Google Tag Manager. In this guide, I will cover how to set up a Google Analytics 4 property. You can skip to the instructions if you don't want to read all about the new changes.&nbsp; &nbsp;
 
