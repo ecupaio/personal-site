@@ -44,11 +44,9 @@ Add a title for the variable: GA4 Event Name, then select the Variable Configura
 
 Add the Data Layer Variable name: **eventName**\:&nbsp;
 
-![](/images/screen-shot-2023-01-30-at-3-44-44-pm.png){: width="2314" height="1078"}
-
-Hit save and get back to the GA4 Event Tag to see the **Event Name** field filled with your new variable:&nbsp;
-
 ![](/images/screen-shot-2023-01-30-at-3-44-44-pm-1.png){: width="2314" height="1078"}
+
+Hit save and get back to the GA4 Event Tag to see the **Event Name** field filled with your new variable.
 
 ## Setting the Trigger
 
@@ -56,7 +54,7 @@ Now we're ready for the trigger. Select the Triggering panel below the Tag Confi
 
 Let's title&nbsp; this one GA4 Event Trigger and then select the Trigger Configuration panel to open the Choose trigger type model. [Just like we did in UA](/blog/tracking-google-analytics-events-with-google-tag-manager/), we'll choose **Custom Event**\:&nbsp;
 
-![](/images/screen-shot-2023-01-30-at-3-54-55-pm.png){: width="1280" height="1380"}
+![](/images/screen-shot-2023-01-30-at-3-54-55-pm-1.png){: width="1280" height="1380"}
 
 Add "**ga4\_event**" for the event name and leave the rest of the options at their default state. Hit save and get whisked back to the tag to see your trigger added:&nbsp;
 
@@ -98,8 +96,6 @@ Select the preview button and enter the URL you want to test your new trigger on
 ![](/images/screen-shot-2023-01-30-at-4-22-48-pm.png){: width="1876" height="554"}
 
 If you select the GA4 Event, you should be able to see all the details of the tag, including the definition of your eventName variable in the Event Name object we pass that data into:&nbsp;
-
-\##
 
 ![](/images/screen-shot-2023-01-30-at-4-25-40-pm.png){: width="752" height="926"}
 
