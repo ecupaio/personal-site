@@ -28,7 +28,7 @@ I wanted to create a generic event tag so I didn't have to configure each and ev
 
 ![](/images/screen-shot-2023-01-30-at-3-23-43-pm.png){: width="1268" height="688"}
 
-In the new model that pops up, you will select your Configuration tag (I cover how to set up GA4 on GTM here) then add your event name variable by selecting the wee lego piece:&nbsp;
+In the new model that pops up, you will select your Configuration tag (assuming you have that setup) then add your event name variable by selecting the wee lego piece:&nbsp;
 
 ![](/images/screen-shot-2023-01-30-at-3-30-39-pm.png){: width="670" height="670"}
 
