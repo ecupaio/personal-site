@@ -12,7 +12,7 @@ footer-cta:
   text: ''
 published: true
 ---
-Google is sunsetting Universal Analytics on July 1, 2023 so it's time to hop on the Google Analytics 4 train if you haven't already. The one key difference outside of the new UI that's somehow even more opaque,&nbsp; are how events are tracked. Previously you would add an event action, category, and label to track an event. Now you just add an event name and you're good to go.
+Google is sunsetting Universal Analytics on July 1, 2023 so it's time to hop on the Google Analytics 4 train if you haven't already. The one key difference outside of the new UI that's somehow even more opaque,&nbsp; are how events are tracked. Previously you would add an event action, category, and label to track an event. Now you just add an event name and you're good to go unless you want to add custom and/or required parameters.
 
 ## Recommended Events and Custom Definitions
 
