@@ -4,7 +4,7 @@ meta_img: https://images.unsplash.com/photo-1599658880436-c61792e70672?ixid=Mnwx
 tags:
 - Google Analytics
 - Google Tag Manager
-
+published: true
 ---
 This guide was written assuming you have implemented Google Universal Analytics via Google Tag Manager.
 

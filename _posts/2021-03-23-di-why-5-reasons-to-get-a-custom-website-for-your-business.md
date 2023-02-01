@@ -4,7 +4,7 @@ title: DI-Why? 5 Reasons to Get a Custom Website for Your Business
 tags:
 - UX
 - Web Development
-
+published: true
 ---
 WordPress, SquareSpace, Wix, Shopify, and the like are really great tools for people that need an online space to showcase their business and sell their wares. However, if you have used one of these tools, you probably noticed some limitations. Or, maybe you got sticker shock from the hosting fees and extra costs for additional features. It may have been easy to set up your homepage, but does your site follow best practices? Is it secure? Is it accessible to people with disabilities? (You can get sued for that, you know?) DIY builders are convenient to set up, but they leave the rest up to you. I know what it takes to create a good website because I am dedicated to the best SEO practices. I can help you convert your DIY website into one that is fully customized and functional on the front- and back-end. Here are some reasons why you should switch:
 

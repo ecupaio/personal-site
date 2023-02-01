@@ -7,7 +7,7 @@ tags:
 - Jekyll
 - Github
 - Web Development
-
+published: true
 ---
 In this tutorial, we're going to create a Jekyll site and host it with Github. You will need to use the command line (Applications > Utilities > Terminal) and I'm using Mac OS X for the steps below. I'm also assuming you have git installed and you have a github account so follow these instructions, if you have not: [https://help.github.com/articles/set-up-git/](https://help.github.com/articles/set-up-git/ "https://help.github.com/articles/set-up-git/")
 

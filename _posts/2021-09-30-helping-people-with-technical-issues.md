@@ -7,7 +7,7 @@ meta_img: https://images.pexels.com/photos/1181472/pexels-photo-1181472.jpeg?cs=
 footer-cta:
   title: Need some help from me?
   text: I'm all ears. Send me a line and let's find a solution together.
-
+published: true
 ---
 A little coding humor, folks:
 

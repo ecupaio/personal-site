@@ -57,6 +57,7 @@ defaults:
       type: "projects"
     values:
       link: ""
+      published: false
       img:
         - ""
       tech:
@@ -68,6 +69,7 @@ defaults:
     values:
       permalink: "/blog/:title/"
       layout: "blog-post"
+      published: false
       tags:
         - ""
   - scope: 

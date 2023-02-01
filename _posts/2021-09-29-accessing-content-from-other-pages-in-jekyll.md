@@ -8,7 +8,7 @@ tags:
 footer-cta:
   title: Find a better way? Let me know!
   text: 'I really like talking with fellow coders on that grind. My inbox is open. '
-
+published: true
 ---
 **Scenario:** You want to feed in content from another page into your homepage. You frantically googled this title and my post came up in the search results after all the unhelpful jerks in StackOverflow. Welcome! I'll sort you out right and you can always contact me if you have questions.
 
