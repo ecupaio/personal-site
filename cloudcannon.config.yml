@@ -21,7 +21,7 @@ collections_config:
               values: []
               allow_create: true
               allow_empty: true
-          $.date:
+          date:
             instance_value: NOW   
           published: 
             type: switch
@@ -90,7 +90,8 @@ _inputs:
     hidden: true
   css: 
     hidden: true
-
+  date:
+    instance_value: NOW
 timezone: America/Los_Angeles    
   
     
