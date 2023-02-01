@@ -3,21 +3,41 @@
 {% if layout.footer-cta.title.size > 1 %}
   {% assign title = layout.footer-cta.title %}
 {% endif %}
+
 {% if page.footer-cta.title.size > 1 %}
   {% assign title = page.footer-cta.title %}
 {% endif %}
+
 {% if layout.footer-cta.text.size > 1 %}
   {% assign text = layout.footer-cta.text %}
 {% endif %}
+
 {% if page.footer-cta.text.size > 1 %}
   {% assign text = page.footer-cta.text %}
 {% endif %}
+
+{% if layout.footer-cta.button.text.size > 1 %}
+  {% assign button-text = layout.footer-cta.button.text %}
+{% endif %}
+
+{% if layout.footer-cta.button.link.size > 1 %}
+  {% assign button-link = layout.footer-cta.button.link %}
+{% endif %}
+
+{% if page.footer-cta.button.text.size > 1 %}
+  {% assign button-text = page.footer-cta.button.text %}
+{% endif %}
+
+{% if page.footer-cta.button.link.size > 1 %}
+  {% assign button-link = layout.footer-cta.button.link %}
+{% endif %}
+
 <section id="footer-cta" class="{{ include.color }}">
   <div class="inner-section">
     <h2>{{ title }}</h2>
     {{ text | markdownify }}
     {% if page.footer-cta.button %}
-    <a class="btn" href="{{ page.footer-cta.button.link }}">{{ page.footer-cta.button.text }}</a>
+    <a class="btn" href="{{ button-link }}">{{ button-text }}</a>
     {% else %}
     {% include form-button.html location="CTA Footer" %}
     {% endif %}

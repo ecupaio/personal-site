@@ -28,3 +28,25 @@ navToggle.addEventListener('click', e => {
     
   
 });
+
+document
+  .querySelectorAll("#sidebar-nav .nav-link-list > .nav-link > a")
+  .forEach((link) => {
+    link.addEventListener("click", (e) => {
+      if (!link.classList.contains("toggle-link")) {
+        navToggle.classList.remove("active");
+        nav.classList.remove("active");
+        body.classList.remove("active");
+      }
+      
+      // if (link.getAttribute('href').startsWith('/#') && !link.classList.contains("toggle-link")) {
+      //   const sectionId = link.getAttribute("href").replace("/", "");
+      //   document.querySelector(sectionId).scrollIntoView({
+      //     behavior: "smooth"
+      //   });
+      // } else {
+      //   console.log('not an anchor');
+      // }
+    });
+  });
+

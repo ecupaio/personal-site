@@ -72,3 +72,18 @@ Either pass the px number through individually, or set it as a variable */
   display: -webkit-flex;
   display: flex;
 }
+
+@mixin linkHiglight {
+  position: relative;
+  z-index: 1;
+  padding: 0 2px;
+  background-image: linear-gradient(to bottom, rgba($yellow,1) 0%,rgba($yellow,1) 100%);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-position: 0 1.2em;
+  @include transition(background-position,color);
+  &:hover, &:active, &:focus {
+    background-position: 0 0em;
+  }
+}

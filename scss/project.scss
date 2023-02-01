@@ -1,0 +1,141 @@
+@import "mixins.scss";
+@import "vars.scss";
+.project {
+  &-hero {
+    background-color: $blue;
+    color: $white;
+    &__text {
+      a {
+        color: $white;
+      }
+    }
+    .btn-row {
+      margin-top: 1rem;
+    }
+    &__linkback {
+      margin-top: 1rem;
+      text-align: right;
+      @include bp-small {
+        text-align: left;
+      }
+    }
+  }
+  &-images {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 1rem;
+    &__swiper {
+      height: 500px;
+      padding: 2rem;
+      .swiper-wrapper {
+        
+      }
+      .swiper-button-prev {
+        left: 0.5rem;
+      }
+      .swiper-button-next {
+        right: 0.5rem;
+      }
+      .swiper-slide {
+        border-radius: 6px;
+        overflow: hidden;
+        @include box-shadow;
+        position: relative;
+        &:hover {
+          cursor: pointer;
+          .project-images__zoom {
+            transform: translate(-50%,-50%) scale(1);
+          }
+        }
+      }
+      
+    }
+    &__zoom {
+      position: absolute;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      background-color: $yellow;
+      transform: translate(-50%,-50%) scale(0);
+      transform-origin: center center;
+      top: 50%;
+      left: 50%;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include transition(transform);
+      i {
+        color: $charcoal;
+        
+        font-size: 2rem;  
+      }
+      
+    }
+  }
+  &-text {
+    padding-top: 0;
+  }
+  &-recent {
+    h2 {
+      text-align: center;
+    }
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 1rem;
+      max-width: $size-large;
+      margin: 2rem auto 0; 
+    }
+    &__col {
+      
+      
+    }
+    &__link {
+      background-image: none !important;
+      padding: 0 !important;
+      border-radius: 4px;
+      
+      display: block;
+      height: 100%;
+      @include transition(box-shadow !important);
+      &:hover, &:active, &:focus {
+        
+        
+        
+        .project-recent__title {
+          background-position: 0 0em;
+        }
+      }  
+    }
+    &__title {
+      display: inline-block;
+      @include linkHiglight; 
+    }
+    &__image {
+      height: 200px;
+      width: 100%;
+      object-position: center top;
+      object-fit: cover;
+    }
+    &__tech {
+      color: $grey-text;
+      font-weight: 400;
+      margin-top: 0.5rem;
+    }
+  }
+
+
+  
+}
+
+.zoom-overlay {
+  .swiper {
+    .swiper-button-next, .swiper-button-prev {
+      position: fixed;
+      top: 50%;
+    }
+  }
+}

@@ -1,17 +1,18 @@
 ---
 title: DC Public Charter School Board
-link: ''
+link: 'https://web.archive.org/web/20150419024826/http://www.dcpcsb.org/'
 image:
-- dcpcsb.jpg
+- /images/dcpcsb.jpg
 tech:
 - Web design
 - Web development
 - Frontend development
 date: '2015-12-04'
+description: |-
+  This site was already designed, but the website maintainers were left with a site that was not indexed and difficult to update. I created repositories with Drupal's Views module for all their unique categories of content that automatically updated and fed into each of the respective repositories.
 ---
 
-## Description
-This site was already designed, but the website maintainers were left with a site that was not indexed and difficult to update. I created repositories with Drupal's Views module for all their unique categories of content that automatically updated and fed into each of the respective repositories. You can see an example of the repositories on the Job Opportunities page. Before, the page was just a host of linked PDFs that were loosely organized and needed to be removed manually if the charter school notified the DC PCSB that the position was filled. Now, the job opportunities are automatically removed after 30 days and each opportunity exists as it's own page to host all information about the job on the site instead of on a PDF so that users can filter based on the job type and click through to apply.
+You can see an example of the repositories on the [Job Opportunities page](https://web.archive.org/web/20150316115316/http://www.dcpcsb.org/job-opportunities). Before, the page was just a host of linked PDFs that were loosely organized and needed to be removed manually if the charter school notified the DC PCSB that the position was filled. Now, the job opportunities are automatically removed after 30 days and each opportunity exists as it's own page to host all information about the job on the site instead of on a PDF so that users can filter based on the job type and click through to apply.
 
 From my experience at the Office of the State Superintendent of Education (OSSE), I knew that posting policies, items open for public comment, and other official documents was not only a legal requirement but a never-ending task that required constant maintenance. The Public Comment page is just one of the several pages I improved by creating automatically updating repositories that made maintenance simple. All items open for public comment and archived items flow to their respective sections automatically, no maintenance required. All the content author needs to do is set a date and the repository will take over from there.  Since each item is it's own page, attachments can be swapped out and text can be modified without affecting the other items.
 

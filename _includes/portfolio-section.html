@@ -7,7 +7,7 @@
       <div class="project-col {% if forloop.index > 9 %}hidden{% endif %}" data-project="{{ project.title }}">
         <div class="col-content" >
           {%- capture project-image -%}
-          /images/{{ project.image[0]}}
+          {{ project.image[0]}}
           {%- endcapture -%}
           <img class="project-image" src="{{ project-image | resize: '310x'}}" alt="{{ project.title }}">
           <h4 class="project-title">{{ project.title }}</h4>

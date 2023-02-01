@@ -19,10 +19,11 @@ function loadProject(projectTitle) {
       const projectLink = project.link;
       const projectText = decodeURIComponent(project.text).replace(/\+/g,' '); 
       const projectTech = project.tech;
-      
+      const projectPage = project.page;
       //insert content
       document.querySelector('.selected-tech').innerHTML = projectTech;
       document.querySelector('.about-project').innerHTML = projectText;
+      document.querySelector('.project-page').setAttribute("href",projectPage);
       if (projectLink.length > 0 ) {
         document.querySelector('.selected-link').setAttribute('href',projectLink);
         document.querySelector('.selected-link').classList.remove('hidden');
@@ -38,7 +39,7 @@ function loadProject(projectTitle) {
       //add images and init swiper
       projectImages.forEach(image => {
         const projectSlide = '<div class="swiper-slide">'+
-                              '<img class="project-image" src="/images/'+image+'" />'
+                              '<img class="project-image" src="'+image+'" />'
                               '</div>';
         projectSwiper.insertAdjacentHTML('beforeend', projectSlide);
       });
@@ -109,7 +110,6 @@ function loadProject(projectTitle) {
 selectedProject.forEach(item => {
   item.addEventListener('click', event => {
     const projectTitle = event.currentTarget.querySelector('.project-title').innerText; 
-    console.log(projectTitle);
     loadProject(projectTitle);
   });  
 });
