@@ -12,6 +12,7 @@ image:
 date: '2017-03-28'
 description: |-
   live.democrats.org stores and streams clips and episodes of the weekly Democrats Live series.
+published: true  
 ---
 
 

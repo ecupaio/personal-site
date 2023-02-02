@@ -10,6 +10,7 @@ link: 'https://web.archive.org/web/20170302080544/https://future.democrats.org/'
 date: '2016-12-09'
 description: |-
   Microsite for the DNC Officer Election Process and livestreams.
+published: true  
 ---
 
 

@@ -12,4 +12,5 @@ image:
 date: '2017-04-14'
 description: 
   This site was used to RSVP attendees for the Come Together and Fight Back Tour and livestream events.
+published: true  
 ---

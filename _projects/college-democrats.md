@@ -10,6 +10,7 @@ tech:
   - Frontend development
 description: |-
   Collegedems.com  is the official site for College Democrats. This started as a static microsite and later converted into a Jekyll site so that content editors could update content on the site.
+published: true  
 ---
 Here's some neat features to look out for on College Democrats: 
 
