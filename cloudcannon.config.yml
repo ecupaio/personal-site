@@ -51,6 +51,8 @@ collections_config:
             type: array
           $.layout:
             hidden: true
+          published: 
+            type: switch  
   experience:
     name: Experience
     path: _experience

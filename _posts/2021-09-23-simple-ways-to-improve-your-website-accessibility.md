@@ -8,7 +8,7 @@ footer-cta:
   title: Want 100s across the board?
   text: Get in touch with me and I'll make sure your website is accessible without
     sacrificing quality.
-
+published: true
 ---
 ## What is accessibility and why is it important?
 

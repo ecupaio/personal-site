@@ -8,7 +8,7 @@ tags:
 footer-cta:
   title: Ready to make the switch?
   text: 'Let''s talk about your goals and make your website work for you. '
-
+published: true
 ---
 You are part of or lead an organization or business, you have a website, and you just want to be able to edit it periodically and never have to worry about anything else. I get it, many moons ago I was on the other side of the javascript mines. Your website enables you to reach people in multiple ways more efficient than spinning a sign on the side of the road. So why are you worrying about about server fees, core updates, and a myriad of plugins duct-taped together to make your site barely function. It's time to ditch that Wordpress site and embrace the future with [Jekyll](https://jekyllrb.com/).
 

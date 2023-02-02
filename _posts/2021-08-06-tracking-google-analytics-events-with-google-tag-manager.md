@@ -8,7 +8,7 @@ tags:
 footer-cta:
   title: Still need help?
   text: Let's find a solution together.
-
+published: true
 ---
 This guide is assuming you have a [Google Analytics - Universal Analytics (UA)](https://support.google.com/analytics/answer/10269537?hl=en) property for your website and it's deployed via [Google Tag Manager (GTM)](https://support.google.com/tagmanager/answer/6103696?hl=en). If you are unsure, then install the [Tag Assistant extension](https://chrome.google.com/webstore/detail/tag-assistant-legacy-by-g/kejbdjndbnbjgmefkgdddjlbokphdefk?hl=en) for your chrome browser and check if your Tag Manager Property is setup and Analytics are among the tags.
 

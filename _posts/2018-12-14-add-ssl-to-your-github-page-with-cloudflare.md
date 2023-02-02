@@ -6,7 +6,7 @@ meta_img: 'https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?ixid=Mnw
 tags:
 - Jekyll
 - Web Development
-
+published: true
 ---
 I wrote these instructions assuming you have a domain set up with NameCheap. Other domain services will allow you to modify the DNS settings, but definitely go with CloudFlare for your SSL certificate since it's free and they have a great UI and support.
 

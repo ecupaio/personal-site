@@ -8,6 +8,7 @@ tech:
 date: '2017-02-10'
 description: |-
   Rebuild is a microsite that integrates a Blue State Digital form so that users can provide constructive feedback for the new DNC chair.
+published: true  
 ---
 
 

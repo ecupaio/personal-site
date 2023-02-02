@@ -1,7 +1,7 @@
 title: Ed Cupaioli
 description: Web Development | Optimization | Training
 url: https://edcupaioli.com 
-meta_img: "/images/meta-img.png"
+meta_img: "/images/ec-meta-img.png"
 email: "ed.cupaioli@gmail.com"
 phone: 469-867-3438
 favicon: "/images/favicon.png"
@@ -57,6 +57,7 @@ defaults:
       type: "projects"
     values:
       link: ""
+      published: false
       img:
         - ""
       tech:
@@ -68,6 +69,7 @@ defaults:
     values:
       permalink: "/blog/:title/"
       layout: "blog-post"
+      published: false
       tags:
         - ""
   - scope: 

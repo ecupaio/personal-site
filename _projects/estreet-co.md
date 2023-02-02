@@ -18,4 +18,5 @@ tech:
 date: '2020-12-20 04:22:22'
 description: |-
   Before I came to eStreet, they had a DIY wordpress site and zero search presence. I worked with designers to create an agency website that put its best foot forward with clean designs that emphasized our creative while optimizing performance. I also set up our portfolio so that staff could easily add a diverse array of projects and content feeds into features in the site like the homepage carousel. 
+published: true  
 ---

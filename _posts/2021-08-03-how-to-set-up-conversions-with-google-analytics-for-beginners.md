@@ -7,7 +7,7 @@ tags:
 footer-cta:
   title: Still need help?
   text: Let's find a solution together.
-
+published: true
 ---
 For this tutorial, I am assuming your are using the Universal Analytics version of Google Analytics. You can verify information in this guide by following along with [Google's official documentation](https://support.google.com/analytics/answer/1032415?hl=en&ref_topic=6150889#zippy=%2Cin-this-article "Google's official documentation"). Fair warning Google sunsets features and changes layouts constantly and doesn't reflect the most up-to-date user interface like me.
 
