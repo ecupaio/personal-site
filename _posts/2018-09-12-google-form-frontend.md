@@ -7,6 +7,7 @@ meta_img: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-
 tags:
 - Google Apps
 - Web Development
+published: true
 ---
 **Problem:** you have a Google Form but you don't want an ugly embed on your site.
 

@@ -5,6 +5,7 @@ meta_img: https://images.unsplash.com/photo-1574887427561-d3d5d58c9273
 tags:
   - Accessibility
   - Web Development
+published: true  
 ---
 [Tab Order](https://web.dev/keyboard-access/)&nbsp;is an accessibility standard that Google Lighthouse won't automatically detect and they suggest for you to check for it manually in their updated reports:&nbsp;
 

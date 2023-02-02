@@ -10,6 +10,7 @@ tech:
 date: '2015-12-04'
 description: |-
   This site was already designed, but the website maintainers were left with a site that was not indexed and difficult to update. I created repositories with Drupal's Views module for all their unique categories of content that automatically updated and fed into each of the respective repositories.
+published: true  
 ---
 
 You can see an example of the repositories on the [Job Opportunities page](https://web.archive.org/web/20150316115316/http://www.dcpcsb.org/job-opportunities). Before, the page was just a host of linked PDFs that were loosely organized and needed to be removed manually if the charter school notified the DC PCSB that the position was filled. Now, the job opportunities are automatically removed after 30 days and each opportunity exists as it's own page to host all information about the job on the site instead of on a PDF so that users can filter based on the job type and click through to apply.

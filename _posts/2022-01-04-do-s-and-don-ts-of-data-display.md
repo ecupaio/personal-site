@@ -7,7 +7,7 @@ tags:
 footer-cta:
   title: ''
   text: ''
-
+published: true
 ---
 Seeing all the charting and graphing fails on [r/dataisugly](https://www.reddit.com/r/dataisugly/) is always worth a chuckle, but I consistently see websites with some confusing, inaccessible, or just plain bad methods of displaying data to the user. In order to be successful in displaying information to a user, you first need to determine what is the purpose of displaying the information, in that what do you want the user to do after seeing the information. Follow these tips below to effectively communicate with users in order to increase your conversions.
 

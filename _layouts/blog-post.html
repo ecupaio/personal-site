@@ -57,11 +57,12 @@ scripts:
   {% assign related-posts = "" | split: ',' %}
   {% for post in site.posts %}
     {% for tag in post.tags %}
-      {% if page.tags contains tag and page.title != post.title %}
-        {% assign related-posts = related-posts | push: post %}
+      {% if page.tags contains tag and page.title != post.title  %}
+        {% assign related-posts = related-posts | push: post | uniq %}
       {% endif %}
     {% endfor %}
   {% endfor %}
+  
   {% if related-posts.size > 0 %}
   <section id="related-posts">
     <div class="inner-section">

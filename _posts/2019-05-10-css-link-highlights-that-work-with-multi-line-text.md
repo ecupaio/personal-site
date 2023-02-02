@@ -5,7 +5,7 @@ meta_img: https://images.unsplash.com/photo-1585247226801-bc613c441316?ixid=Mnwx
 tags:
 - Web Development
 - CSS
-
+published: true
 ---
 I originally thought just adding a pseudo element beneath the text and growing the height would do the trick, but I figured out that they don't account for when the link wraps around a border. Fortunately, I found two ways to create that neat highlight effect across multiple lines:
 

@@ -9,5 +9,6 @@ tech:
 date: '2016-08-09'
 description: |-
   The DNC Member Database Form is a static site frontend for a Salesforce form. DNC members would add their information here for the Secretary's Office.
+published: true  
 ---
 

@@ -12,4 +12,5 @@ tech:
 date: '2020-08-03 04:22:22'
 description: |-
   This site was just a static page with a link to an email before I came in and did my magic. Built in record time with my Jekyll template, I was able to get this firm a website that showcased their services, staff, and provided ample opporunities to collect leads. 
+published: true  
 ---

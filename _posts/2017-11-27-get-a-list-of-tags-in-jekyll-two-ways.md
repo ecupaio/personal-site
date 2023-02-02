@@ -5,6 +5,7 @@ meta_img: https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=Mnwx
 tags:
 - Jekyll
 - Web Development
+published: true
 ---
 
 I ran into this problem when I was creating a tag filter for my blog: I needed a list of all the tags I used in my posts, but I wanted to filter out any duplicates. I also wanted tags from only published posts, so I needed to use the [where filter](https://www.siteleaf.com/blog/advanced-liquid-where/). Below is how I achieved this result:
