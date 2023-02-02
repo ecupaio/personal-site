@@ -11,7 +11,7 @@ tech:
   - Web Design
   - CMS
 link: https://www.sacconnects.net
-layout: default
+layout: project
 published: true
 description: >-
   SacConnects was previously designed and built by another agency, but it had

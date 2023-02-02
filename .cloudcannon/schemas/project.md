@@ -4,7 +4,7 @@ date:
 image: []
 tech: []
 link: ''
-layout: default
+layout: project
 published: false
 description: ''
 ---
