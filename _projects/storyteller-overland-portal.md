@@ -2,7 +2,9 @@
 _schema: default
 title: Storyteller Overland Portal
 date: 2022-12-01 16:41:00 -0800
-image: []
+image:
+  - /images/sto-signup.jpg
+  -
 tech:
   - Web Development
   - Web Design
