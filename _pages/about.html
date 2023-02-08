@@ -9,7 +9,7 @@ css: about
 intro:
   title: About me
   text: |-
-    I am a one-person web department with 9 years experience embedded with marketing, digital, and communications teams. From enterprise websites to landing pages, I have coded and optimized them all with a user-first approach driven by data. Typically the roles of developer, UX specialist, and product manager are separate, but you get all three with me. Ideal projects and roles for me will focus on A/B testing, conversion rate and web performance optimization, and product management.
+    I am a one-person web department with 10 years experience embedded with marketing, digital, and communications teams. From enterprise websites to landing pages, I have coded and optimized them all with a user-first approach driven by data. Typically the roles of developer, UX specialist, and product manager are separate, but you get all three with me. Ideal projects and roles for me will focus on A/B testing, conversion rate and web performance optimization, and product management.
   headshot: 
     image: /images/ed-cupaioli-color.png
     alt: Headshot of Ed Cupaioli
@@ -100,21 +100,30 @@ skills:
       startdate: 2014
     - title: jQuery
       startdate: 2014
+    - title: React
+      startdate: 2022  
   - title: Platforms        
     list: 
     - title: Wordpress
       startdate: 2014
+      enddate: 2019
     - title: Drupal
       startdate: 2013
       enddate: 2016
+      enddate: 2016
     - title: Jekyll
       startdate: 2017
+    - title: Gatsby
+      startdate: 2022  
     - title: Shopify
       startdate: 2015
       enddate: 2018
     - title: Zendesk
       startdate: 2018
       enddate: 2020
+    - title: Salesforce
+      startdate: 2023
+
   - title: Data 
     list:    
     - title: Google Analytics
@@ -166,7 +175,7 @@ recruiters:
   - title: Location/Timezone
     text: Sacramento, CA/Pacific
   - title: Availability
-    text: July 2023
+    text: Immediate
   - title: Education/Year
     text: Bachelor of Arts - Political Science/2009        
   resume: 
@@ -239,13 +248,21 @@ footer-cta:
               <div class="skill-title-block">
                 <div class="skill-label heading-5">{{ skill.title }}</div>
                 <div class="skill-years">
+                  {% if skill-yrs <= 1  %}
+                  1 year
+                  {% else %}
                   {{ skill-yrs }} years
+                  {% endif %}
                 </div>
               </div >
               
               <div class="skill-bar">
                 {% assign skill-pct = skill-yrs | times: 100.0 |  divided_by: baseline %}
+                {% if skill-pct == 0 %}
+                <span class="bar" style="width: 10%"></span>
+                {% else %}
                 <span class="bar" style="width: {{skill-pct}}%"></span>
+                {% endif %}
               </div>
               
             </div>
