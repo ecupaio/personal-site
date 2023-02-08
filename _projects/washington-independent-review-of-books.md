@@ -6,8 +6,8 @@ image:
   - /images/wirb-nav-desk.jpg
   - /images/wirb-nav-search.png
   - /images/wirb-nav-desk-subscribe.jpg
-  - /images/wirb-nav-mobile.png
-  - /images/wirb-nav-mobile-active.jpg
+  - /images/wirb-nav-mobile-active-1.jpg
+  - /images/wirb-mobile-sub.jpg
 tech:
   - Web Design
   - Web Development
