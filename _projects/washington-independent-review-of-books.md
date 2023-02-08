@@ -15,7 +15,7 @@ tech:
   - UX
 link: https://www.washingtonindependentreviewofbooks.com/
 layout: project
-published: false
+published: true
 description: >-
   WIRB had a large navigation bar that took up half the screen on mobile so I
   was hired to design and develop a navigation bar that was sleek and
