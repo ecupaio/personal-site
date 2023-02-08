@@ -111,10 +111,11 @@
       }  
     }
     &__title {
-      display: inline-block;
+      display: inline;
       @include linkHiglight; 
     }
     &__image {
+      margin-top: 1rem;
       height: 200px;
       width: 100%;
       object-position: center top;

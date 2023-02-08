@@ -33,8 +33,10 @@ function loadProject(projectTitle) {
       }
       //add share links
       const projectOpen = window.location.origin+"/?project="+encodeURIComponent(projectTitle);
-      document.querySelector('.copy-link').setAttribute('value',projectOpen);
-      const linkedinShare = 'https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(projectOpen);
+      document.querySelector('.copy-link').setAttribute('value',window.location.origin+projectPage);
+      const linkedinShare =
+        "https://www.linkedin.com/sharing/share-offsite/?url=" +
+        encodeURIComponent('https://edcupaioli.com'+projectPage);
       document.querySelector('.share-btn.linkedin').setAttribute('href',linkedinShare);
       //add images and init swiper
       projectImages.forEach(image => {
