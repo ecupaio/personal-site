@@ -24,13 +24,13 @@ API stands for Application Programming Interface, which won't really clear anyth
 
 ![](/images/api-diagram.png){: width="643" height="163"}
 
-APIs allow for transfers of data between a frontend like an app or a website and transfer them to a backend like a database. For example, when you login to Facebook, you send your username and password through an API and their database sends a response verifying or denying the credentials you send, eg "yup, this is a user and their password is correct!" That would be an example of a GET request, where data is sent to a backend and a response is generated. There's several types of requests: **GET**, **POST**, **PUT**, and **DELETE**. These requests are sent to an endpoint, a URL meant to receive requests, along with structured data, which can take the form of a&nbsp;**request body**&nbsp;or a **query string​**. Now that we got the terminology out of the way, let's get into what this actually looks like on a simple level.&nbsp;
+APIs allow for transfers of data between a frontend like an app or a website and transfer them to a backend like a database. For example, when you login to Facebook, you send your username and password through an API and their database sends a response verifying or denying the credentials you send, eg "yup, this is a user and their password is correct!" That would be an example of a GET request, where data is sent to a backend and a response is generated. There's several types of requests: **GET**, **POST**, **PUT**, and **DELETE**. These requests are sent to an endpoint, a URL meant to receive requests, along with structured data, which can take the form of a&nbsp;**request body**&nbsp;or a **query string​**. An example of POST request would be when you create a new user account. You send in your name, email, and password and the API will communicate that data to the backend and then let you know on the frontend that you were successful in creating said account. PUT edits existing information like if you were to update your email and DELETE gets rid of it as would happen when you remove your account.&nbsp;
 
-For this example, I'm using a [free API](https://restful-api.dev/) that will allow me to GET, POST, PUT, and DELETE data on a backend. Let's GET a list of the data first:&nbsp;
+Now that we got the terminology out of the way, let's get into what this actually looks like on a simple level.&nbsp;
 
 ### GET method
 
-In this example, the endpoint is&nbsp;[https://api.restful-api.dev/objects](https://api.restful-api.dev/objects). You can click on that link and see the matrix. Just kidding, it's&nbsp; a structured data language known as [JSON](https://www.w3schools.com/js/js_json_intro.asp). All us engineers use JSON for receiving and requesting data. You don't need to know too much about other than it's the standard language we use for reading and sending data. I'm also using the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)&nbsp;to get the data from the API. Again, it's just engineering things but I figured it's good to cover all of the bases. Here's a code example where I GET a list of objects from the API and display their name data on a page.&nbsp;
+In this example, the endpoint is&nbsp;[https://api.restful-api.dev/objects](https://api.restful-api.dev/objects). You can click on that link and see the matrix. Just kidding, it's&nbsp; a structured data language known as [JSON](https://www.w3schools.com/js/js_json_intro.asp). You don't need to know too much about other than it's the standard language us engineers use for reading and sending data. I'm also using the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)&nbsp;to get the data from the API. Again, it's just engineering things but I figured it's good to cover all of the bases. Here's a code example where I GET a list of objects from the API and display their name data on a page.&nbsp;
 
 &nbsp; See the Pen [&nbsp; API Example](https://codepen.io/ecupaio/pen/ZEjdrEN) by Ed Cupaioli ([@ecupaio](https://codepen.io/ecupaio)) &nbsp; on [CodePen](https://codepen.io).
 {: .codepen}
@@ -74,3 +74,5 @@ I'm telling the API, "I'm sending you this user's favorite food. Their favorite 
 ```
 
 I can now grab that message object and display the value on the page: Success.
+
+The PUT and DELETE methods are very similar to POST in that you send a request body and await a response to an endpoint so I'll end the code demos here.&nbsp;
