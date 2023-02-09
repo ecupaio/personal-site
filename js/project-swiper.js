@@ -29,6 +29,7 @@ const projectSwiperLarge = new Swiper(".project-swiper-large", {
 const zoomOverlay = document.querySelector(".zoom-overlay");
 projectSwiper.on('click', function () {
    zoomOverlay.classList.add("active");
+   document.querySelector('html').classList.add('active');
   //  const activeSlide = projectSwiper.activeIndex;
   //  console.log(activeSlide);
   //  projectSwiperLarge.slideTo(activeSlide); 
@@ -46,4 +47,5 @@ projectSwiper.on('click', function () {
 // });
 document.querySelector(".close-project-zoom").onclick = () => {
   document.querySelector(".zoom-overlay").classList.remove('active');
+  document.querySelector("html").classList.remove("active");
 };  

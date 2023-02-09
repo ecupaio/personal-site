@@ -38,7 +38,7 @@ tech:
   - UX
   - CRM
 link: 'http://portal.storytelleroverland.com/'
-layout: default
+layout: project
 published: true
 description: >-
   Storyteller Overland needed a user portal for their owners and dealers, but
