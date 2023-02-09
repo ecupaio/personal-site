@@ -3,7 +3,7 @@ _schema: default
 title: Washington Independent Review of Books
 date: 2022-03-15 14:11:00 -0700
 image:
-  - /images/wirb-nav-desk.jpg
+  - /images/wird-nav-desk.jpg
   - /images/wirb-nav-search.png
   - /images/wirb-nav-desk-subscribe.jpg
   - /images/wirb-nav-mobile-active-1.jpg
