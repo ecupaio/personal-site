@@ -8,11 +8,11 @@ tags:
 footer-cta:
   title: Still don't get it?
   text: I do and I'll figure it out for you.
-published: false
+published: true
 ---
 ![](/images/screen-shot-2023-02-09-at-11-02-55-am.png){: width="602" height="161"}
 
-Elon Musk announced recently, as of this post, he was monetizing the free API to the dismay of&nbsp;[novelty bot accounts](https://twitter.com/ca_dmv_bot), but reneged on it and the goofy, irreverent tweets are still flowing. Outside of Musk's erratic management of the social media platform, more people asked the question: what is an API?&nbsp;
+Elon Musk announced recently, as of this post, he was monetizing the free API to the dismay of&nbsp;[novelty bot accounts](https://twitter.com/ca_dmv_bot), but reversed his decision so the goofy, irreverent tweets are still flowing. Outside of Musk's erratic management of the social media platform, more people asked the question: what is an API?&nbsp;
 
 I developed many frontend tools and websites with APIs so allow me to introduce to APIs: what they are and what they do.&nbsp;
 
