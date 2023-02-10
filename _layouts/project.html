@@ -78,8 +78,10 @@ footer-cta:
       {% for project in recent-projects  limit: 3 %}
       <div class="project-recent__col">
         <a class="project-recent__link" href="{{ project.url }}">
-          <div class="project-recent__title heading-4">{{ project.title }}</div>
-          <img class="project-recent__image" src="{{ project.image[0] | resize: '330x' }}" />
+          <div class="project-recent__title heading-4">
+            <span class="project-recent__title-text">{{ project.title }}</span>
+          </div>
+          <img class="project-recent__image" src="{{ project.image[0] | resize: '330x>' }}" />
           <div class="project-recent__tech small">
             {% for tech in project.tech %}
             {{ tech }}{% unless forloop.last %},{% endunless %}

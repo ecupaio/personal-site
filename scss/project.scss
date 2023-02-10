@@ -79,6 +79,7 @@
     padding-top: 0;
   }
   &-recent {
+    
     h2 {
       text-align: center;
     }
@@ -88,10 +89,16 @@
       gap: 1rem;
       max-width: $size-large;
       margin: 2rem auto 0; 
+      @include bp-large {
+        max-width: 330px;
+        grid-template-columns: repeat(1,1fr);
+      }
     }
     &__col {
-      
-      
+      border-radius: 4px;
+      //@include box-shadow;
+      border: 2px solid $charcoal;
+      background-color: white;
     }
     &__link {
       background-image: none !important;
@@ -102,17 +109,18 @@
       height: 100%;
       @include transition(box-shadow !important);
       &:hover, &:active, &:focus {
-        
-        
-        
-        .project-recent__title {
+        .project-recent__title-text {
           background-position: 0 0em;
         }
       }  
     }
     &__title {
-      display: inline;
-      @include linkHiglight; 
+      
+      
+      padding: 0.5rem;
+      &-text {
+        @include linkHiglight; 
+      }
     }
     &__image {
       margin-top: 1rem;
@@ -125,6 +133,7 @@
       color: $grey-text;
       font-weight: 400;
       margin-top: 0.5rem;
+      padding: 0.5rem;
     }
   }
 
