@@ -25,10 +25,9 @@
     padding-right: 0;
     padding-bottom: 1rem;
     &__swiper {
-      height: 500px;
       padding: 2rem;
       .swiper-wrapper {
-        
+        align-items: center;
       }
       .swiper-button-prev {
         left: 0.5rem;
@@ -38,6 +37,7 @@
       }
       .swiper-slide {
         border-radius: 6px;
+        max-height: 500px;
         overflow: hidden;
         @include box-shadow;
         position: relative;
