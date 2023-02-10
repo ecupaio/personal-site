@@ -32,19 +32,23 @@ Now that we got the terminology out of the way, let's get into what this actuall
 
 In this example, the endpoint is&nbsp;[https://api.restful-api.dev/objects](https://api.restful-api.dev/objects). You can click on that link and see the matrix. Just kidding, it's&nbsp; a structured data language known as [JSON](https://www.w3schools.com/js/js_json_intro.asp). You don't need to know too much about other than it's the standard language us engineers use for reading and sending data. I'm also using the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)&nbsp;to get the data from the API. Again, it's just engineering things but I figured it's good to cover all of the bases. Here's a code example where I GET a list of objects from the API and display their name data on a page.&nbsp;
 
-&nbsp; See the Pen [&nbsp; API Example](https://codepen.io/ecupaio/pen/ZEjdrEN) by Ed Cupaioli ([@ecupaio](https://codepen.io/ecupaio)) &nbsp; on [CodePen](https://codepen.io).
-{: .codepen}
-
-<script async="" src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="ZEjdrEN" data-user="ecupaio" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/ecupaio/pen/ZEjdrEN">
+  API Example: GET</a> by Ed Cupaioli (<a href="https://codepen.io/ecupaio">@ecupaio</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ### GET method with a query string
 
 Next we're going to add a request body to our GET request. A parameter will allow us to narrow down the data we get. For example, if I didn't want the whole list of objects, but a specific one, I would need to add some data along with my request to say to the API, "gimme only the objects with this particular id. Let's see that in action:&nbsp;
 
-See the Pen [API Example: GET with request body](https://codepen.io/ecupaio/pen/RwBzQjQ) by Ed Cupaioli ([@ecupaio](https://codepen.io/ecupaio)) on [CodePen](https://codepen.io).
-{: .codepen}
-
-<script async="" src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="RwBzQjQ" data-user="ecupaio" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/ecupaio/pen/RwBzQjQ">
+  API Example: GET with request body</a> by Ed Cupaioli (<a href="https://codepen.io/ecupaio">@ecupaio</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 I told the API, get me only the objects with an id of 4 with the query string **?id=4**&nbsp;appended to the end of the endpoint URL and it returned me the object with an id of 4. This is the most common type of GET request as most APIs take some form of data to give a response. For example,&nbsp;[Google Maps](https://www.google.com/maps/place/Golden+1+Center/@38.5802045,-121.5018489,17z/data=!3m2!4b1!5s0x809ad12d01bf9ce7:0x3333a570477aa9a0!4m5!3m4!1s0x80e84cbc046b19bf:0x987c53711f042fa6!8m2!3d38.5802045!4d-121.4996602) takes a query string of your address and returns a location.&nbsp;
 
@@ -52,10 +56,12 @@ I told the API, get me only the objects with an id of 4 with the query string **
 
 Now that we have successfully received data, we're now going to post data to the database via the API. As I mentioned earlier, APIs can also be used to send data from a website to a database. I made a simple example below of how you can send or POST data to an API and the API will return a response to let you know if it went through. Go ahead and enter your favorite food. The data doesn't actually go anywhere so you can admit your love of pineapple pizza discretely.&nbsp;
 
-See the Pen [API Example: GET with request body](https://codepen.io/ecupaio/pen/QWBXmRp) by Ed Cupaioli ([@ecupaio](https://codepen.io/ecupaio)) on [CodePen](https://codepen.io).
-{: .codepen}
-
-<script async="" src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="QWBXmRp" data-user="ecupaio" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/ecupaio/pen/QWBXmRp">
+  API Example: GET with request body</a> by Ed Cupaioli (<a href="https://codepen.io/ecupaio">@ecupaio</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 This API will accept anything so go nuts. Lots of Javascript here so let's break it down. On submit of the form, I grab the value of the favorite food input and create a JSON object:&nbsp;
 
