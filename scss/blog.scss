@@ -170,6 +170,7 @@
       @include transform(translateX(-50%));
     }
     .post-list {
+      padding: 0;
       li {
         list-style: none;
         margin-bottom: 1em;
