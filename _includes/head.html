@@ -110,7 +110,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  </script>
 {% endif %}
 
-{% if page.meta_img %}
+{% if page.meta_img and page.meta_img.size > 0 %}
 {% assign meta_img = page.meta_img %}
 {% else %}
 {% assign meta_img = site.meta_img %}
