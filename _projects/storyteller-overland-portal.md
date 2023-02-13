@@ -37,7 +37,7 @@ tech:
   - Web Design
   - UX
   - CRM
-link: 'http://portal.storytelleroverland.com/'
+link: https://sto-portal.netlify.app/
 layout: project
 published: true
 description: >-
