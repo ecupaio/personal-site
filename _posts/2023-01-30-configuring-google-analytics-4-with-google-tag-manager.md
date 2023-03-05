@@ -1,6 +1,6 @@
 ---
 _schema: default
-title: Configuring Google Analytics 4 with Google Tag Manager
+title: 'Migrating to Google Analytics 4 '
 date: 2023-01-30 16:45:00 -0800
 meta_img: ''
 tags:
