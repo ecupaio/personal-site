@@ -49,36 +49,92 @@ As of writing this (before the July 1, 2023 deadline), Google Analytics has adde
 
 That's it! You will now see the Setup Assistant for GA4, but ignore that for now. We're going to set up Google Tag Manager to implement GA4 tracking on your site.&nbsp;
 
-### Create a Google Tag Manager Property
-
 ### Create a Google Tag Manager Container
+
+As I mentioned earlier, GTM is the best way to implement your GA4 property on your site. I do it for all my clients and my own personal site. You will create an Account in Google Tag Manager and then set up a container which will include all of your tags. Lots of jargon, but I will break it down in the instructions for you.&nbsp;
+
+1\. Go to the [Tag Manager](https://tagmanager.google.com/) dashboard, then select Create Account in order to create an account to house your container:&nbsp;
+
+![](/images/screen-shot-2023-03-04-at-5-12-19-pm.png){: width="1078" height="70"}
+
+Your account will be your organization, and it will have containers for each of your sites. For example, if you have separate sites for your blog or shop, you will add containers that will implement GA4 properties for each of your sites.&nbsp;
+
+2\. The Add a New Account panel will appear. Enter your Account Name. This can be your organization name, eg My Business.&nbsp;
+
+3\. In the Container Setup section, add your Container name and select Web for the Target platform. This should be the URL for your site so you can instantly now where the container is installed.&nbsp;
+
+4\. Select Create, then agree to the terms to get to your container setup.&nbsp;
+
+You will see the installation code for your GTM container, but exit out of that for now. We will focus on creating a Google Analytics 4 Tag next.&nbsp;
 
 ### Create a Google Analytics 4 Tag
 
-#### Copy your Google Analytics 4 Measurement ID
+Now you should be in your workspace. You can access this at anytime by going to your [Tag Manager dashboard](https://tagmanager.google.com/#/home) and selecting your container.&nbsp;
 
-1\. Go back to your [Analytics Dashboard](https://analytics.google.com) and select Admin.&nbsp;
+1\. Select Tags from the left-hand menu:&nbsp;
 
-2\. Select Data Streams under your property:&nbsp;
+![](/images/screen-shot-2023-03-04-at-5-26-21-pm.png){: width="233" height="394"}
+
+2\. Select New in the Tags section:&nbsp;
+
+![](/images/screen-shot-2023-03-04-at-5-27-00-pm.png){: width="999" height="223"}
+
+4\. Now you should see a new panel that has two sections: Tag Configuration and Triggering. First, Add a title for your tag: GA4. Next, select anywhere within in Tag Configuration to bring up the menu of tags:&nbsp;
+
+![](/images/screen-shot-2023-03-04-at-5-30-26-pm.png){: width="1064" height="373"}
+
+5\. From the list of options, select Google Analytics: GA4 Configuration:&nbsp;
+
+![](/images/screen-shot-2023-03-04-at-5-31-15-pm.png){: width="635" height="296"}
+
+The GA4 configuration will appear with a blank input for Measurement ID. To get that, we need to head back to Google Analytics.&nbsp;
+
+6\. Go back to your [Analytics Dashboard](https://analytics.google.com) and select Admin.&nbsp;
+
+7\. Select Data Streams under your property:&nbsp;
 
 ![](/images/screen-shot-2023-03-04-at-4-51-53-pm.png){: width="232" height="278"}
 
-3\. Your website should be in the table of Data streams. Select it to get your property information:&nbsp;
+8\. Your website should be in the table of Data streams. Select it to get your property information:&nbsp;
 
 ![](/images/screen-shot-2023-03-04-at-4-56-39-pm.png){: width="877" height="128"}
 
 **Note:** If your website is not shown in the table. Select Add Stream &gt; Web, enter your&nbsp; URL, add a name, then select Create stream. [Google has a guide](https://support.google.com/analytics/answer/9304153?hl=en#zippy=%2Cweb) for this as well.&nbsp;
 
-4\. In the Web steam details panel, hit the copy icon (two stacked rectangles) next to your measurement ID:&nbsp;
+9\. In the Web steam details panel, hit the copy icon (two stacked rectangles) next to your measurement ID:&nbsp;
 
 ![](/images/screen-shot-2023-03-04-at-4-59-41-pm.png){: width="891" height="177"}
 
 You now have your Measurement ID to add to your Google Analytics 4 Tag.&nbsp;
 
-5\. Paste that Measurement ID into the corresponding field.&nbsp;
+10\. Go back to you Tag Manager screen and paste that Measurement ID into the corresponding field:&nbsp;
+
+![](/images/screen-shot-2023-03-04-at-5-37-11-pm.png){: width="369" height="269"}&nbsp;
+
+Now we're ready to set our trigger.&nbsp;
 
 ### Configure the Google Analytics 4 Tag Trigger
 
+GTM listens to triggers to fire the tag. In this scenario, we're going to tell GTM to listen for when any page loads on our website to trigger the Google Analytics 4 tag. This will successfully load GA4 on your website so you can track those views.&nbsp;
+
+I'm assuming you still have the tag open, but if you don't then go to Tag Manager,&nbsp; select your container, select Tags from the lefthand menu, then select your GA4&nbsp; tag (or whatever you named it) from the tags table.&nbsp;
+
+1\. Select anywhere in the area within Triggering&nbsp; to open the triggers menu:&nbsp;
+
+![](/images/screen-shot-2023-03-04-at-5-42-31-pm.png){: width="927" height="284"}
+
+2\. From the triggers menu, select All Pages:&nbsp;
+
+![](/images/screen-shot-2023-03-04-at-5-44-50-pm.png){: width="576" height="218"}
+
+3\. Select Save in the top right corner.
+
+4\. After the tag minimizes, select Submit to bring up the Publish menu. Then select Publish to see a silly highschool yearbook quote. It will ask you to name your version, but you can just hit skip.&nbsp;
+
+Now GA4 is set to load on our site&nbsp;
+
 ### Installing the Google Tag Manager Container
+
+We got your GA4 property set up, our Tag Manager container ready with our tag and trigger&nbsp;
 
 ### Test Configuration
