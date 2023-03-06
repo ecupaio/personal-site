@@ -65,6 +65,11 @@ collections_config:
         _inputs:
           $.org_logo:
             type: file
+          projects:  
+            type: select
+            options: 
+              values: collections.projects
+              value_key: path
   skills:
     name: Skills
     path: _skills
