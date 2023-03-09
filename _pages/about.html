@@ -27,7 +27,7 @@ experience:
   timeline:
     - daterange: May 2021 - Present
       company: Ed Cupaioli LLC
-      title: Product Manager
+      title: Technical Product Manager
       text:
       tasks:
         - >-
@@ -265,14 +265,12 @@ recruiters:
   title: For Recruiters
   text: >-
     I've listed all the info that you will need in order to represent me for a
-    job. I'm aware recruiters and HR professionals love nothing more than a PDF
-    copy of a resumé when all the same details have been listed previously so I
-    added a download button below for your convenience.
+    job. If you need any more information, please email me at [ed.cupaioli@gmail.com](mailto:ed.cupaioli@gmail.com).
   info:
     - title: Full Name
       text: Edward A Cupaioli
     - title: Hourly Rate
-      text: $75 for W2, $100 for 1099
+      text: $75 for W2, $100 for C2C
     - title: Minimum Desired Salary
       text: $120,000
     - title: Date of Birth (MM/DD)
@@ -284,7 +282,14 @@ recruiters:
     - title: Availability
       text: Immediate
     - title: Education/Year
-      text: Bachelor of Arts - Political Science/2009
+      text: Bachelor of Arts/2009
+  links: 
+    - title: LinkedIn
+      url: https://www.linkedin.com/in/ed-cupaioli-10a9849/
+    - title: GitHub
+      url: https://github.com/ecupaio
+    - title: Website
+      url: https://edcupaioli.com/           
   resume:
     title: Download resumé
     link: /resume/
@@ -300,7 +305,7 @@ footer-cta:
 <main id="about-page">
   <section id="hero" class="blue">
     <div class="inner-section">
-      <h1 class="hero-title editable" data-cms-bind="#intro.title">{{ page.intro.title }}</h1>
+      <h1 class="hero-title" data-cms-bind="#intro.title">{{ page.intro.title }}</h1>
       <img class="hero-image" src="{{ page.intro.headshot.image }}" alt="{{ page.intro.headshot.alt }}" />
       <div class="hero-text" data-cms-bind="#intro.text">
         {{ page.intro.text | markdownify }}
@@ -388,15 +393,25 @@ footer-cta:
       <div class="section-text">
         {{ page.recruiters.text | markdownify }}
       </div>
-      <div class="info-list">
-        {% for info in page.recruiters.info %}
-        <div class="info-block">
-          <div class="heading-4 info-title">{{ info.title }}</div>
-          <div class="info-text">{{ info.text }}</div>
+      <div class="info-content">
+        <div class="info-list">
+          {% for info in page.recruiters.info %}
+          <div class="info-block">
+            <span class="info-title">{{ info.title }}</span>:&nbsp;
+            <span class="info-text">{{ info.text }}</span>
+          </div>
+          {% endfor %}
         </div>
-        {% endfor %}
+        <div class="link-list">
+          {% for link in page.recruiters.links %}
+          <div class="link-item">
+            <span class="link-title bold">{{ link.title }}:</span>&nbsp;<a href="{{ link.url }}">{{ link.url }}</a>
+          </div>
+          {% endfor %}
+        </div>
+        {% include button-row.html link=page.recruiters.resume.link text=page.recruiters.resume.title target="_blank" %}
       </div>
-      {% include button-row.html link=page.recruiters.resume.link text=page.recruiters.resume.title target="_blank" %}
+      
     </div>
   </section>
   {% include footer-cta.html %}
