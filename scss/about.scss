@@ -161,21 +161,35 @@
   }
   #recruiters {
     text-align: center;
-    .section-text {
-      
+    .inner-section {
       max-width: $size-medium;
-      margin: auto;
     }
-    .info-list {
-      max-width: $size-small;
+    .info-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .info-list {  
       margin: auto;
-      display: inline-block;
-      
+      text-align: left;
       .info-block {
         margin-bottom: 1rem;
         .info-title {
-          margin: 0;
+          font-weight: 700;
         }
+      }
+    }
+    .link-list {
+
+      text-align: left;
+      .link-item {
+         
+      }
+      .link-title {
+        font-weight: 700;
+      }
+      a {
+        font-weight: 400;
       }
     }
     .btn-row {
