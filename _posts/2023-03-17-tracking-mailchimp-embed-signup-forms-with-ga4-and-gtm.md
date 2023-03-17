@@ -9,7 +9,7 @@ tags:
 footer-cta:
   title: ''
   text: ''
-published: false
+published: true
 ---
 MailChimp([kimp?](https://www.google.com/search?q=mail+kimp&amp;sxsrf=AJOqlzVbLgP1oCOunUjALfatL7YX73nrdA%3A1679073219181&amp;ei=w58UZNGxCtqwkvQPg9SC0AU&amp;ved=0ahUKEwiRn5-Wu-P9AhVamIQIHQOqAFoQ4dUDCBE&amp;uact=5&amp;oq=mail+kimp&amp;gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQgAQyBggAEBYQHjIFCAAQhgM6BAgAEEc6BAgjECc6DQguEIAEEMcBENEDEAo6CggAEIAEEBQQhwI6DQgAEIAEEBQQhwIQsQM6CAgAEIAEELEDOgUILhCABDoFCAAQkQI6EAgAEIAEEBQQhwIQsQMQgwE6CwgAEIAEELEDEIMBOggIABCABBDJAzoECAAQAzoHCC4QgAQQCjoICAAQFhAeEApKBAhBGABQ6gJYkQ1ghhBoAHACeACAAagBiAHSBpIBAzAuNpgBAKABAcgBA8ABAQ&amp;sclient=gws-wiz-serp#fpstate=ive&amp;vld=cid:598e9c49,vid:GkPZP2NADYg)) has a handy signup form you can embed into your website easy-peasy, but tracking submissions is a bit more complicated. In this guide, I will show you how track MailChimp signup form submissions on your website using Google Analytics 4 and Google Tag Manager.&nbsp;
 
