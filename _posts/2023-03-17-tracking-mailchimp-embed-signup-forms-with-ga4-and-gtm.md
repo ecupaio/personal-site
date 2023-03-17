@@ -1,0 +1,44 @@
+---
+_schema: default
+title: Tracking MailChimp Embed Signup forms with GA4 and GTM
+date: 2023-03-17 09:56:02 -0700
+meta_img: ''
+tags:
+footer-cta:
+  title: ''
+  text: ''
+published: true
+---
+MailChimp([kimp?](https://www.google.com/search?q=mail+kimp&amp;sxsrf=AJOqlzVbLgP1oCOunUjALfatL7YX73nrdA%3A1679073219181&amp;ei=w58UZNGxCtqwkvQPg9SC0AU&amp;ved=0ahUKEwiRn5-Wu-P9AhVamIQIHQOqAFoQ4dUDCBE&amp;uact=5&amp;oq=mail+kimp&amp;gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQgAQyBggAEBYQHjIFCAAQhgM6BAgAEEc6BAgjECc6DQguEIAEEMcBENEDEAo6CggAEIAEEBQQhwI6DQgAEIAEEBQQhwIQsQM6CAgAEIAEELEDOgUILhCABDoFCAAQkQI6EAgAEIAEEBQQhwIQsQMQgwE6CwgAEIAEELEDEIMBOggIABCABBDJAzoECAAQAzoHCC4QgAQQCjoICAAQFhAeEApKBAhBGABQ6gJYkQ1ghhBoAHACeACAAagBiAHSBpIBAzAuNpgBAKABAcgBA8ABAQ&amp;sclient=gws-wiz-serp#fpstate=ive&amp;vld=cid:598e9c49,vid:GkPZP2NADYg)) has a handy signup form you can embed into your website easy-peasy, but tracking submissions is a bit more complicated. In this guide, I will show you how track MailChimp signup form submissions on your website using Google Analytics 4 and Google Tag Manager.&nbsp;
+
+I am assuming that you have Google Analytics 4 configured with Google Tag Manager on your website along with debug view enabled. If you don't follow my guide: \[SUPPORT ARTICLE HERE\]
+
+## Configure your Custom Event Tag
+
+Google's [Recommended Events](https://support.google.com/analytics/answer/9267735?hl=en) doesn't have anything that would accurately capture a newsletter signup since the [signup event](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#sign_up)&nbsp;should be used for when a user account is created and [generate\_lead](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#generate_lead)&nbsp;is better suited for actual lead forms so you can assign value to them for ad campaigns.&nbsp;
+
+In this case, we'll call our custom event **newsletter\_signup**&nbsp;and set our GA4 tag to receive the event like so:&nbsp;
+
+![](/images/screen-shot-2023-03-17-at-10-30-50-am.png){: width="926" height="580"}
+
+You can get fancy and add event parameters to define the location of the signup, (eg footer or [the cursed overlay](https://edcupaioli.com/blog/8-ux-trends-that-need-to-go/)), but I'm keeping it simple here.&nbsp;
+
+## Setting your Trigger&nbsp;
+
+Next step is to add your trigger so the event will fire when the form successfully submits. Logically you would think that the [Form Submission trigger](https://support.google.com/tagmanager/answer/7679217?hl=en&amp;ref_topic=7679108) is the way to go, but it is not. I'm assuming it's because MailChimp uses javascript to submit the form data and prevent the default form action from redirecting the user to another page. You also shouldn't trigger the event on the [button click](https://support.google.com/tagmanager/answer/7679320?hl=en&amp;ref_topic=7679108) because MailChimp can reject the input if the email is not in the right format or the email already exists in their database. Either way, you will use the [Element Visibility trigger](https://support.google.com/tagmanager/answer/7679410?hl=en) since MailChimp displays a success message after their database accepted the data.&nbsp;&nbsp;
+
+1\. Select **Element Visibility** for your Trigger Type:&nbsp;
+
+![](/images/screen-shot-2023-03-17-at-10-42-03-am.png){: width="249" height="277"}
+
+2\. Next, select ID for the Selection Method.
+
+We're telling Google Tag Manager, watch for this element to appear on the page with this exact ID. IDs are unique to one element on the DOM, ie the webpage, so they're the best to work with if you're targeting one element.&nbsp;
+
+3\. Enter the Element ID of the success response: **mce-success-response**&nbsp;into the Element ID field:&nbsp;
+
+![](/images/screen-shot-2023-03-17-at-10-46-45-am.png){: width="399" height="772"}
+
+You can leave the options as the default. I changed the When to fire this trigger to&nbsp;
+
+CODE HERE
