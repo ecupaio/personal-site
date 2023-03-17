@@ -4,6 +4,8 @@ title: Tracking MailChimp Embed Signup forms with GA4 and GTM
 date: 2023-03-17 09:56:02 -0700
 meta_img: ''
 tags:
+  - Google Analytics
+  - Google Tag Manager
 footer-cta:
   title: ''
   text: ''
