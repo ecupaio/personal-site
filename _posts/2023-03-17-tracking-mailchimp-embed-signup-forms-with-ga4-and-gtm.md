@@ -63,6 +63,16 @@ Now for that ID, here's how I got it. I pasted MailChimp's current code as of wr
 
 As you go down the HTML, you'll see a div with the ID mce-success-response. Bingo! The other way you can find it is submit a valid email to the form and use [Chrome dev tools](https://developer.chrome.com/docs/devtools/) (right click the element &gt; Inspect Element) to get the success response ID when it appears.&nbsp;
 
+4\. Hit the Save button and you're all set to test.
+
 ## Test your Tag
 
-Now it's the moment of truth, i
+Now it's the moment of truth, let's test our tag by using using the Tag Assistant in Preview mode and GA4's new debug view.&nbsp;
+
+1\. Select **Preview** in the upper right-hand corner. We don't actually have to publish our tag while testing so we should be able to see our new tag firing.&nbsp;
+
+2\. In the new window that appear, enter your website's URL and select **Connect**\:
+
+![](/images/screen-shot-2023-03-17-at-11-07-30-am.png){: width="1298" height="1052"}
+
+A new window will appear with your website and there will be a wee modal that says your site is in Preview mode:&nbsp;
