@@ -7,7 +7,7 @@ tags:
 footer-cta:
   title: ''
   text: ''
-published: true
+published: false
 ---
 MailChimp([kimp?](https://www.google.com/search?q=mail+kimp&amp;sxsrf=AJOqlzVbLgP1oCOunUjALfatL7YX73nrdA%3A1679073219181&amp;ei=w58UZNGxCtqwkvQPg9SC0AU&amp;ved=0ahUKEwiRn5-Wu-P9AhVamIQIHQOqAFoQ4dUDCBE&amp;uact=5&amp;oq=mail+kimp&amp;gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQgAQyBggAEBYQHjIFCAAQhgM6BAgAEEc6BAgjECc6DQguEIAEEMcBENEDEAo6CggAEIAEEBQQhwI6DQgAEIAEEBQQhwIQsQM6CAgAEIAEELEDOgUILhCABDoFCAAQkQI6EAgAEIAEEBQQhwIQsQMQgwE6CwgAEIAEELEDEIMBOggIABCABBDJAzoECAAQAzoHCC4QgAQQCjoICAAQFhAeEApKBAhBGABQ6gJYkQ1ghhBoAHACeACAAagBiAHSBpIBAzAuNpgBAKABAcgBA8ABAQ&amp;sclient=gws-wiz-serp#fpstate=ive&amp;vld=cid:598e9c49,vid:GkPZP2NADYg)) has a handy signup form you can embed into your website easy-peasy, but tracking submissions is a bit more complicated. In this guide, I will show you how track MailChimp signup form submissions on your website using Google Analytics 4 and Google Tag Manager.&nbsp;
 
@@ -39,6 +39,30 @@ We're telling Google Tag Manager, watch for this element to appear on the page w
 
 ![](/images/screen-shot-2023-03-17-at-10-46-45-am.png){: width="399" height="772"}
 
-You can leave the options as the default. I changed the When to fire this trigger to&nbsp;
+You can leave the options as the default. I changed the When to fire this trigger to every time it appears for testing purposes, but you can leave it as once per page if you only have one form embedded on the page.&nbsp;
 
-CODE HERE
+Now for that ID, here's how I got it. I pasted MailChimp's current code as of writing this below:&nbsp;&nbsp;
+
+```
+<!-- Begin Mailchimp Signup Form -->
+<div id="mc_embed_signup">
+    <form action="YOUR_FORM_ACTION_URL" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+        <div class="mc-field-group"><input type="email" placeholder="Your Email" name="EMAIL" class="required email" id="mce-EMAIL"></div>
+        <div id="mce-responses" class="clear">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+        </div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;"><input type="text" name="b_0b5586be71b0fee16a03f5684_e41ec18eab" tabindex="-1" value=""></div>
+        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+        </div>
+    </form>
+</div>
+<!--End mc_embed_signup-->
+```
+
+As you go down the HTML, you'll see a div with the ID mce-success-response. Bingo! The other way you can find it is submit a valid email to the form and use [Chrome dev tools](https://developer.chrome.com/docs/devtools/) (right click the element &gt; Inspect Element) to get the success response ID when it appears.&nbsp;
+
+## Test your Tag
+
+Now it's the moment of truth, i
