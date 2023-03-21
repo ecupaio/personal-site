@@ -11,9 +11,7 @@ body {
 	}
 }
 body {
-	background: linear-gradient(to bottom, $blue,$charcoal);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+	background: $blue;
 }
 * {
 	box-sizing: border-box;
@@ -81,6 +79,7 @@ img,svg {
 //semantic elements
 main, section, article, footer, nav {
 	display: block;
+	background-color: $white;
 }
 main {
 	margin-top: 3rem;
