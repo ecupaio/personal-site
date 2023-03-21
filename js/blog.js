@@ -57,5 +57,7 @@ $(function() {
       $('.share-btn.copy').removeClass('active');  
     },1000);
   });
+
+  
   
 });
