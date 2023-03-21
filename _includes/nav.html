@@ -1,35 +1,50 @@
-<div id="nav-toggle">
-  <div class="toggle-burger">
-    <span class="toggle-line one"></span>
-    <span class="toggle-line two"></span>
-    <span class="toggle-line three"></span>
+<nav class="{{ page.nav_class }}">
+  <div class="nav-col left">
+    <div id="nav-toggle">
+      <div class="toggle-burger">
+        <span class="toggle-line one"></span>
+        <span class="toggle-line two"></span>
+        <span class="toggle-line three"></span>
+      </div>
+    </div>
+    <div id="site-logo">
+      <a href="/" aria-lable="Home Page">Ed Cupaioli</a>
+    </div>
   </div>
-</div>
-<nav id="sidebar-nav">
-  <ul class="nav-link-list">
-    {% for nav in site.data.nav.main %}
-    <li class="nav-link">
-      {% if nav.submenu and nav.submenu.size > 0 %}
-      <a class="text-link white toggle-link" href="{{ nav.url }}">{{ nav.title }}&nbsp;&nbsp;<i class="fa fa-caret-right"></i></a>
-      <ul class="nav-submenu toggle-box">
-        {% for item in nav.submenu %}
-        <li class="submenu-item ">
-          <a class="submenu-link white" href="{{ item.url }}">{{ item.title }}</a>
-        </li>
-        {% endfor %}
-      </ul>
-      {% else %}
-      <a class="text-link white" href="{{ nav.url }}">{{ nav.title }}</a>
-      {% endif %}
-    </li>
-    {% endfor %}
-    <li class="nav-link">
-      <a class="btn" href="#open-form" data-location="Menu">Work with me</a>
-    </li>
-    <li class="nav-link social-row">
-      {% for link in site.data.nav.social %}
-      <a class="icon-link white" href="{{ link.url }}" aria-label="{{ link.title }}" >{{ link.icon }}</a>
+  <div class="nav-col right">
+    <a href="#open-form" class="btn">Work with me</a>
+  </div>
+  
+  
+  <div id="sidebar-nav">
+    <ul class="nav-link-list">
+      {% for nav in site.data.nav.main %}
+      <li class="nav-link">
+        {% if nav.submenu and nav.submenu.size > 0 %}
+        <a class="text-link white toggle-link" href="{{ nav.url }}">{{ nav.title }}&nbsp;&nbsp;<i class="fa fa-caret-right"></i></a>
+        <ul class="nav-submenu toggle-box">
+          {% for item in nav.submenu %}
+          <li class="submenu-item ">
+            <a class="submenu-link white" href="{{ item.url }}">{{ item.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <a class="text-link white" href="{{ nav.url }}">{{ nav.title }}</a>
+        {% endif %}
+      </li>
       {% endfor %}
-    </li>
-  </ul>
+      <li class="nav-link">
+        <a class="btn" href="#open-form" data-location="Menu">Work with me</a>
+      </li>
+      <li class="nav-link social-row">
+        {% for link in site.data.nav.social %}
+        <a class="icon-link white" href="{{ link.url }}" aria-label="{{ link.title }}" >{{ link.icon }}</a>
+        {% endfor %}
+      </li>
+    </ul>
+  </div>
+  
 </nav>
+
+

@@ -32,25 +32,28 @@ scripts:
     </div>
     {% include separator.html %}
     <div class="share-post">
-      <a class="share-btn" aria-label="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url | url_encode}}{{ page.url | url_encode }}" target="_blank" rel="noreferrer noopener">
+      {% assign linkedin-utm = '?utm_campaign=blogshare&utm_source=linkedin&utm_medium=social' %}
+      <a class="share-btn" aria-label="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url | url_encode}}{{ page.url | url_encode }}{{ linkedin-utm | url_encode }}" target="_blank" rel="noreferrer noopener">
         <i class="fab fa-linkedin-in" aria-hidden="true" title="Share on LinkedIn"></i>
         
       </a>
-      <a class="share-btn fbook" aria-label="Share on Facebook" href="{{ site.url }}{{ page.url }}" data-title="{{ page.title }}" rel="noreferrer noopener">
+      <a class="share-btn fbook" aria-label="Share on Facebook" href="{{ site.url }}{{ page.url }}?utm_campaign=blogshare&utm_source=facebook&utm_medium=social" data-title="{{ page.title }}" rel="noreferrer noopener">
         <i class="fab fa-facebook-f"></i>
         
       </a>
-      <a class="share-btn" aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url | url_encode}}{{ page.url | url_encode }}" rel="noreferrer noopener">
+      {% assign twitter-utm = '?utm_campaign=blogshare&utm_source=twitter&utm_medium=social'%}
+      <a class="share-btn" aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url | url_encode}}{{ page.url | url_encode }}{{ twitter-utm | url_encode }}" rel="noreferrer noopener">
         <i class="fab fa-twitter"></i>
         
       </a>
-      <a class="share-btn" aria-label="Share on Email" href="mailto:?subject={{ page.title }}&body={{ site.url }}{{ page.url | url_encode }}" rel="noreferrer noopener">
+      {% assign email-utm = '?utm_campaign=blogshare&utm_source=email' %}
+      <a class="share-btn" aria-label="Share on Email" href="mailto:?subject={{ page.title }}&body={{ site.url }}{{ page.url | url_encode }}{{ email-utm | url_encode }}" rel="noreferrer noopener">
         <i class="fa fa-envelope"></i>
       </a>
       <a class="share-btn copy" aria-label="Copy Link" href="#">
         <i class="fa fa-check"></i>
         <i class="fa fa-link"></i>
-        <input class="copy-link" aria-label="Copy Link Text" value="{{ site.url }}{{ page.url }}">
+        <input class="copy-link" aria-label="Copy Link Text" value="{{ site.url }}{{ page.url }}?utm_campaign=blogshare&utm_source=copylink">
       </a>
     </div> 
   </section>
