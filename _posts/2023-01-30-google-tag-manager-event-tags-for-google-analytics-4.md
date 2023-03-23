@@ -18,7 +18,7 @@ Google is sunsetting Universal Analytics on July 1, 2023 so it's time to hop on 
 
 One feature to watch out for are [Recommended Events](https://support.google.com/analytics/answer/9267735?hl=en), which can have required parameters to send data. GA4 has special UI features set up for these but you need to make sure you add the required parameters or else GA4 won't recognize the event.&nbsp;
 
-The other new feature is [Custom Definitions](https://support.google.com/analytics/answer/10075209). So if you wanted to add the category and label did back in the day, you can do that with Custom Definitions.&nbsp; There's [standard definitions](https://support.google.com/analytics/answer/9143382) they automatically track as well.&nbsp;
+The other new&nbsp; (not actually new, but more prominent) feature is [Custom Dimensions](https://support.google.com/analytics/answer/10075209). So if you wanted to add the category and label did back in the day, you can do that with Custom Definitions.&nbsp; There's [standard dimensions](https://support.google.com/analytics/answer/9143382)&nbsp;they automatically track as well.&nbsp;
 
 This tutorial will just cover how to set up the generic tag to trigger events without any custom definitions since those will need to be configured on an event by event basis, which makes the generic tag moot.&nbsp;
 
