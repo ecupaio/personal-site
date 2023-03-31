@@ -231,6 +231,30 @@ Once the plugin is activated, it will appear in your dashboard for you to access
 
 ![](/images/screen-shot-2023-03-31-at-3-02-09-pm.png){: width="1188" height="510"}
 
-6\. With the plugin open, select&nbsp;
+6\. With the plugin open, select **Sign in with Google**. This will display a prompt that will allow you to login with the Google account you set up Analytics and Tag Manager with.&nbsp;
+
+![](/images/screen-shot-2023-03-31-at-3-02-29-pm.png){: width="1194" height="1128"}
+
+7\. Once you signin, Google will ask for permission to access your account. Check the two additional boxes that will grant access to Search Console and domains:&nbsp;
+
+![](/images/screen-shot-2023-03-31-at-3-30-54-pm.png){: width="868" height="844"}
+
+Although we just want to add our Tag Manager code, Site Kit won't allow you to proceed with the setup without allowing them access to everything, which will prompt them to install [Search Console](https://search.google.com/search-console/about).&nbsp;
+
+8\. Select the blue buttons for each step as it will not allow you so selectively install the one thing we want: Tag Manager.&nbsp;
+
+9\. Once you complete the setup, you will get to access the Settings panel that will allow us to add GTM. Select **Settings** from the side menu of the dashboard or select **Go to Settings** in the success message:&nbsp;
+
+![](/images/screen-shot-2023-03-31-at-3-36-41-pm.png){: width="1588" height="486"}
+
+10\. Select **Connect More Services** from the menu then select **Set up Tag Manager**
+
+**![](/images/screen-shot-2023-03-31-at-3-39-51-pm.png){: width="2248" height="1400"}**
+
+11\. Google will ask us to allow them access to your account again, but there's no bonus checkboxes this time. Just make your you're signed into the account you created the Tag Manager container with and select the continue prompts.&nbsp;
+
+12\. Select your tag manager account, then the container for your site, and finally select **Complete setup without Analytics** (we already set it up!).&nbsp;
+
+![](/images/screen-shot-2023-03-31-at-3-44-39-pm.png){: width="1116" height="654"}&nbsp;That's it you're all set up and ready to test your configuration. Plus you now have Google Search Console to track what terms people use to find your website through Google.&nbsp;
 
 ### Test Configuration
