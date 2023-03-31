@@ -161,6 +161,8 @@ We got your GA4 property set up, our Tag Manager container ready with our GA4 ta
 
 ![](/images/screen-shot-2023-03-31-at-2-16-09-pm.png){: width="1516" height="948"}
 
+Place the code in the head and body after the openings of each tag. You can see in my example below I have the code right after &lt;head&gt; and &lt;body&gt; appear in the DOM. If you have trouble finding these tags, download the code locally to a directory (a folder), then open it with a code editor like [VS Code](https://code.visualstudio.com/). Use the [Find function](https://learn.microsoft.com/en-us/visualstudio/ide/finding-and-replacing-text?view=vs-2022)&nbsp;to locate &lt;head&gt; and &lt;body&gt; and enter the code respectively.&nbsp;
+
 ```
 <html>
   <head>
@@ -178,8 +180,7 @@ We got your GA4 property set up, our Tag Manager container ready with our GA4 ta
   </head>
   <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THQC7Q9"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXX"  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
     <nav>
       <ul>
@@ -198,6 +199,16 @@ We got your GA4 property set up, our Tag Manager container ready with our GA4 ta
 </html>
 ```
 
+Save it and push it to prod or just use FTP like a madman. Either way, your GTM container is set up on your website.&nbsp;
+
 #### Wordpress Installation
+
+You can follow the example above if you have access to your source code and your&nbsp; body and head are accessible, but a lot can go wrong if you're still a newbie so let's use a plugin.&nbsp;
+
+There's plenty of third-party plugins that get GTM on your Wordpress site like [Monster Insights](https://wordpress.org/plugins/google-analytics-for-wordpress/) and [GTM4WP](https://wordpress.org/plugins/duracelltomi-google-tag-manager/) that contain lots of functionality, but there's no guarantee they will continue to be supported. Google has their own plugin, [SiteKit](https://wordpress.org/plugins/google-site-kit/), that will do the trick and it will definitely stick around since it's a vehicle for their products.&nbsp;
+
+1\. Go to the admin dashboard of your website and select **Plugins**
+
+2\.&nbsp;
 
 ### Test Configuration
