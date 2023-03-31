@@ -209,6 +209,26 @@ There's plenty of third-party plugins that get GTM on your Wordpress site like [
 
 1\. Go to the admin dashboard of your website and select **Plugins**
 
-2\.&nbsp;
+**![](/images/screen-shot-2023-03-31-at-2-45-16-pm.png){: width="324" height="934"}**
+
+2\. Once in the plugins panel, select Add New:&nbsp;
+
+![](/images/screen-shot-2023-03-31-at-2-47-37-pm.png){: width="420" height="210"}
+
+3\. Type "Google Site Kit" into the search box, then select **Install Now**&nbsp;within the Google Site Kit box to install the plugin.&nbsp;
+
+![](/images/screen-shot-2023-03-31-at-2-57-47-pm.png){: width="2064" height="1068"}
+
+4\. Once the plugin is finished installing, select **Activate** to begin setting up the plugin.&nbsp;
+
+![](/images/screen-shot-2023-03-31-at-2-59-47-pm.png){: width="1054" height="694"}
+
+Once the plugin is activeated, it will appear in your dashboard
+
+5\. Select Start setup on the plugin page to get started in configuring the plugin with Google Tag Manager.&nbsp;
+
+You will&nbsp;
+
+6\.&nbsp;
 
 ### Test Configuration
