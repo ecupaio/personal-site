@@ -223,12 +223,14 @@ There's plenty of third-party plugins that get GTM on your Wordpress site like [
 
 ![](/images/screen-shot-2023-03-31-at-2-59-47-pm.png){: width="1054" height="694"}
 
-Once the plugin is activeated, it will appear in your dashboard
+Once the plugin is activated, it will appear in your dashboard for you to access at any time:&nbsp;&nbsp;
 
-5\. Select Start setup on the plugin page to get started in configuring the plugin with Google Tag Manager.&nbsp;
+![](/images/screen-shot-2023-03-31-at-3-03-24-pm.png){: width="326" height="270"}
 
-You will&nbsp;
+5\. Select **Start setup** on the plugin page to get started in configuring the plugin with Google Tag Manager.&nbsp;
 
-6\.&nbsp;
+![](/images/screen-shot-2023-03-31-at-3-02-09-pm.png){: width="1188" height="510"}
+
+6\. With the plugin open, select&nbsp;
 
 ### Test Configuration
