@@ -21,6 +21,8 @@ Google Analytics 4 (GA4) is the latest iteration of Google Analytics. A lot has 
 
 If you don't already know, Google Tag Manager (GTM) is the best way to configure your analytics and events, add tracking pixels and other code to the head of your site, and take advantage of Google Suite products like Ads or Search Console. Google Tag Manager makes it so that you don't ever have to touch your site's code again, after installation of course. You can trigger events based on link text and drop in tracking pixel code with ease. Plus it's what all us elite, level 9000 javascript-fu masters use so more than likely the integrations you need will play nice with GTM and have docs to support it.&nbsp;
 
+**NOTE: If you use drag and drop site builders like SquareSpace or Wix, you should not configure a Tag Manager container since they will have everything set up to send data to GA4 directly. You should just set up the GA4 property according to their instructions:&nbsp;[Add the tag to a website builder or CMS-hosted website (e.g., HubSpot, Shopify, etc.)](https://support.google.com/analytics/answer/9304153?hl=en#zippy=%2Cadd-the-tag-to-a-website-builder-or-cms-hosted-website-eg-hubspot-shopify-etc).&nbsp;**
+
 ## Steps
 
 ### Create a Google Analytics 4 Property and Get Measurement ID
@@ -111,6 +113,10 @@ You now have your Measurement ID to add to your Google Analytics 4 Tag.&nbsp;
 
 ![](/images/screen-shot-2023-03-04-at-5-37-11-pm.png){: width="369" height="269"}&nbsp;
 
+11\. Finally we're going to setup the debugger so we can test our analytics configuration. Select the user properties, then type **debug\_mode** under **Property Name&nbsp;**and type&nbsp;**true&nbsp;**under **Value**.
+
+![](/images/screen-shot-2023-03-31-at-1-56-52-pm.png){: width="1828" height="396"}
+
 Now we're ready to set our trigger.&nbsp;
 
 ### Configure the Google Analytics 4 Tag Trigger
@@ -123,18 +129,22 @@ I'm assuming you still have the tag open, but if you don't then go to Tag Manage
 
 ![](/images/screen-shot-2023-03-04-at-5-42-31-pm.png){: width="927" height="284"}
 
-2\. From the triggers menu, select All Pages:&nbsp;
+2\. From the triggers menu, select **All Pages**\:&nbsp;
 
 ![](/images/screen-shot-2023-03-04-at-5-44-50-pm.png){: width="576" height="218"}
 
-3\. Select Save in the top right corner.
+In this tag, we're telling GTM to load this GA4 configuration when any page of your website loads.&nbsp;
 
-4\. After the tag minimizes, select Submit to bring up the Publish menu. Then select Publish to see a silly highschool yearbook quote. It will ask you to name your version, but you can just hit skip.&nbsp;
+3\. Select **Save** in the top right corner.
 
-Now GA4 is set to load on our site&nbsp;
+4\. After the tag minimizes, select Submit to bring up the Publish menu. Then select Publish to see a [silly high school yearbook quote](https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.analyticsmania.com%2Fpost%2Fgoogle-tag-manager-reaction-gifs-3%2F&amp;psig=AOvVaw3G0gmNVVkctJ2syhUG2gbZ&amp;ust=1680382121748000&amp;source=images&amp;cd=vfe&amp;ved=0CA8QjRxqFwoTCIiTl6-Fh_4CFQAAAAAdAAAAABAE). It will ask you to name your version, but you can just hit skip or type "Installed GA4 all by myself! Shout out Ed!".&nbsp;
+
+Now your GTM container is setup and GA4 is set to load on our site. Let's get GTM installed on your website.&nbsp;
 
 ### Installing the Google Tag Manager Container
 
-We got your GA4 property set up, our Tag Manager container ready with our tag and trigger&nbsp;
+We got your GA4 property set up, our Tag Manager container ready with our GA4 tag and page load trigger, now it's time to install the container onto your website. The best way is to manually install the scripts within your code, but I respect that some people don't have access to their code and most likely use Wordpress so I added instructions for both.&nbsp;
+
+More than likely, you're a Wordpress user.&nbsp;&nbsp;
 
 ### Test Configuration
