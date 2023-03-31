@@ -258,3 +258,15 @@ Although we just want to add our Tag Manager code, Site Kit won't allow you to p
 ![](/images/screen-shot-2023-03-31-at-3-44-39-pm.png){: width="1116" height="654"}&nbsp;That's it you're all set up and ready to test your configuration. Plus you now have Google Search Console to track what terms people use to find your website through Google.&nbsp;
 
 ### Test Configuration
+
+So far you have set up Google Tag Manager and Google Analytics. Now it's test to see if it's working. Both Tag Manager and Analytics have helpful tools to test out our configurations.&nbsp;
+
+#### Use Preview Mode in Tag Manager
+
+First, we'll use Preview Mode in Tag Manager to see if loading a page triggers the Analytics tag we set up.&nbsp;
+
+1\. Go to [tagmanager.google.com](https://tagmanager.google.com/) and select your container for your website.&nbsp;
+
+2\. Select the **Preview** button in the upper right-hand corner to enter preview mode:&nbsp;
+
+![](/images/screen-shot-2023-03-31-at-3-56-42-pm.png){: width="794" height="210"}
