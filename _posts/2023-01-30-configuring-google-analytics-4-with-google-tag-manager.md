@@ -137,7 +137,7 @@ In this tag, we're telling GTM to load this GA4 configuration when any page of y
 
 3\. Select **Save** in the top right corner.
 
-4\. After the tag minimizes, select Submit to bring up the Publish menu. Then select Publish to see a [silly high school yearbook quote](https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.analyticsmania.com%2Fpost%2Fgoogle-tag-manager-reaction-gifs-3%2F&amp;psig=AOvVaw3G0gmNVVkctJ2syhUG2gbZ&amp;ust=1680382121748000&amp;source=images&amp;cd=vfe&amp;ved=0CA8QjRxqFwoTCIiTl6-Fh_4CFQAAAAAdAAAAABAE). It will ask you to name your version, but you can just hit skip or type "Installed GA4 all by myself! Shout out Ed!".&nbsp;
+4\. After the tag minimizes, select **Submit** to bring up the Publish menu. Then select **Publish** to see a [silly high school yearbook quote](https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.analyticsmania.com%2Fpost%2Fgoogle-tag-manager-reaction-gifs-3%2F&amp;psig=AOvVaw3G0gmNVVkctJ2syhUG2gbZ&amp;ust=1680382121748000&amp;source=images&amp;cd=vfe&amp;ved=0CA8QjRxqFwoTCIiTl6-Fh_4CFQAAAAAdAAAAABAE). It will ask you to name your version, but you can just hit skip or type "Installed GA4 all by myself! Shout out Ed!".&nbsp;
 
 Now your GTM container is setup and GA4 is set to load on our site. Let's get GTM installed on your website.&nbsp;
 
@@ -145,6 +145,59 @@ Now your GTM container is setup and GA4 is set to load on our site. Let's get GT
 
 We got your GA4 property set up, our Tag Manager container ready with our GA4 tag and page load trigger, now it's time to install the container onto your website. The best way is to manually install the scripts within your code, but I respect that some people don't have access to their code and most likely use Wordpress so I added instructions for both.&nbsp;
 
-More than likely, you're a Wordpress user.&nbsp;&nbsp;
+#### Manual Installation
+
+1\. Go to your [Tag Manager dashbord](https://tagmanager.google.com/)&nbsp;and select your container.&nbsp;
+
+2\. Select **Admin** from the top menu:&nbsp;
+
+![](/images/screen-shot-2023-03-31-at-2-11-31-pm-1.png){: width="874" height="223"}
+
+3\. Select **Install Google Tag Manager** from the menu that appears:&nbsp;
+
+![](/images/screen-shot-2023-03-31-at-2-13-19-pm.png){: width="1292" height="1244"}
+
+4\. Now you should see two code snippets to copy. We're going to take each of those snippets and place them at the opening of the head and body tags.&nbsp;
+
+![](/images/screen-shot-2023-03-31-at-2-16-09-pm.png){: width="1516" height="948"}
+
+```
+<html>
+  <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXX');</script>
+  <!-- End Google Tag Manager -->
+  <title> Home | My Webite </title>
+  <meta content="For demo GTM installations" name="description">
+  <link href="/css/style.min.css" rel="stylesheet" type="text/css">
+  <script src="/js/functions.js"></script>
+  </head>
+  <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THQC7Q9"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <h1>My website</h1>
+        <p>My fake website is neat!</p>
+      </section>
+    </main>
+    <footer>Copyright 2023</footer>
+  </body>
+</html>
+```
+
+#### Wordpress Installation
 
 ### Test Configuration
