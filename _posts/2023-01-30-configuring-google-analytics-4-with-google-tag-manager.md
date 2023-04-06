@@ -9,7 +9,7 @@ tags:
 footer-cta:
   title: ''
   text: ''
-published: false
+published: true
 ---
 Google Analytics 4 is here and Universal Analytics is [set to end on July 1, 2023](https://support.google.com/analytics/answer/11583528)&nbsp;so let's take advantage of the update and set up Google Tag Manager. In this guide, I will cover how to set up a Google Analytics 4 property. You can skip\[ANCHOR LINK\] to the instructions if you don't want to read all about the new changes.&nbsp; &nbsp;
 
@@ -39,7 +39,7 @@ As of writing this (before the July 1, 2023 deadline), Google Analytics has adde
 
 3\. Make sure your current UA account is selected, then select GA4 Setup Assistant:&nbsp;
 
-![](/images/screen-shot-2023-03-04-at-4-32-56-pm.png){: width="453" height="130"}
+![](/images/screen-shot-2023-04-06-at-11-38-06-am.png){: width="420" height="128"}
 
 4\. Select Get Started on the Setup Assistant panel that appears to, guess what, get started:&nbsp;
 
@@ -95,7 +95,7 @@ The GA4 configuration will appear with a blank input for Measurement ID. To get 
 
 7\. Select Data Streams under your property:&nbsp;
 
-![](/images/screen-shot-2023-03-04-at-4-51-53-pm.png){: width="232" height="278"}
+![](/images/screen-shot-2023-04-06-at-11-37-36-am.png){: width="422" height="272"}
 
 8\. Your website should be in the table of Data streams. Select it to get your property information:&nbsp;
 
@@ -111,7 +111,7 @@ You now have your Measurement ID to add to your Google Analytics 4 Tag.&nbsp;
 
 10\. Go back to you Tag Manager screen and paste that Measurement ID into the corresponding field:&nbsp;
 
-![](/images/screen-shot-2023-03-04-at-5-37-11-pm.png){: width="369" height="269"}&nbsp;
+&nbsp;![](/images/screen-shot-2023-03-04-at-5-37-11-pm-1.png){: width="369" height="269"}
 
 11\. Finally we're going to setup the debugger so we can test our analytics configuration. Select the user properties, then type **debug\_mode** under **Property Name&nbsp;**and type&nbsp;**true&nbsp;**under **Value**.
 
