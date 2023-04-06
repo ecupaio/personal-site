@@ -23,7 +23,7 @@ If you don't already know, Google Tag Manager (GTM) is the best way to configure
 
 **NOTE: If you use drag and drop site builders like SquareSpace, Shopify, or Wix, you should not configure a Tag Manager container since they will have everything set up to send data to GA4 directly. You should just set up the GA4 property according to their instructions:&nbsp;[Add the tag to a website builder or CMS-hosted website (e.g., HubSpot, Shopify, etc.)](https://support.google.com/analytics/answer/9304153?hl=en#zippy=%2Cadd-the-tag-to-a-website-builder-or-cms-hosted-website-eg-hubspot-shopify-etc).&nbsp;**
 
-<h2 id="steps">Steps</h2>
+## Steps
 
 ### Create a Google Analytics 4 Property and Get Measurement ID
 
