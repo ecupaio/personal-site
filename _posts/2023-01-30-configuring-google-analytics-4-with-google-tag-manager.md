@@ -11,7 +11,7 @@ footer-cta:
   text: ''
 published: true
 ---
-Google Analytics 4 is here and Universal Analytics is [set to end on July 1, 2023](https://support.google.com/analytics/answer/11583528)&nbsp;so let's take advantage of the update and set up Google Tag Manager. In this guide, I will cover how to set up a Google Analytics 4 property. You can skip\[ANCHOR LINK\] to the instructions if you don't want to read all about the new changes.&nbsp; &nbsp;
+Google Analytics 4 is here and Universal Analytics is [set to end on July 1, 2023](https://support.google.com/analytics/answer/11583528)&nbsp;so let's take advantage of the update and set up Google Tag Manager. In this guide, I will cover how to set up a Google Analytics 4 property. You can [skip](#steps) to the instructions if you don't want to read all about the new changes.&nbsp; &nbsp;
 
 ## About Google Analytics 4
 
@@ -23,7 +23,7 @@ If you don't already know, Google Tag Manager (GTM) is the best way to configure
 
 **NOTE: If you use drag and drop site builders like SquareSpace, Shopify, or Wix, you should not configure a Tag Manager container since they will have everything set up to send data to GA4 directly. You should just set up the GA4 property according to their instructions:&nbsp;[Add the tag to a website builder or CMS-hosted website (e.g., HubSpot, Shopify, etc.)](https://support.google.com/analytics/answer/9304153?hl=en#zippy=%2Cadd-the-tag-to-a-website-builder-or-cms-hosted-website-eg-hubspot-shopify-etc).&nbsp;**
 
-## Steps
+<h2 id="steps">Steps</h2>
 
 ### Create a Google Analytics 4 Property and Get Measurement ID
 
