@@ -21,7 +21,7 @@ Google Analytics 4 (GA4) is the latest iteration of Google Analytics. A lot has 
 
 If you don't already know, Google Tag Manager (GTM) is the best way to configure your analytics and events, add tracking pixels and other code to the head of your site, and take advantage of Google Suite products like Ads or Search Console. Google Tag Manager makes it so that you don't ever have to touch your site's code again, after installation of course. You can trigger events based on link text and drop in tracking pixel code with ease. Plus it's what all us elite, level 9000 javascript-fu masters use so more than likely the integrations you need will play nice with GTM and have docs to support it.&nbsp;
 
-**NOTE: If you use drag and drop site builders like SquareSpace or Wix, you should not configure a Tag Manager container since they will have everything set up to send data to GA4 directly. You should just set up the GA4 property according to their instructions:&nbsp;[Add the tag to a website builder or CMS-hosted website (e.g., HubSpot, Shopify, etc.)](https://support.google.com/analytics/answer/9304153?hl=en#zippy=%2Cadd-the-tag-to-a-website-builder-or-cms-hosted-website-eg-hubspot-shopify-etc).&nbsp;**
+**NOTE: If you use drag and drop site builders like SquareSpace, Shopify, or Wix, you should not configure a Tag Manager container since they will have everything set up to send data to GA4 directly. You should just set up the GA4 property according to their instructions:&nbsp;[Add the tag to a website builder or CMS-hosted website (e.g., HubSpot, Shopify, etc.)](https://support.google.com/analytics/answer/9304153?hl=en#zippy=%2Cadd-the-tag-to-a-website-builder-or-cms-hosted-website-eg-hubspot-shopify-etc).&nbsp;**
 
 ## Steps
 
@@ -199,7 +199,7 @@ Place the code in the head and body after the openings of each tag. You can see 
 </html>
 ```
 
-Save it and push it to prod or just use FTP like a madman. Either way, your GTM container is set up on your website.&nbsp;
+Save it and push it to your repo or use FTP on production like a madman. Either way, your GTM container is set up on your website.&nbsp;
 
 #### Wordpress Installation
 
@@ -270,3 +270,61 @@ First, we'll use Preview Mode in Tag Manager to see if loading a page triggers t
 2\. Select the **Preview** button in the upper right-hand corner to enter preview mode:&nbsp;
 
 ![](/images/screen-shot-2023-03-31-at-3-56-42-pm.png){: width="794" height="210"}
+
+3\. Tag Manager will open a new window, for the [Tag Assistant](https://support.google.com/tagassistant/answer/10039345?hl=en&amp;ref_topic=6000196&amp;sjid=5478285950578995246-NA). Enter your website's URL in the input then select **Connect.**&nbsp;
+
+![](/images/screen-shot-2023-04-06-at-10-04-14-am.png){: width="1320" height="1076"}
+
+4\. After you select Connect, your website should open in a new tab and display a wee modal in the bottom right corner to confirm your Tag Assistant is connected:&nbsp;
+
+![](/images/screen-shot-2023-04-06-at-10-10-01-am.png){: width="1004" height="548"}
+
+Go back to the Tag Assistant tab so see all the tags loading on your website:&nbsp;
+
+![](/images/screen-shot-2023-04-06-at-10-19-14-am-1.png){: width="1928" height="1144"}
+
+The Summary view (highlighted in blue) will show you all the tags loaded on your website. You can select each of the actions below so see what gets triggered when, but that's more relevant for event tracking. The important thing to see is that your tag container is loaded on your website and GA4 is loading as well. I can see that GTM is connected to my site and my GA4 tag gets fired when the site loads for a page view.&nbsp;
+
+You can select the GA4 tag to see a summary of the tag and when it fired:&nbsp;
+
+![](/images/screen-shot-2023-04-06-at-10-25-54-am.png){: width="1930" height="1478"}
+
+From this summary, I can see that my GA4 tag is a Google Analytics 4 Configuration that loaded with my measurement ID and debug mode parameters. You can even select each of those boxes under Messages Where This Tag Fired to see the exact moments when the GA4 tag got fired to record page views.&nbsp;
+
+You'll also notice that on the top row to the right of "Google tags found", there's two properties: our tag container (GTM-XXXXX) and our analytics property (G-XXXXXX). Select the analytics property (the wee bar graph icon) to see the output of the property:&nbsp;
+
+![](/images/screen-shot-2023-04-06-at-10-30-36-am.png){: width="1456" height="820"}
+
+We can see the events that our GA4 configuration is sending to our analytics dashboard: [Page View](https://support.google.com/analytics/answer/9216061?hl=en&amp;ref_topic=13367566&amp;sjid=5478285950578995246-NA) and [User Engagement](https://support.google.com/analytics/answer/11109416?hl=en).
+
+Now that we know it's working on GTM, let's go to your analytics dashboard and view debug mode:
+
+#### Use Debug Mode in Google Analytics
+
+1\. [Open your analytics dashboard](https://analytics.google.com/analytics/web/) and make sure you have the right property selected for your GA4 property.&nbsp;
+
+2\. Select the Admin menu item from the left-hand menu (wee gear icon at the bottom) to open the Admin panel.&nbsp;
+
+3\. Once in the Admin panel, look to the middle for your Property column then scroll all the way down to find the DebugView item:&nbsp;
+
+![](/images/screen-shot-2023-04-06-at-10-43-23-am.png){: width="463" height="768"}
+
+Oy! They really hid it!&nbsp;
+
+Now you'll be able to see a live summary off all the events that have occurred on your site in real time:&nbsp;
+
+![](/images/screen-shot-2023-04-06-at-10-46-19-am.png){: width="1177" height="356"}
+
+Alternatively, you can view the Realtime report, but it's a bit messy in my opinion in that it contains a lot of unnecessary data and makes it difficult to see what you actually need: event data.&nbsp;
+
+#### Use Realtime Report in Google Analytics
+
+1\. [Open your analytics dashboard](https://analytics.google.com/analytics/web/) and make sure you have the right property selected for your GA4 property.&nbsp;
+
+2\. Select the Reports menu item from the left-hand menu (the wee bar chart icon)
+
+3\. Once the Reports panel is open, select Realtime on the interior left-hand menu:&nbsp;
+
+![](/images/screen-shot-2023-04-06-at-10-50-52-am.png){: width="349" height="470"}
+
+Now you can see your GA4 property is properly loaded and data (lots of it!) is flowing in.&nbsp;
