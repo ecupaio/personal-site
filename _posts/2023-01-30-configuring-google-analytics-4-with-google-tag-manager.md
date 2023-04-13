@@ -51,7 +51,7 @@ As of writing this (before the July 1, 2023 deadline), Google Analytics has adde
 
 That's it! You will now see the Setup Assistant for GA4, but ignore that for now. We're going to set up Google Tag Manager to implement GA4 tracking on your site.&nbsp;
 
-<h3 id="create-gtm">Create a Google Tag Manager Container</h3>
+### Create a Google Tag Manager Container
 
 As I mentioned earlier, GTM is the best way to implement your GA4 property on your site. I do it for all my clients and my own personal site. You will create an Account in Google Tag Manager and then set up a container which will include all of your tags. Lots of jargon, but I will break it down in the instructions for you.&nbsp;
 
