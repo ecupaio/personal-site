@@ -27,7 +27,7 @@ If you don't already know, Google Tag Manager (GTM) is the best way to configure
 
 ### Create a Google Analytics 4 Property and Get Measurement ID
 
-As of writing this (before the July 1, 2023 deadline), Google Analytics has added a [setup assistant](https://support.google.com/analytics/answer/9744165?hl=en#zippy=%2Cin-this-article) that will assist you in creating a GA4 property that makes creating a new property simple. If you're reading this past July 1, 2023, Google has automatically created a GA4 property for you so you can skip to the Create a Google Tag Manager Property\[ANCHOR LINK\] instructions
+As of writing this (before the July 1, 2023 deadline), Google Analytics has added a [setup assistant](https://support.google.com/analytics/answer/9744165?hl=en#zippy=%2Cin-this-article) that will assist you in creating a GA4 property that makes creating a new property simple. If you're reading this past July 1, 2023, Google has automatically created a GA4 property for you so you can skip to the [Create a Google Tag Manager Container](#create-gtm)&nbsp;instructions
 
 1\. Go to your [analytics dashboard](https://analytics.google.com/) and select the wee gear icon to go the admin menu:
 
@@ -51,7 +51,7 @@ As of writing this (before the July 1, 2023 deadline), Google Analytics has adde
 
 That's it! You will now see the Setup Assistant for GA4, but ignore that for now. We're going to set up Google Tag Manager to implement GA4 tracking on your site.&nbsp;
 
-### Create a Google Tag Manager Container
+<h3 id="create-gtm">Create a Google Tag Manager Container</h3>
 
 As I mentioned earlier, GTM is the best way to implement your GA4 property on your site. I do it for all my clients and my own personal site. You will create an Account in Google Tag Manager and then set up a container which will include all of your tags. Lots of jargon, but I will break it down in the instructions for you.&nbsp;
 
