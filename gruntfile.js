@@ -94,12 +94,12 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-cwebp');
-  //grunt.registerTask('default', ['terser','sass', 'postcss','concurrent:target']);
-  grunt.registerTask("default", [
-    "terser",
-    "sass",
-    "postcss",
-    "imagemin",
-    "watch"
-  ]);
+  grunt.registerTask('default', ['terser','sass', 'postcss','concurrent:target']);
+  // grunt.registerTask("default", [
+  //   "terser",
+  //   "sass",
+  //   "postcss",
+  //   "imagemin",
+  //   "watch"
+  // ]);
 };
