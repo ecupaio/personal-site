@@ -1,6 +1,6 @@
 ---
 _schema: default
-title: 'Google Tag Manager Event Tags for Google Analytics 4 '
+title: 'Google Tag Manager Custom Event Tags for Google Analytics 4 '
 date: 2023-01-30 14:46:00 -0800
 meta_img: >-
   https://images.unsplash.com/photo-1633307057722-a4740ba0c5d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
