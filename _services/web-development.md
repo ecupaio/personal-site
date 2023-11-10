@@ -15,11 +15,11 @@ features:
     image: /images/content-edit.svg
   - title: High performance, low maintenance 
     text: |- 
-      With my proprietary stack you get fast loading pages, top-notch security, and free hosting. Don't worry about updates crashing your plugins or site: my sites are coded from a proven base template and built to last. The only thing you'll need to update is your content. 
+      With my proprietary stack and partnership with [CloudCannon](https://cloudcannon.com/) you get fast loading pages, top-notch security, and hosting for as low as $10/month. Don't worry about updates crashing your plugins or site: my sites are coded from a proven base template and built to last. The only thing you'll need to update is your content. 
     image: /images/pagespeed.svg
   - title: Everything else you never knew you needed
     text: |-
-      Ad pixels, WCAG, Analytics, SEO, UX, and CCPA are all confusing industry jargon I've mastered. Due to my years of experience embedded in marketing and digital teams, I know exactly what you need to run ads on your page, comply with privacy and disability regulations, and monitor the performance of your site.
+      Ad pixels, WCAG, Analytics, SEO, UX, and CCPA are all confusing industry jargon that I've mastered. Due to my years of experience embedded in marketing and digital teams, I know exactly what you need to run ads on your page, comply with privacy and disability regulations, and monitor the performance of your site.
     image: /images/backend.svg
 steps: 
   title: How it works
