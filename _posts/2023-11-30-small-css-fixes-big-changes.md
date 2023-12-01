@@ -25,9 +25,7 @@ Good news is that this is entirely fixable with a few CSS touch ups and I'll exp
 
 For some reason, all of the content is in a table and all of the CSS is inlined exactly the same way you would create an HTML email.&nbsp; Perhaps the service they use for email subscription management just used an email template&nbsp; to create this page. I just worked within the existing framework so perhaps a certain EDD employee can copy my code. I would typically use semantic elements and only the most advanced CSS trickery to create a perfect page, but when working with other people's code, I find it's better to work within their framework instead of imposing my own styles and standards on someone else. Plus HTML email has limitations on what you can and can't use so perhaps this is generated as an email elsewhere so I want to keep within the [acceptable CSS and HTML properties and elements](https://www.campaignmonitor.com/css/)&nbsp;to avoid any compatibility issues. &nbsp;&nbsp;
 
-Feel free to copy this code. First one is free but then you gotta pay for the next.
 
-&lt;iframe src="https://codesandbox.io/embed/d2fqxt?view=preview&module=%2Findex.html"<br>&nbsp; &nbsp; &nbsp;style="width:100%; height: 500px; border:0; border-radius: 4px; overflow:hidden;"<br>&nbsp; &nbsp; &nbsp;title="EDD Email Unsubscribe Page"<br>&nbsp; &nbsp; &nbsp;allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"<br>&nbsp; &nbsp; &nbsp;sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"<br>&nbsp; &nbsp;&gt;&lt;/iframe&gt;
 
 
 
@@ -35,6 +33,27 @@ Feel free to copy this code. First one is free but then you gotta pay for the ne
 
 First let's address the top text-section. There was 50px of left padding added to this section so I removed it and made it 5px like the rest of the section. I then added text-align: center to the section so it would align with the rest of the page.&nbsp;
 
-Next, it was time to address all that crowded text. I added a margin, a CSS property not forbidden for HTML email but very okay for websites, to the heading to give some breathing room between the title and text. I would typically make this page title an H1 element and add a margin, but as I mentioned in the previous section, I want to keep everything kosher with the vengeful Outlook gods. I just added two [br](https://www.w3schools.com/tags/tag_br.asp) elements between the title and body text elements to create some space.&nbsp;
+Next, it was time to address all that crowded text. I would typically make this page title an H1 element and add a margin, but as I mentioned in the previous section, I want to keep everything kosher with the vengeful Outlook gods. I just added two [br](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br) elements between the title and body text elements to create some space. I also made this heading black like the rest of the text. I highly suggest making all of your text the same color unless it's link text. That way the links, the elements you want people to focus on and eventually click, can pop!&nbsp;
 
-The reason the body text looked so crowded was because the line-height was&nbsp;
+The reason the body text looked so crowded was because the [line-height](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height) was because it was set to 115%. This caused it to look squishy and it's a much better practice to use [relative em units](https://www.goodemailcode.com/email-accessibility/rem-and-em.html). Removing the style made it a bit more legible but I found a 1.5em line-height was just right.&nbsp;
+
+The bold text for Submit looks differently from the rest since the [font-family property](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family) was improperly implemented. You could just remove the font-family from the bold element since it's applied to the parent span element, but, as I mentioned earlier, I want to exercise caution in messing with anything and provide my maintainer with solutions instead of new headaches.&nbsp;
+
+## Success Message
+
+This element wasn't bad it just had way to many br elements surrounding it. I just removed those extra elements and we were good to go from there. I removed the color styling here just like the heading since we really want those links to shine. The user can still see the success message just fine and they won't think it's a link as it's the link color on your website. Branding guides matter!&nbsp;
+
+## Social Follow CTA
+
+Just like the bold submit text, we had an improper implementation of the the font-family property,&nbsp;&nbsp;
+
+## The End Result
+
+Feel free to copy this code. First one is free but then you gotta pay for the next.
+
+<iframe src="https://codesandbox.io/embed/d2fqxt?view=editor+%2B+preview&module=%2Findex.html"
+     style="width:100%; height: 500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="EDD Email Unsubscribe Page"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
