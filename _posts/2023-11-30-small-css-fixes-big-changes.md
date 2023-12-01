@@ -49,4 +49,9 @@ And there you have it. Some small tweaks and we have a perfectly functional page
 
 Feel free to copy this code. First one is free but then you gotta pay for the next.
 
-<iframe src="https://codesandbox.io/embed/d2fqxt?view=editor+%2B+preview&amp;module=%2Findex.html" style="width:100%; height: 500px; border:0; border-radius: 4px; overflow:hidden;" title="EDD Email Unsubscribe Page" allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"></iframe>
+<iframe src="https://codesandbox.io/embed/d2fqxt?view=preview&module=%2Findex.html"
+     style="width:100%; height: 500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="EDD Email Unsubscribe Page"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
