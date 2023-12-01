@@ -8,7 +8,7 @@ tags:
 footer-cta:
   title: You can totally copy my code!
   text: Free to contact me if you still need some help.
-published: false
+published: true
 ---
 I went to unsubscribe from the State of California's Employment Development Department's (EDD) newsletter and I was greeted with this mess:&nbsp;
 
