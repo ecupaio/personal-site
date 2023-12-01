@@ -1,6 +1,6 @@
 ---
 _schema: default
-title: Small CSS fixes, Big Changes
+title: Small CSS Fixes, Big Changes
 date: 2023-11-30 15:24:54 -0800
 meta_img: ''
 tags:
