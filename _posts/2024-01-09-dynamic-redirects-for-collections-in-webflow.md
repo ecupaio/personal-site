@@ -8,7 +8,7 @@ tags:
 footer-cta:
   title: ''
   text: ''
-published: false
+published: true
 ---
 I had a situation where I wanted to create a [collection](https://university.webflow.com/lesson/structure-and-style-collection-pages?topics=cms-dynamic-content)&nbsp;where the collection content would be displayed on a page in the form of items in a [collection list](https://university.webflow.com/lesson/collection-list?topics=cms-dynamic-content), but I didn't wan't them to be displayed as pages since they linked to external sites. Since these collection pages would be published as pages, I wanted to completely rule out the scenario of a user stumbling on this blank page so I wanted the page to just be a [301 redirect](https://webflow.com/blog/301-redirects) to the external link.&nbsp; Furthermore, I did not want these collection pages to show up in search results so I will need to hide this collection directory from search engine crawlers as well as my internal site search.&nbsp;&nbsp;
 
@@ -60,4 +60,4 @@ www.yoursite.com/\[COLLECTION PATH\]/item-slug
 
 `Disallow: /[YOUR COLLECTION PATH]/*`
 
-In my case, I wrote Disallow: /tools/\* since /tools is my collection path and I added the extra /\* as a catch all to tell Google and the rest to ignore any page&nbsp;
+In my case, I wrote Disallow: /tools/\* since /tools is my collection path and I added the extra /\* as a catch all to tell Google and the rest to ignore any page stemming from that path.&nbsp;
