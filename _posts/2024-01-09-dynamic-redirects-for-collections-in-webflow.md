@@ -18,7 +18,7 @@ In order to make these instructions evergreen, I'm going to link to Webflow's of
 
 In order to have a dynamic redirect destination based on the collection page the user accesses, we need to add a field within the collection. We will use the [Link](https://university.webflow.com/lesson/link-field?topics=cms-dynamic-content) field as it will enforce proper URL format for our content editors.&nbsp;
 
-1\. Access your&nbsp;[collection settings](https://university.webflow.com/lesson/webflow-collections-overview?topics=cms-dynamic-content#how-to-edit-a-collection)&nbsp;for your target collection.&nbsp;
+1\. Access your&nbsp;[collection settings](https://university.webflow.com/lesson/webflow-collections-overview?topics=cms-dynamic-content#how-to-edit-a-collection)&nbsp;for your target collection.&nbsp;&nbsp;
 
 2\. Now that you're in the target collection settings, select [Add New Field](https://university.webflow.com/lesson/use-collection-fields-to-build-custom-collections?topics=cms-dynamic-content#how-to-use-collection-fields) and then select [Link](https://university.webflow.com/lesson/link-field?topics=cms-dynamic-content).&nbsp;
 
