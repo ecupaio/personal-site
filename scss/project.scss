@@ -6,7 +6,10 @@
     color: $white;
     &__text {
       a {
-        color: $white;
+        color: inherit;
+        &:hover {
+          color: $black;
+        }
       }
     }
     .btn-row {
