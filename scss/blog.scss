@@ -140,9 +140,8 @@
       pre,code {
         background-color: $charcoal;
         color: $white;
-        
-        overflow-x: auto;
-        
+        max-width: 100%;
+        overflow-x: scroll;
       }
     }
   }
