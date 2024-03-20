@@ -45,6 +45,8 @@ collections_config:
         _inputs:
           $.image[*]:
             type: image
+            options: 
+              width: 800
           $.image:
             type: array
           $.tech:
@@ -99,10 +101,6 @@ _inputs:
     hidden: true
   date:
     instance_value: NOW
-  image_file:
-    type: image
-    options: 
-      width: 800  
 timezone: America/Los_Angeles
 
 _editables:
