@@ -99,6 +99,10 @@ _inputs:
     hidden: true
   date:
     instance_value: NOW
+  image_file:
+    type: image
+    options: 
+      width: 800  
 timezone: America/Los_Angeles
 
 _editables:
@@ -138,5 +142,6 @@ _editables:
     justify: align-justify
     image_size_attributes: true
     snippet: true
+     
   
     
