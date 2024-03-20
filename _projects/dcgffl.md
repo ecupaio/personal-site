@@ -7,7 +7,6 @@ image:
   - /images/dcgffl-league.jpg
   - /images/dcgffl-team.jpg
   - /images/dcgffl-scoreboard.jpg
-  - /images/dcgffl-home.png
 tech:
   - Web Development
   - Web Design
