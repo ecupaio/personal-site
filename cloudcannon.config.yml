@@ -47,6 +47,7 @@ collections_config:
             type: image
             options: 
               width: 800
+              height: auto
           $.image:
             type: array
           $.tech:
