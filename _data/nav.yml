@@ -10,17 +10,16 @@ _structures:
           title:
           url:
           submenu: []
-        _inputs: 
+        _inputs:
           submenu:
             type: array
-            options: 
-              structures: _structures.submenu-links      
+            options:
+              structures: _structures.submenu-links
   submenu-links:
-    values: 
-      - value: 
-          title: 
-          link: 
-
+    values:
+      - value:
+          title:
+          link:
 main:
   - title: Home
     url: /#
@@ -53,11 +52,6 @@ main:
         url: /campaigner-theme/
   - title: Blog
     url: /blog/
-    submenu:
-      - title:
-        url:
-  - title: Test
-    url: /blog/tracking-form-submissions-on-unbounce/
     submenu:
       - title:
         url:
