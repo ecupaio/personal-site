@@ -1,54 +1,69 @@
-_inputs: 
-  main: 
+_inputs:
+  main:
     type: array
     options:
       structures: _structures.menu-links
 _structures:
   menu-links:
-    values: 
-    - value:
-        title:
-        url: 
-        submenu:
-        - title: 
-          url:      
+    values:
+      - value:
+          title:
+          url:
+          submenu:
+            - title:
+              url:
 main:
   - title: Home
     url: /#
+    submenu:
+      - title:
+        url:
   - title: Portfolio
     url: /#portfolio
+    submenu:
+      - title:
+        url:
   - title: About me
-    url: /about/  
+    url: /about/
+    submenu:
+      - title:
+        url:
   - title: Services
     url: '#'
-    submenu: 
-    - title: Optimization
-      url: /service/optimization/
-    - title: Web Development
-      url: /service/web-development/  
-  - title: Tools & Themes    
+    submenu:
+      - title: Optimization
+        url: /service/optimization/
+      - title: Web Development
+        url: /service/web-development/
+  - title: Tools & Themes
     url: '#'
-    submenu: 
-    - title: "A/B Test Calc"
-      url: /ab-test-calculator/
-    - title: Campaigner Theme
-      url: /campaigner-theme/
+    submenu:
+      - title: A/B Test Calc
+        url: /ab-test-calculator/
+      - title: Campaigner Theme
+        url: /campaigner-theme/
   - title: Blog
     url: /blog/
-contact: 
-  phone: '469.867.3438'
-  linkedin: 'https://www.linkedin.com/in/ed-cupaioli-10a9849/'
-  github: 'https://github.com/ecupaio'
-  email: 'ed.cupaioli@gmail.com'
-social: 
-- title: My github
-  icon: '<i class="fab fa-github-alt"></i>'
-  url: https://github.com/ecupaio
-- title: My LinkedIn
-  icon: '<i class="fab fa-linkedin-in"></i>'
-  url: https://www.linkedin.com/in/ed-cupaioli-10a9849/
-- title: Send me an email
-  icon: '<i class="fa fa-envelope"></i>'
-  url: mailto:ed.cupaioli@gmail.com       
-
-  
+    submenu:
+      - title:
+        url:
+  - title: Test
+    url: /blog/tracking-form-submissions-on-unbounce/
+    submenu:
+      - title:
+        url:
+contact:
+  phone: 469.867.3438
+  linkedin: https://www.linkedin.com/in/ed-cupaioli-10a9849/
+  github: https://github.com/ecupaio
+  email: ed.cupaioli@gmail.com
+social:
+  - title: My github
+    icon: <i class="fab fa-github-alt"></i>
+    url: https://github.com/ecupaio
+  - title: My LinkedIn
+    icon: <i class="fab fa-linkedin-in"></i>
+    url: https://www.linkedin.com/in/ed-cupaioli-10a9849/
+  - title: Send me an email
+    icon: <i class="fa fa-envelope"></i>
+    url: mailto:ed.cupaioli@gmail.com
