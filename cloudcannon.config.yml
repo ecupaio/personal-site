@@ -1,4 +1,7 @@
 collections_config:
+  data: 
+    name: Menus
+    path: _data
   posts:
     name: Posts
     path: _posts
