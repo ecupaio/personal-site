@@ -13,13 +13,12 @@ _structures:
         _inputs: 
           submenu:
             type: array
-            options: _structures.submenu-links
-        _structures:
-          submenu-links:
-            values: 
-            - value: 
-                title: 
-                link: 
+            options: _structures.submenu-links      
+  submenu-links:
+    values: 
+      - value: 
+          title: 
+          link: 
 
 main:
   - title: Home
