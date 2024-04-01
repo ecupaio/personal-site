@@ -89,6 +89,7 @@ collection_groups:
       - experience
       - skills
       - pages
+      - data
 paths:
   static: ''
   uploads: images
