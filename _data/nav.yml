@@ -1,3 +1,17 @@
+_inputs: 
+  main: 
+    type: array
+    options:
+      structures: _structures.menu-links
+_structures:
+  menu-links:
+    values: 
+    - value:
+        title:
+        url: 
+        submenu:
+        - title: 
+          url:      
 main:
   - title: Home
     url: /#
