@@ -9,9 +9,18 @@ _structures:
       - value:
           title:
           url:
+          submenu: []
+        _inputs: 
           submenu:
-            - title:
-              url:
+            type: array
+            options: _structures.submenu-links
+        _structures:
+          submenu-links:
+            values: 
+            - value: 
+                title: 
+                link: 
+
 main:
   - title: Home
     url: /#
