@@ -13,7 +13,8 @@ _structures:
         _inputs: 
           submenu:
             type: array
-            options: _structures.submenu-links      
+            options: 
+              structures: _structures.submenu-links      
   submenu-links:
     values: 
       - value: 
