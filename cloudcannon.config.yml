@@ -59,13 +59,12 @@ collections_config:
   experience:
     name: Experience
     path: _experience
+    _enabled-editors:
+      - data
     schemas:
       default:
         path: .cloudcannon/schemas/experience.md
         name: Experience
-        _enabled-editors:
-          - visual
-          - data
         _inputs:
           $.org_logo:
             type: image
