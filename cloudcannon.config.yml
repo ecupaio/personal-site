@@ -67,7 +67,7 @@ collections_config:
           - content
         _inputs:
           $.org_logo:
-            type: file
+            type: image
           projects:  
             type: select
             options: 
