@@ -13,31 +13,24 @@ _structures:
         _inputs:
           submenu:
             type: array
-            options: 
+            options:
               structures: _structures.submenu-links
-        _structures:             
+        _structures:
           submenu-links:
-            values: 
-              - value: 
-                  title: 
-                  link: 
-
+            values:
+              - value:
+                  title:
+                  link:
 main:
   - title: Home
     url: /#
-    submenu:
-      - title:
-        url:
+    submenu: []
   - title: Portfolio
     url: /#portfolio
-    submenu:
-      - title:
-        url:
+    submenu: []
   - title: About me
     url: /about/
-    submenu:
-      - title:
-        url:
+    submenu: []
   - title: Services
     url: '#'
     submenu:
@@ -54,9 +47,7 @@ main:
         url: /campaigner-theme/
   - title: Blog
     url: /blog/
-    submenu:
-      - title:
-        url:
+    submenu: []
 contact:
   phone: 469.867.3438
   linkedin: https://www.linkedin.com/in/ed-cupaioli-10a9849/
