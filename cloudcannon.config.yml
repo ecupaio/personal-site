@@ -63,13 +63,13 @@ collections_config:
       default:
         path: .cloudcannon/schemas/experience.md
         name: Experience
-        _enabled_editors:
-          - content
+        _enabled-editors:
+          - data
         _inputs:
           $.org_logo:
             type: image
           projects:  
-            type: select
+            type: multiselect
             options: 
               values: collections.projects
               value_key: path
