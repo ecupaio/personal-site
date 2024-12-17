@@ -31,10 +31,11 @@
           }
         }
         .image-col {
+          position: relative;
           @include bp-medium {
             display: none;
           }
-          position: relative;
+          
           
           &::before {
             content: '';
@@ -171,9 +172,10 @@
       .sample {
         height: 250px;
         overflow: hidden;
+        position: relative;
         @include border-radius;
         @include box-shadow;
-        position: relative;
+        
         &:hover {
           .sample-title {
             color: $yellow;
