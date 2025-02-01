@@ -1,0 +1,29 @@
+<div class="features-z-pattern">
+  {% for feature in include.features %}
+  <div class="features-z-pattern__section features-z-pattern__section--{% cycle 'odd', 'even' %}">
+    <div class="features-z-pattern__section-col features-z-pattern__section-col--text">
+      <div class="features-z-pattern__section-title heading-3">
+        {{ feature.title  }}
+      </div>
+      {% if feature.subtitle %}
+      <div class="features-z-pattern__section-subtitle heading-5 color-grey-text">
+        {% if feature.icon %}{{ feature.icon }}&nbsp;{% endif %}{{ feature.subtitle }}
+      </div>
+      {% endif %}
+      <div class="features-z-pattern__section-text text-large">
+        {{ feature.text | markdownify }}
+      </div>
+      {% if feature.cta.text %}
+      <a class="features-z-pattern__section-cta" href="{{ feature.cta.url }}">
+        {{ feature.cta.text }}
+      </a>
+      {% endif %}
+    </div>
+    <div class="features-z-pattern__section-col features-z-pattern__section-col--image">
+      <div class="features-z-pattern__section-image">
+        <img src="{{ feature.image }}"/>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

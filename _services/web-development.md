@@ -57,7 +57,7 @@ about:
     list: 
     - Control all of your content
     - No keeping up-to-date with updates
-    - Free hosting 
+    - Low Cost hosting 
     - Optimized for performance and user-experience
     - SEO and Analytics tools included
     - WCAG compliance

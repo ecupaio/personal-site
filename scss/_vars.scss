@@ -1,3 +1,4 @@
+@import '_colors.scss';
 //Fonts
 $header-font: 'Nunito Sans', sans-serif;
 $body-font: 'Nunito Sans', sans-serif;
@@ -24,7 +25,6 @@ $size-large: 1024px;
 $size-medium: 768px;
 $size-small: 568px;
 $size-x-small: 480px;
-//Padding for Sections and Grids
-
+//Transition
 $transition_duration: .33s;
 //Mixins

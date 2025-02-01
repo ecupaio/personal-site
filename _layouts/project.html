@@ -82,7 +82,7 @@ footer-cta:
             <span class="project-recent__title-text">{{ project.title }}</span>
           </div>
           <img class="project-recent__image" src="{{ project.image[0] | resize: '330x>' }}" />
-          <div class="project-recent__tech small">
+          <div class="project-recent__tech text-small">
             {% for tech in project.tech %}
             {{ tech }}{% unless forloop.last %},{% endunless %}
             {% endfor %}
