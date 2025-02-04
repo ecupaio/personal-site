@@ -36,7 +36,7 @@
           }
         }
         .date-col {
-          width: 31%;
+          width: 50%;
           text-align: right;
           position: relative;
           padding-right: 1rem;
@@ -45,11 +45,12 @@
           }
           .daterange {
             margin-bottom: 0;
+            font-weight: 400;
           }
         }
         
         .details-col {
-          width: 69%;
+          width: 50%;
           padding-left: 1rem;
           position: relative;
           padding-bottom: 3rem;
@@ -87,7 +88,7 @@
             .mobile-daterange {
               display: none;
               @include bp-medium {
-                display: inline-block;
+                display: block;
               }
             }
           }
