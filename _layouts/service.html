@@ -6,32 +6,17 @@ css: service
   <section id="intro-section" class="blue">
     <div class="inner-section">
       <h1 class="intro-title">{{ page.intro.title }}</h1>
-      <div class="intro-text">{{ page.intro.text }}</div>
+      <div class="intro-text text-large">{{ page.intro.text }}</div>
       {% include form-button.html %}
     </div>
   </section>
+  
   <section id="features-section">
     <div class="inner-section">
       <h2 class="section-title">
         {{ page.features.title }}
       </h2>
-      <div class="features-list">
-        {% for feature in page.features.list %}
-        <div class="feature {% cycle 'odd', 'even' %}">
-          <div class="feature-col text-col">
-            <h3 class="feature-title">{{ feature.title }}</h3>
-          <div class="feature-text">
-            {{ feature.text | markdownify }}
-          </div>
-          </div>
-          <div class="feature-col image-col">
-            <img class="feature-image" src="{{ feature.image }}" aria-label="hidden"/>
-          </div>
-          
-        </div>
-        {% endfor %}
-        {% include form-button.html %}
-      </div>
+      {% include features-z-pattern.html features=page.features.list %}
     </div>
   </section>
   {% include steps-section.html class="grey" button-link="#open-form?service=web" button-text="Work with me" %}
@@ -45,7 +30,7 @@ css: service
       <div class="about-benefits">
         <div class="benefits-list">
           {% for benefit in page.about.benefits.list %}
-          <div class="benefit">{{ benefit }}</div>
+          <div class="benefit text-large">{{ benefit }}</div>
           {% endfor %}
         </div>
       </div>

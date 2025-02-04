@@ -1,17 +1,16 @@
 ---
 title: Product Management
 published: true
-permalink: /product-management/
 intro: 
   title: "Your website is your product:<br>make it work for you"
-  text: 
+  text: "Your website is the digital face of your organization: let's create something that helps you achieve your goals."
   button: 
     title: Get started
     link: '#open-form?service=optimization'
 features: 
   title: What I can do for you
   list: 
-  - title: UX Design
+  - title: UX Optimization
     text: |-
       It should be obvious what users should do when they see your website within 1 second. If it's not, let's fix that. I'll help you make your calls to action obvious in order to convert users into customers. 
     image: /images/ux-design.svg  
@@ -45,16 +44,16 @@ steps:
   - title: Road mapping
     text: Now that we have an idea of where we want the website to be, let's talk about how we're going to get there. 
   - title: Sprint planning
-    text: With the big picture established, now I can create a litany of tasks to complete and a timeline from which to complete them. You'll have access to my project board so everything is transparent, organized, and accountable. 
+    text: With the big picture established, now I can create a litany of tasks to complete and a timeline from which to complete them. You'll have access to my project board so everything is transparent, organized, and accountable.   
 about: 
   title: Here's what you get
   text: |-
-    Even before I started coding, I used data to make decisions and measure the efficacy of my actions. Let's make your website better with my years of experience and your institutional knowledge of your organization.
+    Let's make your website better with my years of experience and your institutional knowledge of your organization.
   benefits: 
     list: 
-    - Goal tracking
     - Transparent project management
     - Page load and user experience improvements
-    - SEO visibility and keyword tracking
     - A/B testing and data analysis
+    - Speed and mobile optimization
+    - Technical SEO implementation
 ---

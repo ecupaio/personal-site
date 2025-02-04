@@ -2,7 +2,7 @@
 title: Web Development
 intro: 
   title: Don't just get a coder,<br>get a web expert.
-  text: "Your website is the digital face of your organization: let's create something that helps you achieve your goals."
+  text: "I'll build a solid, maintainable website that you won't ever have to worry about."
   button: 
     title: Get started
     link: '#open-form?service=web'
@@ -35,35 +35,13 @@ steps:
 about: 
   title: A better website starts here
   text: |-
-    What I have crafted for 5 years and counting will allow you to control and create your content without the update headaches, hosting fees, and security risks of Wordpress. 
-  items: 
-  - title: Jekyll
-    text: Simple to develop and manage for me, secure and fast for you. 
-    logo: /images/jekyll-logo-light-transparent.png
-    link: https://jekyllrb.com/
-  - title: GitHub Pages
-    text: Free hosting offered by the world's largest code repository.
-    logo: /images/GitHub_Logo.png
-    link: https://pages.github.com/
-  - title: Forestry.io
-    text: Content management system customized to your exact needs. Easy to manage for everyone involved.
-    logo: /images/forestry-pos-full.svg
-    link: https://forestry.io/
-  - title: CloudFlare
-    text: Extra layer of security that will protect you from attacks and outages. 
-    logo: /images/cf-logo-v.svg
-    link: https://www.cloudflare.com/hp/      
+    What I have crafted for 5 years and counting will allow you to control and create your content without the update headaches, hosting fees, and security risks of Wordpress.     
   benefits: 
     list: 
-    - Control all of your content
-    - No keeping up-to-date with updates
+    - Control over all of your content
+    - Security and accessibility
     - Low Cost hosting 
     - Optimized for performance and user-experience
     - SEO and Analytics tools included
     - WCAG compliance
-work: 
-  title: My work speaks for itself
-  text: Check out my portfolio for all of my web projects.
-  collection: projects 
-  filter: "tags"
 ---
