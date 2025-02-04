@@ -34,10 +34,13 @@ main:
   - title: Services
     url: '#'
     submenu:
-      - title: Optimization
-        url: /service/optimization/
       - title: Web Development
         url: /service/web-development/
+      - title: Analytics
+        url: /service/analytics/
+      - title: Product Management
+        url: /service/product-management/ 
+      
   - title: Tools & Themes
     url: '#'
     submenu:

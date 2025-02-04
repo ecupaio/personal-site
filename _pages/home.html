@@ -9,31 +9,32 @@ scripts:
 - portfolio
 services: 
 - title: Web Development
-  id: web-dev
-  action: Build my website
+  
+  subtitle: Build my website
   text: |-
-    Get a fast, reliable website that you can manage easily. I give you the tools to edit every piece of content on your site, plus security, accessibility, and little to no-cost hosting. 
-
-    [Service info](/service/web-development/)
-  image: svg/web-dev.svg
+    Get a fast, reliable website that you can manage easily. I give you the tools to edit every piece of content on your site, plus security, accessibility, and low-cost hosting.
+  cta: 
+    text: Learn more about Web Development
+    url: /service/web-development/  
+  image: /images/web-dev.svg
   icon: <i class="fa fa-laptop-code"></i>
-- title: Optimization
-  id: optimization
-  action: Improve my website
+- title: Analytics
+  subtitle: Track events on my website
   text: |-
-    Whether you’re looking for a performance upgrade or you want to increase sales, I will help bring your website up to speed. From SEO and A/B testing to bug fixes and tracking snippets, I’m here to help you achieve your goals. 
-
-    [Service info](/service/optimization/)
-  image: svg/optimization.svg
+    I handle everything from planning your conversion funnel to installing tracking pixels. Just let me know what you want to track and consider it done. 
+  cta: 
+    text: Learn more about Analytics
+    url: /service/analytics/  
+  image: /images/optimization.svg
   icon: <i class="fa fa-chart-line"></i>
-- title: Training
-  id: training
-  action: Help me with my website
+- title: Product Management
+  subtitle: Manage my website
   text: |-
-    Did you get a website with everything you want but the manual? No problem! I’ll help you be in control of your content and integrations. 
-
-    [Get started](#open-form)
-  image: svg/training.svg
+    Your website is your most loyal employee, working 24/7 365 days a year. Let's give it some goals and achieve them through continuous optimization.
+  cta: 
+    text: Learn more about Product Management
+    url: /service/product-management  
+  image: /images/training.svg
   icon: <i class="fa fa-chalkboard-teacher"></i>
 skills:
   - title: Web Development
@@ -52,9 +53,9 @@ skills:
     - Analytics
     - 3rd party software  
 about: |-
-  I make websites that are fast, secure, WCAG compliant, data-driven, and fully editable. I can design the layout, code the site, optimize it through A/B testing, and show you how to manage the content.
+  With over 12 years experience building and optimizing websites in non-profit, government, e-commerce, and start-ups, I'm ready for whatever challenge comes next. My hybrid nature makes me ideal for under-staffed teams that need one person that can truly do it all. 
 
-  I'm based out of Sacramento, CA with my two lovable mutts and my brilliant wife, [Dr. Jess Sanders](https://jessicasandersphd.com/).
+  I'm based out of Sacramento, CA with my lovable mutt and my brilliant wife, [Dr. Jess Sanders](https://jessicasandersphd.com/).
 ---
 <main id="home">
   <section id="hero">
@@ -62,8 +63,8 @@ about: |-
       <div class="hero-text">
         <h1>Ed Cupaioli</h1>
         <div class="heading-4 text-item">Web Development</div>
-        <div class="heading-4 text-item">Optimization</div>
-        <div class="heading-4 text-item">Training</div>
+        <div class="heading-4 text-item">Analytics</div>
+        <div class="heading-4 text-item">Product Management</div>
       </div>
       <div class="btn-row">
         <a class="btn" href="#open-form">Work with me</a>
@@ -73,29 +74,7 @@ about: |-
   <section id="services">
     <div class="inner-section">
       <h2>Services</h2>
-      <div class="services-list">
-        {% for service in page.services %}
-        <div class="service {% cycle 'odd', 'even' %}">
-          <div class="service-col text-col">
-            <div class="service-content">
-              <h3 class="service-title">{{ service.title }}</h3>
-              <h4 class="service-action">{{ service.icon }}&nbsp;&nbsp;{{ service.action }}</h4>
-              <div class="mobile-image">
-                {% include {{service.image}} %}  
-              </div>
-              <div class="service-text">
-                {{ service.text | markdownify }}
-              </div>
-            </div>
-          </div>
-          <div class="service-col image-col">
-            <div class="service-image">
-              {% include {{service.image}} %}
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
+      {% include features-z-pattern.html features=page.services %}
       {% include form-button.html location="Services Section" %}
     </div>
   </section>
