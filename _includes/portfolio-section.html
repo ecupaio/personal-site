@@ -1,16 +1,14 @@
-<section id="portfolio" class="grey">
+<section class="portfolio {{ include.section_class }}" {% if include.section_id %}id="{{ include.section_id }}"{% endif %}>
   <div class="inner-section">
     <h2>Portfolio</h2>
+    
     <div class="portfolio-grid">
       {% assign projects = site.projects | sort: 'date' | reverse %}
       {% for project in projects %}
       <div class="project-col {% if forloop.index > 9 %}hidden{% endif %}" data-project="{{ project.title }}">
         <div class="col-content" >
-          {%- capture project-image -%}
-          {{ project.image[0]}}
-          {%- endcapture -%}
-          <img class="project-image" src="{{ project-image | resize: '310x'}}" alt="{{ project.title }}">
-          <h4 class="project-title">{{ project.title }}</h4>
+          {% picture portfolio_grid  {{ project.image[0] }} class="project-image" --alt Thumbnail of {{ project.title }} project %}
+          <div class="project-title heading-4">{{ project.title }}</div>
         </div>
       </div>
       {% endfor %}

@@ -84,3 +84,9 @@ defaults:
       type: "redirects"      
     values: 
       layout: redirect          
+picture:
+  source: ""
+  output: "images/generated/"
+  ignore_missing_images: true
+  webp: 
+    format: webp
