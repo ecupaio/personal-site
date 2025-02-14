@@ -4,59 +4,67 @@ layout: default
 css: home
 swiper: true
 permalink: /
-scripts: 
-- home
-- portfolio
-services: 
-- title: Web Development
-  
-  subtitle: Build my website
-  text: |-
-    Get a fast, reliable website that you can manage easily. I give you the tools to edit every piece of content on your site, plus security, accessibility, and low-cost hosting.
-  cta: 
-    text: Web Development Services &rarr;
-    url: /service/web-development/  
-  image: /images/web-dev.svg
-    
-  icon: <i class="fa fa-laptop-code"></i>
-- title: Analytics
-  subtitle: Track events on my website
-  text: |-
-    I handle everything from planning your conversion funnel to installing tracking pixels. Just let me know what you want to track and consider it done. 
-  cta: 
-    text: Analytics Services &rarr;
-    url: /service/analytics/  
-  image: /images/optimization.svg
-  icon: <i class="fa fa-chart-line"></i>
-- title: Product Management
-  subtitle: Manage my website
-  text: |-
-    Your website is your most loyal employee, working 24/7 365 days a year. Let's give it some goals and achieve them through continuous optimization.
-  cta: 
-    text: Product Management Services &rarr;
-    url: /service/product-management  
-  image: /images/training.svg
-  icon: <i class="fa fa-chalkboard-teacher"></i>
+scripts:
+  - home
+  - portfolio
+services:
+  - title: Web Development
+    subtitle: Build my website
+    text: >-
+      Get a fast, reliable website that you can manage easily. I give you the
+      tools to edit every piece of content on your site, plus security,
+      accessibility, and low-cost hosting.
+    cta:
+      text: Web Development Services &rarr;
+      url: /service/web-development/
+    image: /images/web-dev.svg
+    icon: <i class="fa fa-laptop-code"></i>
+  - title: Analytics
+    subtitle: Track events on my website
+    text: >-
+      I handle everything from planning your conversion funnel to installing
+      tracking pixels. Just let me know what you want to track and consider it
+      done. 
+    cta:
+      text: Analytics Services &rarr;
+      url: /service/analytics/
+    image: /images/optimization.svg
+    icon: <i class="fa fa-chart-line"></i>
+  - title: Product Management
+    subtitle: Manage my website
+    text: >-
+      Your website is your most loyal employee, working 24/7 365 days a year.
+      Let's give it some goals and achieve them through continuous optimization.
+    cta:
+      text: Product Management Services &rarr;
+      url: /service/product-management
+    image: /images/training.svg
+    icon: <i class="fa fa-chalkboard-teacher"></i>
 skills:
   - title: Web Development
-    items: 
-    - Websites 
-    - E-commerce
-    - Integrations
+    items:
+      - 'Websites '
+      - E-commerce
+      - Integrations
   - title: UX
-    items: 
-    - Research & Experiments
-    - Design
-    - Engineering
+    items:
+      - Research & Experiments
+      - Design
+      - Engineering
   - title: Training
-    items: 
-    - Content Management
-    - Analytics
-    - 3rd party software  
-about: |-
-  With over 12 years experience building and optimizing websites in non-profit, government, e-commerce, and start-ups, I'm ready for whatever challenge comes next. My hybrid nature makes me ideal for under-staffed teams that need one person that can truly do it all. 
+    items:
+      - Content Management
+      - Analytics
+      - 3rd party software
+about: >-
+  With over 12 years experience building and optimizing websites in non-profit,
+  government, e-commerce, and start-ups, I'm ready for whatever challenge comes
+  next. My hybrid nature makes me ideal for under-staffed teams that need one
+  person that can truly do it all. 
 
-  I'm based out of Sacramento, CA with my lovable mutt and my brilliant wife, [Dr. Jess Sanders](https://jessicasandersphd.com/).
+
+  I'm based out of Sacramento, CA with my lovable mutt and my brilliant wife,
+  [Dr. Jess Sanders](https://jessicasandersphd.com/).
 ---
 <main id="home">
   <section class="home-hero">
@@ -90,7 +98,7 @@ about: |-
             <div class="study">
               <div class="image-col">
                 <div class="image-block">
-                  <img src="{{ study.intro.image }}" alt="image of {{ study.title }}" class="study-image"/>
+                  <img src="{{ study.intro.image }}" alt="image of {{ study.title }}" class="study-image" />
                 </div>
               </div>
               <div class="text-col">
@@ -125,7 +133,7 @@ about: |-
         {% include button-row.html text="Meet me" link="/about/" %}
     </div>
   </section>
-  <section id="blog-posts" >
+  <section id="blog-posts">
     <div class="inner-section">
       <h2>Blog</h2>
       <div class="posts-list">
