@@ -49,7 +49,7 @@ footer-cta:
       <div class="swiper-wrapper">
         {% for image in page.image %}
         <div class="swiper-slide project-slide">
-          <img src="{{ image | resize: '620x' }}" />
+          {% picture portfolio_page {{ image }} %}
           <div class="project-images__zoom">
             <i class="fa fa-search-plus"></i>
           </div>
@@ -81,8 +81,8 @@ footer-cta:
           <div class="project-recent__title heading-4">
             <span class="project-recent__title-text">{{ project.title }}</span>
           </div>
-          <img class="project-recent__image" src="{{ project.image[0] | resize: '330x>' }}" />
-          <div class="project-recent__tech small">
+          {% picture recent_projects {{ project.image[0] }} class="project-recent__image" %}
+          <div class="project-recent__tech text-small">
             {% for tech in project.tech %}
             {{ tech }}{% unless forloop.last %},{% endunless %}
             {% endfor %}

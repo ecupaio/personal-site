@@ -25,104 +25,26 @@ experience:
       company: Ed Cupaioli LLC
       title: Web Consultant
       text:
-      tasks:
-        - >-
-          Gathered product requirements from clients, created roadmaps, planned
-          projects according to budgets, and refined and assigned tasks to
-          designers and developers. 
-        - >-
-          Evaluated feature needs and pain points analysis for content
-          management and user experience.
-        - >-
-          Established and ran daily standups, wrote technical documentation for
-          engineers and clients, and designed and implemented solutions for IAM,
-          CMS, and CRM.
     - daterange: July 2020 - May 2021
       company: eStreet
       title: Director of Engineering
-      text:
-      tasks:
-        - >-
-          Established SDLC processes for digital projects and products in order
-          to streamline product launches and proactively prevent bugs. 
-        - >-
-          Oversaw the discovery and design process, vetted vendors, managed
-          engineers, and ensured delivery was high-quality and WCAG compliant.
-        - >-
-          Managed A/B tests and implemented analytics solutions for eCommerce
-          clients. 
-        - >-
-          Gathered requirements, wrote documentation, and project managed the
-          integration of tax compliance software.
+      
     - daterange: February 2018 - July 2020
       company: Arcadia
       title: Web Developer
-      text:
-      tasks:
-        - >-
-          Established agile methodology in order to manage and continuously
-          improve three distinct products for Arcadia: website, blog, and
-          support center.
-        - >-
-          Analyzed website data, user interviews, and screen recordings to
-          improve conversion rates in accordance with user growth KPIs. 
-        - >-
-          Created a reporting template, collaborated with the data team to
-          determine a Bayesian method to evaluate experiments, and created a
-          cross-platform tracking solution with GTM.
-        - >-
-          Worked closely with marketing, product, and data teams to design and
-          implement frontend tools for user engagement and closing gaps in user
-          flows.
     - daterange: December 2015 - February 2018
       company: Democratic National Committee
       title: Frontend Developer
-      text:
-      tasks:
-        - >-
-          Led the development of the official Democratic Party website and
-          microsites.
-        - >-
-          Translated designs into responsive websites, developed frontend tools,
-          and created rapid-response templates.
-        - >-
-          Supported volunteer, officer election, and voter activities with CMS
-          and CRM solutions.
+      text: 
     - daterange: December 2014 – December 2015
-      company: Consultant
+      company: Freelance
       title: Web Developer
       text:
-      tasks:
-        - >-
-          Designed and developed Wordpress and Drupal websites for clients in
-          education, non-profit, and political sectors. 
-        - >-
-          Gathered product requirements, analyzed data, and worked closely with
-          stakeholders in order to optimize content management and user
-          experience for an enterprise website.
-        - >-
-          Led training sessions on content management, SEO, and user experience
-          for non-technical audiences.
+      
     - daterange: March 2013 – November 2014
       company: OSSE DC
       title: Web Communications Specialist
       text:
-      tasks:
-        - >-
-          Managed the agency's Drupal website, social media, blog, and
-          SharePoint site.
-        - >-
-          Reorganized the website's content, resulting in a significant drop in
-          bounce rates and an increase in search engine referral traffic.
-        - >-
-          Developed responsive email templates for stakeholder newsletters and
-          public outreach.
-        - >-
-          Implemented Eventbrite and Google Forms solutions for agency programs
-          and public engagement.
-        - >-
-          Established an editorial process for timely and organized website
-          updates.
 skills:
   title: Relevant Skills
   text: I have listed the You can see a full list of my skills on my resumé
@@ -226,7 +148,7 @@ recruiters:
     - title: Website
       url: https://edcupaioli.com/
   resume:
-    title: Download resumé
+    title: View resumé on LinkedIn
     link: /resume/
 footer-cta:
   title: Let's chat
@@ -260,8 +182,8 @@ footer-cta:
             <div class="daterange heading-5">{{ experience.daterange }}</div>
           </div>
           <div class="details-col">
-            <div class="title heading-4">{{ experience.title }}</div>
-            <div class="company">{{ experience.company }} <span class="mobile-daterange">| {{ experience.daterange }}</span></div>
+            <div class="title heading-3">{{ experience.title }}</div>
+            <div class="company text-large">{{ experience.company }} <div class="mobile-daterange text-medium">{{ experience.daterange }}</div></div>
             <div class="task-list">
               {% for task in experience.tasks %}
               <div class="task">
@@ -273,7 +195,7 @@ footer-cta:
         </div>
         {% endfor %}
       </div>
-      {% include button-row.html link="/resume/" text="Download resumé" target="_blank" %}
+      {% include button-row.html link="/resume/" text="View resumé on LinkedIn" target="_blank" %}
     </div>
   </section>
   <section id="skills-section" class="grey">

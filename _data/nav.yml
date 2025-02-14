@@ -34,10 +34,13 @@ main:
   - title: Services
     url: '#'
     submenu:
-      - title: Optimization
-        url: /service/optimization/
       - title: Web Development
         url: /service/web-development/
+      - title: Analytics
+        url: /service/analytics/
+      - title: Product Management
+        url: /service/product-management/ 
+      
   - title: Tools & Themes
     url: '#'
     submenu:
@@ -48,6 +51,8 @@ main:
   - title: Blog
     url: /blog/
     submenu: []
+  - title: Contact
+    url: /contact/  
 contact:
   phone: 469.867.3438
   linkedin: https://www.linkedin.com/in/ed-cupaioli-10a9849/

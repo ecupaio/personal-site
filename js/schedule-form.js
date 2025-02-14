@@ -1,6 +1,6 @@
 //embed widget
 Calendly.initInlineWidget({
-  url: 'https://calendly.com/ed-cupaioli/30min?hide_landing_page_details=1&hide_gdpr_banner=1&hide_event_type_details=1',
+  url: 'https://calendly.com/ed-cupaioli/30min?hide_event_type_details=1',
   parentElement: document.getElementById('calendly-embed'),
   prefill: {},
   utm: {}
@@ -96,3 +96,4 @@ if (
 ) {
   openForm();
 }
+

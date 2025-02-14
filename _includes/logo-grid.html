@@ -1,0 +1,10 @@
+<section class="logos-grid">
+  <h2>{{ logos.title }}</h2>
+  <div class="logos-grid__list">
+  {% for logo in logos.list %}
+    <div class="logos-grid__col">
+      <img class="logos-grid__logo" src="{{ logo.image }}" alt="{{ logo.org }} logo" />      
+    </div>
+  {% endfor }
+  </div>
+</section>

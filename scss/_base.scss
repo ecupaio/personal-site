@@ -2,16 +2,12 @@ html,
 body {
 	margin:0;
 	padding:0;
-	
 	font-size: 18px;
 	overflow-x: hidden;
 	overflow-y: auto;
 	&.active {
 		overflow-y: hidden;
 	}
-}
-body {
-	background: $blue;
 }
 * {
 	box-sizing: border-box;
@@ -38,22 +34,26 @@ h4, .heading-4 {
 	font-size: 1.25rem;
 }
 h5, .heading-5 {
-	font-size: 1rem;
+	font-size: 1.125rem;
 }
 body {
 	font-family: $body-font;
 	
 	color: $text_color;
 }
-.large {
-	font-size: 20px;
+
+.text-large {
+	font-size: 1.25rem;
 }
-.small {
-	font-size: 16px;
+.text-medium {
+	font-size: 1rem;
+}
+.text-small {
+	font-size: 0.875rem;
 }
 p {
 	margin-top: 0;
-	
+	font-size: 1rem;
 }
 //Links
 a, .text-link {
@@ -174,4 +174,17 @@ hr {
 	height: 1px;
 	border: none;
 }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 @import "_overlay.scss";

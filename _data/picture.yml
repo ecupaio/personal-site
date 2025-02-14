@@ -1,0 +1,29 @@
+webp:
+    formats: [webp, original]    
+
+media_queries:
+  mobile: "max-width: 568px"
+  tablet: "max-width: 768px"
+  desktop: "min-width: 1400px"
+  
+presets:
+  portfolio_grid:
+    sizes: 
+      desktop: [310]
+      tablet: [470]
+    formats: [webp]
+    picture: false
+    crop: '16:10'
+    keep: 'entropy'
+    
+  portfolio_page:
+    widths: [620]
+    formats: [webp]
+    picture: false
+  recent_projects: 
+    widths: [330]
+    formats: [webp]
+    crop: '16:9'
+    keep: 'entropy'
+
+ 

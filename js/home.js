@@ -3,11 +3,11 @@ $(function() {
   
   //hero animation
   setTimeout(function() {
-    $('#hero').addClass('active');
+    $('.home-hero').addClass('active');
     
   }, 700);
   setTimeout(function() {
-    $('#hero .text-item').each(function(i) {
+    $('.home-hero__text-item').each(function(i) {
       var $this= $(this);
       setTimeout(function() {
         $this.addClass('active');

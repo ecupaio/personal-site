@@ -13,10 +13,9 @@ image:
 tech: []
 link: https://www.soundstripe.com/
 layout: project
-published: false
+published: true
 description: >-
-  Homepage for a royalty-free music service created in hubspot  complete with
-  reusable and editable content modules and sections. 
+  Pages and re-usable components for both website and email created in Hubspot.
 ---
 This project started as a deliverable contract for a single homepage, beautifully designed by James Vanderplant of [Alchemy Collective](), then evolved into more pages along with an entire re-usable component system that I aligned with their existing design system.
 

@@ -3,7 +3,7 @@ title: Thanks for getting in touch
 permalink: /schedule-thanks/
 layout: basic
 ---
-I'm excited for our chat. We will use Google Meet to talk unless you have a preference for phone or another video conference service. Please feel free to reach out to me any time if you need to cancel or reschedule: [ed.cupaioli@gmail.com](mailto:ed.cupaioli@gmail.com).
+I'm excited for our chat. We will use Google Meet to talk unless you have a preference for phone or another video conference service. Please feel free to reach out to me any time if you need to cancel or reschedule: [{{ site.data.nav.contact.email}}](mailto:{{ site.data.nav.contact.email}}).
 
 ## Meeting Details
 
@@ -24,8 +24,10 @@ A copy of these details will be in your inbox along with a calendar invite.
 ## Services
 
 In the meantime, check out what I can do for you:
-
-* {% for service in site.services %}
-* [{{ service.title }}]({{ service.url }}){: .services-list__link}{: .services-list__item}
-* {% endfor %}
-{: .services-list}
+<ul>
+  {% for service in site.services %}
+  <li>
+    <a href="{{ service.url }}">{{ service.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
