@@ -14,14 +14,13 @@ tech: []
 link: https://www.soundstripe.com/
 layout: project
 published: true
-description: >-
-  Pages and re-usable components for both website and email created in Hubspot.
+description: Pages and re-usable components for both website and email created in Hubspot.
 ---
 This project started as a deliverable contract for a single homepage, beautifully designed by James Vanderplant of [Alchemy Collective](), then evolved into more pages along with an entire re-usable component system that I aligned with their existing design system.
 
 Every line of text, image, and even the carousels are all editable and you can place each section in any order on any page with the simple drag and drop section system I implemented. I even extended my re-usable components to their email platform. This was made possible because I earned my Hubspot CMS certification and properly implemented a theme instead of adding bespoke, uneditable pages like the last agency they worked with.
 
-You might ask yourself, "How were you able to do all this incredible work?" Two reasons:
+You might ask yourself, “How were you able to do all this incredible work?” Two reasons:
 
 1. Soundstripe was an excellent client that provided me with existing project management and constant communication.
 2. Soundstripe signed me on to a retainer which allowed me to do my thing without having to itemize and estimate each individual task. I just got my money for a block of hours each month and did my thing.
@@ -30,7 +29,7 @@ Pages I made from a bespoke design:
 
 * [Homepage](https://www.soundstripe.com/)
 * [Sync Licensing](https://www.soundstripe.com/traditional-sync)
-* [Enterprise](https://www.soundstripe.com/enterprise-licensing) (use the music player! I'm most proud of the wee sound wave animation I made)
+* [Enterprise](https://www.soundstripe.com/enterprise-licensing) (use the music player! I’m most proud of the wee sound wave animation I made)
 
 Pages made from my component system:
 
