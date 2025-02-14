@@ -14,16 +14,17 @@ services:
   text: |-
     Get a fast, reliable website that you can manage easily. I give you the tools to edit every piece of content on your site, plus security, accessibility, and low-cost hosting.
   cta: 
-    text: Learn more about Web Development
+    text: Web Development Services &rarr;
     url: /service/web-development/  
   image: /images/web-dev.svg
+    
   icon: <i class="fa fa-laptop-code"></i>
 - title: Analytics
   subtitle: Track events on my website
   text: |-
     I handle everything from planning your conversion funnel to installing tracking pixels. Just let me know what you want to track and consider it done. 
   cta: 
-    text: Learn more about Analytics
+    text: Analytics Services &rarr;
     url: /service/analytics/  
   image: /images/optimization.svg
   icon: <i class="fa fa-chart-line"></i>
@@ -32,7 +33,7 @@ services:
   text: |-
     Your website is your most loyal employee, working 24/7 365 days a year. Let's give it some goals and achieve them through continuous optimization.
   cta: 
-    text: Learn more about Product Management
+    text: Product Management Services &rarr;
     url: /service/product-management  
   image: /images/training.svg
   icon: <i class="fa fa-chalkboard-teacher"></i>
@@ -58,13 +59,13 @@ about: |-
   I'm based out of Sacramento, CA with my lovable mutt and my brilliant wife, [Dr. Jess Sanders](https://jessicasandersphd.com/).
 ---
 <main id="home">
-  <section id="hero">
+  <section class="home-hero">
     <div class="inner-section">
-      <div class="hero-text">
+      <div class="home-hero__text">
         <h1>Ed Cupaioli</h1>
-        <div class="heading-4 text-item">Web Development</div>
-        <div class="heading-4 text-item">Analytics</div>
-        <div class="heading-4 text-item">Product Management</div>
+        <div class="heading-4 home-hero__text-item">Web Development</div>
+        <div class="heading-4 home-hero__text-item">Analytics</div>
+        <div class="heading-4 home-hero__text-item">Product Management</div>
       </div>
       <div class="btn-row">
         <a class="btn" href="#open-form">Work with me</a>
@@ -78,7 +79,7 @@ about: |-
       {% include form-button.html location="Services Section" %}
     </div>
   </section>
-  {% include portfolio-section.html %}
+  {% include portfolio-section.html section_id="portfolio" %}
   <section id="studies">
     <div class="inner-section">
       <h2>Studies</h2>
@@ -132,7 +133,7 @@ about: |-
         <div class="post-col">
           <div class="post">
             <div class="post-content">
-              <h4 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+              <div class="post-title heading-4"><a href="{{ post.url }}">{{ post.title }}</a></div>
               <div class="post-tags">
                 {% for tag in post.tags %}
                 <a class="post-tag" href="/blog/?tag={{ tag }}">{{ tag }}</a>{% unless forloop.last %},{% endunless %}

@@ -2,6 +2,12 @@
 title: Contact
 permalink: /contact/
 layout: basic
+hero: 
+  title: Contact
+  text: 
+  button:
+    text: 
+    url: 
 ---
 You can reach me by email, phone, or schedule a 30 minute meeting with me:
 

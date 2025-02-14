@@ -14,14 +14,15 @@
         {{ feature.text | markdownify }}
       </div>
       {% if feature.cta.text %}
-      <a class="features-z-pattern__section-cta text-large" href="{{ feature.cta.url }}">
+      <a class="features-z-pattern__section-cta" href="{{ feature.cta.url }}">
         {{ feature.cta.text }}
       </a>
       {% endif %}
     </div>
     <div class="features-z-pattern__section-col features-z-pattern__section-col--image">
       <div class="features-z-pattern__section-image">
-        <img src="{{ feature.image }}"/>
+        
+        <img src="{{ feature.image }}" alt="" role="presentation"/>
       </div>
     </div>
   </div>

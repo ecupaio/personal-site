@@ -15,44 +15,35 @@ body {
       }
     }
   }
-  #hero {
+  .home-hero {
     padding: 2em;
     color: $white;
+    
     @include flexbox;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: $blue;
     position: relative;
-    &:after {
-      content: '';
-      bottom: 0;
-      background-color: $blue;
-      height: 100vh;
-      width: 100%;
-      display: block;
-      @include transition(height);
-      transition-delay: 1.7s;
+    &.active {
+      .home-hero__text {
+        &:before {
+          @include transform(translateY(0%));
+        }
+      }
+      .btn-row {
+        .btn {
+          transform: translateY(0%);
+          opacity: 1;
+        }
+      }
     }
-    .hero-text {
+    &__text {
       padding-left: 2rem;
       margin-bottom: 2rem;
       overflow: hidden;
       position: relative;
-      .text-item {
-        opacity: 0;
-        transform: translateX(-100%);
-        @include transition(transform,opacity);
-        
-        &:last-child {
-          margin-bottom: 0;
-          
-        }
-        &.active {
-          opacity: 1;
-          transform: translateX(0%);
-        }
-      }
+      
       &:before {
         content: '';
         display: block;
@@ -68,6 +59,20 @@ body {
       }
 
     }
+    &__text-item {
+      opacity: 0;
+      transform: translateX(-100%);
+      @include transition(transform,opacity);
+      
+      &:last-child {
+        margin-bottom: 0;
+        
+      }
+      &.active {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+    }
     .btn-row {
       padding-left: 2em;
       margin-top: 1rem;
@@ -82,23 +87,7 @@ body {
         margin: 0;
       }
     }
-    &.active {
-      &:after {
-        height: 0;
-      }
-      .hero-text {
-        &:before {
-          @include transform(translateY(0%));
-        }
-        
-      }
-      .btn-row {
-        .btn {
-          transform: translateY(0%);
-          opacity: 1;
-        }
-      }
-    }
+    
   }
   #services {
     
@@ -196,119 +185,7 @@ body {
       }
     }
   }
-  #portfolio {
-    position: relative;
-    @include bp-small {
-      padding: 2rem 1rem;
-    }
-    .btn-row {
-      text-align: center;
-    }
-    .portfolio-grid {
-      max-width: $size-large;
-      margin: auto;
-      position: relative;
-      top: 0;
-      background-color: transparent;
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      @include bp-medium {
-        grid-template-columns: repeat(2,1fr);
-      }
-      @include bp-small {
-        grid-template-columns: repeat(1,1fr);
-      }
-      .project-col {
-        background-size: cover;
-        background-position: top center;
-        height: 250px;
-        overflow: hidden;
-        padding: 1rem;
-        position: relative;
-        
-        .col-content {
-          text-align: center;
-          position: relative;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          @include box-shadow;
-          @include border-radius;
-          overflow: hidden;
-          &:after {
-            content: '';
-            display: block;
-            position: absolute;
-            opacity: 0;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            
-            background-color: rgba($charcoal,0.95);
-            @include transition(opacity);
-          }
-          .project-image {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            object-position: center top;
-            z-index: 0;
-          }
-          .project-title {
-            color: $white;
-            font-weight: 700;
-            position: relative;
-            z-index: 1;
-            display: inline-block;
-            opacity: 0;
-            @include transition(opacity);
-            &:after {
-              content: '';
-              position: absolute;
-              height: 2px;
-              width: 100%;
-              left: 0;
-              bottom: -0.1em;
-              background-color: $blue;
-              @include transform(scaleX(0));
-              transform-origin: center;
-              @include transition(transform);
-            }
-          }
-
-        }
-        &:hover {
-          cursor: pointer;
-          
-          .col-content {
-            padding: 0.5rem;
-            &:after {
-              opacity: 1;
-              z-index: 1;
-            }
-            .project-title {
-              opacity: 1;
-              z-index: 3;
-              
-              &:before {
-                bottom: -1.5em;
-                opacity: 1;
-                z-index: 3;
-              }
-              &:after {
-                @include transform(scaleX(1));
-              }
-            }
-
-          }
-        }
-      }
-    }
-  }
+  
   #studies {
     #studies-slider {
       margin-top: 1rem;

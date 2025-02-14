@@ -24,8 +24,10 @@ A copy of these details will be in your inbox along with a calendar invite.
 ## Services
 
 In the meantime, check out what I can do for you:
-
-* {% for service in site.services %}
-* [{{ service.title }}]({{ service.url }}){: .services-list__link}{: .services-list__item}
-* {% endfor %}
-{: .services-list}
+<ul>
+  {% for service in site.services %}
+  <li>
+    <a href="{{ service.url }}">{{ service.title }}</a>
+  </li>
+  {% endfor %}
+</ul>

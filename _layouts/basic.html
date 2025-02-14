@@ -3,14 +3,14 @@ layout: default
 css: basic
 ---
 <main class="basic-page">
-  <!-- <div class="branded-topbar">
-    <div class="branded-topbar__content">
-      <div class="heading-4"><a href="/" class="white">Ed Cupaioli</a></div>
-    </div>
-  </div> -->
+  {% if page.hero.title %}
+    {% assign title = page.hero.title %}
+  {% else %}  
+    {% assign title = page.title %}
+  {% endif %}
+  {% include hero.html title=title text=page.hero.text btn_text=page.hero.button.text btn_url=page.hero.button.url %}
   <section class="basic-page__content">
     <div class="inner-section">
-      <h1 class="basic-page__title">{{ page.title }}</h1>
       <div class="basic-page__text">{{ content }}</div>
     </div>
   </section>

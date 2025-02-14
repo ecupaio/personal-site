@@ -51,6 +51,8 @@ main:
   - title: Blog
     url: /blog/
     submenu: []
+  - title: Contact
+    url: /contact/  
 contact:
   phone: 469.867.3438
   linkedin: https://www.linkedin.com/in/ed-cupaioli-10a9849/

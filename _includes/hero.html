@@ -1,0 +1,13 @@
+<section class="hero">
+  <div class="inner-section">
+    <h1 class="hero__title"> {{ include.title }}</h1>
+    {% if include.text %}
+    <div class="hero__text">{{ include.text }}</div>
+    {% endif %}
+    {% if include.btn_text  %}
+    <div class="hero__cta">
+      <a class="btn" href="{{ include.btn_url }}">{{ include.btn_text }}</a>
+    </div>
+    {% endif %}
+  </div>
+</section>
