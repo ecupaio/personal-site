@@ -10,7 +10,7 @@ image:
   - /images/soundstripe-podcast-lp.png
   - /images/soundstripe-section-editor.png
   - /images/screenshot-2024-05-23-at-11-57-13-am.webp
-tech: []
+
 link: https://www.soundstripe.com/
 layout: project
 published: true

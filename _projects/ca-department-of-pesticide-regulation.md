@@ -7,7 +7,7 @@ image:
   - /images/cdpr-interior-page.png
   - /images/cdpr-news.png
   - /images/cdpr-pmr.png
-tech: []
+
 link: https://www.cdpr.ca.gov/
 layout: project
 published: true
