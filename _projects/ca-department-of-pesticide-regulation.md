@@ -3,11 +3,11 @@ _schema: default
 title: CA Department of Pesticide Regulation
 date: 2025-02-14 15:44:33 -0800
 image:
-  - /images/cdpr-home.png
-  - /images/cdpr-interior-page.png
-  - /images/cdpr-news.png
-  - /images/cdpr-pmr.png
-
+  - /images/cdpr-home-1.png
+  - /images/cdpr-news-1.png
+  - /images/cdpr-ipm.png
+  - /images/cdpr-interior.png
+tech: []
 link: https://www.cdpr.ca.gov/
 layout: project
 published: true
