@@ -1,0 +1,25 @@
+<section class="skills-section {{ include.bg_color }}">
+  <div class="inner-section">
+    <div class="skills-section__heading">
+      <h2 class="skills-section__heading-title">{{ page.skills.title }}</h2>
+      <div class="skills-section__heading-text">{{ page.skills.text }}</div>
+    </div>
+    <div class="skills-section__blocks">
+      {% for skill in page.skills.categories %}
+      <div class="skill-block">
+        <div class="skill-block__title heading-4">
+          {{ skill.title }}
+        </div>
+        <div class="skill-block__list">
+          {% for item in skill.list %}
+          <div class="skill-block__list-item">
+            {{ item.title }}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% include button-row.html link="https://www.linkedin.com/in/ed-cupaioli-10a9849/details/skills/" text="View all skills on LinkedIn" %}
+  </div>
+</section>

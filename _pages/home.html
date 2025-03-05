@@ -41,31 +41,19 @@ services:
       url: /service/product-management
     image: /images/training.svg
     icon: <i class="fa fa-chalkboard-teacher"></i>
-skills:
-  - title: Web Development
-    items:
-      - 'Websites '
-      - E-commerce
-      - Integrations
-  - title: UX
-    items:
-      - Research & Experiments
-      - Design
-      - Engineering
-  - title: Training
-    items:
-      - Content Management
-      - Analytics
-      - 3rd party software
-about: >-
-  With over 12 years experience building and optimizing websites in non-profit,
-  government, e-commerce, and start-ups, I'm ready for whatever challenge comes
-  next. My hybrid nature makes me ideal for under-staffed teams that need one
-  person that can truly do it all. 
+about: 
+  image: 
+    src: /images/ed-headshot-cropped.jpg
+    alt: Headshot of Ed Cupaioli
+  text: >-
+    With over 12 years experience building and optimizing websites in non-profit,
+    government, e-commerce, and start-ups, I'm ready for whatever challenge comes
+    next. My hybrid nature makes me ideal for under-staffed teams that need one
+    person that can truly do it all. 
 
 
-  I'm based out of Sacramento, CA with my lovable mutt and my brilliant wife,
-  [Dr. Jess Sanders](https://jessicasandersphd.com/).
+    I'm based out of Sacramento, CA with my lovable mutt, [Walker](/images/walker.jpg), and my brilliant wife,
+    [Dr. Jess Sanders](https://jessicasandersphd.com/). 
 ---
 <main id="home">
   <section class="home-hero">
@@ -88,7 +76,7 @@ about: >-
       {% include form-button.html location="Services Section" %}
     </div>
   </section>
-  {% include portfolio-section.html section_id="portfolio" %}
+  {% include portfolio-section.html section_id="portfolio" section_class="grey" %}
   <section id="studies">
     <div class="inner-section">
       <h2>Studies</h2>
@@ -129,9 +117,18 @@ about: >-
   <section id="about" class="grey">
     <div class="inner-section">
       <h2>About me</h2>
-      
-        {{ page.about | markdownify }}
-        {% include button-row.html text="Meet me" link="/about/" %}
+      <div class="about-grid">
+        <div class="about-grid__col">
+          <img src="{{ page.about.image.src }}" alt="{{ page.about.image.alt }}"/> 
+           
+        </div>
+        <div class="about-grid__col">
+          {{ page.about.text | markdownify }}
+          {% include button-row.html text="Meet me" link="/about/" %}
+        </div>
+      </div>
+        
+        
     </div>
   </section>
   <section id="blog-posts">
