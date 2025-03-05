@@ -11,7 +11,7 @@ css: about
 intro:
   title: About me
   text: >-
-    User-experience led and data-driven web developer with over a decade of
+    User-experience focused web developer with over a decade of
     experience as a technical lead in marketing, e-commerce, and
     non-profit/government industries.
   headshot:
@@ -28,7 +28,6 @@ experience:
     - daterange: July 2020 - May 2021
       company: eStreet
       title: Director of Engineering
-      
     - daterange: February 2018 - July 2020
       company: Arcadia
       title: Web Developer
@@ -45,78 +44,39 @@ experience:
       company: OSSE DC
       title: Web Communications Specialist
       text:
+
 skills:
   title: Relevant Skills
-  text: I have listed the You can see a full list of my skills on my resumé
+  text: If you don't see a skill below, there's a good chance I can read the docs and pick it up in no time as I've done with all my listed skills.
   categories:
     - title: Code
       list:
         - title: HTML
-          startdate: 2013
         - title: CSS
-          startdate: 2013
         - title: SASS/SCSS
-          startdate: 2013
         - title: Javascript
-          startdate: 2014
         - title: jQuery
-          startdate: 2014
         - title: React
-          startdate: 2022
-    - title: Platforms
+    - title: Frameworks
       list:
         - title: Wordpress
-          startdate: 2014
-          enddate: 2019
         - title: Drupal
-          startdate: 2013
-          enddate: 2016
         - title: Jekyll
-          startdate: 2017
         - title: Gatsby
-          startdate: 2022
         - title: Shopify
-          startdate: 2015
-          enddate: 2018
+        - title: Hubspot CMS
+        - title: Webflow
         - title: Zendesk
-          startdate: 2018
-          enddate: 2020
-        - title: Salesforce
-          startdate: 2023
-    - title: Data
+    - title: Analytics & CRM
       list:
         - title: Google Analytics
-          startdate: 2013
         - title: Google Tag Manager
-          startdate: 2017
-        - title: Bayesian Statistics
-          startdate: 2018
-    - title: UX
-      list:
-        - title: Conversion Rate Optimization
-          startdate: 2018
-        - title: A/B Testing
-          startdate: 2018
-        - title: Accessibility Compliance
-          startdate: 2013
-        - title: Google Optimize
-          startdate: 2018
-        - title: Figma
-          startdate: 2018
-        - title: Adobe XD
-          startdate: 2020
-    - title: Leadership
-      list:
-        - title: Project Management
-          startdate: 2013
-        - title: Product Management
-          startdate: 2013
-        - title: Engineering Lead
-          startdate: 2020
-        - title: Content Management
-          startdate: 2013
-        - title: Enterprise Website Management
-          startdate: 2013
+        - title: Mixpanel
+        - title: Adobe Analytics
+        - title: Adobe Launch
+        - title: Hubspot Email
+        - title: MailChimp
+        - title: Salesforce     
 recruiters:
   title: For Recruiters
   text: >-
@@ -126,18 +86,12 @@ recruiters:
   info:
     - title: Full Name
       text: Edward A Cupaioli
-    - title: Hourly Rate
-      text: $75 for W2, $100 for C2C
-    - title: Minimum Desired Salary
-      text: $120,000
     - title: Date of Birth (MM/DD)
       text: 09/21
     - title: US Work Authorization
       text: Natural born US citizen
     - title: Location/Timezone
       text: Sacramento, CA/Pacific
-    - title: Availability
-      text: April 2024
     - title: Education/Year
       text: Bachelor of Arts/2009
   links:
@@ -198,52 +152,7 @@ footer-cta:
       {% include button-row.html link="/resume/" text="View resumé on LinkedIn" target="_blank" %}
     </div>
   </section>
-  <section id="skills-section" class="grey">
-    <div class="inner-section">
-      <h2 class="section-title">{{ page.skills.title }}</h2>
-      <div class="skills-grid">
-        {% for category in page.skills.categories %}
-        <div class="skill-category">
-          <h3 class="category-title">{{ category.title }}</h3>
-          <div class="skills-list">
-            {% assign currentyear = site.time | date: '%Y' %}
-            {% assign firstyear = category.list | sort: "startdate" | first  %}
-            {% assign baseline = currentyear | minus: firstyear.startdate %}
-            {% for skill in category.list %}
-            {% if skill.enddate and skill.enddate.size > 0 %}
-                {% assign skill-yrs =  skill.enddate | minus: skill.startdate %}
-                {% else %}
-                {% assign skill-yrs =  currentyear | minus: skill.startdate %}
-                {% endif %}
-            <div class="skill">
-              <div class="skill-title-block">
-                <div class="skill-label heading-5">{{ skill.title }}</div>
-                <div class="skill-years">
-                  {% if skill-yrs <= 1  %}
-                  1 year
-                  {% else %}
-                  {{ skill-yrs }} years
-                  {% endif %}
-                </div>
-              </div>
-              
-              <div class="skill-bar">
-                {% assign skill-pct = skill-yrs | times: 100.0 |  divided_by: baseline %}
-                {% if skill-pct == 0 %}
-                <span class="bar" style="width: 10%"></span>
-                {% else %}
-                <span class="bar" style="width: {{skill-pct}}%"></span>
-                {% endif %}
-              </div>
-              
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
+  {% include skills.html bg_color="grey" %}
   <section id="recruiters">
     <div class="inner-section">
       <h2 class="section-title">{{ page.recruiters.title }}</h2>
@@ -258,15 +167,15 @@ footer-cta:
             <span class="info-text">{{ info.text }}</span>
           </div>
           {% endfor %}
-        </div>
-        <div class="link-list">
-          {% for link in page.recruiters.links %}
-          <div class="link-item">
-            <span class="link-title bold">{{ link.title }}:</span>&nbsp;<a href="{{ link.url }}">{{ link.url }}</a>
+          <div class="link-list">
+            {% for link in page.recruiters.links %}
+            <div class="link-item">
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            </div>
+            {% endfor %}
           </div>
-          {% endfor %}
         </div>
-        {% include button-row.html link=page.recruiters.resume.link text=page.recruiters.resume.title target="_blank" %}
+        
       </div>
       
     </div>

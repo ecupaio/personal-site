@@ -4,13 +4,11 @@ permalink: /contact/
 layout: basic
 hero: 
   title: Contact
-  text: 
+  text: You can reach me by email, phone, or schedule a 30 minute meeting with me.
   button:
     text: 
     url: 
 ---
-You can reach me by email, phone, or schedule a 30 minute meeting with me:
-
 <!-- Calendly inline widget begin -->
 <div class="calendly-inline-widget" data-url="https://calendly.com/ed-cupaioli/30min" style="min-width:320px;height:700px;"></div>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>

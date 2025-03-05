@@ -253,7 +253,7 @@ body {
   }
   #about {
     .inner-section {
-      max-width: $size-small;
+      
       padding: 1rem 2rem;;
       margin: auto;
       background-color: $white;
@@ -261,39 +261,20 @@ body {
       border: 1px solid $grey;
     }
     .btn-row {
-      text-align: center;
+      text-align: left;
       margin-top: 1.5rem;
     }
-    .skills-col {
-      .skill-grid {
-        .skill-category {
-          text-align: center;
-          .skill {
-            margin: 0.5em 10px;
-            background-color: $blue;
-            color: $white;
-            font-weight: 700;
-            @include transform(translateY(-2em));
-            opacity: 0;
-            @include transition(transform,opacity);
-            padding: 0.5em;
-
-            &.active {
-              @include transform(translateY(0));
-              opacity: 1;
-            }
-          }
-          .skill-bin {
-            height: 1em;
-            position: relative;
-            top: -1em;
-            border-bottom: 5px solid $blue;
-            border-left: 5px solid $blue;
-            border-right: 5px solid $blue;
-          }
-        }
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 2rem;
+      align-items: center;
+      margin-top: 1.5rem;
+      @include bp-medium {
+        grid-template-columns: repeat(1,1fr);
       }
     }
+    
   }
   #blog-posts {
     .posts-list {
