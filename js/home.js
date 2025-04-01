@@ -1,6 +1,4 @@
 $(function() {
-  
-  
   //hero animation
   setTimeout(function() {
     $('.home-hero').addClass('active');

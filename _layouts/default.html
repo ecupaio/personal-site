@@ -32,21 +32,24 @@ layout: compress
     </div>
   </footer>
   <!-- Scripts -->
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script> 
   <!-- Sitewide -->
-  <script src="/js/min/site-functions.min.js?{{site.time | date: '%s' }}"></script>
+  <script src="/js/min/site-functions.min.js?{{site.time | date: '%s' }}" ></script>
   <!-- Sitewide - Calendly Form -->
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>  
-  <script src="/js/min/schedule-form.min.js?{{site.time | date: '%s' }}"></script>
+  <script src="/js/min/schedule-form.min.js?{{site.time | date: '%s' }}" ></script>
   <!-- Sitewide - Nav -->
-  <script src="/js/min/nav.min.js?{{site.time | date: '%s' }}"></script>
+  <script src="/js/min/nav.min.js?{{site.time | date: '%s' }}" ></script>
   {% if page.swiper == true or layout.swiper == true %}
   <!-- Swiper -->
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="/js/min/swiper-bundle.min.js" ></script>
+  
   {% endif %}
   {% if layout.scripts.size > 0 %}
   <!-- Layout -->
   {% for script in layout.scripts %}
-  <script src="/js/min/{{script}}.min.js?{{site.time | date: '%s' }}"></script>
+  <script src="/js/min/{{script}}.min.js?{{site.time | date: '%s' }}" ></script>
   {% endfor %}
   {% endif %}
   {% if page.scripts.size > 0 %}

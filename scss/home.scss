@@ -9,7 +9,6 @@ body {
 #home {
   section {
     .inner-section {
-      
       h2 {
         text-align: center;
       }
@@ -25,7 +24,23 @@ body {
     align-items: center;
     background-color: $blue;
     position: relative;
+    z-index: 2;
+    &:before {
+      content: '';
+      display: block;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      background-color: $blue;
+      transition: height 1s ease;
+      transition-delay: 1s;
+    }
     &.active {
+      &:before {
+        height: 0;
+        
+      }
       .home-hero__text {
         &:before {
           @include transform(translateY(0%));

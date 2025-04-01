@@ -18,9 +18,11 @@ footer-cta:
       </button>
     </div>
     <div class="swiper project-swiper-large">
+      
       <div class="swiper-wrapper">
         {% for image in page.image %}
-        <div class="swiper-slide">
+        <div class="swiper-slide"> 
+          slide {{ forloop.index }}
           <img src="{{ image }}" />
         </div>
         {% endfor %}
@@ -56,10 +58,8 @@ footer-cta:
         </div>
         {% endfor %}
       </div>
-      
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
-
     </div>
   </section>
   {% if page.content.size > 1 %}

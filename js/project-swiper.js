@@ -1,6 +1,7 @@
 const projectSwiper = new Swiper(".project-images__swiper", {
   slidesPerView: 1,
   centerInsufficientSlides: true,
+  direction: 'horizontal',
   spaceBetween: 10,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -18,7 +19,6 @@ const projectSwiper = new Swiper(".project-images__swiper", {
 
 const projectSwiperLarge = new Swiper(".project-swiper-large", {
   slidesPerView: 1,
-  
   speed: 1,
   thumbs: {
     swiper: projectSwiper,
