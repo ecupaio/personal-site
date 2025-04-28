@@ -3,6 +3,7 @@ _schema: default
 title: Soundstripe
 date: 2024-05-23 11:55:23 -0700
 image:
+  - /images/soundstripe-home-v5.png
   - /images/soundstripe-home.webp
   - /images/soundstripe-custom-sync.png
   - /images/soundstripe-enterprise.png
@@ -10,7 +11,7 @@ image:
   - /images/soundstripe-podcast-lp.png
   - /images/soundstripe-section-editor.png
   - /images/screenshot-2024-05-23-at-11-57-13-am.webp
-
+tech: []
 link: https://www.soundstripe.com/
 layout: project
 published: true
