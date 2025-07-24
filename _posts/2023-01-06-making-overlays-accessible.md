@@ -7,9 +7,7 @@ tags:
   - Web Development
 published: true  
 ---
-[Tab Order](https://web.dev/keyboard-access/)&nbsp;is an accessibility standard that Google Lighthouse won't automatically detect and they suggest for you to check for it manually in their updated reports:&nbsp;
-
-![](/uploads/screen-shot-2023-01-06-at-2-43-51-pm.png){: width="720" height="146"}
+[Tab Order](https://web.dev/keyboard-access/)&nbsp;is an accessibility standard that Google Lighthouse won't automatically detect and they suggest for you to check for it manually in their updated reports. 
 
 If you're unfamiliar with this accessibility standard, it's there for people who are unable to use a mouse when browsing the web. &nbsp;To see if your tab order will make sense to a user, download the [Screen Reader extension](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en) and tab through your page. You will hear the screen reader say what element it's focused on along with a highlight around the object. Chrome has a [great demo](https://youtu.be/cOmehxAU_4s?t=205) of this that I highly recommend watching.&nbsp;
 
