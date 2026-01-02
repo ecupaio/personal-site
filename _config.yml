@@ -90,3 +90,7 @@ picture:
   ignore_missing_images: true
   webp: 
     format: webp
+jekyll-minifier:
+      
+plugins:
+- jekyll-minifier    

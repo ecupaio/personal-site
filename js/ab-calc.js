@@ -1,7 +1,6 @@
 $(function() {
   // use https://www.socscistatistics.com/tests/chisquare/Default2.aspx to check
   function findSig() {
-
     //clear results
     $('.not-sig, .is-sig').addClass('hidden');
     $('.donut-segment').attr('stroke-dasharray','0,100').attr('stroke','');
